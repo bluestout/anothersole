@@ -1,0 +1,181 @@
+<div class="hm-business-sec-main">
+	<div class="hm-business-sec-inn">
+		<div class="hm-business-sec-row">
+			<div class="hm-business-sec-block">
+				<div class="hm-business-sec-video">{{section.settings.video}}</div>
+			</div>
+			<div class="hm-business-sec-block">
+				<div class="hm-business-sec-cont">
+					<h3>{{section.settings.heading}}</h3>
+					<p>{{section.settings.sub_heading}}</p>
+					<ul>
+						<li><span><img src="{{section.settings.image_1 | img_url : "original"}}" /></span> {{section.settings.heading_1}}</li>
+						<li><span><img src="{{section.settings.image_2 | img_url : "original"}}" /></span> {{section.settings.heading_2}}</li>
+					</ul>
+					<div class="hm-banner-sec-cont-btn"><a href="{{section.settings.btn_link}}" class="wht-bk-rounded-btn">{{section.settings.btn_text}}</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% schema %}
+  {
+    "name": "Video With Content",
+    "settings": [
+{
+      "type": "text",
+      "id": "heading",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Heading "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+      "type": "text",
+      "id": "sub_heading",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Sub Heading "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+      "type": "text",
+      "id": "heading_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Heading 1 "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title 1"
+      }
+    },
+{
+          "type": "image_picker",
+          "id": "image_1",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image 1"
+          }
+        },
+{
+      "type": "text",
+      "id": "heading_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Heading 2 "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title 2"
+      }
+    },
+{
+          "type": "image_picker",
+          "id": "image_2",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image"
+          }
+        },
+{
+      "type": "text",
+      "id": "btn_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Button Text"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+      "type": "url",
+      "id": "btn_link",
+      "label": {
+        "cs": "Odkaz",
+        "da": "Link",
+        "de": "Link",
+        "en": "Link"
+      },
+      "info": {
+        "cs": "Volitelné",
+        "da": "Valgfri",
+        "de": "Optional",
+        "en": "Optional"
+      }
+    },
+{
+      "type": "text",
+      "id": "video",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Video Iframe "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Video Iframe"
+      }
+    }
+],
+  "presets": [
+    {
+      "name": {
+        "cs": "Static with scroll",
+        "da": "Static with scroll",
+        "de": "Static with scroll",
+        "en": "Video With Content"
+      },
+      "category": {
+        "cs": "Gallery",
+        "da": "Gallery",
+        "de": "Gallery",
+        "en": "Gallery"
+      }
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,71 @@
+<div class="ext-top-bar">
+	<div class="ext-top-bar-row">
+      <div class="ext-top-bar-left">
+        <div class="ext-top-bar-left-inn">
+          
+       <div class="custom-slider">
+        <p class="list-custom-slide">{{section.settings.accounment_1}}</p>
+        <p class="list-custom-slide">{{section.settings.accounment_2}} </p>
+        <p class="list-custom-slide">{{section.settings.accounment_3}}</p>
+        </div>
+        </div>
+        <div class="ext-top-bar-left-inn-close">
+        </div>
+      </div>
+		<div class="ext-top-bar-right">
+          <ul>
+          	<li><a href="#">#Buy1Feed1</a></li>
+            <li><div class="custom-currency-drop">USD</div></li>   
+          </ul>
+      </div>
+	</div>  
+</div>
+<div class="cst-header-sec">
+	<div class="cst-header-row">
+      
+		<div class="cst-header-left"> 
+          <ul class="custom-main-menu">
+           
+      {% for link in linklists[section.settings.main_linklist].links %}
+            
+          <li><a href="{{link.href}}">{{link.handle}}</a>
+            
+            {% if link.handle == section.settings.main_linklist_1 %}
+            {% assign selectedlist = section.settings.main_linklist_1 %}
+            
+          {%include "mega-menu-desktop"%}
+              {% elsif link.handle == section.settings.main_linklist_2 %}
+             {% assign selectedlist = section.settings.main_linklist_2 %}
+              {%include "mega-menu-desktop"%}
+            {% elsif link.handle == section.settings.main_linklist_3 %}
+             {% assign selectedlist = section.settings.main_linklist_3 %}
+              {%include "mega-menu-desktop"%}
+            {%endif%}
+          </li>
+          {%endfor%}
+          </ul>
+      </div>
+      <div class="cst-header-mid"><a href="/"><img src="{{ section.settings.logo | img_url: 'original' }}" /></a> </div>
+		<div class="cst-header-right"> 
+      <ul>
+        <li class="custom-goods"><a href="{{section.settings.custom_link}}">{{section.settings.custom_text}}</a></li>
+        <li class="custom-login">
+          {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+          <a href="/account">Account</a>
+        {%else%}
+          <a href="/account/login">Login</a>
+          {%endif%}
+           {%endif%}
+        </li>
+        <li class="custom-search">
+          <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
+            {% include 'icon-search' %}
+            <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+          </button>
+          Search</li>
+        <li class="custom-cart-icon"><div class="custom-cart-icon-box"><img src="{{'bag_ico.svg' | asset_url}}" /></div></li>
+          </ul>
+      </div>
+	</div>
+</div>

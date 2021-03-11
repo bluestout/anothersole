@@ -235,6 +235,28 @@
                 {% if section.settings.enable_payment_button %}
                   {{ form | payment_button }}
                 {% endif %}
+             
+                            {% assign set = "" %}
+							{% for coll in product.collections %}
+							{% if coll.template_suffix contains 'set' %}
+							{% assign set = coll %}
+							{% break %}
+							{% endif %}
+							{% endfor %}
+							{% if set != "" %}
+							<div class="product-colors">
+								<div class="label" for=""><strong class="upper">Select Colour:</strong> {{ title[1] }}</div>
+								<ul class="swatch">
+									{% for pro in set.products %}
+									{% if pro.id == product.id %}
+									<li class="active"><div class="dd" style="background-color:#{{ pro.metafields.information.color_code }}"></div></li>
+									{% else %} 
+									<li><a href="{{ pro.url }}" class="dd"  style="background-color:#{{ pro.metafields.information.color_code }}"></a></li>
+									{% endif %}
+									{% endfor %}
+								</ul>
+							</div> 
+							{% endif %}
               </div>
             </div>
           {% endform %}

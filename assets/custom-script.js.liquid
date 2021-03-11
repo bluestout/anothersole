@@ -1,0 +1,68 @@
+$(document).ready(function(){
+  /********************Fotter Accordion ***********************/
+  $( function() {
+    $( "#footer-accordion" ).accordion({
+      collapsible: true
+    });
+  } );
+  
+  
+  
+  /*******************Top bar close for Mobile *****************/
+  $(".ext-top-bar-left-inn-close").click(function(){
+  $(".ext-top-bar").addClass("close-top-bar");
+  })
+  
+  /************************ Search Open on Icon Click *****************/
+  $(".custom-search").click(function(){
+  $("html").addClass("js-drawer-open js-drawer-open-top");
+    $("body").addClass("js-drawer-open js-drawer-open-top prevent-scrolling");
+  })
+  $(".btn--link.search-bar__close.js-drawer-close").click(function(){
+  $("html").removeClass("js-drawer-open js-drawer-open-top");
+    $("body").removeClass("js-drawer-open js-drawer-open-top prevent-scrolling");
+  })
+  
+  
+  /************ Top Bar Slider *********************/
+  if ($(window).width() < 749) {
+  $('.hm-fav-product-listing-main').slick({
+ dots: false,
+    prevArrow: false,
+    slidesToShow: 1,
+  slidesToScroll: 1,
+    nextArrow: false
+});
+     $('.logo-slider-mobile').slick({
+ dots: true,
+    prevArrow: false,
+    slidesToShow: 1,
+  slidesToScroll: 1,
+    nextArrow: false
+});
+  }
+  $('.custom-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  draggable: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    dots: true,
+    fade: true,
+    speed: 500,
+    infinite: true,
+    cssEase: 'ease-in-out',
+    touchThreshold: 100,
+    dots: false,
+    prevArrow: false,
+    nextArrow: false
+});
+$('.hm-lt-sticky-section-left-slider').slick({
+    dots: true,
+    prevArrow: false,
+    nextArrow: false
+});	
+}) 

@@ -2864,9 +2864,9 @@ theme.Header = (function() {
     styleDropdowns(document.querySelectorAll(selectors.siteNavHasDropdown));
     positionFullWidthDropdowns();
 
-    cache.parents.forEach(function(element) {
-      element.addEventListener('click', submenuParentClickHandler);
-    });
+//     cache.parents.forEach(function(element) {
+//       element.addEventListener('click', submenuParentClickHandler);
+//     });
 
     // check when we're leaving a dropdown and close the active dropdown
     cache.siteNavChildLink.forEach(function(element) {
@@ -2894,7 +2894,7 @@ theme.Header = (function() {
     cache = {
       nav: navigation,
       topLevel: document.querySelectorAll(selectors.siteNavLinkMain),
-      parents: navigation.querySelectorAll(selectors.siteNavHasDropdown),
+      //parents: navigation.querySelectorAll(selectors.siteNavHasDropdown),
       subMenuLinks: document.querySelectorAll(selectors.siteNavChildLinks),
       activeDropdown: document.querySelector(selectors.siteNavActiveDropdown),
       siteHeader: document.querySelector(selectors.siteHeader),
@@ -3016,9 +3016,9 @@ theme.Header = (function() {
       element.removeEventListener('click', stopImmediatePropagation);
     });
 
-    cache.parents.forEach(function(element) {
-      element.removeEventListener('click', submenuParentClickHandler);
-    });
+//     cache.parents.forEach(function(element) {
+//       element.removeEventListener('click', submenuParentClickHandler);
+//     });
 
     cache.siteNavChildLink.forEach(function(element) {
       element.removeEventListener('focusout', submenuFocusoutHandler);

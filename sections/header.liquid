@@ -1,11 +1,12 @@
 {% if section.settings.message %}
-  <style>
+  <style> 
+
     {% if section.settings.logo != blank %}
       .site-header__logo-image {
         max-width: {{ section.settings.logo_max_width | escape }}px;
       }
     {% endif %}
-
+    
     {% if section.settings.align_logo == 'left' %}
       .site-header__logo-image {
         margin: 0;
@@ -17,6 +18,8 @@
 {% include 'search-drawer' %}
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>
+  {%include "custom-header" %}
+  {%comment%}
   {% if section.settings.message %}
     {% if section.settings.home_page_only == false or request.page_type == 'index' %}
       <style>
@@ -251,6 +254,7 @@
     {% include 'site-nav', linklist: section.settings.main_linklist, wrapper_class: 'site-nav--centered' %}
   </nav>
   {% endif %}
+   {%endcomment%}
 </div>
 
 
@@ -490,6 +494,137 @@
       },
       "default": "main-menu"
     },
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Mega Menu"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "main_linklist_1",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Menu 1"
+      },
+      "default": "main-menu"
+    },
+{
+      "type": "link_list",
+      "id": "main_linklist_2",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Menu 2"
+      },
+      "default": "main-menu"
+    },
+{
+      "type": "link_list",
+      "id": "main_linklist_3",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Menu 3"
+      },
+      "default": "main-menu"
+    },
+{
+      "type": "text",
+      "id": "custom_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Custom Text"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Make Good Do Good"
+      }
+    },
+    {
+      "type": "url",
+      "id": "custom_link",
+      "label": {
+        "cs": "Odkaz",
+        "da": "Link",
+        "de": "Link",
+        "en": "Custom Link"
+      },
+      "info": {
+        "cs": "Volitelné",
+        "da": "Valgfri",
+        "de": "Optional",
+        "en": "Optional"
+      }
+    },
+{
+      "type": "header",
+      "content": {
+        "cs": "Panel oznámení",
+        "da": "Meddelelseslinje",
+        "de": "Ankündigungsbereich",
+        "en": "Offers"
+      }
+    },
+{
+      "type": "text",
+      "id": "accounment_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Announcement"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Announcement"
+      }
+    },
+{
+      "type": "text",
+      "id": "accounment_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Announcement"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Make Good Do Good"
+      }
+    },
+{
+      "type": "text",
+      "id": "accounment_3",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Announcement"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Make Good Do Good"
+      }
+    },
     {
       "type": "header",
       "content": {
@@ -579,47 +714,13 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Text",
-        "es": "Texto",
-        "fi": "Teksti",
-        "fr": "Texte",
-        "it": "Testo",
-        "ja": "テキスト",
-        "ko": "텍스트",
-        "nb": "Tekst",
-        "nl": "Tekst",
-        "pl": "Tekst",
-        "pt-BR": "Texto",
-        "pt-PT": "Texto",
-        "sv": "Text",
-        "th": "ข้อความ",
-        "tr": "Metin",
-        "vi": "Văn bản",
-        "zh-CN": "文本",
-        "zh-TW": "文字"
+        "en": "Text"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
         "da": "Meddel noget her",
         "de": "Hier etwas ankündigen",
-        "en": "Announce something here",
-        "es": "Anuncia algo aquí",
-        "fi": "Ilmoita jotakin tässä",
-        "fr": "Annoncez quelque chose ici",
-        "it": "Annuncia qualcosa qui",
-        "ja": "ここで告知してください",
-        "ko": "여기에 공지하십시오",
-        "nb": "Kunngjør noe her",
-        "nl": "Kondig hier iets aan",
-        "pl": "Ogłoś coś tutaj",
-        "pt-BR": "Anuncie algo aqui",
-        "pt-PT": "Anunciar algo aqui",
-        "sv": "Meddela något här",
-        "th": "ประกาศข้อความที่นี่",
-        "tr": "Buraya bir duyuru ekleyin",
-        "vi": "Thông báo điều gì đó tại đây",
-        "zh-CN": "在此处进行公告",
-        "zh-TW": "在此公告資訊"
+        "en": "Announce something here"
       }
     },
     {
@@ -629,24 +730,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Link",
-        "es": "Enlace",
-        "fi": "Linkki",
-        "fr": "Lien",
-        "it": "Link",
-        "ja": "リンク",
-        "ko": "링크",
-        "nb": "Kobling",
-        "nl": "Link",
-        "pl": "Link",
-        "pt-BR": "Link",
-        "pt-PT": "Ligação",
-        "sv": "Länk",
-        "th": "ลิงก์",
-        "tr": "Bağlantı",
-        "vi": "Liên kết",
-        "zh-CN": "链接",
-        "zh-TW": "連結"
+        "en": "Link"
       },
       "info": {
         "cs": "Volitelné",

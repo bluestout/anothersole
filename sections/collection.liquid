@@ -1,8 +1,10 @@
-<div class="page-width">
+<div class="ant-sole-cst-container pro-custom-sect">
   {% if section.settings.title != blank %}
-    <div class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
-    </div>
+  <div class="hm-tp-fav-title-sec">
+	<h3>{{ section.settings.title | escape }}</h3>
+	<p>{{section.settings.sub_title}}</p>
+	<div class="hm-tp-fav-title-sec-link"><a href="{{ collection.url }}">View Limited edition</a></div>
+</div>
   {% endif %}
 
   {%- assign collection = collections[section.settings.collection] -%}
@@ -10,23 +12,24 @@
   {% case section.settings.grid %}
     {% when 2 %}
       {%- assign max_height = 530 -%}
-      {%- assign grid_item_width = 'medium-up--one-half' -%}
+      {%- assign grid_item_width = 'medium-up--one-whole' -%}
     {% when 3 %}
       {%- assign max_height = 345 -%}
-      {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
+      {%- assign grid_item_width = 'small--one-whole medium-up--one-third' -%}
     {% when 4 %}
       {%- assign max_height = 250 -%}
-      {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
+      {%- assign grid_item_width = 'small--one-whole medium-up--one-quarter' -%}
     {% when 5 %}
       {%- assign max_height = 195 -%}
-      {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
+      {%- assign grid_item_width = 'small--one-whole medium-up--one-fifth' -%}
   {% endcase %}
 
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
-
-  <ul class="grid grid--uniform grid--view-items">
+<div class="hm-tp-fav-pro-sec">
+  <div class="hm-tp-fav-pro-sec-inn">
+  <ul class="hm-fav-product-listing-main">
     {% for product in collection.products limit: product_limit %}
-      <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+      <li class="custom-product-listing">
         {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
       </li>
     {% else %}
@@ -48,11 +51,12 @@
       {% endfor %}
     {% endfor %}
   </ul>
-
+  </div>
+  </div>
   {% if section.settings.show_view_all %}
-    <hr class="hr--invisible" aria-hidden="true" />
+    
     <div class="text-center">
-      <a href="{{ collection.url }}" class="btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+      <a href="{{ collection.url }}" class="blk-bk-rounded-btn btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
         {{ 'collections.general.view_all' | t }}
       </a>
     </div>
@@ -87,7 +91,7 @@
     "zh-CN": "特色产品系列",
     "zh-TW": "精選商品系列"
   },
-  "class": "index-section",
+  "class": "index-section-custom",
   "settings": [
     {
       "type": "text",
@@ -137,6 +141,23 @@
         "vi": "Bộ sưu tập nổi bật",
         "zh-CN": "特色产品系列",
         "zh-TW": "精選商品系列"
+      }
+    },
+{
+      "type": "text",
+      "id": "sub_title",
+      "label": {
+        "cs": "Nadpis",
+        "da": "Overskrift",
+        "de": "Titel",
+        "en": "Sub Heading"
+      },
+      "default": {
+        "cs": "Propagovaná kolekce",
+        "da": "Udvalgt kollektion",
+        "de": "Vorgestellte Kategorie",
+        "en": "Featured collection",
+        "es": "Colección destacada"
       }
     },
     {

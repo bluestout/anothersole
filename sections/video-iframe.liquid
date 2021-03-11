@@ -1,0 +1,93 @@
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<div class="video_ifram">
+{{section.settings.video_iframe}}
+  <h3 class="video_ifram_title">{{section.settings.title}}</h3>
+</div>
+
+
+
+<button id="play">Play</button>
+<button id="pause">Pause</button>
+<script>
+  window._wq = window._wq || [];
+  _wq.push({
+    id: "ommolgxirk", onReady: function (video) {
+      console.log("I got a handle to the video!", video);
+    }
+  });
+  $("#play").click(function () {
+    _wq.push({
+      id: "ommolgxirk", onReady: function (video) {
+        video.play();
+      }
+    });
+  })
+  $("#pause").click(function () {
+    _wq.push({
+      id: "ommolgxirk", onReady: function (video) {
+        video.pause();
+      }
+    });
+  })
+</script>
+  {% schema %}
+  {
+    "name": "Video Iframe",
+    "settings": [
+{
+      "type": "textarea",
+      "id": "video_iframe",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Iframe"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Supple and comfortable soles"
+      }
+    },
+{
+      "type": "text",
+      "id": "title",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Heading For Mobile"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    }
+],
+  "presets": [
+    {
+      "name": {
+        "cs": "Gift Cards",
+        "da": "Gift Cards",
+        "de": "Gift Cards",
+        "en": "Video Iframe"
+      },
+      "category": {
+        "cs": "Gallery",
+        "da": "Gallery",
+        "de": "Gallery",
+        "en": "Gallery"
+      }
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

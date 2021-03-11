@@ -1,0 +1,122 @@
+<div class="hm-as-seen-in-main">
+	<div class="hm-as-seen-in-inn">
+		<div class="hm-as-seen-in-row">
+			<div class="hm-as-seen-in-left">
+				<h3>{{section.settings.text_1}}</h3>
+			</div>
+			<div class="hm-as-seen-in-mid">
+				<ul class="logo-slider-mobile cst-slider-dots-lt">
+					<li><a href="#"><img src="{{section.settings.image_1 | img_url : "medium"}}" /></a></li>
+					<li><a href="#"><img src="{{section.settings.image_2 | img_url : "medium"}}" /></a></li>
+					<li><a href="#"><img src="{{section.settings.image_3 | img_url : "medium"}}" /></a></li>
+					<li><a href="#"><img src="{{section.settings.image_4 | img_url : "medium"}}" /></a></li>
+				</ul>
+			</div>
+			<div class="hm-as-seen-in-right">
+				<p>{{section.settings.text_2}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% schema %}
+  {
+    "name": "Logo With Text",
+    "settings": [
+{
+      "type": "text",
+      "id": "text_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 1"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 1"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+          "type": "image_picker",
+          "id": "image_1",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image 1"
+          }
+        },
+{
+          "type": "image_picker",
+          "id": "image_2",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image 2"
+          }
+        },
+{
+          "type": "image_picker",
+          "id": "image_3",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image 3"
+          }
+        },
+{
+          "type": "image_picker",
+          "id": "image_4",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image 4"
+          }
+        }
+
+],
+  "presets": [
+    {
+      "name": {
+        "cs": "Logo With Text",
+        "da": "Logo With Text",
+        "de": "Logo With Text",
+        "en": "Logo With Text"
+      },
+      "category": {
+        "cs": "Gallery",
+        "da": "Gallery",
+        "de": "Gallery",
+        "en": "Gallery"
+      }
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,3 +1,4 @@
+
 {% comment %}
     Renders a product card using "Grid" style
     Accepts:
@@ -47,3 +48,27 @@
   {% include 'product-price-listing', product: product, show_vendor: show_vendor %}
 
 </div>
+{% assign set = "" %}
+							{% for coll in product.collections %}
+							{% if coll.template_suffix contains 'set' %}
+							{% assign set = coll %}
+							{% break %}
+							{% endif %}
+							{% endfor %}
+							{% if set != "" %}
+							<div class="product-colors-coll">
+								
+								<ul class="swatch">
+									{% for pro in set.products %}
+									{% if forloop.index < 5 %}
+									<li><a href="{{ pro.url }}" class="dd{%if pro.metafields.information.color_code =="FFFFFF"%} custom-white{%endif%}"  style="background-color:#{{ pro.metafields.information.color_code }}"></a></li>
+								{%endif%}
+                                  {%capture pending_number%}<div class="swatch-color-count-text-hover"><span class="hover_number">+{% if forloop.last %}{{forloop.index | minus: 4}}{%endif%} more</span></div>{%endcapture%}
+                                  {%capture total_number%}<div class="swatch-color-count-text-total"><span class="total_number">{% if forloop.last %}{{forloop.index}}{%endif%} Colors Available</span></div>{%endcapture%}	
+                                  {% endfor %}
+                                  
+								</ul>
+                              {{pending_number}}
+                                  {{total_number}}
+							</div> 
+							{% endif %}

@@ -1,36 +1,19 @@
-<div class="page-width">
-  {% if section.settings.title != blank %}
-    <div class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
-    </div>
-  {% endif %}
-
-  {% if section.blocks.size > 0 %}
-    <ul class="logo-bar{% if section.settings.title_enable %} logo-bar--large{% endif %}">
-      {% for block in section.blocks %}
-        <li class="logo-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
-          {% if block.settings.link != blank %}
-            <a href="{{ block.settings.link }}" class="logo-bar__link">
-          {% endif %}
-          {% if block.settings.image != blank %}
-            {{ block.settings.image | img_url: '160x160', scale: 2 | img_tag: block.settings.image.alt, 'logo-bar__image' }}
-          {% else %}
-            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
-          {% endif %}
-          {% if block.settings.link != blank %}
-            </a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if section.blocks.size == 0 %}
-    {% include 'no-blocks' %}
-  {% endif %}
+<div class="hm-fea-icon-txt-main">
+	<div class="hm-fea-icon-txt-inn">
+      <div class="hm-fea-mobile-heading sec-hide-for-desktop">{{section.settings.heading}}</div>
+		<div class="hm-fea-icon-txt-row">
+        
+           {% for block in section.blocks %}
+			<div class="hm-fea-icon-txt-block">
+				<div class="hm-fea-icon-txt-box">
+					<div class="hm-fea-icon-txt-box-img"><img src=" {{ block.settings.image | img_url:'medium'}}" /></div>
+					<p>{{block.settings.title}}</p>
+				</div>
+			</div>
+          {%endfor%}
+		</div>
+	</div>
 </div>
-
-
 
 {% schema %}
 {
@@ -57,9 +40,25 @@
     "zh-CN": "logo 列表",
     "zh-TW": "標誌清單"
   },
-  "class": "index-section",
-  "max_blocks": 20,
+  "class": "index-section-custom",
+  "max_blocks":4,
   "settings": [
+{
+      "type": "text",
+      "id": "heading",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Main Heading for Mobile"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Comfortable And Classy Shoes"
+      }
+    },
     {
       "type": "text",
       "id": "title",
@@ -165,6 +164,22 @@
             "zh-TW": "圖片"
           }
         },
+{
+      "type": "text",
+      "id": "title",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Title"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
         {
           "type": "url",
           "id": "link",

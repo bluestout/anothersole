@@ -1,0 +1,241 @@
+<div class="hm-gift-card-main">
+	<div class="hm-gift-card-inn">
+		<div class="hm-gift-card-row">
+			<div class="hm-gift-card-block">
+				<div class="hm-gift-card-box">
+					<div class="hm-gift-card-box-img">
+						<img src="{{section.settings.gift_image | img_url}}" />
+					</div>
+					<h3>{{section.settings.gift_text }}</h3>
+					<p>{{section.settings.gift_desc}}</p>
+					<div class="hm-gift-card-box-btn">
+						<a href="{{section.settings.btn_link}}" class="wht-bk-rounded-btn">{{section.settings.btn_text}}</a>
+					</div>
+				</div>
+			</div>
+			<div class="hm-gift-card-block">
+				<div class="hm-ret-grnt-box">
+					<h3>{{section.settings.return_title}}</h3>
+					<ul>
+						<li>
+							<div class="hm-ret-grnt-box-icon"><img src="{{section.settings.return_image_1 | img_url}}" /></div>
+							<p><span>{{section.settings.return_title_1}}</span><a href="{{section.settings.return_link}}">{{section.settings.return_link_text}}</a></p>
+						</li>
+						<li>
+							<div class="hm-ret-grnt-box-icon"><img src="{{section.settings.return_image_2 | img_url}}" /></div>
+							<p><span>{{section.settings.return_title_2}}</span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Gift Cards",
+    "settings": [
+{
+      "type": "image_picker",
+      "id": "gift_image",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Gift image"
+      }
+    },
+{
+      "type": "text",
+      "id": "gift_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Gift Title"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Gift Card"
+      }
+    },
+{
+      "type": "text",
+      "id": "gift_desc",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Gift Description"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Gift Card"
+      }
+    },
+{
+      "type": "text",
+      "id": "btn_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Button Text"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Gift Card"
+      }
+    },
+{
+      "type": "url",
+      "id": "btn_link",
+      "label": {
+        "cs": "Odkaz",
+        "da": "Link",
+        "de": "Link",
+        "en": "Link"
+      },
+      "info": {
+        "cs": "Volitelné",
+        "da": "Valgfri",
+        "de": "Optional",
+        "en": "Optional"
+      }
+    },
+{
+      "type": "text",
+      "id": "return_title",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Return Title"
+      },
+      "default": {
+        "cs": "Return Title",
+        "da": "Return Title",
+        "de": "Return Title",
+        "en": "Return Title"
+      }
+    },
+{
+      "type": "url",
+      "id": "return_link",
+      "label": {
+        "cs": "Odkaz",
+        "da": "Link",
+        "de": "Link",
+        "en": "Return Link"
+      },
+      "info": {
+        "cs": "Volitelné",
+        "da": "Valgfri",
+        "de": "Optional",
+        "en": "Optional"
+      }
+    },
+{
+      "type": "text",
+      "id": "return_link_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Return Link Title"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Return Link Title"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "return_image_1",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Return image 1"
+      }
+    },
+{
+      "type": "text",
+      "id": "return_title_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Return Title 1"
+      },
+      "default": {
+        "cs": "Return Title",
+        "da": "Return Title",
+        "de": "Return Title",
+        "en": "Return Title 1"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "return_image_2",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Return image 2"
+      }
+    },
+{
+      "type": "text",
+      "id": "return_title_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Return Title 2"
+      },
+      "default": {
+        "cs": "Return Title",
+        "da": "Return Title",
+        "de": "Return Title",
+        "en": "Return Title 2"
+      }
+    }
+],
+  "presets": [
+    {
+      "name": {
+        "cs": "Gift Cards",
+        "da": "Gift Cards",
+        "de": "Gift Cards",
+        "en": "Gift Cards"
+      },
+      "category": {
+        "cs": "Gallery",
+        "da": "Gallery",
+        "de": "Gallery",
+        "en": "Gallery"
+      }
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
