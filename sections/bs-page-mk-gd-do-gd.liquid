@@ -1,0 +1,150 @@
+<div class="bs-page-mgdg-sec bs-pg-top-remove-padding">
+  {% if section.settings.hero_img != blank %}
+    {% assign hero_img= section.settings.hero_img %}
+	  <div class="bs-mgdg-hero-img lazyload js" 
+      {% unless hero_img.alt == blank %}
+        role="img"
+        aria-label="{{ hero_img.alt | escape }}"
+        data-alt="{{ hero_img.alt | escape }}"
+      {% endunless %}
+      data-bg="{{ hero_img | img_url: '300x300' }}"
+      data-bgset="{% include 'bgset', image: hero_img %}"
+      data-sizes="auto"
+      data-parent-fit="contain"
+      style="background-image: url('{{ hero_img | img_url: '300x300' }}');"
+      >
+      <div class="bs-mgdg-hero-inn">
+        <h1 class="bs-mgdg-hero-title">Making a Difference.</h1>
+        <p class="bs-mgdg-hero-des">Make Good Do Good.</p>
+      </div>
+	  </div>
+  {% endif %}
+  <div class="bs-mgdg-md-row">
+    <div class="bs-mgdg-md-ini">
+      <p class="bs-mgdg-md-content">
+          There is power in where you spend your money.
+          Anothersole as business wants to do a social good.
+          10% of our profit goes to feeding children, building sustainable communities and supporting their future.<br><br>
+          We can make a difference.<br>
+          Make Good Do Good.
+      </p>
+    </div>
+  </div>
+  <div class="bs-mgdg-pb-row">
+    <div class="bs-mgdg-pb-ini">
+      <div class="bs-mgdg-pb-left">
+        {%- assign img_url = section.settings.problem_img | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+        <img class="lazyload js"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+            data-sizes="auto"
+            />
+      </div>
+      <div class="bs-mgdg-pb-right">
+        <div class="bs-mgdg-pb-right-ini">
+          <h2>The Problem</h2>
+          <h4>Each year almost seven million children die</h4>
+          <p>There are 66 million school-added kids in developing countries who attend school on an empty stomach. The body compensates for the lack of energy by slowing down its physical and mental growth activities.</p>
+          <p>Deprived of the right nutrition, hungry children are especially vulnerable and become too weak to fight off diseases and may die from common infections like measles and diarrhoea.</p>
+          <p>A hungry mind cannot concentrate, a hungry body does not take initiative, a hungry child loses all desire to play and study.<br><br></p>
+          <h5>*(Source: Levels and Trends in child mortality, IGME, 2012) / www.wfp.org)</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bs-mgdg-what-row">
+    <div class="bs-mgdg-what-ini">
+      <div class="bs-mgdg-what-left">
+        <div class="bs-mgdg-what-left-ini">
+          <h2>What Are We Doing About It?</h2>
+          <h4>10% of our profit is pledged towards solving this.</h4>
+          <p>We aim to feed children, build sustainable communities and support their future.</p>
+          <p>Anothersole feed fund will be used for the buying of food supplies and funding sustainability for underfunded orphanages, building sustainable communities for children to thrive and qualified missions with a school feeding operation. We work with charities already functioning towards the goal of benefiting the kids directly.<br><br></p>
+          <h5>Please note we are not asking for donations nor are we representing ourselves as a charity. We are a private social business who wants to pay it forward by first selling a great product.</h5>
+        </div>
+      </div>
+      <div class="bs-mgdg-what-right">
+        {%- assign img_url = section.settings.what_are_img | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+          <img class="lazyload js"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-sizes="auto"
+              />
+      </div>
+    </div>
+  </div>
+  <div class="bs-mgdg-video-row">
+    <div class="bs-mgdg-video-ini">
+      <div class="bs-mgdg-video-left">
+        {%- assign img_url = section.settings.video_lt_img | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+            <img class="lazyload js"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                data-sizes="auto"
+                />
+      </div>
+      <div class="bs-mgdg-video-mid">
+        <iframe width="100%" height="100%" data-src="https://fast.wistia.net/embed/iframe/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed zpa-lazyloaded" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" src="https://fast.wistia.net/embed/iframe/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false"></iframe>
+      </div>
+      <div class="bs-mgdg-video-right">
+        {%- assign img_url = section.settings.video_rt_img | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+            <img class="lazyload js"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                data-sizes="auto"
+                />
+      </div>
+    </div>
+  </div>
+  <div class="bs-mgdg-goal-row">
+    <div class="bs-mgdg-goal-ini">
+      <h2>Our Goal</h2>
+      <p>With your help and support we want to reach the point where we are able to contribute $1,000,000 annually towards feeding hungry children, building sustainable communities and supporting their growth.</p>
+      <span>Follow The Journey</span>
+      <a class="bs-mgdg-goal-btn" href="{{section.settings.goal_link}}">READ MORE</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Make Good Do Good",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_img",
+      "label": "Hero Image",
+      "info": "Recommend 1440 x 550px"
+    },
+    {
+      "type": "image_picker",
+      "id": "problem_img",
+      "label": "Problem Image",
+      "info": "Recommend 660 x 660px"
+    },
+    {
+      "type": "image_picker",
+      "id": "what_are_img",
+      "label": "What are we",
+      "info": "Recommend 660 x 660px"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_lt_img",
+      "label": "Video Left Image",
+      "info": "Recommend 205 x 420px"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_rt_img",
+      "label": "Video Right Image",
+      "info": "Recommend 165 x 420px"
+    },
+    {
+      "type": "url",
+      "id": "goal_link",
+      "label": "Readmore link"
+    }
+  ]
+}
+{% endschema %}

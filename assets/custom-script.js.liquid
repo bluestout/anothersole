@@ -5,9 +5,59 @@ $(document).ready(function(){
       collapsible: true
     });
   } );
+    $( function() {
+    $( ".accordion-child" ).accordion({
+      collapsible: true, heightStyle: "content"
+    });
+  } );
+  /*********************Currency Convertor **********************/
+  $(".custom_currency_wrapper").click(function(){
+  $("#custom-currency-list").slideToggle(100); 
+  })
+ 
+  $("#custom-currency-list li").click(function(){
+  var custom_currency = $(this).html();
+   $(".custom-currency-drop").html(custom_currency);
+    $("#currency-list .disclosure-list__item").each(function(){
+    var actual_currency_list = $(this).children("a").attr("data-value");
+      if(custom_currency==actual_currency_list){
+      $(this).trigger("click");
+      }
+    })
+  })
   
   
+  /*****************Mobile Header ***********************/
+  $(".cst-mob-header-menu-toggle").click(function(){
+  $(this).toggleClass("custom-mobile-close");
+    $(".cst-mob-header.sec-hide-for-desktop").toggleClass("show-mobile-menu");
+    $("body").toggleClass("for-custom-mobile-menu");
+  })
   
+  $(".mobile-accordion-list").click(function(){
+   
+    if($(this).hasClass("custom-open-accordion")){
+    $(this).removeClass("custom-open-accordion");
+    }
+    else{
+    $(this).addClass("custom-open-accordion");
+      $(this).siblings("li").removeClass("custom-open-accordion");
+    }
+  })
+  $(".tab-listing").click(function(){
+   
+    $(this).addClass("active-tab");
+    $(this).siblings("li").removeClass("active-tab");
+   
+    var data_tab = $(this).attr("data-tab");
+    $(".cst-mob-header-dd-tab-cont").each(function(){
+    var data_content = $(this).attr("data-content");
+      if(data_content==data_tab){
+      $(this).show();
+       $(this).siblings(".cst-mob-header-dd-tab-cont").hide();
+      }
+    })
+  })
   /*******************Top bar close for Mobile *****************/
   $(".ext-top-bar-left-inn-close").click(function(){
   $(".ext-top-bar").addClass("close-top-bar");

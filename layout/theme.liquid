@@ -78,6 +78,7 @@
   <link rel="stylesheet" href="{{ 'slick.css' | asset_url }}" type="text/css">
   <link rel="stylesheet" href="{{ 'jquery-ui.css' | asset_url }}" type="text/css">
   <link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}" type="text/css">
+  <link rel="stylesheet" href="{{ 'bs-style.css' | asset_url }}" type="text/css">
   <style>
     {{ header_font | font_face: font_display: 'swap' }}
     {{ base_font | font_face: font_display: 'swap' }}
@@ -153,8 +154,10 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
   <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'jquery.cookie.js' | asset_url }}" defer="defer"></script> 
   <script src="{{ 'jquery-ui.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'custom-script.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'bs-script.js' | asset_url }}" defer="defer"></script>
   <script type="text/javascript">
     if (window.MSInputMethodContext && document.documentMode) {
       var scripts = document.getElementsByTagName('script')[0];
@@ -197,5 +200,6 @@
     <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
     <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
   </ul>
+  {% include 'bs-cookie-banner' %}
 </body>
 </html>

@@ -1,0 +1,62 @@
+<div class="bs-pg-sitemap-sec bs-pg-top-remove-padding">
+  {% if section.settings.hero_img != blank %}
+    {% assign hero_img= section.settings.hero_img %}
+	  <div class="bs-sitemap-banner-img lazyload js" 
+      {% unless hero_img.alt == blank %}
+        role="img"
+        aria-label="{{ hero_img.alt | escape }}"
+        data-alt="{{ hero_img.alt | escape }}"
+      {% endunless %}
+      data-bg="{{ hero_img | img_url: '300x300' }}"
+      data-bgset="{% include 'bgset', image: hero_img %}"
+      data-sizes="auto"
+      data-parent-fit="contain"
+      style="background-image: url('{{ hero_img | img_url: '300x300' }}');"
+      >
+      <div class="bs-sitemap-banner-inn">
+        <h1 class="bs-sitemap-title">Site map</h1>
+      </div>
+	  </div>
+  {% endif %}
+  <div class="bs-sitemap-row">
+    <div class="bs-sitemap-ini">
+      <ul>
+        <li><a href="#" class="bs-sitemap-link-item">Sneakers</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Anytime Flats</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">All-Day Heel</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Everyday Flats</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Men</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Bags</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">About</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Make Good Do Good</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Account</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Cart</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">FAQ & Contact Us</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Shipping & Delivery</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Return & Exchanges</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Privacy & Security</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Track My Parcel</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Blog</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">My Account</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Loyalty</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Return</a></li>
+        <li><a href="#" class="bs-sitemap-link-item">Press</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Sitemap",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_img",
+      "label": "Hero Image",
+      "info": "Recommend 1440 x 235px"
+    }
+  ]
+}
+{% endschema %}

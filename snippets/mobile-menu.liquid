@@ -1,0 +1,48 @@
+<div class="cst-mob-header sec-hide-for-desktop">
+	<div class="cst-mob-header-row">
+		<div class="cst-mob-header-left">
+			<div class="cst-mob-header-menu-toggle"></div>
+			<div class="cst-mob-header-dropdown">
+				<ul class="accordion-child">
+                  <li class="mobile-accordion-list custom-open-accordion"><span>First Accordion</span>
+                  {% include "menu-tabs" %}
+                  </li>
+                  <li class="mobile-accordion-list"><span>Others</span>
+                  <ul>
+					<li><a href="#">Gift Card</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Make good do good</a></li>
+                  </ul>
+                  </li>
+                  
+				</ul>
+				<div class="cst-mob-header-dropdown-bot">
+					<div class="cst-mob-header-dropdown-list">
+						<ul>
+							<li>
+								<div><div class="custom-currency-drop">USD</div></div>
+							</li>
+							<li>
+								<a href="#">Account</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cst-mob-header-mid">
+			<div class="cst-mob-header-logo"><img src="{{ section.settings.logo | img_url: 'medium' }}"></div>
+		</div>
+		<div class="cst-mob-header-right">
+			<ul>
+				<li class="custom-search custom-mobile-search">
+          <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
+            {% include 'icon-search' %}
+            <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+          </button>
+          Search</li>
+				<li class="custom-mobile-cart"><img src="{{'bag_ico.svg' | asset_url}}" /></li>
+			</ul>
+		</div>
+	</div>
+</div>

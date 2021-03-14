@@ -14,15 +14,16 @@
       </div>
 		<div class="ext-top-bar-right">
           <ul>
-          	<li><a href="#">#Buy1Feed1</a></li>
-            <li><div class="custom-currency-drop">USD</div></li>   
+          	<li><a href="{{section.settings.message_link}}">{{section.settings.message_text}}</a></li>
+            <li class="custom_currency_wrapper"><div class="custom-currency-drop">USD</div>
+            
+            </li>   
           </ul>
       </div>
 	</div>  
 </div>
-<div class="cst-header-sec">
+<div class="cst-header-sec sec-hide-for-mobile">
 	<div class="cst-header-row">
-      
 		<div class="cst-header-left"> 
           <ul class="custom-main-menu">
            
@@ -69,3 +70,4 @@
       </div>
 	</div>
 </div>
+{% include "mobile-menu" %}

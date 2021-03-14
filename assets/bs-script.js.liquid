@@ -1,0 +1,27 @@
+$(document).ready(function(){
+  /****************cookie banner*********************/
+  $(function(){
+    var check_privacy = $.cookie('bs-privacy');
+    //check_privacy = null;/*Test*/
+    if(check_privacy == null)
+    {
+        //$(".bs-cookie-banner").show();//Right now Hide
+    }
+  });
+
+  $(".bs-cookie-banner .bs-cookie-banner-accept").on("click",function(e){
+    e.preventDefault();
+    $(".bs-cookie-banner").hide();
+    $.cookie('bs-privacy', "done");
+  });
+
+  /****************faq page********************/
+  $(".bs-faq-main-accor" ).accordion({
+    collapsible: true,
+    heightStyle: "content",
+    header: "h4", 
+    active: false, 
+    animate: 0
+  });
+
+}) 
