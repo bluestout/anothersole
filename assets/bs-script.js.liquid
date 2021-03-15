@@ -24,4 +24,15 @@ $(document).ready(function(){
     animate: 0
   });
 
+  /********************account mobile nav*********************/
+  
+  $(document).on('touchstart', '.bs-acct-mob-list-btn', function(){
+    $(this).toggleClass('EnableAcctMobNav');
+    if ($(this).hasClass("EnableAcctMobNav")) {
+      $(this).siblings('.bs-acct-mob-list-block').show();
+    } else{
+      $(this).siblings('.bs-acct-mob-list-block').hide();
+    }
+  });
+  
 }) 

@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  
+  /********************* Header Fixed ********************/
+  $(window).scroll(function() {    
+    var scroll_val = $(".cst-header-sec-main").scrollTop();    
+    if($(window).scrollTop() > scroll_val+34){
+        $("#shopify-section-header").addClass("header-fixed");
+    }
+    else{
+    $("#shopify-section-header").removeClass("header-fixed");
+    }
+})
   /********************Fotter Accordion ***********************/
   $( function() {
     $( "#footer-accordion" ).accordion({
@@ -30,7 +41,7 @@ $(document).ready(function(){
   /*****************Mobile Header ***********************/
   $(".cst-mob-header-menu-toggle").click(function(){
   $(this).toggleClass("custom-mobile-close");
-    $(".cst-mob-header.sec-hide-for-desktop").toggleClass("show-mobile-menu");
+    $(".cst-mob-header").toggleClass("show-mobile-menu");
     $("body").toggleClass("for-custom-mobile-menu");
   })
   

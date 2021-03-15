@@ -26,7 +26,7 @@
         .announcement-bar {
           background-color: {{ section.settings.color_bg }};
         }
-
+ 
         .announcement-bar__link:hover {
           {% assign brightness = section.settings.color_bg | color_brightness %}
 
@@ -500,7 +500,7 @@
         "cs": "Mega Menu",
         "da": "Mega Menu",
         "de": "Mega Menu",
-        "en": "Mega Menu"
+        "en": "Desktop Mega Menu"
       }
     },
     {
@@ -533,6 +533,64 @@
         "da": "Menu",
         "de": "Menü",
         "en": "Menu 3"
+      },
+      "default": "main-menu"
+    },
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Mobile Menu"
+      }
+    },
+{
+      "type": "text",
+      "id": "menu_text_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Tab 1 Menu"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "First"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_mega_1",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Tab 2 Menu"
+      },
+      "default": "main-menu"
+    },
+{ 
+      "type": "link_list",
+      "id": "mobile_mega_2",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Menu 2"
+      },
+      "default": "main-menu"
+    },
+{
+      "type": "link_list",
+      "id": "other_mobile_menu",
+      "label": {
+        "cs": "Nabídka",
+        "da": "Menu",
+        "de": "Menü",
+        "en": "Others Menu"
       },
       "default": "main-menu"
     },

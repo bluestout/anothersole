@@ -19,6 +19,21 @@
 
 <div data-section-id="{{ section.id }}" data-section-type="collection-template">
   <header class="collection-header">
+    
+    <div class="an-colection-pg-banner">
+	<div class="an-colection-pg-banner-img">
+		<img src="{{section.settings.banner | img_url: "master"}}{{'imgpsh_fullsize_anim.png' | asset_url}}" />
+		<div class="an-colection-pg-banner-cont">
+			<h3>{{section.settings.collection_title}}</h3>
+			<p>{{section.settings.collection_content}}</p>
+		</div>
+		<div class="an-colection-pg-banner-butfeed">
+			<h3><a href="{{section.settings.link_url}}">{{section.settings.link_text}}</a></h3>
+			<p>{{section.settings.text_content}}</p>
+		</div>
+	</div>
+</div>
+    {%comment%}
     {%- assign is_filter_by_available = false -%}
     {%- if section.settings.tags_enable and collection.all_tags.size > 0 -%}
       {%- assign is_filter_by_available = true -%}
@@ -122,9 +137,11 @@
         </div>
       </div>
     {% endif %}
+    {%endcomment%}
   </header>
 
   <div class="page-width" id="Collection">
+    {% include "collection-info-widget" %}
     {% if section.settings.layout == 'grid' %}
       {% case section.settings.grid %}
       {% when 2 %}
@@ -261,6 +278,219 @@
     "zh-TW": "商品系列頁面"
   },
   "settings": [
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Collection Information"
+      }
+    },
+{
+      "type": "text",
+      "id": "collection_title",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Title"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "collection_content",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "content"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Content"
+      }
+    },
+{
+      "type": "text",
+      "id": "link_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Link Text"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text"
+      }
+    },
+{
+      "type": "url",
+      "id": "link_url",
+      "label": {
+        "cs": "Odkaz",
+        "da": "Link",
+        "de": "Link",
+        "en": "Link"
+      },
+      "info": {
+        "cs": "Volitelné",
+        "da": "Valgfri",
+        "de": "Optional",
+        "en": "Optional"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_content",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text"
+      }
+    },
+
+{
+      "type": "image_picker",
+      "id": "banner",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Collection Banner"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 1"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 1"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_1",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 1"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 2"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 2"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_2",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 2"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_3",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 3"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 3"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_3",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 3"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_4",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 4"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 4"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_4",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 4"
+      }
+    },
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Sections"
+      }
+    },
     {
       "type": "select",
       "id": "layout",

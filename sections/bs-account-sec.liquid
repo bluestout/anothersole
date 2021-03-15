@@ -1,0 +1,119 @@
+<div class="bs-acct-banner-sec">
+  {% if section.settings.page_linklist != blank %}
+    {%- assign page_linklist = section.settings.page_linklist -%}
+    <div class="bs-acct-mob-linklist">
+      <h3 class="bs-acct-mob-list-btn">DASHBOARD</h3>
+      <ul class="bs-acct-mob-list-block" style="display: none;">
+        {%- for link in linklists[page_linklist].links -%}
+        <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>
+<div class="bs-acct-container">
+  <div class="bs-acct-left">
+    {% if section.settings.page_linklist != blank %}
+      {%- assign page_linklist = section.settings.page_linklist -%}
+      <div class="bs-acct-dsk-linklist">
+        <h3 class="bs-acct-dsk-list-btn">Dashboard</h3>
+        <ul class="bs-acct-dsk-list-block">
+          {%- for link in linklists[page_linklist].links -%}
+          <li class="{% if link.current %}bs-acct-link-active{% endif %}"><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+  <div class="bs-acct-right">
+    <div class="bs-acct-order-block">
+      <h2 class="bs-acct-order-title">{{ 'customer.orders.title' | t }}</h2>
+      {% paginate customer.orders by 20 %}
+        {% if customer.orders.size != 0 %}
+
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th class="bs-acct-order-th" scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                <th class="bs-acct-order-th" scope="col">{{ 'customer.orders.date' | t }}</th>
+                <th class="bs-acct-order-th" scope="col">Payment</th>
+                <th class="bs-acct-order-th" scope="col">Status</th>
+                <th class="bs-acct-order-th" scope="col">{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
+                <tr>
+                  <th class="bs-acct-order-td" data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                    <a href="{{ order.customer_url }}" class="" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.name }}</a>
+                  </th>
+                  <td class="bs-acct-order-td" data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | time_tag: format: 'date' }}</td>
+                  <td class="bs-acct-order-td" data-label="Payment">{{ order.financial_status_label }}</td>
+                  <td class="bs-acct-order-td" data-label="Status">{{ order.fulfillment_status_label }}</td>
+                  <td class="bs-acct-order-td" data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        {% else %}
+
+          <p>{{ 'customer.orders.none' | t }}</p>
+
+        {% endif %}
+        {%- if paginate.pages > 1 -%}
+          {% include 'pagination', paginate: paginate %}
+        {%- endif -%}
+      {% endpaginate %}
+    </div>
+    <div class="bs-acct-info-block">
+      <div class="bs-acct-detail-block">
+        <div class="bs-acct-detail-block-head">
+          <h2 class="bs-acct-info-title">Details</h2>
+          <a href="/account/addresses">Edit</a>
+        </div>
+        <p>
+          {{customer.name}}
+          <br>{{customer.email}}
+          {%if customer.accepts_marketing == true %}
+            <br>Accepts Marketing: Yes
+          {% else %}
+            <br>Accepts Marketing: No
+          {% endif %}
+        </p>
+        
+      </div>
+      <div class="bs-acct-addr-block">
+        <div class="bs-acct-detail-block-head">
+          <h2 class="bs-acct-info-title">Addresses</h2>
+          <a href="{{ routes.account_addresses_url }}" >
+          {{ 'customer.account.view_addresses' | t }}
+            ({{ customer.addresses_count }})</a>
+        </div>
+        {{ customer.default_address | format_address }}
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Account Banner",
+  "settings": [
+  {
+    "type": "link_list",
+    "id": "page_linklist",
+    "label": "Select Menu",
+    "default": "main-menu"
+  }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

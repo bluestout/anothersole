@@ -1,3 +1,5 @@
+{% section 'bs-addr-sec' %}
+{% comment %} 
 {% paginate customer.addresses by 5 %}
 
 <div class="page-width text-center">
@@ -13,9 +15,6 @@
 <div class="page-width">
   <div class="grid">
     <div class="grid__item medium-up--two-thirds medium-up--push-one-sixth">
-      {% comment %}
-        Add address form, hidden by default
-      {% endcomment %}
       <div id="AddressNewForm" class="form-vertical hide">
         {% form 'customer_address', customer.new_address %}
           <h2>{{ 'customer.addresses.add_new' | t }}</h2>
@@ -78,10 +77,6 @@
         <hr>
       </div>
 
-      {% comment %}
-        List all customer addresses with a unique edit form.
-        Also add pagination in case they have a large number of addresses
-      {% endcomment %}
       <ul>
         {% for address in customer.addresses %}
           <li>
@@ -194,4 +189,4 @@
   </div>
 
 </div>
-{% endpaginate %}
+{% endpaginate %} {% endcomment %}

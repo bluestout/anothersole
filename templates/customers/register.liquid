@@ -1,4 +1,98 @@
-<div class="page-width">
+<div class="bs-pg-reg bs-pg-top-remove-padding">
+  <div class="bs-pg-reg-ini">
+    <div class="bs-pg-reg-left">
+      {% section 'bs-login-sec' %}
+    </div>
+    <div class="bs-pg-reg-right">
+      <div class="bs-pg-reg-form">
+        <h1 class="bs-pg-reg-form-title">Create an Account</h1>
+
+        {%- assign formId = 'RegisterForm' -%}
+        {% form 'create_customer', id: formId %}
+          {% include 'form-status', form: form, form_id: formId %}
+
+          <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
+          <input type="text" name="customer[first_name]" 
+            id="{{ formId }}-FirstName" 
+            placeholder="First Name"
+            {% if form.first_name %}value="{{ form.first_name }}"{% endif %} 
+            autocomplete="given-name"
+            required>
+
+          <label for="{{ formId }}-LastName">{{ 'customer.register.last_name' | t }}</label>
+          <input type="text" name="customer[last_name]" 
+            id="{{ formId }}-LastName" 
+            placeholder="Last Name"
+            {% if form.last_name %}value="{{ form.last_name }}"{% endif %} 
+            autocomplete="family-name"
+            required>
+
+          <label for="{{ formId }}-email">{{ 'customer.register.email' | t }}</label>
+          <input
+            type="email"
+            name="customer[email]"
+            id="{{ formId }}-email"
+            placeholder="Email"
+            class="{% if form.errors contains 'email' %} input--error{% endif %}"
+            {% if form.email %} value="{{ form.email }}"{% endif %}
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            aria-required="true"
+            required
+            {%- if form.errors contains 'email' -%}
+              class="input--error"
+              aria-invalid="true"
+              aria-describedby="{{ formId }}-email-error"
+            {%- endif -%}
+          >
+          {%- if form.errors contains 'email' -%}
+            <span id="{{ formId }}-email-error" class="input-error-message">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% include 'icon-error' %}
+              <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+            </span>
+          {%- endif -%}
+
+          <label for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
+          <input
+            type="password"
+            name="customer[password]"
+            id="{{ formId }}-password"
+            placeholder="Password"
+            class="{% if form.errors contains 'password' %} input--error{% endif %}"
+            aria-required="true"
+            required
+            {%- if form.errors contains 'password' -%}
+              class="input--error"
+              aria-invalid="true"
+              aria-describedby="{{ formId }}-password-error"
+            {%- endif -%}
+          >
+          {%- if form.errors contains 'password' -%}
+            <span id="{{ formId}}-password-error" class="input-error-message">
+              {% include 'icon-error' %}
+              <span>{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.</span>
+            </span>
+          {%- endif -%}
+
+
+          <input type="submit" 
+            value="SIGN UP" 
+            class="bs-pg-reg-form-btn">
+          <div class="bs-pg-reg-form-quiz">
+            <p>Or continue with</p>
+          </div> 
+          <div class="bs-pg-reg-form-quiz">
+            <p>Already have an account? <a href="/account/login">Login here</a></p>
+          </div> 
+
+        {% endform %}
+      </div>
+    </div>
+  </div>
+<div>
+{% comment %} <div class="page-width">
   <div class="grid">
     <div class="grid__item medium-up--one-half medium-up--push-one-quarter">
 
@@ -69,4 +163,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> {% endcomment %}

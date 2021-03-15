@@ -1,0 +1,36 @@
+{% if section.settings.left_img != blank %}
+  {% assign left_img= section.settings.left_img %}
+  <div class="bs-pg-lg-img lazyload js" 
+    {% unless left_img.alt == blank %}
+      role="img"
+      aria-label="{{ left_img.alt | escape }}"
+      data-alt="{{ left_img.alt | escape }}"
+    {% endunless %}
+    data-bg="{{ left_img | img_url: '300x300' }}"
+    data-bgset="{% include 'bgset', image: left_img %}"
+    data-sizes="auto"
+    data-parent-fit="contain"
+    style="background-image: url('{{ left_img | img_url: '300x300' }}');"
+    >
+  </div>
+{% endif %}
+{% comment %} <img class="lazyload" src="{{section.settings.left_img | img_url: 'master'}}"/> {% endcomment %}
+{% comment %} {%- assign img_url = section.settings.left_img | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+<img class="lazyload js"
+      data-src="{{ img_url }}"
+      data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+      data-sizes="auto"
+      /> {% endcomment %}
+{% schema %}
+  {
+    "name": "Login Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "left_img",
+        "label": "Left Image",
+        "info": "recommended size (1080 X 1137)px"
+      }
+	  ]
+  }
+{% endschema %}
