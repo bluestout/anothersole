@@ -22,8 +22,12 @@
     
     <div class="an-colection-pg-banner">
 	<div class="an-colection-pg-banner-img">
-		<img src="{{section.settings.banner | img_url: "master"}}{{'imgpsh_fullsize_anim.png' | asset_url}}" />
-		<div class="an-colection-pg-banner-cont">
+      {% if collection.image %}
+      <img src="{{collection.image| img_url: "original"}}" />
+      {%else%}
+		<img src="{{section.settings.banner | img_url: "master"}}" />
+	{%endif%}	
+      <div class="an-colection-pg-banner-cont">
 			<h3>{{section.settings.collection_title}}</h3>
 			<p>{{section.settings.collection_content}}</p>
 		</div>
@@ -156,7 +160,7 @@
 
       <ul class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
         {% for product in collection.products %}
-          <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+          <li class="custom-product-listing grid__item grid__item--{{section.id}} {{ grid_item_width }}">
             {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
           </li>
         {% else %}
@@ -365,7 +369,7 @@
         "da": "Meddel noget her",
         "de": "Hier etwas ankündigen",
         "en": "Text"
-      }
+      } 
     },
 
 {
@@ -376,7 +380,12 @@
         "da": "Logobillede",
         "de": "Logo-Foto",
         "en": "Collection Banner"
-      }
+      }, "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 2160 x 830 px "
+        }
     },
 {
       "type": "text",
@@ -402,6 +411,22 @@
         "da": "Logobillede",
         "de": "Logo-Foto",
         "en": "Image 1"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "svg_code_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 1"
       }
     },
 {
@@ -431,6 +456,22 @@
       }
     },
 {
+      "type": "textarea",
+      "id": "svg_code_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 2"
+      }
+    },
+{
       "type": "text",
       "id": "text_3",
       "label": {
@@ -457,6 +498,22 @@
       }
     },
 {
+      "type": "textarea",
+      "id": "svg_code_3",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 3"
+      }
+    },
+{
       "type": "text",
       "id": "text_4",
       "label": {
@@ -480,6 +537,22 @@
         "da": "Logobillede",
         "de": "Logo-Foto",
         "en": "Image 4"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "svg_code_4",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 4"
       }
     },
 {

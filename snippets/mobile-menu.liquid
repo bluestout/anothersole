@@ -1,18 +1,18 @@
 <div class="cst-header-sec-mob-main sec-hide-for-desktop">
 <div class="cst-mob-header">
 	<div class="cst-mob-header-row">
-		<div class="cst-mob-header-left">
+		<div class="cst-mob-header-left"> 
 			<div class="cst-mob-header-menu-toggle"></div>
 			<div class="cst-mob-header-dropdown">
 				<ul class="accordion-child">
-                  <li class="mobile-accordion-list custom-open-accordion"><span>First Accordion</span>
-                  {% include "menu-tabs" %}
+                  <li class="mobile-accordion-list custom-open-accordion"><span>{{section.settings.menu_text_1}}</span>
+                  {% include "menu-tabs" %} 
                   </li>
-                  <li class="mobile-accordion-list"><span>Others</span>
+                  <li class="mobile-accordion-list"><span>{{section.settings.other_mobile_menu}}</span>
                   <ul>
-					<li><a href="#">Gift Card</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Make good do good</a></li>
+                    {% for link in linklists[section.settings.other_mobile_menu].links %}
+					<li><a href="{{link.url}}">{{link.title}}</a></li>
+                    {%endfor%}
                   </ul>
                   </li>
                   
@@ -24,7 +24,13 @@
 								<div><div class="custom-currency-drop">{% include "mobile-currency" %}</div></div>
 							</li>
 							<li>
-								<a href="#">Account</a>
+								 {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+          <a href="/account">Account</a>
+        {%else%}
+          <a href="/account/login">Login</a>
+          {%endif%}
+           {%endif%}
 							</li>
 						</ul>
 					</div>

@@ -2,254 +2,81 @@
 <li>
 						<div class="cst-mob-header-dd-tab">
 							<ul class="cst-mob-header-dd-tab-list">
-								<li class="tab-listing active-tab" data-tab="first-tab"><a  href="#">Woman</a></li>
-								<li class="tab-listing" data-tab="second-tab"><a href="#">Men</a></li>
+								<li class="tab-listing active-tab" data-tab="first-tab"><a  href="#">{{section.settings.mobile_mega_1}}</a></li>
+								<li class="tab-listing" data-tab="second-tab"><a href="#">{{section.settings.mobile_mega_2}}</a></li>
 							</ul>
 							<div data-content="first-tab" class="active_content cst-mob-header-dd-tab-cont">
-								<div class="cst-mob-header-dd-tab-cont-box">
-									<h3>Shoes</h3>
-									<ul class="cst-mob-header-dd-tab-cont-list">
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Sneakers</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Anytime Flats</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>All-Day Heel</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Everyday Flats</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="cst-mob-header-dd-tab-cont-box">
-									<h3>Style</h3>
-									<ul class="cst-mob-header-dd-tab-cont-list">
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Classics</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Luxury</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Limited Edition</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Neutrals</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Metallics</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Prints</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Ribbons</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="cst-mob-header-dd-tab-cont-box">
-									<h3>Colors</h3>
+							 {% for link in linklists[section.settings.mobile_mega_1].links %}	
+                              {% if link.handle =="colors" %}
+                              <div class="cst-mob-header-dd-tab-cont-box">
+									<h3>{{link.title}}</h3>
 									<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
-										<li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
+									{% for childlink in link.links %}	
                                       <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
+											<a href="{{childlink.url}}">
+                                              {% capture imagename %}{{childlink.title | handleize | append: ".png"}}{%endcapture%}
+												<img src="{{imagename| file_url}}">												
 											</a>
 										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
+                                       {%endfor%}
 									</ul>
 								</div>
+                              {%else%}
+                              <div class="cst-mob-header-dd-tab-cont-box">
+                                 
+									<h3>{{link.title}}</h3>
+                                  <ul class="cst-mob-header-dd-tab-cont-list">
+                                       {% for childlink in link.links %}
+										<li>
+											<a href="{{childlink.url}}">
+                                              {% capture imagenamestyle %}{{childlink.title | handleize | append: ".png"}}{%endcapture%}
+												<div><img src="{{imagenamestyle | file_url }}" /></div>
+												<span>{{childlink.title}}</span>
+											</a>
+										</li>
+                                      {%endfor%}
+									</ul>
+                               </div>
+                              {%endif%}
+								{%endfor%}
+								
 							</div>
                           <div style="display:none;" data-content="second-tab" class="cst-mob-header-dd-tab-cont">
-								<div class="cst-mob-header-dd-tab-cont-box">
-									<h3>Shoes</h3>
-									<ul class="cst-mob-header-dd-tab-cont-list">
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Sneakers</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Anytime Flats</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>All-Day Heel</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Everyday Flats</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="cst-mob-header-dd-tab-cont-box">
-									<h3>Style</h3>
-									<ul class="cst-mob-header-dd-tab-cont-list">
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Classics</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Luxury</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Limited Edition</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Neutrals</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Metallics</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Prints</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<div><img src="{{'dummy.jpg' | asset_url | replace: ".jpg","_small.jpg" }}" /></div>
-												<span>Ribbons</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="cst-mob-header-dd-tab-cont-box">
-									<h3>Colors</h3>
+								 {% for link in linklists[section.settings.mobile_mega_2].links %}	
+                              {% if link.handle =="colors" %}
+                              <div class="cst-mob-header-dd-tab-cont-box">
+									<h3>{{link.title}}</h3>
 									<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
-										<li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
+									{% for childlink in link.links %}	
                                       <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
+											<a href="{{childlink.url}}">
+												{% capture imagename %}{{childlink.title | handleize | append: ".png"}}{%endcapture%}
+												<img src="{{imagename| file_url}}">	
 											</a>
 										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
-                                      <li>
-											<a href="#">
-												<img src="{{'color.png' | asset_url| replace: ".png","_small.png"}}">												
-											</a>
-										</li>
+                                       {%endfor%}
 									</ul>
 								</div>
+                              {%else%}
+                              <div class="cst-mob-header-dd-tab-cont-box">
+                                 
+									<h3>{{link.title}}</h3>
+                                  <ul class="cst-mob-header-dd-tab-cont-list">
+                                       {% for childlink in link.links %}
+										<li>
+											<a href="{{childlink.url}}">
+												<div>
+                                              {% capture imagename %}{{childlink.title | handleize | append: ".png"}}{%endcapture%}
+												<img src="{{imagename| file_url}}">	
+                                              </div>
+												<span>{{childlink.title}}</span>
+											</a>
+										</li>
+                                      {%endfor%}
+									</ul>
+                               </div>
+                              {%endif%}
+								{%endfor%}
 							</div>
 						</div>
 					</li>

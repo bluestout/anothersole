@@ -34,13 +34,24 @@
             
             {% if link.handle == section.settings.main_linklist_1 %}
             {% assign selectedlist = section.settings.main_linklist_1 %}
-            
+             {% assign text_11 = section.settings.last_text_11 %}
+             {% assign link_11 = section.settings.last_link_11 %}
+             {% assign text_12 = section.settings.last_text_12 %}
+             {% assign link_12 = section.settings.last_link_12 %}
           {%include "mega-menu-desktop"%}
               {% elsif link.handle == section.settings.main_linklist_2 %}
              {% assign selectedlist = section.settings.main_linklist_2 %}
+             {% assign text_11 = section.settings.last_text_21 %}
+             {% assign link_11 = section.settings.last_link_21 %}
+             {% assign text_12 = section.settings.last_text_22 %}
+             {% assign link_12 = section.settings.last_link_22 %}
               {%include "mega-menu-desktop"%}
             {% elsif link.handle == section.settings.main_linklist_3 %}
              {% assign selectedlist = section.settings.main_linklist_3 %}
+             {% assign text_11 = section.settings.last_text_31 %}
+             {% assign link_11 = section.settings.last_link_31 %}
+             {% assign text_12 = section.settings.last_text_32 %}
+             {% assign link_12 = section.settings.last_link_32 %}
               {%include "mega-menu-desktop"%}
             {%endif%}
           </li>

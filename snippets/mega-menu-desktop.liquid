@@ -3,7 +3,7 @@
 <div class="ant-mm-drop-row">
 <div class="ant-mm-drop-row">
 
-    {% for link in linklists["women"].links %}
+    {% for link in linklists[selectedlist].links %}
 
   {%- assign child_list_handle = link.title | handleize -%}
   {% if link.handle =="colors" %}
@@ -12,8 +12,8 @@
 <h3>{{link.title}}</h3>
 <ul class="ant-mm-drop-box-list ant-mm-drop-box-inline-list">
  {% for childlink in link.links %}
-  {% capture imagename %}'{{link.title | handleize | append: ".png"}}'{%endcapture%}
-<li><a href="{{childlink.url}}"><span class="ant-mm-drop-box-color"><img src="" /></span> {{childlink.title}}</a></li>
+  {% capture imagename %}{{childlink.title | handleize | append: ".png"}}{%endcapture%}
+<li><a href="{{childlink.url}}"><span class="ant-mm-drop-box-color"><img src="{{imagename| file_url}}" /></span> {{childlink.title}}</a></li>
  {%endfor%}
 </ul>
 </div>
@@ -37,15 +37,15 @@
 <div class="ant-mm-drop-block ant-mm-drop-img-text-block">
 <div class="ant-mm-drop-box ant-mm-drop-box-last">
 <div class="ant-mm-drop-box-con">
-<a href="#">
-<img src="{{'gift_2.5x.png' | asset_url}}" />
-<h3>Gift Cards</h3>
+<a href="{{link_11}}">
+<img src="{{section.settings.gift_image| img_url: "original"}}" />
+<h3>{{text_11}}</h3>
 </a>
   </div>
   <div class="ant-mm-drop-box-con">
-  <a href="#">
-<img src="{{'3BUY1FEED1.png' | asset_url}}" />
-<h3>#BUY1FEED1</h3>
+  <a href="{{link_12}}">
+<img src="{{section.settings.gift_image_2| img_url: "original"}}" />
+<h3>{{text_12}}</h3>
 </a>
 </div>
 </div>

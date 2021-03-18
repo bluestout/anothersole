@@ -27,13 +27,14 @@
     <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
       <div style="padding-top:{% unless preview_image == blank %}{{ 1 | divided_by: preview_image.aspect_ratio | times: 100 }}%{% else %}100%{% endunless %};">
         <img id="{{ img_id }}"
-              class="grid-view-item__image lazyload"
+              class="pro-feature-image grid-view-item__image lazyload"
               alt="{{ preview_image.alt }}"
               data-src="{{ img_url }}"
               data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
               data-aspectratio="{{ preview_image.aspect_ratio }}"
               data-sizes="auto"
               data-image>
+        <img class="pro-hover-image" src="{{ product.images[1] | img_url: 'large' }}" alt="{{ product.images.last.alt | escape }}" />
       </div>
     </div>
   </div>
@@ -63,7 +64,8 @@
 									{% if forloop.index < 5 %}
 									<li><a href="{{ pro.url }}" class="dd{%if pro.metafields.information.color_code =="FFFFFF"%} custom-white{%endif%}"  style="background-color:#{{ pro.metafields.information.color_code }}"></a></li>
 								{%endif%}
-                                  {%capture pending_number%}<div class="swatch-color-count-text-hover"><span class="hover_number">+{% if forloop.last %}{{forloop.index | minus: 4}}{%endif%} more</span></div>{%endcapture%}
+                                  {%if forloop.last %}{% assign lastnumber = forloop.index %}{%endif%}
+                                  {% if lastnumber < 5 %}{%else%}{%capture pending_number%}<div class="swatch-color-count-text-hover"><span class="hover_number">+{% if forloop.last %}{{forloop.index | minus: 4}}{%endif%} more</span></div>{%endcapture%}{%endif%}
                                   {%capture total_number%}<div class="swatch-color-count-text-total"><span class="total_number">{% if forloop.last %}{{forloop.index}}{%endif%} Colors Available</span></div>{%endcapture%}	
                                   {% endfor %}
                                   

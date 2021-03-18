@@ -7,7 +7,8 @@
                   {% for block in section.blocks %}
 					<li>
 						<a href="{{ block.settings.link}}">
-							<img src="{{ block.settings.image | img_url: 'large'}}" />
+							<img class="hm-lt-sticky-section-img-def" src="{{ block.settings.image | img_url: 'large'}}" />
+                            <img class="hm-lt-sticky-section-img-hov" src="{{ block.settings.hover_image | img_url: 'large'}}" />
 							<div class="hm-lt-sticky-section-right-cont">
 								<h3>{{ block.settings.title}}</h3>
 								<p>{{ block.settings.sub_title}}</p>
@@ -204,7 +205,29 @@
             "da": "Billede",
             "de": "Foto",
             "en": "Image"
-          }
+          },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 360 x 480 px "
+        }
+        },
+{
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "On Hover Image"
+          },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 360 x 480 px "
+        }
         },
 {
       "type": "text",

@@ -1,4 +1,4 @@
-<div class="product-template__container page-width"
+<div class="product-template__container page-width ansl-cst-product-pg-sec"
   id="ProductSection-{{ section.id }}"
   data-section-id="{{ section.id }}"
   data-section-type="product"
@@ -38,11 +38,48 @@
   <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
     <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-
+<div class="pro-thumb-gal-img-sec">
+      <div class="main-thumb-image-product">
+        <ul>
+      {% for image in product.images %}
+          <li><img src="{{image.src| img_url: "small"}}"></li>
+      {%endfor%}
+        </ul>
+      </div>
+      
+      <div class="main-large-image-product">
+        <ul>
+      {% for image in product.images %}
+          <li><img src="{{image.src| img_url: "master"}}"></li>
+             {% if forloop.first%}
+          <li>
+          <div class="sin-pro-gall-fea-row">
+	<ul>
+		<li>
+			<div><img src ="{{section.settings.image_1 | img_url: "original"}}" /></div>
+			<p>{{section.settings.text_1}}</p>
+		</li>
+		<li>
+			<div><img src ="{{section.settings.image_2 | img_url: "original"}}" /></div>
+			<p>{{section.settings.text_2}}</p>
+		</li>
+		<li>
+			<div><img src ="{{section.settings.image_3 | img_url: "original"}}" /></div>
+			<p>{{section.settings.text_3}}</p>
+		</li>
+	</ul>
+</div>
+          </li>
+          {%endif%}
+      {%endfor%}
+        </ul>
+      </div>
+      </div>
+      {%comment%}
       {%- for media in product.media -%}
         {% include 'media', media: media, featured_media: featured_media, height: height, enable_image_zoom: enable_image_zoom, image_zoom_size: product_image_zoom_size, image_scale: product_image_scale %}
       {%- endfor -%}
-
+{%endcomment%}
       <noscript>
         {% capture product_image_size %}{{ height }}x{% endcapture %}
         <img src="{{ featured_media | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_media.alt }}" id="FeaturedMedia-{{ section.id }}" class="product-featured-media" style="max-width: {{ height }}px;">
@@ -63,7 +100,7 @@
         </button>
       {%- endif -%}
 
-
+{%comment%}
       {% if product.media.size > 1 %}
         {% if product.media.size > 4 %}
           {%- assign enable_thumbnail_slides = true -%}
@@ -129,9 +166,10 @@
           </div>
         </div>
       {% endif %}
+      {%endcomment%}
     </div>
 
-    <div class="grid__item {{ product_description_width }}">
+    <div class="custom-product-info grid__item {{ product_description_width }}">
       <div class="product-single__meta">
 
         <h1 class="product-single__title">{{ product.title }}</h1>
@@ -338,6 +376,7 @@
   },
   "settings": [
     {
+
       "type": "checkbox",
       "id": "show_quantity_selector",
       "label": {
@@ -472,6 +511,94 @@
       },
       "default": true
     },
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Information"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 1"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 1"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_1",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 1"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 2"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 2"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_2",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 2"
+      }
+    },
+{
+      "type": "text",
+      "id": "text_3",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text 3"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 3"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_3",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Image 3"
+      }
+    },
+
     {
       "type": "header",
       "content": {
