@@ -4,7 +4,7 @@
 			<div class="hm-gift-card-block">
 				<div class="hm-gift-card-box">
 					<div class="hm-gift-card-box-img">
-						<img src="{{section.settings.gift_image | img_url}}" />
+						{{section.settings.gift_svg}}
 					</div>
 					<h3>{{section.settings.gift_text }}</h3>
 					<p>{{section.settings.gift_desc}}</p>
@@ -18,11 +18,11 @@
 					<h3>{{section.settings.return_title}}</h3>
 					<ul>
 						<li>
-							<div class="hm-ret-grnt-box-icon"><img src="{{section.settings.return_image_1 | img_url}}" /></div>
+							<div class="hm-ret-grnt-box-icon">{{section.settings.return_svg}}</div>
 							<p><span>{{section.settings.return_title_1}}</span><a href="{{section.settings.return_link}}">{{section.settings.return_link_text}}</a></p>
 						</li>
 						<li>
-							<div class="hm-ret-grnt-box-icon"><img src="{{section.settings.return_image_2 | img_url}}" /></div>
+							<div class="hm-ret-grnt-box-icon">{{section.settings.return_svg_2}}</div>
 							<p><span>{{section.settings.return_title_2}}</span></p>
 						</li>
 					</ul>
@@ -41,19 +41,20 @@
     "name": "Gift Cards",
     "settings": [
 {
-      "type": "image_picker",
-      "id": "gift_image",
+      "type": "textarea",
+      "id": "gift_svg",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Gift image"
-      }, "info": {
-          "cs": "Dojde ke zmenšení na 32 × 32 px",
-          "da": "Skaleres ned til 32 x 32 px",
-          "de": "Wird in der Größe 32 x 32 px angezeigt",
-          "en": "Recommended 100 x 60 px "
-        }
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Gift Card"
+      }
     },
 {
       "type": "text",
@@ -168,19 +169,20 @@
       }
     },
 {
-      "type": "image_picker",
-      "id": "return_image_1",
+      "type": "textarea",
+      "id": "return_svg",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Return image 1"
-      }, "info": {
-          "cs": "Dojde ke zmenšení na 32 × 32 px",
-          "da": "Skaleres ned til 32 x 32 px",
-          "de": "Wird in der Größe 32 x 32 px angezeigt",
-          "en": "Recommended 100 x 100 px "
-        }
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Return SVG HTML"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Return SVG"
+      }
     },
 {
       "type": "text",
@@ -199,19 +201,20 @@
       }
     },
 {
-      "type": "image_picker",
-      "id": "return_image_2",
+      "type": "textarea",
+      "id": "return_svg_2",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Return image 2"
-      }, "info": {
-          "cs": "Dojde ke zmenšení na 32 × 32 px",
-          "da": "Skaleres ned til 32 x 32 px",
-          "de": "Wird in der Größe 32 x 32 px angezeigt",
-          "en": "Recommended 100 x 100 px "
-        }
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Return SVG HTML 2"
+      },
+      "default": {
+        "cs": "Gift Card",
+        "da": "Gift Card",
+        "de": "Gift Card",
+        "en": "Return SVG"
+      }
     },
 {
       "type": "text",

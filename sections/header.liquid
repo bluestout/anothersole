@@ -325,88 +325,7 @@
     "zh-TW": "標頭"
   },
   "settings": [
-    {
-      "type": "radio",
-      "id": "align_logo",
-      "label": {
-        "cs": "Zarovnání loga",
-        "da": "Logojustering",
-        "de": "Logo-Ausrichtung",
-        "en": "Logo alignment",
-        "es": "Alineación de logo",
-        "fi": "Logon tasaus",
-        "fr": "Alignement du logo",
-        "it": "Allineamento logo",
-        "ja": "ロゴアラインメント",
-        "ko": "로고 정렬",
-        "nb": "Logojustering",
-        "nl": "Logo-uitlijning",
-        "pl": "Wyrównanie logo",
-        "pt-BR": "Alinhamento do logo",
-        "pt-PT": "Alinhamento do logótipo",
-        "sv": "Logojustering",
-        "th": "การจัดวางโลโก้",
-        "tr": "Logo hizalaması",
-        "vi": "Căn chỉnh logo",
-        "zh-CN": "logo 对齐方式",
-        "zh-TW": "商標對齊"
-      },
-      "default": "left",
-      "options": [
-        {
-          "value": "left",
-          "label": {
-            "cs": "Doleva",
-            "da": "Venstre",
-            "de": "Links",
-            "en": "Left",
-            "es": "Izquierda",
-            "fi": "Vasen",
-            "fr": "Gauche",
-            "it": "Sinistra",
-            "ja": "左",
-            "ko": "왼쪽",
-            "nb": "Venstre",
-            "nl": "Links",
-            "pl": "Do lewej",
-            "pt-BR": "Esquerda",
-            "pt-PT": "Esquerda",
-            "sv": "Vänster",
-            "th": "ด้านซ้าย",
-            "tr": "Sol",
-            "vi": "Bên trái",
-            "zh-CN": "左侧",
-            "zh-TW": "左方"
-          }
-        },
-        {
-          "value": "center",
-          "label": {
-            "cs": "Na střed",
-            "da": "Centreret",
-            "de": "Mittig",
-            "en": "Centered",
-            "es": "Centrada",
-            "fi": "Keskitetty",
-            "fr": "Centré",
-            "it": "Centrato",
-            "ja": "中央揃え",
-            "ko": "센터 맞추기",
-            "nb": "Sentrert",
-            "nl": "Gecentreerd",
-            "pl": "Wyśrodkowane",
-            "pt-BR": "Centralizado",
-            "pt-PT": "Centrado",
-            "sv": "Centrera",
-            "th": "ตรงกลาง",
-            "tr": "Orta",
-            "vi": "Giữa",
-            "zh-CN": "居中",
-            "zh-TW": "置中"
-          }
-        }
-      ]
-    },
+    
     {
       "type": "image_picker",
       "id": "logo",
@@ -434,38 +353,7 @@
         "zh-TW": "標誌圖片"
       }
     },
-    {
-      "type": "range",
-      "id": "logo_max_width",
-      "label": {
-        "cs": "Šířka vlastního loga",
-        "da": "Tilpasset logobredde",
-        "de": "Logobreite",
-        "en": "Custom logo width",
-        "es": "Ancho del logo personalizado",
-        "fi": "Mukautetun logon leveys",
-        "fr": "Largeur personnalisée du logo",
-        "it": "Larghezza logo personalizzato",
-        "ja": "ロゴの幅をカスタマイズする",
-        "ko": "사용자 지정 로고 폭",
-        "nb": "Tilpasset logobredde",
-        "nl": "Aangepaste logo-breedte",
-        "pl": "Niestandardowa szerokość logo",
-        "pt-BR": "Largura do logo personalizado",
-        "pt-PT": "Largura de logótipo personalizada",
-        "sv": "Anpassad logotypsbredd",
-        "th": "ความกว้างของโลโก้แบบกำหนดเอง",
-        "tr": "Özel logo genişliği",
-        "vi": "Chiều rộng logo tùy chỉnh",
-        "zh-CN": "自定义 logo 宽度",
-        "zh-TW": "自訂商標寬度"
-      },
-      "min": 50,
-      "max": 250,
-      "step": 5,
-      "unit": "px",
-      "default": 100
-    },
+    
     {
       "type": "link_list",
       "id": "main_linklist",
@@ -504,23 +392,35 @@
       }
     },
 {
-      "type": "image_picker",
-      "id": "gift_image",
+      "type": "textarea",
+      "id": "gift_image_1",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Gift Image"
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Gift Card SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Gift Cards"
       }
     },
 {
-      "type": "image_picker",
+      "type": "textarea",
       "id": "gift_image_2",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Gift Image"
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Gift Card SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Gift Cards"
       }
     },
     {
@@ -541,7 +441,7 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Last Child Text 1"
+        "en": "Gift Card Text 1"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
@@ -557,7 +457,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Last Child Link 1"
+        "en": "Gift Card Link 1"
       },
       "info": {
         "cs": "Volitelné",
@@ -573,7 +473,7 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Last Child Text 2"
+        "en": "Gift Card Text 2"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
@@ -589,7 +489,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Last Child Link 2"
+        "en": "Gift Card Link 2"
       },
       "info": {
         "cs": "Volitelné",
@@ -616,7 +516,7 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Last Child Text 1"
+        "en": "Gift Card Text 1"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
@@ -632,7 +532,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Last Child Link 1"
+        "en": "Gift Card Link 1"
       },
       "info": {
         "cs": "Volitelné",
@@ -648,7 +548,7 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Last Child Text 2"
+        "en": "Gift Card Text 2"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
@@ -664,7 +564,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Last Child Link 2"
+        "en": "Gift Card Link 2"
       },
       "info": {
         "cs": "Volitelné",
@@ -691,7 +591,7 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Last Child Text 1"
+        "en": "Gift Card Text 1"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
@@ -707,7 +607,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Last Child Link 1"
+        "en": "Gift Card Link 1"
       },
       "info": {
         "cs": "Volitelné",
@@ -723,7 +623,7 @@
         "cs": "Text",
         "da": "Tekst",
         "de": "Text",
-        "en": "Last Child Text 2"
+        "en": "Gift Card Text 2"
       },
       "default": {
         "cs": "Tady můžete zadat oznámení",
@@ -739,7 +639,7 @@
         "cs": "Odkaz",
         "da": "Link",
         "de": "Link",
-        "en": "Last Child Link 2"
+        "en": "Gift Card Link 2"
       },
       "info": {
         "cs": "Volitelné",
@@ -822,7 +722,7 @@
         "en": "Make Good Do Good"
       }
     },
-    {
+    {        
       "type": "url",
       "id": "custom_link",
       "label": {
@@ -830,7 +730,7 @@
         "da": "Link",
         "de": "Link",
         "en": "Custom Link"
-      },
+      },  
       "info": {
         "cs": "Volitelné",
         "da": "Valgfri",
@@ -844,7 +744,7 @@
         "cs": "Panel oznámení",
         "da": "Meddelelseslinje",
         "de": "Ankündigungsbereich",
-        "en": "Offers"
+        "en": "Offers Slider"
       }
     },
 {
@@ -895,88 +795,9 @@
         "en": "Make Good Do Good"
       }
     },
-    {
-      "type": "header",
-      "content": {
-        "cs": "Panel oznámení",
-        "da": "Meddelelseslinje",
-        "de": "Ankündigungsbereich",
-        "en": "Announcement bar",
-        "es": "Barra de anuncios",
-        "fi": "Ilmoituspalkki",
-        "fr": "Barre d'annonces",
-        "it": "Barra degli annunci",
-        "ja": "告知バー",
-        "ko": "공지 표시줄",
-        "nb": "Kunngjøringslinje",
-        "nl": "Aankondigingsbalk",
-        "pl": "Pasek ogłoszeń",
-        "pt-BR": "Barra de avisos",
-        "pt-PT": "Barra de comunicado",
-        "sv": "Meddelandefält",
-        "th": "แถบประกาศ",
-        "tr": "Duyuru çubuğu",
-        "vi": "Thanh thông báo",
-        "zh-CN": "公告栏",
-        "zh-TW": "公告列"
-      }
-    },
-    {
-      "type": "checkbox",
-      "id": "message",
-      "label": {
-        "cs": "Zobrazit oznámení",
-        "da": "Vis meddelelse",
-        "de": "Ankündigung anzeigen",
-        "en": "Show announcement",
-        "es": "Mostrar anuncio",
-        "fi": "Näytä ilmoitus",
-        "fr": "Afficher l'annonce",
-        "it": "Mostra annuncio",
-        "ja": "告知を表示する",
-        "ko": "공지 표시",
-        "nb": "Vis kunngjøring",
-        "nl": "Aankondiging weergeven",
-        "pl": "Pokaż ogłoszenie",
-        "pt-BR": "Exibir comunicado",
-        "pt-PT": "Mostrar comunicado",
-        "sv": "Visa tillkännagivande",
-        "th": "แสดงประกาศ",
-        "tr": "Duyuruyu göster",
-        "vi": "Hiển thị thông báo",
-        "zh-CN": "显示公告",
-        "zh-TW": "顯示公告"
-      },
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "home_page_only",
-      "label": {
-        "cs": "Jen domovská stránka",
-        "da": "Kun startside",
-        "de": "Nur Startseite",
-        "en": "Home page only",
-        "es": "Solo página de inicio",
-        "fi": "Vain etusivu",
-        "fr": "Page d'accueil uniquement",
-        "it": "Solo home page",
-        "ja": "ホームページのみ",
-        "ko": "홈페이지만",
-        "nb": "Kun på startsiden",
-        "nl": "Alleen homepage",
-        "pl": "Tylko strona główna",
-        "pt-BR": "Apenas na página inicial",
-        "pt-PT": "Apenas a página inicial",
-        "sv": "Endast hemsida",
-        "th": "หน้าแรกเท่านั้น",
-        "tr": "Yalnızca ana sayfa",
-        "vi": "Chỉ trang chủ",
-        "zh-CN": "仅主页",
-        "zh-TW": "僅限首頁"
-      },
-      "default": true
-    },
+    
+    
+    
     {
       "type": "text",
       "id": "message_text",
@@ -1006,81 +827,8 @@
         "cs": "Volitelné",
         "da": "Valgfri",
         "de": "Optional",
-        "en": "Optional",
-        "es": "Opcional",
-        "fi": "Valinnainen",
-        "fr": "Facultatif",
-        "it": "Facoltativo",
-        "ja": "オプション",
-        "ko": "선택 사항",
-        "nb": "Valgfritt",
-        "nl": "Optioneel",
-        "pl": "Opcjonalnie",
-        "pt-BR": "Opcional",
-        "pt-PT": "Opcional",
-        "sv": "Valfritt",
-        "th": "ไม่จำเป็น",
-        "tr": "İsteğe bağlı",
-        "vi": "Không bắt buộc",
-        "zh-CN": "可选",
-        "zh-TW": "(選填)"
+        "en": "Optional"
       }
-    },
-    {
-      "type": "color",
-      "id": "color_bg",
-      "label": {
-        "cs": "Panel",
-        "da": "Bjælke",
-        "de": "Zeile",
-        "en": "Bar",
-        "es": "Barra",
-        "fi": "Palkki",
-        "fr": "Barre",
-        "it": "Barra",
-        "ja": "バー",
-        "ko": "바",
-        "nb": "Felt",
-        "nl": "Balk",
-        "pl": "Pasek",
-        "pt-BR": "Barra",
-        "pt-PT": "Barra",
-        "sv": "Fält",
-        "th": "แถบ",
-        "tr": "Çubuk",
-        "vi": "Thanh",
-        "zh-CN": "栏",
-        "zh-TW": "橫條"
-      },
-      "default": "#3a3a3a"
-    },
-    {
-      "type": "color",
-      "id": "color_text",
-      "label": {
-        "cs": "Text",
-        "da": "Tekst",
-        "de": "Text",
-        "en": "Text",
-        "es": "Texto",
-        "fi": "Teksti",
-        "fr": "Texte",
-        "it": "Testo",
-        "ja": "テキスト",
-        "ko": "텍스트",
-        "nb": "Tekst",
-        "nl": "Tekst",
-        "pl": "Tekst",
-        "pt-BR": "Texto",
-        "pt-PT": "Texto",
-        "sv": "Text",
-        "th": "ข้อความ",
-        "tr": "Metin",
-        "vi": "Văn bản",
-        "zh-CN": "文本",
-        "zh-TW": "文字"
-      },
-      "default": "#ffffff"
     }
   ]
 }

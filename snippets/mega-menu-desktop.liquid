@@ -12,7 +12,7 @@
 <h3>{{link.title}}</h3>
 <ul class="ant-mm-drop-box-list ant-mm-drop-box-inline-list">
  {% for childlink in link.links %}
-  {% capture imagename %}{{childlink.title | handleize | append: ".png"}}{%endcapture%}
+  {% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
 <li><a href="{{childlink.url}}"><span class="ant-mm-drop-box-color"><img src="{{imagename| file_url}}" /></span> {{childlink.title}}</a></li>
  {%endfor%}
 </ul>
@@ -38,13 +38,13 @@
 <div class="ant-mm-drop-box ant-mm-drop-box-last">
 <div class="ant-mm-drop-box-con">
 <a href="{{link_11}}">
-<img src="{{section.settings.gift_image| img_url: "original"}}" />
+  <div class="dt-drop-gift-car-01">{{section.settings.gift_image_1}}</div>
 <h3>{{text_11}}</h3>
 </a>
   </div>
   <div class="ant-mm-drop-box-con">
   <a href="{{link_12}}">
-<img src="{{section.settings.gift_image_2| img_url: "original"}}" />
+    <div class="dt-drop-gift-car-02">{{section.settings.gift_image_2}}</div>
 <h3>{{text_12}}</h3>
 </a>
 </div>

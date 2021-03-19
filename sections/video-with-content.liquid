@@ -9,8 +9,8 @@
 					<h3>{{section.settings.heading}}</h3>
 					<p>{{section.settings.sub_heading}}</p>
 					<ul>
-						<li><span><img src="{{section.settings.image_1 | img_url : "original"}}" /></span> {{section.settings.heading_1}}</li>
-						<li><span><img src="{{section.settings.image_2 | img_url : "original"}}" /></span> {{section.settings.heading_2}}</li>
+						<li><span>{{section.settings.svg_1}}</span> {{section.settings.heading_1}}</li>
+						<li><span>{{section.settings.svg_2}}</span> {{section.settings.heading_2}}</li>
 					</ul>
 					<div class="hm-banner-sec-cont-btn"><a href="{{section.settings.btn_link}}" class="wht-bk-rounded-btn">{{section.settings.btn_text}}</a></div>
 				</div>
@@ -71,21 +71,21 @@
       }
     },
 {
-          "type": "image_picker",
-          "id": "image_1",
-          "label": {
-            "cs": "Obrázek",
-            "da": "Billede",
-            "de": "Foto",
-            "en": "Image 1"
-          },
-        "info": {
-          "cs": "Dojde ke zmenšení na 32 × 32 px",
-          "da": "Skaleres ned til 32 x 32 px",
-          "de": "Wird in der Größe 32 x 32 px angezeigt",
-          "en": "Recommended 85 x 85 px "
-        }
-        },
+      "type": "textarea",
+      "id": "svg_1",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG Image HTML 1 "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "SVG"
+      }
+    },
 {
       "type": "text",
       "id": "heading_2",
@@ -103,21 +103,21 @@
       }
     },
 {
-          "type": "image_picker",
-          "id": "image_2",
-          "label": {
-            "cs": "Obrázek",
-            "da": "Billede",
-            "de": "Foto",
-            "en": "Image"
-          },
-        "info": {
-          "cs": "Dojde ke zmenšení na 32 × 32 px",
-          "da": "Skaleres ned til 32 x 32 px",
-          "de": "Wird in der Größe 32 x 32 px angezeigt",
-          "en": "Recommended 85 x 85 px "
-        }
-        },
+      "type": "textarea",
+      "id": "svg_2",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG Image HTML 2 "
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "SVG"
+      }
+    },
 {
       "type": "text",
       "id": "btn_text",

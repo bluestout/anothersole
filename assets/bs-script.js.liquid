@@ -34,5 +34,30 @@ $(document).ready(function(){
       $(this).siblings('.bs-acct-mob-list-block').hide();
     }
   });
-  
+  /*****************blog loadmore*****************************/
+
+  $("#bs-blog-load-btn").on("click",function(e){
+    e.preventDefault();
+    var page_url = "/blogs/news?page=";
+    var page_total =  parseInt($("#bs-art-pg-total").val());
+    var page_cur =  parseInt($("#bs-art-pg-cur").val());
+    if(page_cur < page_total)
+    {
+      page_url = page_url + (page_cur + 1);
+      $.ajax({
+        type: 		'GET',
+        dataType: 	'html',
+        url: 		page_url,     
+        success: function(data) {
+          let filteredData = $(data).find(".bs-blog-row");
+          $(filteredData).appendTo($(".bs-blog-row").parent());
+          $("#bs-art-pg-cur").val(page_cur + 1);
+          if(page_cur + 1 >= page_total)
+          {
+            $("#bs-blog-load-btn").hide();
+          }
+        }
+      });
+    }
+  });
 }) 

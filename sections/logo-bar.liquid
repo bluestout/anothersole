@@ -6,7 +6,7 @@
            {% for block in section.blocks %}
 			<div class="hm-fea-icon-txt-block">
 				<div class="hm-fea-icon-txt-box">
-					<div class="hm-fea-icon-txt-box-img"><img src=" {{ block.settings.image | img_url:'medium'}}" /></div>
+					<div class="hm-fea-icon-txt-box-img">{{ block.settings.svg_logo}}</div>
 					<p>{{block.settings.title}}</p>
 				</div>
 			</div>
@@ -138,37 +138,21 @@
       },
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": {
-            "cs": "Obrázek",
-            "da": "Billede",
-            "de": "Foto",
-            "en": "Image",
-            "es": "Imagen",
-            "fi": "Kuva",
-            "fr": "Image",
-            "it": "Immagine",
-            "ja": "画像",
-            "ko": "이미지",
-            "nb": "Bilde",
-            "nl": "Afbeelding",
-            "pl": "Obraz",
-            "pt-BR": "Imagem",
-            "pt-PT": "Imagem",
-            "sv": "Bild",
-            "th": "รูปภาพ",
-            "tr": "Görsel",
-            "vi": "Hình ảnh",
-            "zh-CN": "图片",
-            "zh-TW": "圖片"
-          }, "info": {
-          "cs": "Dojde ke zmenšení na 32 × 32 px",
-          "da": "Skaleres ned til 32 x 32 px",
-          "de": "Wird in der Größe 32 x 32 px angezeigt",
-          "en": "Recommended 110 x 70 px "
-        }
-        },
+      "type": "textarea",
+      "id": "svg_logo",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "SVG"
+      }
+    },
 {
       "type": "text",
       "id": "title",

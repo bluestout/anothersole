@@ -1,0 +1,83 @@
+{% paginate blog.articles by 6 %}
+<div class="bs-blog-page">
+    <div class="bs-blog-page-ini">
+      <div class="bs-blog-page-title">
+        <h1>{{ page_title }}</h1>
+      </div>
+      <div class="bs-blog-article-list">
+        <div class="bs-blog-row">
+          {% for article in blog.articles %}
+            <div class="bs-blog-col">
+              <div class="bs-blog-info-top">
+                <a href="{{ article.url }}" class="article__link">
+                  {% if article.image %}
+                    <img class="lazyload" src="{{article.image.src | img_url: 'master'}}"/>
+                  {% endif %}
+                  <div class="bs-blog-info-author">
+                    {{ article.published_at | time_tag: format: 'date' }} by <span>{{ article.author }}</span>
+                  </div>
+                  <h2 class="bs-blog-info-title">
+                    {{ article.title | escape }}
+                  </h2>
+                </a>
+              </div>
+              <div class="bs-blog-info-des">
+                {% if article.excerpt.size > 0 %}
+                  {{ article.excerpt | strip_html | truncate: 180}}
+                {% else %}
+                  {{ article.content | strip_html | truncate: 180 }}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>
+{%- if paginate.pages > 1 -%}
+  {%if paginate.next.is_link %}
+    <div class="bs-blog-loadmore-block">
+      <input type="hidden" name="bs-art-pg-total" id="bs-art-pg-total" value="{{paginate.pages}}"/>
+      <input type="hidden" name="bs-art-pg-cur" id="bs-art-pg-cur" value="1"/>
+      <button class="bs-blog-loadmore-btn" id="bs-blog-load-btn" data-url="{{ paginate.next.url }}">Show More</button>
+    </div>
+  {%endif%}
+{%- endif -%}
+
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Blog pages",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "list",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "list",
+          "label": "List"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": "Show date",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
