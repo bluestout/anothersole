@@ -1,4 +1,32 @@
 <!-- /snippets/social-sharing.liquid -->
+<ul class="">
+  {% comment %} {% if settings.share_pinterest %}
+    <li>
+      <a target="_blank" href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | url_param_escape }}" class="">
+        <img class="" src="{{'bs-insta_ico.svg' | asset_url}}" />
+      </a>
+    </li>
+  {% endif %} {% endcomment %}
+
+  {% if settings.share_twitter %}
+    <li>
+      <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="">
+        <img class="" src="{{'bs-tw_ico.svg' | asset_url}}" />
+      </a>
+    </li>
+  {% endif %}
+
+  {% if settings.share_facebook %}
+    <li>
+      <a target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" class="">
+        <img class="" src="{{'bs-fb_ico.svg' | asset_url}}" />
+      </a>
+    </li>
+  {% endif %}
+
+</ul>
+
+{% comment %} <!-- /snippets/social-sharing.liquid -->
 <ul class="social-sharing">
 
   {% if settings.share_facebook %}
@@ -31,4 +59,4 @@
     </li>
   {% endif %}
 
-</ul>
+</ul> {% endcomment %}

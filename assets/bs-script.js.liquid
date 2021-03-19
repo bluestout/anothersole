@@ -34,6 +34,58 @@ $(document).ready(function(){
       $(this).siblings('.bs-acct-mob-list-block').hide();
     }
   });
+
+  var location = (window.location.pathname);
+  if(location=="/account")
+  {
+    $(".bs-acct-details-right").show();
+    $(".bs-acct-order-list-right").hide();
+    
+    /*
+    $(".AccountForm").show();
+    $(".OrderHis").hide();
+    $(".tlt-account-main-head h1").html("Profile Settings");
+    $(".CustomerSidebar li").each(function(){
+      var linkget = $(this).children("a").attr("href");
+      if(linkget==location){
+        $(this).addClass("active");
+      }
+    })*/
+  }
+  else if(location=="/account/")
+  {
+    $(".bs-acct-details-right").hide();
+    $(".bs-acct-order-list-right").show();
+
+    /*
+    $(".AccountForm").hide();
+    $(".OrderHis").show();
+    $(".tlt-account-main-head h1").html("Order History");
+    $(".CustomerSidebar li").each(function(){
+      var linkget = $(this).children("a").attr("href");
+      if(linkget==location){
+        $(this).addClass("active");
+      }
+    })*/
+  }
+  else
+  {
+    /*
+    $(".CustomerSidebar li").each(function(){
+      var linkget = $(this).children("a").attr("href");
+      if(linkget==location){
+        $(this).addClass("active");
+      }
+    })*/
+  }
+
+  $(".bs-acct-order-list-accor" ).accordion({
+    collapsible: true,
+    heightStyle: "content",
+    header: ".bs-acct-order-accor-head", 
+    active: false, 
+    animate: 0
+  });
   /*****************blog loadmore*****************************/
 
   $("#bs-blog-load-btn").on("click",function(e){

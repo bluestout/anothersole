@@ -1,0 +1,81 @@
+<div class="bs-post-page bs-pg-top-remove-padding">
+  <div class="bs-post--container">
+    <div class="bs-post-top">
+      <div>
+        {% comment %} {%- assign img_url_article = article.image.src | img_url: '2x2' | replace: '_2x2.', '_{width}x.' -%}
+        <img class="lazyload js"
+            data-src="{{ img_url_article }}"
+            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+            data-sizes="auto"
+            /> {% endcomment %}
+        <img class="lazyload" src="{{article.image.src | img_url: 'master'}}"/>
+      </div>
+      <div class="bs-post-info-block">
+        <div class="bs-post-info-author">
+          {{ article.published_at | time_tag: format: 'date' }} by <span>{{ article.author }}</span>
+        </div>
+        <div class="bs-post-info-social">
+          {% if section.settings.show_share_buttons %}
+            {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="bs-post-cont">
+      <h1 class="bs-post-title">{{article.title}}</h1>
+      {{ article.content }}
+      {% if blog.previous_article %}
+        <div class="bs-post-prev-link">{{ 'OLDER POST' | link_to: blog.previous_article }}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% comment %} <div class="section-header text-center">
+  <h1 class="article__title" id="title-0">{{ article.title }}</h1>
+  {% if section.settings.blog_show_author %}
+    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+  {% endif %}
+
+  {% if section.settings.blog_show_date %}
+    <span class="article__date">
+      {{ article.published_at | time_tag: format: 'date' }}
+    </span>
+  {% endif %}
+</div>
+
+<div class="rte">
+  {{ article.content }}
+</div>
+
+{% if section.settings.show_share_buttons %}
+  {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+{% endif %} {% endcomment %}
+
+
+
+{% schema %}
+{
+  "name": "BS Posts",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "blog_show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": "Show social sharing buttons",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
