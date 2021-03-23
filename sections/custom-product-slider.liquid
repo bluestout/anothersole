@@ -1,0 +1,184 @@
+<div class="sin-pro-text-img-slide-main">
+  <div class="desk-custom-product-slider-sect">
+    <div class="left-content-section">
+      <div class="left-content-section-inn">
+      	<h3>{{section.settings.title}}</h3>
+      	<p>{{section.settings.content}}</p>
+      </div>
+    </div>
+    <div class="right-slider-section">
+       <div class="custom-items-slider">
+      {% for block in section.blocks %}
+      <div class="custom-items">
+        <img src="{{block.settings.image | img_url: "grande"}}" />
+      </div>
+      {%endfor%}
+      </div>
+    </div>
+  </div>
+  <div class="mobile-custom-grid-sect">
+    <div class="mobile-custom-grid-sect-inn">
+      <div class="mobile-custom-grid-sect-cont">
+        <h3>A Must-have Essential</h3>
+        <p>Every modern woman has a pair of go-to shoe she knows she can rely on.</p>
+      </div>
+      <div class="img-full-width">
+        <img src="{{section.settings.image_1 | img_url: "original"}}" />
+      </div>
+      <div class="image-half-width">
+        <div class="image-half-width-box">
+        	<img src="{{section.settings.image_2 | img_url: "original"}}" />
+        </div>
+        <div class="image-half-width-box">
+          <img src="{{section.settings.image_3 | img_url: "original"}}" />
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Custom Product Slider",
+
+    "settings": [
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Mobile Images"
+      }
+    },
+{
+      "type": "image_picker",
+      "id": "image_1",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Logo image",
+        "es": "Image 1"
+      },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 600 x 600px "
+        }
+    },
+{
+      "type": "image_picker",
+      "id": "image_2",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Logo image",
+        "es": "Image 2"
+      },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 600 x 600px "
+        }
+    },
+{
+      "type": "image_picker",
+      "id": "image_3",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Logo image",
+        "es": "Image 3"
+      },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 600 x 600px "
+        }
+    },
+{
+      "type": "header",
+      "content": {
+        "cs": "Mega Menu",
+        "da": "Mega Menu",
+        "de": "Mega Menu",
+        "en": "Content For Desktop"
+      }
+    },
+{
+      "type": "text",
+      "id": "title",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Title"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Gift Cards"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "content",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Content"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Gift Cards"
+      }
+    }
+
+],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": {
+        "cs": "Logo",
+        "da": "Logo",
+        "de": "Logo",
+        "en": "Desktop Image Slider"
+      },
+      "settings": [
+        {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "cs": "Obrázek loga",
+        "da": "Logobillede",
+        "de": "Logo-Foto",
+        "en": "Logo image",
+        "es": "Image"
+      },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 600 x 600px "
+        }
+    }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

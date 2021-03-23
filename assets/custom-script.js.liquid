@@ -1,7 +1,67 @@
 $(document).ready(function(){
+  
+  /*****************Thumb Image Scroll On PDP ************/
+  $(".custom-thumb-list").click(function(){
+  var data_thumb= $(this).attr("data-thumb");
+    $('html, body').animate({
+        'scrollTop' : $("."+data_thumb).position().top+50
+    });
+  })
+  /*****************Product Slider *************************/
+  $('.custom-items-slider').slick({
+    dots: false,
+     slidesToShow: 2,
+  slidesToScroll: 2
+});	
+  /***************** Product Option Selection and Add to Cart ***********/
+  $(".btn.product-form__cart-submit").click(function(e){
+    var flag_val = false;
+  e.preventDefault();
+   var size_active =  $(".size-each").length;
+    console.log(size_active);
+    $(".size-each").each(function(){
+      if($(this).hasClass("active")){
+      flag_val = true;
+      }
+    })
+    if(flag_val==true)
+    {
+    $("#size-error").hide();
+    }
+    else{
+    $("#size-error").show();
+    }
+  }) 
+  /************************ SIZE POPUP **************************/
+  $("#size-guide").click(function(){
+  $("#shopify-section-size-guide").addClass("active");
+    $("body").addClass("size_body");
+  })
+  $("#close-login-popup").click(function(){
+  $("#shopify-section-size-guide").removeClass("active");
+     $("body").removeClass("size_body");
+  })
+  $(".size-guide__li ").click(function(){
+    $(this).siblings("li").removeClass("active");;
+    $(this).addClass("active");
+  var size_guid = $(this).attr("data-toggle");
+    $(".size-guide__item").each(function(){
+    var attribute_get = $(this).attr("aria-labelledby");
+      if(attribute_get==size_guid){
+      $(this).addClass("active");
+      }
+      else{
+      $(this).removeClass("active");
+      }
+    })
+  })
+  /*************************Shipping-Info Accordion **************/
+  $( "#shipp_accordion" ).accordion({
+      collapsible: true,heightStyle: "content"
+    });
   /*********************** PRODUCT page FAQ ****************/
   $( "#product-accordion" ).accordion({
-      collapsible: true
+      collapsible: true,heightStyle: "content"
     });
   /********************* Header Fixed ********************/
   $(window).scroll(function() {    
@@ -16,7 +76,7 @@ $(document).ready(function(){
   /********************Fotter Accordion ***********************/
   $( function() {
     $( "#footer-accordion" ).accordion({
-      collapsible: true
+      collapsible: true,heightStyle: "content"
     });
   } );
     $( function() {

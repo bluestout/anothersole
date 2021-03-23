@@ -12,7 +12,7 @@
 									<h3>{{link.title}}</h3>
 									<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
 									{% for childlink in link.links %}	
-                                      <li>
+                                      <li class="{%if childlink.handle == "white"%}custom-white{%endif%}">
 											<a href="{{childlink.url}}">
                                               {% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
 												<img src="{{imagename| file_url}}">												
@@ -48,7 +48,7 @@
 									<h3>{{link.title}}</h3>
 									<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
 									{% for childlink in link.links %}	
-                                      <li>
+                                      <li class="{%if childlink.handle == "white"%} custom-white{%endif%}">
 											<a href="{{childlink.url}}">
 												{% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
 												<img src="{{imagename| file_url}}">	

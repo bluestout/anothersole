@@ -1,0 +1,318 @@
+<div data-section-id="{{ section.id }}" class="popup-overlay {% if section.settings.show %} active {% endif %}" data-section-type="size-guide">
+    <div class="size-guide__content size-block">
+
+        <a href="#" class="close-btn" id="close-login-popup">
+            
+        </a>
+
+        <h1 class="size-guide__main-title">
+            Size Guide
+        </h1>
+
+        <ul class="size-guide__ul">
+            <li class="size-guide__li active" data-toggle="size" role="presentation">Choose the right size</li>
+            <li class="size-guide__li"  data-toggle="measure" role="presentation">How to measure your feet</li>
+        </ul>
+
+        <div data-attr="size" aria-labelledby="size" class="size-guide__item active">
+
+            <div class="size-guide__column size-guide__column--text">
+                <div class="size-guide__title">{{ section.settings.title-help }}</div>
+                <div class="size-guide__desc">
+                    {{ section.settings.text-help }}
+                  <div class="size-guide__desc_row">
+                    <div class="size-guide__desc_col">
+                      <p>Measure your feet and choose your size based on your measurements. If your foot length is 23.5 - you should be choosing size EU 38/US 7 as shown in the size guide.</p>
+                      <p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.</p>
+                      <p>Anothersole shoes have a standard width and does not cater to a wide fit. If the width of your feet exceeds the width of your footbed excessively, the leather may be stepped on and make contact with the ground leading to damage from abrasion.</p>
+                    </div>
+                    <div class="size-guide__desc_col">
+                      <p>If the initial wear feels a bit snug, be assured that our leathers will stretch to fit with each wear like a pair of leather gloves. Buying a larger size may result the shoe slipping off at the back upon stretching.</p>
+                      <p>If you are unsure and need some questions answered, please write to us at customerservice@anothersole.com or message us on FB Messenger.</p>                      
+                    </div>
+                  </div>
+                </div>
+                <span class="size-guide__readmore mobile_ hide">Read more</span>
+            </div>
+
+            <div class="size-guide__column size-table-con">
+              <div class="size-table-con-img-row">
+                <div class="size-table-con-img-block">
+                	<img src="{{ section.settings.tab_image | img_url: 'master' }}" />
+                </div>
+                <div class="size-table-con-tbl-block">
+                	<table class="size-guide-table">
+                    <thead>
+                        <tr>
+                            <th rowspan=2 colspan=1>eu<br>size</th>
+                            <th rowspan=2 colspan=1>us<br>size</th>
+                            <th colspan=2>length (cm)</th>
+                            <th colspan=2>width (cm)</th>
+                        </tr>
+                        <tr>
+                            <td>SHOE</td>
+                            <td>Ideal Foot Length</td>
+                            <td>Shoe</td>
+                            <td>Ideal Foot Width</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>35</td>
+                            <td>5</td>
+                            <td>22.8</td>
+                            <td>21.3 to 21.8</td>
+                            <td>7.8</td>
+                            <td>6.8 to 9.3</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>5.5</td>
+                            <td>23.4</td>
+                            <td>21.9 to 22.5</td>
+                            <td>8</td>
+                            <td>7 to 9.5</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>6.5</td>
+                            <td>24.1</td>
+                            <td>22.6 to 23.2</td>
+                            <td>8.2</td>
+                            <td>7.2 to 9.7</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>7</td>
+                            <td>24.8</td>
+                            <td>23.3 to 23.8</td>
+                            <td>8.4</td>
+                            <td>7.4 to 9.9</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>8</td>
+                            <td>25.3</td>
+                            <td>23.9 to 24.5</td>
+                            <td>8.6</td>
+                            <td>7.6 to 10.1</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>9</td>
+                            <td>26.1</td>
+                            <td>24.6 to 25.2</td>
+                            <td>8.8</td>
+                            <td>7.8 to 10.3</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>9.5</td>
+                            <td>26.8</td>
+                            <td>25.3 to 25.8</td>
+                            <td>9</td>
+                            <td>8 to 10.5</td>
+                        </tr>
+                        <tr>
+                            <td>42<br><small>(Classics<br>only)</small></td>
+                            <td>10</td>
+                            <td>27.4</td>
+                            <td>25.9 to 26.4</td>
+                            <td>9.2</td>
+                            <td>8.2 to 10.7</td>
+                        </tr>
+                        <td colspan="6" class="last">1 inch = 2.54cm</td>
+                    </tbody>
+                </table>
+                </div>
+              </div>                
+            </div>
+        </div>
+
+        <div data-attr="measure"  aria-labelledby="measure" class="size-guide__item ">
+		  <div class="measure__block_row">            
+            <div class="measure__block">
+              <div class="measure__block_inn">
+                {%- if section.settings.image-measure1 != blank -%}
+                    <div class="measure__image">
+                        <img src="{{ section.settings.image-measure1 | img_url: 'master' }}"
+                            alt="{{ section.settings.title-measure1 | escape }}" />
+                    </div>
+                {%- endif -%}
+
+
+                {%- if section.settings.title-measure1 != blank -%}
+                    <div class="measure__title">
+                        {{ section.settings.title-measure1 }}
+                    </div>
+                {%- endif -%}
+
+                {%- if section.settings.text-measure1 != blank -%}
+                <div class="measure__text">
+                    {{ section.settings.text-measure1 }}
+                </div>
+                {%- endif -%}
+              </div>
+            </div>
+
+            <div class="measure__block">
+              <div class="measure__block_inn">
+                {%- if section.settings.image-measure2 != blank -%}
+                <div class="measure__image">
+                    <img src="{{ section.settings.image-measure2 | img_url: 'master' }}"
+                         alt="{{ section.settings.title-measure2 | escape }}" />
+                </div>
+                {%- endif -%}
+
+
+                {%- if section.settings.title-measure2 != blank -%}
+                <div class="measure__title">
+                    {{ section.settings.title-measure2 }}
+                </div>
+                {%- endif -%}
+
+                {%- if section.settings.text-measure2 != blank -%}
+                <div class="measure__text">
+                    {{ section.settings.text-measure2 }} 
+                </div>
+                {%- endif -%}
+              </div>
+            </div>
+
+            <div class="measure__block">
+              <div class="measure__block_inn">
+                {%- if section.settings.image-measure3 != blank -%}
+                <div class="measure__image">
+                    <img src="{{ section.settings.image-measure3 | img_url: 'master' }}"
+                         alt="{{ section.settings.title-measure3 | escape }}" />
+                </div>
+                {%- endif -%}
+
+
+                {%- if section.settings.title-measure3 != blank -%}
+                <div class="measure__title">
+                    {{ section.settings.title-measure3 }}
+                </div>
+                {%- endif -%}
+
+                {%- if section.settings.text-measure3 != blank -%}
+                <div class="measure__text">
+                    {{ section.settings.text-measure3 }}
+                </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Size Guide",
+    "class": "size-guide",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show",
+            "label": "Show pop up",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "title-help",
+            "label": "Help title"
+        },
+{
+            "type": "image_picker",
+            "id": "tab_image",
+            "label": "Tab 1 Image"
+        },
+        {
+            "type": "richtext",
+            "id": "text-help",
+            "label": "Help text"
+        },
+        {
+            "type": "text",
+            "id": "title-measure1",
+            "label": "Measure title 1"
+        },
+        {
+            "type": "richtext",
+            "id": "text-measure1",
+            "label": "Measure text 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "image-measure1",
+            "label": "Measure image 1"
+        },
+        {
+            "type": "text",
+            "id": "title-measure2",
+            "label": "Measure title 2"
+        },
+        {
+            "type": "richtext",
+            "id": "text-measure2",
+            "label": "Measure text 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "image-measure2",
+            "label": "Measure image 2"
+        },
+        {
+            "type": "text",
+            "id": "title-measure3",
+            "label": "Measure title 3"
+        },
+        {
+            "type": "richtext",
+            "id": "text-measure3",
+            "label": "Measure text 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "image-measure3",
+            "label": "Measure image 3"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "featured_collection",
+            "name": "Size",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "size-eu",
+                    "label": "EU Size"
+                },
+                {
+                    "type": "text",
+                    "id": "size-us",
+                    "label": "US Size"
+                },
+                {
+                    "type": "text",
+                    "id": "length",
+                    "label": "Length"
+                },
+                {
+                    "type": "text",
+                    "id": "width",
+                    "label": "Width"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Size Guide",
+            "category": "Content"
+        }
+    ]
+  }
+{% endschema %}

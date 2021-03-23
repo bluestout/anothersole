@@ -22,11 +22,13 @@
     
     <div class="an-colection-pg-banner">
 	<div class="an-colection-pg-banner-img">
-      {% if collection.image %}
+      {% comment %} {% if collection.image %}
       <img src="{{collection.image| img_url: "original"}}" />
       {%else%}
 		<img src="{{section.settings.banner | img_url: "master"}}" />
-	{%endif%}	
+	{%endif%}	 {% endcomment %}
+  		<img src="{{section.settings.banner | img_url: "master"}}" />
+
       <div class="an-colection-pg-banner-cont">
 			<h3>{{section.settings.collection_title}}</h3>
 			<p>{{section.settings.collection_content}}</p>

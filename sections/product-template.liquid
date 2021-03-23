@@ -38,11 +38,11 @@
   <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
     <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-<div class="pro-thumb-gal-img-sec">
+      <div class="pro-thumb-gal-img-sec">
       <div class="main-thumb-image-product">
         <ul>
       {% for image in product.images %}
-          <li><img src="{{image.src| img_url: "small"}}"></li>
+          <li class="custom-thumb-list" data-thumb="custom-thumb-{{forloop.index}}"><img src="{{image.src| img_url: "small"}}"></li>
       {%endfor%}
         </ul>
       </div>
@@ -50,21 +50,21 @@
       <div class="main-large-image-product">
         <ul>
       {% for image in product.images %}
-          <li><img src="{{image.src| img_url: "master"}}"></li>
+          <li class="custom-thumb-{{forloop.index}}"><img src="{{image.src| img_url: "master"}}"></li>
              {% if forloop.first%}
           <li>
           <div class="sin-pro-gall-fea-row">
 	<ul>
 		<li>
-			<div><img src ="{{section.settings.image_1 | img_url: "original"}}" /></div>
+			<div>{{section.settings.svg_1}}</div>
 			<p>{{section.settings.text_1}}</p>
 		</li>
 		<li>
-			<div><img src ="{{section.settings.image_2 | img_url: "original"}}" /></div>
+			<div>{{section.settings.svg_2}}</div>
 			<p>{{section.settings.text_2}}</p>
 		</li>
 		<li>
-			<div><img src ="{{section.settings.image_3 | img_url: "original"}}" /></div>
+			<div>{{section.settings.svg_3}}</div>
 			<p>{{section.settings.text_3}}</p>
 		</li>
 	</ul>
@@ -178,7 +178,9 @@
           <div class="product__price">
             {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
           </div>
-
+<div class="product-short-info">
+  {% include "product-short-info" %}
+        </div>
           {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
             <div class="product__policies rte" data-product-policies>
               {%- if cart.taxes_included -%}
@@ -197,8 +199,122 @@
           {%- endcapture %}
 
           {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
-            {% unless product.has_only_default_variant %}
-              <div class="product-form__controls-group">
+        {% assign title = product.title | split:"-" %}
+        
+        {% assign set = "" %}
+							{% for coll in product.collections %}
+							{% if coll.template_suffix contains 'set' %}
+							{% assign set = coll %}
+							{% break %}
+							{% endif %}
+							{% endfor %}
+							{% if set != "" %}
+							<div class="product-colors">
+                              <div class="label" for=""><span class="upper">Color:</span><strong> {{ title[1] }}</strong></div>
+								<ul class="swatch">
+									{% for pro in set.products %}
+									{% if pro.id == product.id %}
+									<li class="active"><div class="dd {%if pro.metafields.information.color_code =="FFFFFF"%} custom-white{%endif%}" style="background-color:#{{ pro.metafields.information.color_code }}"></div></li>
+									{% else %} 
+									<li><a href="{{ pro.url }}" class="dd {%if pro.metafields.information.color_code =="FFFFFF"%} custom-white{%endif%}"  style="background-color:#{{ pro.metafields.information.color_code }}"></a></li>
+									{% endif %}
+									{% endfor %}
+								</ul>
+							</div>
+							{% endif %} 
+        <div class="product-size">
+								{% assign us = "35:5|36:5.5|37:6.5|38:7|39:8|40:9|41:9.5|42:10" | split:"|" %}
+								
+								{% if product.available %}
+
+								{% if product.variants.size > 1 %}
+								{% if product.id != 4406627401813 %}
+
+								<div for="" class="label flex">
+									<span><ul class="product-sizes-system">
+										<li class="active" data-prop="eu">EU</li><li data-prop="us">US</li>
+									</ul></span>
+								</div>
+								{% endif %}
+								<div>
+									{% assign option = product.options_with_values | first %}
+									{% for value in option.values %}<div class="size-each" {% for uu in us %}{% assign tt = uu | split:":" %}{% if value contains tt[0] %}data-us="{{ tt[1] }}"{% break %}{% endif %}{% endfor %} data-eu="{{ value | remove:"EU" }}" data-value="{{ value | escape }}">{{ value | remove:"EU" }}</div>{% endfor %}
+								</div>
+						{% if product.id != 4406627401813 %}
+
+								<a id="size-guide" class="size-guide-link">Size Guide</a>
+{% endif %}
+								<script>
+									$(function(){
+
+										$(".product-sizes-system li").on("click",function(){
+											var elem = $(this);
+											elem.parent().find(".active").removeClass("active");
+											elem.addClass("active");
+											if(elem.attr("data-prop") == "us")
+											{
+												$(".size-each").each(function(){
+													ee = $(this);
+													ee.html(ee.attr("data-us"));
+												});
+											}
+											else
+											{
+												$(".size-each").each(function(){
+													ee = $(this);
+													ee.html(ee.attr("data-eu"));
+												});
+											}
+										});
+
+										var unavailable = [];
+										{% for variant in product.variants %}
+										{% unless variant.available %}
+										unavailable.push("{{ variant.option1 }}");
+										{% endunless %}
+										{% endfor %}
+
+										setTimeout(function(){
+											for(i = 0; i < unavailable.length; i++)
+											{
+												$('.size-each[data-value="'+unavailable[i]+'"]').addClass("disabled");
+											}
+											//$(".size-each").not(".disabled").first().trigger("click");
+										},700);
+										$(".size-each").on("click",function(e){
+											var elem = $(this);
+											elem.parent().find(".active").removeClass("active");
+											elem.addClass("active");
+                                            var value_get = elem.attr("data-value");
+                                          value_get= value_get.trim();
+                                            //alert(value_get);
+                                          $("#ProductSelect-product-template option").each(function(){
+                                          var option_text = $(this).text();
+                                            option_text = option_text.trim();
+                                           if (option_text==value_get)
+                                            {
+                                              var getval = $(this).val();
+                                              $("#ProductSelect-product-template").val(getval).trigger("change");
+                                              
+                                            console.log(option_text);
+                                              $("select#SingleOptionSelector-0").val(option_text).change();
+                                          }
+                                          })
+											//$("#ProductSelect-product-template option").text(elem.attr("data-value")).trigger("change");
+											//mlvedaload();
+										});
+										
+										
+									});
+								</script>
+
+								
+
+								{% endif %}
+          {% endif %}
+							</div>
+        {% unless product.has_only_default_variant %}
+              <div class="product-form__controls-group" style="display:none;">
                 {% for option in product.options_with_values %}
                   <div class="selector-wrapper js product-form__item">
                     <label for="SingleOptionSelector-{{ forloop.index0 }}">
@@ -226,7 +342,6 @@
                 </option>
               {% endfor %}
             </select>
-
             {% if section.settings.show_quantity_selector %}
               <div class="product-form__controls-group">
                 <div class="product-form__item">
@@ -239,6 +354,10 @@
               </div>
             {% endif %}
 
+        <div class="review-offer">
+          {%include "review-offer"%}
+          
+        </div>
             <div class="product-form__error-message-wrapper product-form__error-message-wrapper--hidden{% if section.settings.enable_payment_button %} product-form__error-message-wrapper--has-payment-button{% endif %}"
               data-error-message-wrapper
               role="alert"
@@ -274,27 +393,10 @@
                   {{ form | payment_button }}
                 {% endif %}
              
-                            {% assign set = "" %}
-							{% for coll in product.collections %}
-							{% if coll.template_suffix contains 'set' %}
-							{% assign set = coll %}
-							{% break %}
-							{% endif %}
-							{% endfor %}
-							{% if set != "" %}
-							<div class="product-colors">
-								<div class="label" for=""><strong class="upper">Select Colour:</strong> {{ title[1] }}</div>
-								<ul class="swatch">
-									{% for pro in set.products %}
-									{% if pro.id == product.id %}
-									<li class="active"><div class="dd" style="background-color:#{{ pro.metafields.information.color_code }}"></div></li>
-									{% else %} 
-									<li><a href="{{ pro.url }}" class="dd"  style="background-color:#{{ pro.metafields.information.color_code }}"></a></li>
-									{% endif %}
-									{% endfor %}
-								</ul>
-							</div> 
-							{% endif %}
+                           
+                
+                <div id="size-error" style="display:none;"><p style="margin-top:10px;color:#ff0000;">Please select your size</p></div>
+                 {% include "shipping-specification-accordion" %}
               </div>
             </div>
           {% endform %}
@@ -327,9 +429,7 @@
         >
         </div>
 
-        <div class="product-single__description rte">
-          {{ product.description }}
-        </div>
+        
 
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
@@ -537,13 +637,19 @@
       }
     },
 {
-      "type": "image_picker",
-      "id": "image_1",
+      "type": "textarea",
+      "id": "svg_1",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Image 1"
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG Icon"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text"
       }
     },
 {
@@ -563,13 +669,19 @@
       }
     },
 {
-      "type": "image_picker",
-      "id": "image_2",
+      "type": "textarea",
+      "id": "svg_2",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Image 2"
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG Icon"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text"
       }
     },
 {
@@ -589,13 +701,19 @@
       }
     },
 {
-      "type": "image_picker",
-      "id": "image_3",
+      "type": "textarea",
+      "id": "svg_3",
       "label": {
-        "cs": "Obrázek loga",
-        "da": "Logobillede",
-        "de": "Logo-Foto",
-        "en": "Image 3"
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG Icon"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 3"
       }
     },
 

@@ -63,12 +63,12 @@
   {% endif %}
 
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
-
-  <ul class="page-width list-view-items">
+  <div class="page-width">
+  <ul class="grid grid--uniform grid--view-items">
     {% for item in search.results %}
-      <li class="list-view-item">
+      <li class="custom-product-listing grid__item grid__item--collection-template small--one-half medium-up--one-third">
         {% if item.object_type == 'product' %}
-          {% include 'product-card-list', product: item %}
+          {% include 'product-card-grid', product: item %}
         {% else %}
           <div class="product-card product-card--list">
             <a href="{{ item.url }}" class="full-width-link">
@@ -98,7 +98,7 @@
       </li>
     {% endfor %}
   </ul>
-
+  </div>
   {%- if paginate.pages > 1 -%}
     {% include 'pagination', paginate: paginate %}
   {%- endif -%}
