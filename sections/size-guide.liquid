@@ -18,21 +18,20 @@
 
             <div class="size-guide__column size-guide__column--text">
                 <div class="size-guide__title">{{ section.settings.title-help }}</div>
-                <div class="size-guide__desc">
-                    {{ section.settings.text-help }}
+                <div class="size-guide__desc desktop-info-tab">
                   <div class="size-guide__desc_row">
                     <div class="size-guide__desc_col">
-                      <p>Measure your feet and choose your size based on your measurements. If your foot length is 23.5 - you should be choosing size EU 38/US 7 as shown in the size guide.</p>
-                      <p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.</p>
-                      <p>Anothersole shoes have a standard width and does not cater to a wide fit. If the width of your feet exceeds the width of your footbed excessively, the leather may be stepped on and make contact with the ground leading to damage from abrasion.</p>
+                      {{section.settings.text-help-left}}
                     </div>
                     <div class="size-guide__desc_col">
-                      <p>If the initial wear feels a bit snug, be assured that our leathers will stretch to fit with each wear like a pair of leather gloves. Buying a larger size may result the shoe slipping off at the back upon stretching.</p>
-                      <p>If you are unsure and need some questions answered, please write to us at customerservice@anothersole.com or message us on FB Messenger.</p>                      
-                    </div>
+                      {{section.settings.text-help-right}}
+                   </div>
                   </div>
                 </div>
-                <span class="size-guide__readmore mobile_ hide">Read more</span>
+              <div class="size-guide__desc mobile-info-tab">
+                {{section.settings.text-help-mob}}
+              </div>
+              <div class="read-more-wrap"><span class="size-guide__readmore mobile_">Read more</span></div>
             </div>
 
             <div class="size-guide__column size-table-con">
@@ -57,70 +56,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                      {% for block in section.blocks %}
                         <tr>
-                            <td>35</td>
-                            <td>5</td>
-                            <td>22.8</td>
-                            <td>21.3 to 21.8</td>
-                            <td>7.8</td>
-                            <td>6.8 to 9.3</td>
+                            <td>{{block.settings.size-eu}} <br/>{%if forloop.last%}(Classics only){%endif%}</td>
+                            <td>{{block.settings.size-us}}</td>
+                          <td>{{block.settings.length}}</td>
+                            <td>{{block.settings.ideal_length}}</td>
+                          <td>{{block.settings.width}}</td>
+                            <td>{{block.settings.ideal_width}}</td>
                         </tr>
-                        <tr>
-                            <td>36</td>
-                            <td>5.5</td>
-                            <td>23.4</td>
-                            <td>21.9 to 22.5</td>
-                            <td>8</td>
-                            <td>7 to 9.5</td>
-                        </tr>
-                        <tr>
-                            <td>37</td>
-                            <td>6.5</td>
-                            <td>24.1</td>
-                            <td>22.6 to 23.2</td>
-                            <td>8.2</td>
-                            <td>7.2 to 9.7</td>
-                        </tr>
-                        <tr>
-                            <td>38</td>
-                            <td>7</td>
-                            <td>24.8</td>
-                            <td>23.3 to 23.8</td>
-                            <td>8.4</td>
-                            <td>7.4 to 9.9</td>
-                        </tr>
-                        <tr>
-                            <td>39</td>
-                            <td>8</td>
-                            <td>25.3</td>
-                            <td>23.9 to 24.5</td>
-                            <td>8.6</td>
-                            <td>7.6 to 10.1</td>
-                        </tr>
-                        <tr>
-                            <td>40</td>
-                            <td>9</td>
-                            <td>26.1</td>
-                            <td>24.6 to 25.2</td>
-                            <td>8.8</td>
-                            <td>7.8 to 10.3</td>
-                        </tr>
-                        <tr>
-                            <td>41</td>
-                            <td>9.5</td>
-                            <td>26.8</td>
-                            <td>25.3 to 25.8</td>
-                            <td>9</td>
-                            <td>8 to 10.5</td>
-                        </tr>
-                        <tr>
-                            <td>42<br><small>(Classics<br>only)</small></td>
-                            <td>10</td>
-                            <td>27.4</td>
-                            <td>25.9 to 26.4</td>
-                            <td>9.2</td>
-                            <td>8.2 to 10.7</td>
-                        </tr>
+                      {%endfor%}
+                        
                         <td colspan="6" class="last">1 inch = 2.54cm</td>
                     </tbody>
                 </table>
@@ -227,12 +173,28 @@
 {
             "type": "image_picker",
             "id": "tab_image",
-            "label": "Tab 1 Image"
+            "label": "Tab 1 Image",
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 615 x 675 px "
+        }
         },
         {
-            "type": "richtext",
-            "id": "text-help",
-            "label": "Help text"
+            "type": "textarea",
+            "id": "text-help-right",
+            "label": "Help text for right side (Desktop)"
+        },
+         {
+            "type": "textarea",
+            "id": "text-help-left",
+            "label": "Help text for left side (Desktop)"
+        },
+        {
+        "type": "textarea",
+            "id": "text-help-mob",
+            "label": "Help Content Mobile"
         },
         {
             "type": "text",
@@ -247,7 +209,13 @@
         {
             "type": "image_picker",
             "id": "image-measure1",
-            "label": "Measure image 1"
+            "label": "Measure image 1",
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 375 x 377 px "
+        }
         },
         {
             "type": "text",
@@ -262,7 +230,13 @@
         {
             "type": "image_picker",
             "id": "image-measure2",
-            "label": "Measure image 2"
+            "label": "Measure image 2",
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 375 x 377 px "
+        }
         },
         {
             "type": "text",
@@ -277,7 +251,13 @@
         {
             "type": "image_picker",
             "id": "image-measure3",
-            "label": "Measure image 3"
+            "label": "Measure image 3",
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 375 x 377 px "
+        }
         }
     ],
     "blocks": [
@@ -300,10 +280,20 @@
                     "id": "length",
                     "label": "Length"
                 },
+				{
+                    "type": "text",
+                    "id": "ideal_length",
+                    "label": "Ideal Length"
+                },
                 {
                     "type": "text",
                     "id": "width",
                     "label": "Width"
+                },
+                {
+                    "type": "text",
+                    "id": "ideal_width",
+                    "label": "Ideal Width"
                 }
             ]
         }

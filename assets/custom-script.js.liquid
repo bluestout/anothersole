@@ -1,5 +1,32 @@
 $(document).ready(function(){
+  /**************** RELATED Product Slider On PDP **************/
+
+  if ($(window).width() < 749) {
+  $('.grid-custom-related').slick({
+ dots: false,
+    prevArrow: false,
+    slidesToShow: 1,
+  slidesToScroll: 1,
+    nextArrow: false
+});
+  }
+  /*************Mobile Size Popup Read More ****************/
+  $(".size-guide__readmore").click(function(){
+  $(".mobil-size-show").slideToggle( "slow");
+    $(this).toggleClass("less-content");
+    $(".size-guide__readmore").html("Read more");
+    $(".less-content").html("Read less");
+  })
+ /******************* Main Image Slider For Mobile *********/
   
+  $('.mobile-main-pro-slide').slick({
+ dots: true,
+    prevArrow: false,
+    slidesToShow: 1,
+  slidesToScroll: 1,
+    nextArrow: false
+});
+
   /*****************Thumb Image Scroll On PDP ************/
   $(".custom-thumb-list").click(function(){
   var data_thumb= $(this).attr("data-thumb");
@@ -13,25 +40,7 @@ $(document).ready(function(){
      slidesToShow: 2,
   slidesToScroll: 2
 });	
-  /***************** Product Option Selection and Add to Cart ***********/
-  $(".btn.product-form__cart-submit").click(function(e){
-    var flag_val = false;
-  e.preventDefault();
-   var size_active =  $(".size-each").length;
-    console.log(size_active);
-    $(".size-each").each(function(){
-      if($(this).hasClass("active")){
-      flag_val = true;
-      }
-    })
-    if(flag_val==true)
-    {
-    $("#size-error").hide();
-    }
-    else{
-    $("#size-error").show();
-    }
-  }) 
+  
   /************************ SIZE POPUP **************************/
   $("#size-guide").click(function(){
   $("#shopify-section-size-guide").addClass("active");

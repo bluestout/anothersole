@@ -1,0 +1,92 @@
+<div id="overlay" class=""></div>
+<div class="inline-cart" id="slidingcartmain">
+	<div class="cart-header">
+		<div>
+			<img alt="Cart" src="//cdn.shopify.com/s/files/1/0377/2037/t/37/assets/cart-black.svg?11418713984804123362" class="cart-img">
+		</div>
+		<div>
+			<h3>Review Your Cart</h3>
+		</div>
+		<div>
+			<img alt="Close" src="//cdn.shopify.com/s/files/1/0377/2037/t/37/assets/close-x.svg?11418713984804123362" class="close-cart-img">
+		</div>
+	</div>
+	
+  
+
+  {% if cart.item_count < 1 %}
+	<p class="empty-cart-title international-cart-element" data-empty-cart="">Your cart is empty.</p>
+  {% else %}
+	
+  <div data-cart-contents="">
+
+<div class="line-item-container">
+    
+  
+  
+  {% for item in cart.items %}
+  <div class="line-item">
+    <div class="line-item-image">
+
+      <a href="{{ item.url }}">
+        <img alt="{{ item.image.alt | escape }}" src="{{ item | img_url: 'small' }}">
+      </a>
+
+    </div>
+
+    <div class="line-item-content">
+      <h4 class="line-item-title"><a href="{{ item.url }}">{{ item.title }}</a>
+        </h4>
+      <div class="line-item-price">
+        {% if item.variant.compare_at_price > item.price %}
+        
+        <span class="strikeprice">{{ item.variant.compare_at_price | money }}</span>
+        {% endif %}
+        <span class="flow-price">{{ item.price | money }}</span>
+        <div class="yousavepricesliding yousaveprice">
+          {% if item.variant.compare_at_price > item.price %}You save {{ item.variant.compare_at_price | minus: item.price | times: 100.0 | divided_by: item.variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
+        </div>
+      </div>
+      <a rel="{{ item.id }}" class="remove-item" onclick="remove({{ forloop.index  }},0)">Remove</a> 
+      
+    </div>
+
+    <div class="line-item-qty">
+      <input type="number" value="{{ item.quantity }}" class="changequantity" data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}" min="1" name="quantity">
+    </div>
+
+  </div>
+  {% endfor %}
+  
+  
+  
+  
+    
+    
+    
+
+</div>
+</div>
+	<a href="#" class="button btn-continue-shopping international-cart-element" data-empty-cart="" style="display: none;"><span>Continue Shopping</span></a>
+
+  {% endif %}
+  
+  
+  <div data-full-cart="" class="subtotal-block international-cart-element" style="display: block;"> 
+    {% if cart.item_count < 1 %}
+    <a href="/collections/all" class="button btn-checkout continueshopping"><span>Continue Shopping</span></a>
+    {% else %}
+    <div class="subtotal">
+      <div>Subtotal:</div>
+      <div class="cart-total">
+        <span class="cart-subtotal">{{ cart.total_price | money }}</span>
+      </div>
+    </div>
+    
+      <a href="/checkout" class="button btn-checkout"><span>proceed to checkout</span></a>
+    {% endif %}
+  </div>
+<!--   <div class="saso-summary"></div>
+  <span class="saso-cart-total" id="checksavingprice"></span>
+  <div class="saso-cart-offers"></div> -->
+</div>

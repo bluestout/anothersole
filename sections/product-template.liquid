@@ -36,9 +36,19 @@
   {% endcase %}
 
   <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.media_size }}-media{% endif %}">
+    
     <div class="grid__item product-single__media-group {{ product_media_width }}{% if section.settings.media_size == 'full' %} product-single__media-group--full{% endif %}" data-product-single-media-group>
+    <div class="mobile-image-section">
+<ul class="mobile-main-pro-slide">
+        {% for image in product.images %}
+            <li class="pro-item">
+        <img src="{{image.src| img_url: "large"}}">
+  </li>
+      {%endfor%}
+      </ul>
+      </div>
       {%- assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
-      <div class="pro-thumb-gal-img-sec">
+      <div class="desktop-image-section pro-thumb-gal-img-sec">
       <div class="main-thumb-image-product">
         <ul>
       {% for image in product.images %}
@@ -475,6 +485,70 @@
     "zh-TW": "產品頁面"
   },
   "settings": [
+{
+      "type": "text",
+      "id": "ship_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Shipping Text"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 1"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "ship_content",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Shipping Content"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 1"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "svg_offer",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "SVG HTML"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Text 1"
+      }
+    },
+{
+      "type": "textarea",
+      "id": "offer_text",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Offer Text"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "30% off on 2nd item"
+      }
+    },
     {
 
       "type": "checkbox",
