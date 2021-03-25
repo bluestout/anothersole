@@ -141,6 +141,15 @@
     </div>
   </div>
 </div>
+<a onclick="socialLogin.loginPopup();" herf="#">show Social Login Popup</a>
+<script>
+socialLogin.loginPopup();
+function showSocialLoginPopup() {
+  console.log("showSocialLoginPopup---");
+  socialLogin.loginPopup();
+}
+showSocialLoginPopup();
+</script>
 {% comment %} <div class="page-width">
   <div class="grid">
 

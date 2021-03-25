@@ -1,5 +1,11 @@
 $(document).ready(function(){
-  /**************** RELATED Product Slider On PDP **************/
+  /******************* Cart Slide Cart *************/
+    $('.header-cart-related-list').slick({
+ dots: false,
+ slidesToShow: 1,
+  slidesToScroll: 1
+}); 
+  /**************** Related Product Slider On PDP **************/
 
   if ($(window).width() < 749) {
   $('.grid-custom-related').slick({
@@ -8,7 +14,7 @@ $(document).ready(function(){
     slidesToShow: 1,
   slidesToScroll: 1,
     nextArrow: false
-});
+}); 
   }
   /*************Mobile Size Popup Read More ****************/
   $(".size-guide__readmore").click(function(){
