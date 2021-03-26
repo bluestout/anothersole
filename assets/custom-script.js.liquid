@@ -83,9 +83,11 @@ $(document).ready(function(){
     var scroll_val = $(".cst-header-sec-main").scrollTop();    
     if($(window).scrollTop() > scroll_val+34){
         $("#shopify-section-header").addClass("header-fixed");
+       $(".ans-cst-cart").addClass("ans-cst-cart-fixed");
     }
     else{
     $("#shopify-section-header").removeClass("header-fixed");
+       $(".ans-cst-cart").removeClass("ans-cst-cart-fixed");
     }
 })
   /********************Fotter Accordion ***********************/
@@ -184,12 +186,15 @@ $(document).ready(function(){
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 5000,
-  draggable: true,
+  autoplaySpeed: 3000,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     arrows: false,
-    dots: true,
+    dots: false,
+    swipe: 'false',
+swipeToSlide: 'false',
+touchMove: 'false',
+draggable: 'false',
     fade: true,
     speed: 500,
     infinite: true,

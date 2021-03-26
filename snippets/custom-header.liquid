@@ -2,11 +2,17 @@
 	<div class="ext-top-bar-row">
       <div class="ext-top-bar-left">
         <div class="ext-top-bar-left-inn">
-          
+            
        <div class="custom-slider">
+         {% if section.settings.accounment_1 != blank%}
         <p class="list-custom-slide">{{section.settings.accounment_1}}</p>
+         {%endif%}
+           {% if section.settings.accounment_2 != blank%}
         <p class="list-custom-slide">{{section.settings.accounment_2}} </p>
+         {%endif%}
+           {% if section.settings.accounment_3 != blank %}
         <p class="list-custom-slide">{{section.settings.accounment_3}}</p>
+         {%endif%}
         </div>
         </div>
         <div class="ext-top-bar-left-inn-close">
@@ -31,22 +37,21 @@
       {% for link in linklists[section.settings.main_linklist].links %}
             
           <li><a href="{{link.href}}">{{link.handle}}</a>
-            
-            {% if link.handle == section.settings.main_linklist_1 %}
+            {% if forloop.index == 1 %}
             {% assign selectedlist = section.settings.main_linklist_1 %}
              {% assign text_11 = section.settings.last_text_11 %}
              {% assign link_11 = section.settings.last_link_11 %}
              {% assign text_12 = section.settings.last_text_12 %}
              {% assign link_12 = section.settings.last_link_12 %}
           {%include "mega-menu-desktop"%}
-              {% elsif link.handle == section.settings.main_linklist_2 %}
+              {% elsif forloop.index == 2 %}
              {% assign selectedlist = section.settings.main_linklist_2 %}
              {% assign text_11 = section.settings.last_text_21 %}
              {% assign link_11 = section.settings.last_link_21 %}
              {% assign text_12 = section.settings.last_text_22 %}
              {% assign link_12 = section.settings.last_link_22 %}
               {%include "mega-menu-desktop"%}
-            {% elsif link.handle == section.settings.main_linklist_3 %}
+           {% elsif forloop.index == 3 %}
              {% assign selectedlist = section.settings.main_linklist_3 %}
              {% assign text_11 = section.settings.last_text_31 %}
              {% assign link_11 = section.settings.last_link_31 %}
@@ -77,7 +82,7 @@
             <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
           </button>
           Search</li>
-        <li class="custom-cart-icon"><div class="custom-cart-icon-box"><img src="{{'bag_ico.svg' | asset_url}}" /></div></li>
+        <li class="custom-cart-icon"><div class="custom-cart-icon-box">{% if cart.item_count > 0 %}<span class="cart_count_items">{{cart.item_count}}</span>{%endif%}<img src="{{'bag_ico.svg' | asset_url}}" /></div></li>
           </ul>
       </div>
 	</div>

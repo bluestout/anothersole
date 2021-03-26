@@ -175,7 +175,7 @@
 </head>
 
 <body class="template-{{ request.page_type | handle }}">
-{% include 'slide-cart' %}
+
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
   {%- if settings.enable_ajax -%}
@@ -183,7 +183,7 @@
   {%- endif -%}
 
   {% section 'header' %}
-
+{% include 'slide-cart' %}
   <div class="page-container drawer-page-content" id="PageContainer">
 
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
@@ -204,5 +204,7 @@
   </ul>
   {% include 'bs-cookie-banner' %}
   <!-- Stamped - Begin Script--><script async type="text/javascript" data-api-key="" id="stamped-script-widget" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script><!-- Stamped - End Script --><br>
-{% include 'social-login' %}</body>
+{% include 'social-login' %}
+  <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RjTDH2"></script>
+  </body>
 </html>

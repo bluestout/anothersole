@@ -1,0 +1,94 @@
+<div class="product-size custom-cart-variants" style="display:none;">
+  <div class="custom-cart-variants-inn">
+								{% assign us = "35:5|36:5.5|37:6.5|38:7|39:8|40:9|41:9.5|42:10" | split:"|" %}
+								
+								{% if product.available %}
+
+								{% if product.variants.size > 1 %}
+								{% if product.id != 4406627401813 %}
+
+								<div for="" class="label flex">
+                                  <h3>Size</h3>
+									<span><ul class="product-sizes-system">
+										<li class="active" data-prop="eu">EU</li><li data-prop="us">US</li>
+									</ul></span>
+								</div>
+								{% endif %}
+								<div>
+									{% assign option = product.options_with_values | first %}
+									{% for value in option.values %}<div class="size-each custom-cart-sizes-get" {% for uu in us %}{% assign tt = uu | split:":" %}{% if value contains tt[0] %}data-us="{{ tt[1] }}"{% break %}{% endif %}{% endfor %} data-eu="{{ value | remove:"EU" }}" data-value="{{ value | escape }}">{{ value | remove:"EU" }}</div>{% endfor %}
+								</div>
+						{% if product.id != 4406627401813 %}
+
+								
+{% endif %}
+								<script>
+									$(function(){
+
+										$(".product-sizes-system li").on("click",function(){
+											var elem = $(this);
+											elem.parent().find(".active").removeClass("active");
+											elem.addClass("active");
+											if(elem.attr("data-prop") == "us")
+											{
+												$(".size-each").each(function(){
+													ee = $(this);
+													ee.html(ee.attr("data-us"));
+												});
+											}
+											else
+											{
+												$(".size-each").each(function(){
+													ee = $(this);
+													ee.html(ee.attr("data-eu"));
+												});
+											}
+										});
+
+										var unavailable = [];
+										{% for variant in product.variants %}
+										{% unless variant.available %}
+										unavailable.push("{{ variant.option1 }}");
+										{% endunless %}
+										{% endfor %}
+
+										setTimeout(function(){
+											for(i = 0; i < unavailable.length; i++)
+											{
+												$('.size-each[data-value="'+unavailable[i]+'"]').addClass("disabled");
+											}
+											//$(".size-each").not(".disabled").first().trigger("click");
+										},700);
+										$(".size-each").on("click",function(e){
+											var elem = $(this);
+											elem.parent().find(".active").removeClass("active");
+											elem.addClass("active");
+                                            var value_get = elem.attr("data-value");
+                                          value_get= value_get.trim();
+                                            //alert(value_get);
+                                          $("#ProductSelect-product-template option").each(function(){
+                                          var option_text = $(this).text();
+                                            option_text = option_text.trim();
+                                           if (option_text==value_get)
+                                            {
+                                              var getval = $(this).val();
+                                              $("#ProductSelect-product-template").val(getval).trigger("change");
+                                              
+                                            console.log(option_text);
+                                              $("select#SingleOptionSelector-0").val(option_text).change();
+                                          }
+                                          })
+											//$("#ProductSelect-product-template option").text(elem.attr("data-value")).trigger("change");
+											//mlvedaload();
+										});
+										
+										
+									});
+								</script>
+
+								
+
+								{% endif %}
+          {% endif %}
+							</div>
+</div>

@@ -13,7 +13,7 @@ $(document).ready(function(){
 //   }); 
   $('body').on('click', '.product-add-con button', function(e) {
     e.preventDefault();
-  var Variantsget = $(this).parents(".product-add-con").prev(".product-size-con").children(".product-size-header").children(".getvariant").html();
+  var Variantsget = $(this).parents(".product-add-con").attr("data-idget");
   Variantsget = parseInt(Variantsget);
     //alert(Variantsget);
     $.ajax({
@@ -33,6 +33,8 @@ $(document).ready(function(){
             console.log("syncCart");
             // console.log(data);
             var minicartdata=$(data).filter('#slidingcartmain').html();
+            var countget=$(data).find('.cart_count_items').html();
+            $('.cart_count_items').html(countget);
             // console.log(minicartdata);
             $('#slidingcartmain').html(minicartdata);
                            $('.header-cart-related-list').slick({
@@ -45,19 +47,22 @@ $(document).ready(function(){
 }
 })	
   })
-  $('body').on('click', '.cart-select-box', function() {
-  var valuereceive = $(this).val();
-    $(this).children("option").each(function(){
-     var getoption =  $(this).val();
-    if(valuereceive == getoption)
+  $('body').on('click', '.custom-cart-sizes-get', function() {
+    var valuereceive = $(this).attr("data-value");
+ 
+    $(this).parents(".custom-cart-variants").parents(".product-add-size-chrt-row").prev(".line-item-content-qty-price").children(".slect-size-custom").children(".size-changed").children("span").html(valuereceive);
+    $(this).parents(".custom-cart-variants").next(".cart-select-box").children("option").each(function(){
+    var getoption =  $(this).val();
+      if(valuereceive == getoption)
     {
-    var avriantId = $(this).attr("data-val");
-      $(this).parent(".cart-select-box").next(".getvariant").html(avriantId);
+      var avriantId = $(this).attr("data-val");
+      alert(avriantId);
+      //$(this).parents(".cart-select-box").parents(".product-add-size-chrt-box").next(".product-add-con").attr("data-idget",avriantId);
     }
     })
-    $(this).prev("span").html(valuereceive);
+  
   })
-$('body').on('click', '.custom-cart-icon-box', function() {
+$('body').on('click', '.custom-cart-icon-box, .custom-mobile-cart', function() {
 $("#overlay").addClass("is-active");
             $(".inline-cart").addClass("is-active");
 
@@ -85,10 +90,10 @@ $('body').on('click', '.qtyplus', function() {
       success: function(data) 
       {
         if(data.item_count > 0){
-          $('.site-header__cart #CartCount').html(data.item_count);          
+          $('.cart_count_items').html(data.item_count);          
 
         } else {
-          $('.site-header__cart #CartCount').html(data.item_count) ;         
+          $('.cart_count_items').html(data.item_count) ;         
         }
 
         $.ajax({
@@ -99,10 +104,18 @@ $('body').on('click', '.qtyplus', function() {
           success: function(data) 
           {
             console.log("syncCart");
+            
             // console.log(data);
             var minicartdata=$(data).filter('#slidingcartmain').html();
+            var countget=$(data).find('.cart_count_items').html();
+            $('.cart_count_items').html(countget);
             // console.log(minicartdata);
             $('#slidingcartmain').html(minicartdata);
+             $('.header-cart-related-list').slick({
+ dots: false,
+ slidesToShow: 1,
+ slidesToScroll: 1
+});
             $("#overlay").addClass("is-active");
             $(".inline-cart").addClass("is-active");
           }
@@ -151,8 +164,15 @@ $('body').on('click', '.qtyplus', function() {
             console.log("syncCart");
             // console.log(data);
             var minicartdata=$(data).filter('#slidingcartmain').html();
+            var countget=$(data).find('.cart_count_items').html();
+            $('.cart_count_items').html(countget);
             // console.log(minicartdata);
             $('#slidingcartmain').html(minicartdata);
+             $('.header-cart-related-list').slick({
+ dots: false,
+ slidesToShow: 1,
+ slidesToScroll: 1
+});
             $("#overlay").addClass("is-active");
             $(".inline-cart").addClass("is-active");
           }
@@ -202,7 +222,19 @@ $(document).ready(function(){
       
             console.log("syncCart");
             // console.log(data);
+            var countget=$(data).find('.cart_count_items').html();
+            $('.cart_count_items').html(countget);
             var minicartdata=$(data).filter('#slidingcartmain').html();
+             var countget=$(data).find('.cart_count_items').html();
+            
+            if(countget == 1)
+            {
+              $( ".custom-cart-icon-box" ).prepend( "<span class='cart_count_items'>"+countget+"</span>" );
+              $( ".custom-mobile-cart" ).prepend( "<span class='cart_count_items'>"+countget+"</span>" );
+           }
+            else{
+            $('.cart_count_items').html(countget);
+            }
             // console.log(minicartdata);
             $('#slidingcartmain').html(minicartdata);
             $("#size-error").hide();
@@ -313,8 +345,23 @@ function remove(line, quantity){
 
             success: function(data) 
             {
+              var countget=$(data).find('.cart_count_items').html();
+            $('.cart_count_items').html(countget);
+              if(countget==0){
+              $('.cart_count_items').hide();
+              }
+              else{
+              $('.cart_count_items').show();
+              }
               var minicartdata=$(data).filter('#slidingcartmain').html();
+              
               $('#slidingcartmain').html(minicartdata);
+                     $('.header-cart-related-list').slick({
+ dots: false,
+ slidesToShow: 1,
+ slidesToScroll: 1
+});
+              
 
             }
           });
@@ -351,6 +398,8 @@ $(document).ready(function(){
 
               success: function(data) 
               {
+                var countget=$(data).find('.cart_count_items').html();
+            $('.cart_count_items').html(countget);
                 var minicartdata=$(data).filter('#slidingcartmain').html();
                 $('#slidingcartmain').html(minicartdata);
                 $("#overlay").addClass("is-active");

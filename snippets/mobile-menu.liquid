@@ -43,7 +43,7 @@
             <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
           </button>
           Search</li>
-				<li class="custom-mobile-cart"><img src="{{'bag_ico.svg' | asset_url}}" /></li>
+				<li class="custom-mobile-cart">{% if cart.item_count > 0 %}<span class="cart_count_items">{{cart.item_count}}</span>{%endif%}<img src="{{'bag_ico.svg' | asset_url}}" /></li>
 			</ul>
 		</div>
 	</div>
