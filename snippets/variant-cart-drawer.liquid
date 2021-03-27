@@ -16,7 +16,9 @@
 								{% endif %}
 								<div>
 									{% assign option = product.options_with_values | first %}
-									{% for value in option.values %}<div class="size-each custom-cart-sizes-get" {% for uu in us %}{% assign tt = uu | split:":" %}{% if value contains tt[0] %}data-us="{{ tt[1] }}"{% break %}{% endif %}{% endfor %} data-eu="{{ value | remove:"EU" }}" data-value="{{ value | escape }}">{{ value | remove:"EU" }}</div>{% endfor %}
+									{% for variant in product.variants%}
+                                  <div class="size-each custom-cart-sizes-get" {% for uu in us %}{% assign tt = uu | split:":" %}{% if value contains tt[0] %}data-us="{{ tt[1] }}"{% break %}{% endif %}{% endfor %} data-eu="{{ value | remove:"EU" }}" data-value="{{ value | escape }}">{{ variant.title}}</div>
+                                  {% endfor %}
 								</div>
 						{% if product.id != 4406627401813 %}
 
@@ -66,18 +68,18 @@
                                             var value_get = elem.attr("data-value");
                                           value_get= value_get.trim();
                                             //alert(value_get);
-                                          $("#ProductSelect-product-template option").each(function(){
-                                          var option_text = $(this).text();
-                                            option_text = option_text.trim();
-                                           if (option_text==value_get)
-                                            {
-                                              var getval = $(this).val();
-                                              $("#ProductSelect-product-template").val(getval).trigger("change");
+//                                           $("#ProductSelect-product-template option").each(function(){
+//                                           var option_text = $(this).text();
+//                                             option_text = option_text.trim();
+//                                            if (option_text==value_get)
+//                                             {
+//                                               var getval = $(this).val();
+//                                               $("#ProductSelect-product-template").val(getval).trigger("change");
                                               
-                                            console.log(option_text);
-                                              $("select#SingleOptionSelector-0").val(option_text).change();
-                                          }
-                                          })
+//                                             console.log(option_text);
+//                                               $("select#SingleOptionSelector-0").val(option_text).change();
+//                                           }
+//                                           }) 
 											//$("#ProductSelect-product-template option").text(elem.attr("data-value")).trigger("change");
 											//mlvedaload();
 										});

@@ -1,0 +1,87 @@
+$(document).ready(function(){
+/**************** Related Product Slider On PDP **************/
+
+  if ($(window).width() < 749) {
+  $('.grid-custom-related').slick({
+ dots: false,
+    prevArrow: false,
+    slidesToShow: 1,
+  slidesToScroll: 1,
+    nextArrow: false
+}); 
+  }
+  /*************Mobile Size Popup Read More on PDP****************/
+  $(".size-guide__readmore").click(function(){
+  $(".mobil-size-show").slideToggle( "slow");
+    $(this).toggleClass("less-content");
+    $(".size-guide__readmore").html("Read more");
+    $(".less-content").html("Read less");
+  })
+ /******************* Main Image Slider For Mobile on PDP*********/
+  
+  $('.mobile-main-pro-slide').slick({
+ dots: true,
+    prevArrow: false,
+    slidesToShow: 1,
+  slidesToScroll: 1,
+    nextArrow: false
+});
+
+  /*****************Thumb Image Scroll On PDP ************/
+  $(".custom-thumb-list").click(function(){
+  var data_thumb= $(this).attr("data-thumb");
+    $('html, body').animate({
+        'scrollTop' : $("."+data_thumb).position().top+50
+    });
+  })
+  /*****************Product Slider on PDP*************************/
+  $('.custom-items-slider').slick({
+    dots: false,
+     slidesToShow: 2,
+  slidesToScroll: 2
+});	
+  
+  /************************ SIZE POPUP on PDP**************************/
+  $("#size-guide").click(function(){
+  $("#shopify-section-size-guide").addClass("active");
+    $("body").addClass("size_body");
+  })
+  $("#close-login-popup").click(function(){
+  $("#shopify-section-size-guide").removeClass("active");
+     $("body").removeClass("size_body");
+  })
+  $(".size-guide__li ").click(function(){
+    $(this).siblings("li").removeClass("active");;
+    $(this).addClass("active");
+  var size_guid = $(this).attr("data-toggle");
+    $(".size-guide__item").each(function(){
+    var attribute_get = $(this).attr("aria-labelledby");
+      if(attribute_get==size_guid){
+      $(this).addClass("active");
+      }
+      else{
+      $(this).removeClass("active");
+      }
+    })
+  })
+  /*************************Shipping-Info Accordion on PDP**************/
+  $( "#shipp_accordion" ).accordion({
+      collapsible: true,heightStyle: "content"
+    });
+  /*********************** PRODUCT page FAQ ****************/
+  $( "#product-accordion" ).accordion({
+      collapsible: true,heightStyle: "content"
+    });
+  /********************* Header Fixed on All********************/
+  $(window).scroll(function() {    
+    var scroll_val = $(".cst-header-sec-main").scrollTop();    
+    if($(window).scrollTop() > scroll_val+34){
+        $("#shopify-section-header").addClass("header-fixed");
+       $(".ans-cst-cart").addClass("ans-cst-cart-fixed");
+    }
+    else{
+    $("#shopify-section-header").removeClass("header-fixed");
+       $(".ans-cst-cart").removeClass("ans-cst-cart-fixed");
+    }
+})
+})

@@ -94,6 +94,7 @@
                     {% for product in collections["bestsellers"].products %}
 {% if product.available %}
                     <div class="line-item form related-each-item">
+                      {% include "variant-cart-drawer" %}
     <div class="line-item-image">
 	  <h4 class="line-item-title"><a href="{{ product.url }}">{{ product.title }}</a></h4>
       
@@ -122,7 +123,7 @@
                     {% if product.variant.compare_at_price > item.price %}You save {{ product.variant.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
                   </div>
                 </div>                                
-              </div>
+              </div> 
               <div class="product-add-size-chrt-row">
                   <div class="product-add-size-chrt-box">
                     <div class="cart-select-size">Select Size</div>
@@ -234,7 +235,4 @@
 </svg> Free Returns</li>
     </ul>
   </div>
-<!--   <div class="saso-summary"></div>
-  <span class="saso-cart-total" id="checksavingprice"></span>
-  <div class="saso-cart-offers"></div> -->
 </div>

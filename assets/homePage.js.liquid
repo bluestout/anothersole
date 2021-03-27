@@ -1,0 +1,32 @@
+$(document).ready(function(){
+/************ Product Slider on Homepage *********************/
+  $('.custom-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: false,
+    swipe: 'false',
+swipeToSlide: 'false',
+touchMove: 'false',
+draggable: 'false',
+    fade: true,
+    speed: 500,
+    infinite: true,
+    cssEase: 'ease-in-out',
+    touchThreshold: 100,
+    dots: false,
+    prevArrow: false,
+    nextArrow: false
+});
+  
+  /*****************Fixed Scroll On Homepage *************/
+$('.hm-lt-sticky-section-left-slider').slick({
+    dots: true,
+    prevArrow: false,
+    nextArrow: false
+});
+})

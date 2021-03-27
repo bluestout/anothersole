@@ -158,6 +158,12 @@
   <script src="{{ 'jquery.cookie.js' | asset_url }}" defer="defer"></script> 
   <script src="{{ 'jquery-ui.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'slideCart.js' | asset_url }}" defer="defer"></script>
+  {% if template contains "index" %}
+  <script src="{{ 'homePage.js' | asset_url }}" defer="defer"></script>
+  {%endif%}
+   {% if template contains "product" %}
+  <script src="{{ 'ProductPage.js' | asset_url }}" defer="defer"></script>
+  {%endif%}
   <script src="{{ 'custom-script.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'bs-script.js' | asset_url }}" defer="defer"></script>
   <script type="text/javascript">
@@ -178,9 +184,7 @@
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
-  {%- if settings.enable_ajax -%}
-    {% include 'cart-popup' %}
-  {%- endif -%}
+
 
   {% section 'header' %}
 {% include 'slide-cart' %}
