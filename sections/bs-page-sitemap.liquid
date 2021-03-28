@@ -21,26 +21,12 @@
   <div class="bs-sitemap-row">
     <div class="bs-sitemap-ini">
       <ul>
-        <li><a href="#" class="bs-sitemap-link-item">Sneakers</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Anytime Flats</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">All-Day Heel</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Everyday Flats</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Men</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Bags</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">About</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Make Good Do Good</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Account</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Cart</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">FAQ & Contact Us</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Shipping & Delivery</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Return & Exchanges</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Privacy & Security</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Track My Parcel</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Blog</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">My Account</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Loyalty</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Return</a></li>
-        <li><a href="#" class="bs-sitemap-link-item">Press</a></li>
+        {% if section.settings.page_linklist != blank %}
+          {%- assign page_linklist = section.settings.page_linklist -%}
+          {%- for link in linklists[page_linklist].links -%}
+            <li><a href="{{ link.url }}" class="bs-sitemap-link-item">{{ link.title | escape }}</a></li>
+          {% endfor %}
+        {% endif %}
       </ul>
     </div>
   </div>
@@ -56,6 +42,12 @@
       "id": "hero_img",
       "label": "Hero Image",
       "info": "Recommend 1440 x 235px"
+    },
+    {
+    "type": "link_list",
+    "id": "page_linklist",
+    "label": "Select Menu",
+    "default": "main-menu"
     }
   ]
 }

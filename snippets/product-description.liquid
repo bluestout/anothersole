@@ -2,7 +2,13 @@
 	<div class="sin-pro-fea-pro-inn">
 		<div class="sin-pro-fea-pro-row">
 			<div class="sin-pro-fea-pro-left">
-				<div class="sin-pro-fea-pro-img"><img src="{{section.settings.main_banner| img_url: "original"}}" /></div>
+				<div class="sin-pro-fea-pro-img">
+                  {% if product.tags contains "related-video" %}
+                  {{section.settings.video}}
+                  {%else%}
+                  <img class="lazyload" data-src="{{section.settings.main_banner| img_url: "grande"}}" />
+              {%endif%}
+              </div>
 			</div>
 			<div class="sin-pro-fea-pro-right">
 				<div class="sin-pro-fea-pro-cont">
@@ -48,7 +54,7 @@
       {% assign getnumber = forloop.index | modulo:2 %}
 		<div class="sin-pro-img-cont-lr-row">
 			<div class="sin-pro-img-cont-lr-left">
-				<div class="sin-pro-img-cont-lr-img"><img src="{{ block.settings.image | img_url:'original'}}" /></div>
+				<div class="sin-pro-img-cont-lr-img"><img class="lazyload" data-src="{{ block.settings.image | img_url:'700x700'}}" /></div>
 			</div>
 			<div class="sin-pro-img-cont-lr-right">
 				<div class="sin-pro-img-cont-lr-cont">

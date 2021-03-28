@@ -1,4 +1,21 @@
 <div id="shipp_accordion">
+  {% if product.metafields.information.display_proDesc == 'yes' %}
+
+						{% assign info = product.metafields.information %}
+						{% for i in (0..info.tabs8) %}
+						{% assign enabled = "tab5_enabled_" | append:i %}
+						{% assign title = "proDescinput_" | append:i %}
+						{% assign text = "proDesceditor_" | append:i %}
+						{% if info[enabled] == 'yes' %}
+					
+                          <h3>{{ info[title] }} </h3>
+							<div>
+								{{ info[text] }}
+							</div>
+						
+						{% endif %}
+						{% endfor %}
+						{% endif %}
   <h3>
     <span>
       <svg width="25px" height="15px" viewBox="0 0 27 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,6 +44,7 @@
   <div>
     <p>{{section.settings.ship_content}}</p>
   </div>
+  {% if product.metafields.information.specifications != blank %}
   <h3>
     <span><svg width="25px" height="25px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>0F8278B9-3DA1-4D64-A113-E9B2E4EA8D5E</title>
@@ -45,9 +63,10 @@
 </svg></span>
     Specifications</h3>
   <div>
-    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+  {{product.metafields.information.specifications}}
   </div>
-  
+  {%endif%}
+   {% if product.metafields.information.specifications != blank %}
   <h3>
     <span><svg width="23px" height="26px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>6FB43143-38F7-4857-B510-2BFD1B60C5BE</title>
@@ -75,11 +94,7 @@
 </svg></span>
     Care Guide</h3>
   <div>
-    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
+    {{product.metafields.information.care-guide}}
   </div>
+  {%endif%}
 </div>

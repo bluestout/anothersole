@@ -26,15 +26,7 @@
   </div>
 </div>
 <!-- Stamped - End Main Widget -->
-  
-{% if collection %}
-  <div class="text-center return-link-wrapper page-width">
-    <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
-      {% include 'icon-arrow-left' %}
-      {{ 'products.product.back_to_collection' | t: title: collection.title }}
-    </a>
-  </div>
-{% endif %}
+
 
 <script>
   // Override default values of shop.strings for each template.
