@@ -1,6 +1,13 @@
 // ======================================================================
 
 $(document).ready(function(){
+  
+  
+  $('body').on('click', '.close-size-pop', function(e) {
+  $(".product-size.custom-cart-variants").removeClass("activeSizes");
+  
+  })
+  
   $('.header-cart-related-list').on('swipe', function(event, slick, direction) {
   $(".product-size.custom-cart-variants").removeClass("activeSizes");
   

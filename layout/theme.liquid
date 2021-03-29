@@ -181,7 +181,7 @@
 </head>
 
 <body class="template-{{ request.page_type | handle }}">
-
+{% include 'offer-popup-product' %}
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
 
@@ -210,5 +210,12 @@
   <!-- Stamped - Begin Script--><script async type="text/javascript" data-api-key="" id="stamped-script-widget" src="https://cdn-stamped-io.azureedge.net/files/widget.min.js"></script><!-- Stamped - End Script --><br>
 {% include 'social-login' %}
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RjTDH2"></script>
+
+  <!--Gorgias Chat Widget Start-->
+  <script>
+    window.GORGIAS_CHAT_APP_ID="214",window.GORGIAS_CHAT_BASE_URL="us-east1-898b.production.gorgias.chat",window.GORGIAS_API_BASE_URL="config.gorgias.chat";var xhrChat=new XMLHttpRequest;xhrChat.open("GET","https://config.gorgias.chat/applications/214",!0),xhrChat.onload=function(_){if(4===xhrChat.readyState)if(200===xhrChat.status){var e=JSON.parse(xhrChat.responseText);if(!e.application||!e.bundleVersion)throw new Error("Missing fields in the response body - https://config.gorgias.chat/applications/214");if(window.GORGIAS_CHAT_APP=e.application,window.GORGIAS_CHAT_BUNDLE_VERSION=e.bundleVersion,e&&e.texts&&(window.GORGIAS_CHAT_TEXTS=e.texts),!document.getElementById("gorgias-chat-container")){var r=document.createElement("div");r.id="gorgias-chat-container",document.body.appendChild(r);const _=document.createElement("script");_.setAttribute("defer",!0),_.src="https://storage.googleapis.com/gorgias-chat-production-client-builds/{bundleVersion}/static/js/main.js".replace("{bundleVersion}",e.bundleVersion),document.body.appendChild(_)}}else console.error("Failed request GET - https://config.gorgias.chat/applications/214")},xhrChat.onerror=function(_){console.error(_)},xhrChat.send();</script><script>!function(n){n.IS_SHOPIFY=!0,n.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",n.SHOPIFY_CUSTOMER_ID="{{customer.id}}"}(window||{});
+  </script>
+  <!--Gorgias Chat Widget End-->
+
   </body>
 </html>

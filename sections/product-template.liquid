@@ -181,13 +181,14 @@
 
     <div class="custom-product-info grid__item {{ product_description_width }}">
       <div class="product-single__meta">
-
+<div class="price-title">
         <h1 class="product-single__title">{{ product.title }}</h1>
         <script>window.performance.mark('debut:product:title_visible');</script>
 
           <div class="product__price">
             {% include 'product-price', variant: current_variant, show_vendor: section.settings.show_vendor %}
           </div>
+        </div>
 <div class="product-short-info">
   {% include "product-short-info" %}
         </div>

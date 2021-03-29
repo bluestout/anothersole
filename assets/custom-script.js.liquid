@@ -1,4 +1,16 @@
 $(document).ready(function(){
+  /********************* Header Fixed on All********************/
+  $(window).scroll(function() {    
+    var scroll_val = $(".cst-header-sec-main").scrollTop();    
+    if($(window).scrollTop() > scroll_val+31){
+        $("#shopify-section-header").addClass("header-fixed");
+       $(".ans-cst-cart").addClass("ans-cst-cart-fixed");
+    }
+    else{
+    $("#shopify-section-header").removeClass("header-fixed");
+       $(".ans-cst-cart").removeClass("ans-cst-cart-fixed");
+    }
+})
   /******************* Cart Slide Cart on All*************/
     $('.header-cart-related-list').slick({
  dots: false,

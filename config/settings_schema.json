@@ -1635,5 +1635,47 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": {
+      "cs": "Notifikace o přidání do košíku",
+      "da": "Meddelelse for læg i indkøbskurven",
+      "de": "Benachrichtigung für „Zum Warenkorb hinzufügen“",
+      "en": "Offer Popup on Product page"
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "popup_heading",
+        "label": {
+          "cs": "Text",
+          "da": "Tekst",
+          "de": "Text",
+          "en": "Heading"
+        },
+        "default": {
+          "cs": "Tady můžete zadat oznámení",
+          "da": "Meddel noget her",
+          "de": "Hier etwas ankündigen",
+          "en": "Save 30% on the 2nd pair today!"
+        }
+      },
+      {
+        "type": "textarea",
+        "id": "popup_content",
+        "label": {
+          "cs": "Text",
+          "da": "Tekst",
+          "de": "Text",
+          "en": "content"
+        },
+        "default": {
+          "cs": "Tady můžete zadat oznámení",
+          "da": "Meddel noget her",
+          "de": "Hier etwas ankündigen",
+          "en": "Save 30% on the 2nd pair today!"
+        }
+      }
+    ]
   }
 ]

@@ -1,4 +1,11 @@
 $(document).ready(function(){
+  /************************* Offer Poppup on PDP************/
+  $(".custom-offer-pro").click(function(){
+  $(".promo-popup-con").addClass("active-pop");
+  })
+  $("#promo-popup-close").click(function(){
+  $(".promo-popup-con").removeClass("active-pop");
+  })
 /**************** Related Product Slider On PDP **************/
 
   if ($(window).width() < 749) {
@@ -72,16 +79,5 @@ $(document).ready(function(){
   $( "#product-accordion" ).accordion({
       collapsible: true,heightStyle: "content"
     });
-  /********************* Header Fixed on All********************/
-  $(window).scroll(function() {    
-    var scroll_val = $(".cst-header-sec-main").scrollTop();    
-    if($(window).scrollTop() > scroll_val+34){
-        $("#shopify-section-header").addClass("header-fixed");
-       $(".ans-cst-cart").addClass("ans-cst-cart-fixed");
-    }
-    else{
-    $("#shopify-section-header").removeClass("header-fixed");
-       $(".ans-cst-cart").removeClass("ans-cst-cart-fixed");
-    }
-})
+  
 })

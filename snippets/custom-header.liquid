@@ -20,7 +20,7 @@
       </div>
 		<div class="ext-top-bar-right">
           <ul>
-          	<li><a href="{{section.settings.message_link}}">{{section.settings.message_text}}</a></li>
+          	<li><a href="{{section.settings.message_link.url}}">{{section.settings.message_text}}</a></li>
             <li class="custom_currency_wrapper"><div class="custom-currency-drop">{% include "desktop-currency" %}</div>
             
             </li>   
@@ -36,7 +36,7 @@
            
       {% for link in linklists[section.settings.main_linklist].links %}
             
-          <li><a href="{{link.href}}">{{link.handle}}</a>
+          <li><a href="{{link.url}}">{{link.handle}}</a>
             {% if forloop.index == 1 %}
             {% assign selectedlist = section.settings.main_linklist_1 %}
              {% assign text_11 = section.settings.last_text_11 %}
