@@ -178,6 +178,7 @@
   </script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   {{ content_for_header }}
+  {% include 'talkable-partial' %}
 </head>
 
 <body class="template-{{ request.page_type | handle }}">
@@ -217,5 +218,24 @@
   </script>
   <!--Gorgias Chat Widget End-->
 
+  <!--Social Login Popup-->
+  {%if template == "index" %}
+    {%unless customer%}
+    <script>
+      $(document).ready(function(){ 
+        function showLoginPopup() {    
+          var check_popup_cookie = $.cookie('bs-popup-cookie_3_30');
+          if(check_popup_cookie == null)
+          {
+            socialLogin.loginPopup();
+            $.cookie('bs-popup-cookie_3_30', "done", { expires: 7 });
+          }
+        }
+        setTimeout(showLoginPopup, 10000)
+      });
+
+    </script>
+    {%endunless%}
+  {%endif%}
   </body>
 </html>

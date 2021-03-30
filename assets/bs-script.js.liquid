@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   /****************cookie banner*********************/
   $(function(){
-    var check_privacy = $.cookie('bs-privacy_3_27');
+    var check_privacy = $.cookie('bs-privacy_3_30');
     //check_privacy = null;/*Test*/
     if(check_privacy == null)
     {
@@ -15,7 +15,7 @@ $(document).ready(function(){
   $(".bs-cookie-banner .bs-cookie-banner-accept").on("click",function(e){
     e.preventDefault();
     $(".bs-cookie-banner").hide();
-    $.cookie('bs-privacy_3_27', "done");
+    $.cookie('bs-privacy_3_30', "done" , { expires: 7 });
   });
 
   /****************faq page********************/

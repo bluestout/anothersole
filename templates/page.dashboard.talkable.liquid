@@ -1,0 +1,20 @@
+{% comment %}
+  DO NOT MODIFY MANUALLY
+  This asset is generated automatically by Talkable Integration at 3/3/21 1:20PM
+{% endcomment %}
+{% include 'shogun-products', content: page %}
+<div class="container cf">
+  <div class="page-header cf">
+    <h1 class="majortitle">{{ page.title }}</h1>
+    <div class="social-area">{% include 'social-sharing' with page %}</div>
+  </div>
+  <div class="user-content row-spacing {% if settings.lightbox_imgs %}lightboximages{% endif %}">
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <div id="talkable-offer"></div>
+      {% else %}
+        {{ 'Log in' | customer_login_link }}
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
