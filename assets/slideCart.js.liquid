@@ -63,6 +63,7 @@ $('body').on('click', '.cart-select-size', function(e) {
     var varinstId = $(this).attr("data-variId");
     $(this).parents(".custom-cart-variants").next(".line-item-image").children(".line-item-cst-row").children(".line-item-cst-cont").children(".line-item-content").children(".product-add-size-chrt-row").children(".product-add-con").attr("data-idget",varinstId);
     $(this).parents(".custom-cart-variants").next(".line-item-image").children(".line-item-cst-row").children(".line-item-cst-cont").children(".line-item-content").children(".line-item-content-qty-price").children(".slect-size-custom").children(".size-changed").children("span").html(valuereceive);
+    $(".product-size.custom-cart-variants").removeClass("activeSizes");
     //.next(".line-item-image").children(".line-item-cst-row").children(".line-item-cst-cont").children(".line-item-content").children(".line-item-content-qty-price").children(".product-add-size-chrt-box").children(".slect-size-custom").children(".size-changed").children("span").html(valuereceive);
 //    $(".product-size.custom-cart-variants").removeClass("activeSizes");
 //     //$(this).parents(".custom-cart-variants").parents(".product-add-size-chrt-row").prev(".line-item-content-qty-price").children(".slect-size-custom").children(".size-changed").children("span").html(valuereceive);

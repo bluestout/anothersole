@@ -52,7 +52,7 @@
       <div class="main-thumb-image-product">
         <ul>
       {% for image in product.images %}
-          <li class="lazyload" data-class="custom-thumb-list" data-thumb="custom-thumb-{{forloop.index}}"><img src="{{image.src| img_url: "small"}}"></li>
+          <li class="custom-thumb-list" data-thumb="custom-thumb-{{forloop.index}}"><img class="lazyload" data-src="{{image.src| img_url: "small"}}"></li>
       {%endfor%}
         </ul>
       </div>

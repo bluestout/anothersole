@@ -9608,7 +9608,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (mainContent && mainContent.children && mainContent.children.length) {
         var firstSection = document.getElementsByClassName('index-section')[0];
 
-        if (!firstSection.contains(image)) return;
+        //if (!firstSection.contains(image)) return;
 
         window.performance.mark('debut:index:first_image_visible');
       }
