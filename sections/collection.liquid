@@ -1,14 +1,14 @@
 <div class="ant-sole-cst-container pro-custom-sect">
+
   {% if section.settings.title != blank %}
   <div class="hm-tp-fav-title-sec">
 	<h3>{{ section.settings.title | escape }}</h3>
 	<p>{{section.settings.sub_title}}</p>
-	<div class="hm-tp-fav-title-sec-link"><a href="{{ collection.url }}">View Limited edition</a></div>
+	<div class="hm-tp-fav-title-sec-link"><a href="{{ section.settings.link_url }}">View Limited edition</a></div>
 </div>
   {% endif %}
 
   {%- assign collection = collections[section.settings.collection] -%}
-
   {% case section.settings.grid %}
     {% when 2 %}
       {%- assign max_height = 530 -%}
@@ -158,6 +158,16 @@
         "de": "Vorgestellte Kategorie",
         "en": "Featured collection",
         "es": "Colección destacada"
+      }
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": {
+        "en": "Link"
+      },
+      "info": {
+        "en": "View Limited edition"
       }
     },
     {

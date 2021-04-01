@@ -5,6 +5,7 @@
 .inline-cart.is-active {
   right: 0;
   z-index: 999999;
+  /* z-index: 2147483680; */
   border-left: 2px solid #e2e2e2;
 }
 
@@ -1070,6 +1071,7 @@ display:none;
 @media screen and (max-width: 749px){
   .ans-cst-cart.inline-cart{
   	z-index: 99999999;
+    /* z-index: 2147483680; */
     padding-top: 0px;
   }
   .ans-cst-cart-fixed.inline-cart .line-item-container,

@@ -23,7 +23,7 @@
 
   {% if section.settings.page_linklist != blank %}
     {%- assign page_linklist = section.settings.page_linklist -%}
-    <div class="bs-acct-mob-linklist">
+    <div class="bs-acct-mob-linklist bs-pg-top-remove-padding">
       <h3 class="bs-acct-mob-list-btn">DASHBOARD</h3>
       <ul class="bs-acct-mob-list-block" style="display: none;">
         {%- for link in linklists[page_linklist].links -%}

@@ -31,7 +31,8 @@
     left: 0;
     bottom: 0;
     background-color: #f7f7f7;
-    z-index: 10000000;
+    z-index: 2147483644;
+     {% comment %} z-index: 2147483670; {% endcomment %}
     border-top: 1px solid #DEDEDE;
   }
     .bs-cookie-banner-ini{
@@ -835,10 +836,11 @@
     }
   }
     .bs-mgdg-video-ini{
-      max-width: 1320px;
+      {% comment %} max-width: 1320px;
       margin: auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; {% endcomment %}
+      width: 100%;
     }
     .bs-mgdg-video-ini img{
       display: block;
@@ -854,7 +856,8 @@
       }
     }
     .bs-mgdg-video-mid{
-      flex: 0 0 60%;
+      {% comment %} flex: 0 0 60%; {% endcomment %}
+      width: 100%;
     }
     .bs-mgdg-video-mid iframe{
       display: block;
@@ -999,7 +1002,8 @@
   }
   @media (max-width: 749px){
     .bs-about-mat-row{
-      padding-top: 65px;
+      padding-top: 0px;
+      margin-top: 65px;
     }
   }
   .bs-about-mat-ini{
@@ -1366,6 +1370,12 @@
          font-size: 24px;
          line-height: 28px;
       }
+    }
+    .bs-pg-reg-form-sub-title{
+      text-align: center;
+    }
+    .bs-pg-reg-form-sub-title span{
+      color: #AA3F22;
     }
   .bs-pg-lg label,
   .bs-pg-reg label{
@@ -2084,4 +2094,9 @@
   .social-login-popup-content{
     margin: 30% auto !important;
   }
+}
+/**********georica chat app*************/
+.css-sef6vt{
+  z-index: 999998 !important;
+   {% comment %} z-index: 2147483650!important; {% endcomment %}
 }
