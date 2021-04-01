@@ -1,0 +1,176 @@
+<div class="ant-bot-insta-sec-main">
+  <div class="ant-bot-insta-section">
+	<div class="hm-tp-fav-title-sec">
+		<h3>{{section.settings.heading}}</h3>
+		<div class="hm-tp-fav-title-sec-link"><a href="{{section.settings.link}}">{{section.settings.View_all}}</a></div>
+	</div>
+	<div class="ant-bot-insta-sec-inn">
+		<ul class="instaslider">
+          {% for block in section.blocks %}
+			<li>
+              <div class="instabox">
+				<a href="{{block.settings.link}}">
+					<img src="{{block.settings.image | img_url: "grande"}}" />
+					<span>{{block.settings.title}}</span>
+				</a>
+              </div>
+			</li>
+			{%endfor%}
+		</ul>
+	</div>
+  </div>
+</div>
+{% schema %}
+  { 
+    "name": "Instagram",
+    "settings": [
+{
+      "type": "text",
+      "id": "heading",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Title"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+      "type": "text",
+      "id": "View_all",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Link Title"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+{
+          "type": "url",
+          "id": "link",
+          "label": {
+            "cs": "Odkaz",
+            "da": "Link",
+            "de": "Link",
+            "en": "Link"
+          },
+          "info": {
+            "cs": "Volitelné",
+            "da": "Valgfri",
+            "de": "Optional",
+            "en": "Optional"
+          }
+        }
+
+],
+  "blocks": [
+    {
+      "type": "Image",
+      "name": {
+        "cs": "Logo",
+        "da": "Logo",
+        "de": "Logo",
+        "en": "Image"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "cs": "Obrázek",
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image"
+          },
+        "info": {
+          "cs": "Dojde ke zmenšení na 32 × 32 px",
+          "da": "Skaleres ned til 32 x 32 px",
+          "de": "Wird in der Größe 32 x 32 px angezeigt",
+          "en": "Recommended 350 x 350 px "
+        }
+        },
+
+{
+      "type": "text",
+      "id": "title",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Title"
+      },
+      "default": {
+        "cs": "Tady můžete zadat oznámení",
+        "da": "Meddel noget her",
+        "de": "Hier etwas ankündigen",
+        "en": "Title"
+      }
+    },
+        {
+          "type": "url",
+          "id": "link",
+          "label": {
+            "cs": "Odkaz",
+            "da": "Link",
+            "de": "Link",
+            "en": "Link"
+          },
+          "info": {
+            "cs": "Volitelné",
+            "da": "Valgfri",
+            "de": "Optional",
+            "en": "Optional"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "cs": "Seznam log",
+        "da": "Logoliste",
+        "de": "Logo-Liste",
+        "en": "Image"
+      },
+      "category": {
+        "cs": "Obrázek",
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Instagram Feed"
+      },
+      "blocks": [
+        {
+          "type": "Image"
+        },
+        {
+          "type": "Image"
+        },
+        {
+          "type": "Image"
+        },
+        {
+          "type": "Image"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -29,4 +29,22 @@ $('.hm-lt-sticky-section-left-slider').slick({
     prevArrow: false,
     nextArrow: false
 });
+  if ($(window).width() < 749) {
+    $('.instaslider').slick({
+    dots: false,
+   slidesToShow: 1,
+  slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: false
+});
+  }
+  else{
+  $('.instaslider').slick({
+    dots: false,
+   slidesToShow: 4,
+  slidesToScroll: 4,
+    prevArrow: false,
+    nextArrow: false
+});
+  }
 })
