@@ -176,7 +176,7 @@
               {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
               {%- if settings[social_link] != blank -%}
                 <li class="social-icons-custom">
-                  <a class="social-icons-link-custom" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
+                  <a class="social-icons-link-custom" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message" target="_blank">
                     {%- include icon_link -%}
                     <span class="icon-fallback-text-custom">{{ social }}</span>
                   </a>
@@ -194,8 +194,10 @@
                             {% if inline_list %}list--inline{% endif %}">
                     {%- for link in linklists[footer_linklist].links -%}
                       <li class="site-footer__linklist-item">
+
                         <a href="{{ link.url }}"
                           {% if link.current %} aria-current="page"{% endif %}
+                          {%if link.url contains "aftership.com" %} target="_blank" {%endif%}
                         >
                           {{ link.title | escape }}
                         </a>
@@ -241,7 +243,7 @@
               {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
               {%- if settings[social_link] != blank -%}
                 <li class="social-icons-custom">
-                  <a class="social-icons-link-custom" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
+                  <a class="social-icons-link-custom" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message" target="_blank">
                     {%- include icon_link -%}
                     <span class="icon-fallback-text-custom">{{ social }}</span>
                   </a>
@@ -260,6 +262,7 @@
                       <li class="site-footer__linklist-item">
                         <a href="{{ link.url }}"
                           {% if link.current %} aria-current="page"{% endif %}
+                          {%if link.url contains "aftership.com" %} target="_blank" {%endif%}
                         >
                           {{ link.title | escape }}
                         </a>
@@ -288,7 +291,8 @@
 
 
       <div class="{{ copyright_show_class }} site-footer-item-align-right">
-        <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
+        {% comment %} <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small> {% endcomment %}
+        <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }} ANOTHERSOLE</small>
         
       </div>
     </div>

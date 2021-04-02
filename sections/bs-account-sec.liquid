@@ -5,7 +5,11 @@
       <h3 class="bs-acct-mob-list-btn">DASHBOARD</h3>
       <ul class="bs-acct-mob-list-block" style="display: none;">
         {%- for link in linklists[page_linklist].links -%}
-        <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+          {%if link.url contains "aftership.com" or link.url contains "a/returns"%}
+            <li><a href="{{ link.url }}" target="_blank">{{ link.title | escape }}</a></li>
+          {%else%}
+            <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+          {%endif%}
         {% endfor %}
       </ul>
     </div>
@@ -19,7 +23,11 @@
         <h3 class="bs-acct-dsk-list-btn">Dashboard</h3>
         <ul class="bs-acct-dsk-list-block">
           {%- for link in linklists[page_linklist].links -%}
-          <li class="{% if link.current %}bs-acct-link-active{% endif %}"><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+            {%if link.url contains "aftership.com" or link.url contains "a/returns"%}
+              <li class="{% if link.current %}bs-acct-link-active{% endif %}"><a href="{{ link.url }}" target="_blank">{{ link.title | escape }}</a></li>
+            {%else%}
+              <li class="{% if link.current %}bs-acct-link-active{% endif %}"><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+            {%endif%}
           {% endfor %}
         </ul>
       </div>
@@ -97,6 +105,9 @@
   </div>
   <div class="bs-acct-order-list-right">
     <div class="bs-acct-order-list-accor">
+      {%if customer.orders.length == 0%}
+        <p>There is no order.</p>
+      {%endif%}
       {% for order in customer.orders %}
         <div class="bs-acct-order-accor-head">
           <div class="bs-acct-order-accor-head-ini">
