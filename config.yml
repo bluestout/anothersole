@@ -1,6 +1,0 @@
-development:
-  password: 1
-  theme_id: "120479285429"
-  store: anothersole.myshopify.com
-  ignore_files:
-    - config/settings_data.json
