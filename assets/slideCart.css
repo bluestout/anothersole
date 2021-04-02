@@ -527,6 +527,7 @@ h3.header-cart-related-inner-title{
 	padding-top: 0px !important;
   padding-bottom: 0px !important;
   outline: none !important;
+  padding-right: 5px;
 }
 .ans-cst-cart.inline-cart .header-cart-related-inner .line-item *{
 	outline: none !important;

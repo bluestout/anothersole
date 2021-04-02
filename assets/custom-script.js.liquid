@@ -102,6 +102,8 @@ $(document).ready(function(){
   slidesToScroll: 1,
     nextArrow: false
 });
+  }
+  if ($(window).width() < 750) {
      $('.logo-slider-mobile').slick({
  dots: true,
     prevArrow: false,
@@ -109,6 +111,16 @@ $(document).ready(function(){
   slidesToScroll: 1,
     nextArrow: false
 });
+  }
+  else if($(window).width() < 1200)  {
+    $('.logo-slider-mobile').slick({
+ dots: true,
+    prevArrow: false,
+    slidesToShow: 2,
+  slidesToScroll: 2,
+    nextArrow: false
+});
+  
   }
   
   	

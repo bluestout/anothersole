@@ -231,7 +231,7 @@
                           {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
                   <div class="klaviyo-form-XmU4MF"></div>
                 </div>
-{%- assign socials = "Facebook Twitter Pinterest Instagram Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
+{%- assign socials = "Instagram Facebook Twitter Pinterest Tumblr Snapchat YouTube Vimeo" | split: ' ' -%}
               {%- when 'text' -%}
                 {%- if block.settings.text != blank -%}
                   <div class="site-footer__rte
@@ -290,7 +290,7 @@
       
 
 
-      <div class="{{ copyright_show_class }} site-footer-item-align-right">
+      <div class="site-footer-item-align-right">
         {% comment %} <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small> {% endcomment %}
         <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }} ANOTHERSOLE</small>
         
