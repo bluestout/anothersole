@@ -1791,6 +1791,7 @@
 }
 .boost-pfs-filter-tree-mobile-button button{
 	padding: 12px 45px;
+    position: relative;
 }
 .boost-pfs-filter-tree-mobile-button button:before
 {
@@ -1816,3 +1817,105 @@
     left: auto;
 	}
 }
+
+/* Customization CS-4166 for ticket #67177 */
+/* for the size filter */
+.boost-pfs-filter-tree-v .boost-pfs-filter-option-size .boost-pfs-filter-option-content .boost-pfs-filter-option-item-list-box li {
+    min-width: 25%;
+    float: left;
+    border: none;
+}
+
+.boost-pfs-filter-tree-v .boost-pfs-filter-option-size .boost-pfs-filter-option-content .boost-pfs-filter-option-item-list-box li .boost-pfs-filter-button {
+    background-color: #efeaea;
+    border: none;
+}
+
+.boost-pfs-filter-tree-v .boost-pfs-filter-option-size .boost-pfs-filter-option-content .boost-pfs-filter-option-item-list-box li .boost-pfs-filter-button:hover span {
+    color: #282828;
+}
+
+.boost-pfs-filter-option-content .boost-pfs-filter-option-item-list.boost-pfs-filter-option-item-list-box .boost-pfs-filter-option-item.selected>button {
+    background-color: white;
+    border: 2px solid gray;
+}
+
+.boost-pfs-filter-option-content .boost-pfs-filter-option-item-list.boost-pfs-filter-option-item-list-box .boost-pfs-filter-option-item.selected {
+    margin-bottom: 11px;
+}
+
+.boost-pfs-filter-option-content .boost-pfs-filter-option-item-list.boost-pfs-filter-option-item-list-box .boost-pfs-filter-option-item.selected>button span {
+    color: #282828;
+}
+
+/*for the colour filter*/
+.boost-pfs-filter-option-content .boost-pfs-filter-option-item-list.boost-pfs-filter-option-item-list-swatch.circle-grid li .boost-pfs-filter-option-swatch-image {
+    border: 1px solid;
+}
+
+.boost-pfs-filter-option-content .boost-pfs-filter-option-item-list.boost-pfs-filter-option-item-list-swatch .boost-pfs-filter-option-item .boost-pfs-filter-option-swatch-image:before {
+    border: 4px solid transparent;
+}
+
+.boost-pfs-filter-option-content .boost-pfs-filter-option-item-list.boost-pfs-filter-option-item-list-swatch .boost-pfs-filter-option-item.selected .boost-pfs-filter-option-swatch-image {
+    border: none;
+}
+
+/* sticky filter */
+
+.boost-pfs-filter-toolbar-top-mobile.bc-sf-filter-stick{
+		position: fixed; 
+		background: #fff; 
+		z-index: 999
+	}
+}
+
+.boost-pfs-filter-tree-mobile-button button {
+    position: relative !important;
+}
+
+.boost-pfs-filter-option-shoes .boost-pfs-filter-option-content 
+.boost-pfs-filter-option-item-list li .boost-pfs-check-box,
+.boost-pfs-filter-option-style .boost-pfs-filter-option-content 
+.boost-pfs-filter-option-item-list li .boost-pfs-check-box {
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 15px;
+    height: 15px;
+    background: 0 0;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    border-radius: 50px;
+}
+
+.boost-pfs-filter-option-shoes .boost-pfs-filter-option-content 
+.boost-pfs-filter-option-item-list li .boost-pfs-filter-option-value,
+.boost-pfs-filter-option-style .boost-pfs-filter-option-content 
+.boost-pfs-filter-option-item-list li .boost-pfs-filter-option-value {
+    margin-left: 20px;
+}
+
+.boost-pfs-filter-option-shoes .boost-pfs-filter-option-content 
+.boost-pfs-filter-option-item-list li .boost-pfs-filter-button,
+.boost-pfs-filter-option-style .boost-pfs-filter-option-content 
+.boost-pfs-filter-option-item-list li .boost-pfs-filter-button {
+    position: relative
+}
+
+.boost-pfs-filter-option-shoes .boost-pfs-filter-option-content
+.boost-pfs-filter-option-item-list li.selected .boost-pfs-check-box:before,
+.boost-pfs-filter-option-style .boost-pfs-filter-option-content
+.boost-pfs-filter-option-item-list li.selected .boost-pfs-check-box:before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50px;
+    background-color: #000;
+}
+
+/* Customization CS-4166 for ticket #67177 */

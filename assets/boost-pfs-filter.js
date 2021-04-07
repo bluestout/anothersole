@@ -343,8 +343,8 @@ var boostPFSFilterConfig = {
 	// Build Color Swatches
 	function buildColorSwatches(data) {
 		var colorSwatchesHtml = '',
-			filterSwatchTitle = 'Color',
-			optionName = 'color',
+			filterSwatchTitle = 'Colour',
+			optionName = 'colour',
 			swatchArr = [],
 			countSwatch = 0,
 			swatchValues = [],
@@ -652,20 +652,6 @@ var boostPFSFilterConfig = {
 
 	/************************** END BUILD TOOLBAR **************************/
 
-	// Add additional feature for product list, used commonly in customizing product list
-	ProductList.prototype.afterRender = function(data) {
-		if (!data) data = this.data;
-
-		// Intergrate Review Shopify
-		if (window.SPR &&
-			typeof window.SPR.initDomEls == 'function' &&
-			typeof window.SPR.loadBadges == 'function' &&
-			boostPFSThemeConfig.custom.show_product_review) {
-			window.SPR.initDomEls();
-			window.SPR.loadBadges();
-		}
-	};
-
 	// Build additional elements
 	Filter.prototype.afterRender = function(data) {
 		if (!data) data = this.data;
@@ -874,4 +860,151 @@ var boostPFSFilterConfig = {
 			$selector.removeAttr('data-boost-image-loading-animation');
 		}
 	}
+  
+    /* Customization CS-4166 for ticket #67177 */
+    /* Done this way for now to avoid affecting the live theme */
+	FilterTree.prototype.setData = function(data) {
+
+		// When filering on the same collection, save the filter option we clicked on, so we don't rebuild it
+		if (Settings.getSettingValue('general.filterTreeEnableRenderPartially') && this.collectionId == Globals.collectionId) {
+			this.clickedFilterOption = this.filterOptions.get(this.parent.clickedFilterOptionId);
+		} else {
+			this.collectionId = Globals.collectionId;
+			this.clickedFilterOption = null;
+		}
+		this.isRenderPartially = !!(this.$element && this.clickedFilterOption && this.clickedFilterOption.$element);
+
+		// Modify/Prepare the option data
+		this.modifyOptionsData(data.options);
+
+		this.children = [];
+		this.filterOptions = new Map();
+
+		data.options.forEach((optionData) => {
+			// Check if option is enabled
+			if (optionData.status != FilterOptionEnum.Status.ACTIVE) {
+				return;
+			}
+            if (optionData.label.toLowerCase() === "size") {
+              optionData.displayType = FilterOptionEnum.DisplayType.BOX
+            }
+          
+            if (optionData.label.toLowerCase() === "colour") {
+              optionData.displayType = FilterOptionEnum.DisplayType.SWATCH
+            }
+
+			// Check if optionData has empty values
+			if ((Array.isArray(optionData.values) && optionData.values.length == 0)
+				&& (Array.isArray(optionData.manualValues) && optionData.manualValues.length == 0)) {
+				return;
+			}
+
+			// Check if option element is the one clicked on
+			var filterOption = null;
+			if (this.clickedFilterOption && optionData.filterOptionId == this.clickedFilterOption.filterOptionId) {
+				filterOption = this.clickedFilterOption;
+			}
+
+			if (filterOption == null) {
+				switch (optionData.displayType) {
+					case FilterOptionEnum.DisplayType.LIST:
+						filterOption = new FilterOptionList(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.BOX:
+						filterOption = new FilterOptionBox(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.RANGE:
+						filterOption = new FilterOptionRangeSlider(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.SWATCH:
+						filterOption = new FilterOptionSwatch(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.RATING:
+						filterOption = new FilterOptionRating(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.SUB_CATEGORY:
+						filterOption = new FilterOptionSubCategory(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.MULTI_LEVEL_COLLECTIONS:
+						filterOption = new FilterOptionMultiLevelCollections(this.filterTreeType);
+						break;
+					case FilterOptionEnum.DisplayType.MULTI_LEVEL_TAG:
+						filterOption = new FilterOptionMultiLevelTag(this.filterTreeType);
+						break;
+					default:
+						break;
+				}
+				if (!filterOption) {
+					return;
+				}
+				filterOption.setData(optionData);
+			}
+			this.addComponent(filterOption);
+			this.filterOptions.set(optionData.filterOptionId, filterOption);
+		});
+
+		if (Settings.getSettingValue('general.showRefineBy')) {
+			this.refineBy = new FilterRefineBy(this.filterTreeType);
+			this.addComponent(this.refineBy);
+			this.refineBy.setData();
+		}
+		this.addComponent(this.clearAllButton);
+		this.addComponent(this.applyAllButton);
+	}
+    
+    // Add additional feature for product list, used commonly in customizing product list
+	ProductList.prototype.afterRender = function(data) {
+		if (!data) data = this.data;
+
+		// Intergrate Review Shopify
+		if (window.SPR &&
+			typeof window.SPR.initDomEls == 'function' &&
+			typeof window.SPR.loadBadges == 'function' &&
+			boostPFSThemeConfig.custom.show_product_review) {
+			window.SPR.initDomEls();
+			window.SPR.loadBadges();
+		}
+      
+        var stickyElemet = '.boost-pfs-filter-toolbar-top-mobile';
+        var startElement = '.boost-pfs-filter-toolbar-top-mobile';
+        var endElement = '.boost-pfs-filter-bottom-pagination';
+        jQ(stickyElemet).stickTo(startElement, endElement);
+	};
+  
+    jQ.fn.stickTo = function(startElement, endElement) {
+      var _this = this;
+      var startPos = jQ(startElement).offset().top;
+      var endPos = jQ(endElement).offset().top;
+      var width = jQ(this).width();
+      var setPosition = function() {
+          if (jQ(window).scrollTop() < startPos) { // Initial Position
+              _this.removeClass('bc-sf-filter-stick');
+              _this.css({
+                  position: 'initial',
+                  width: 'auto'
+              });
+          } else if (jQ(window).scrollTop() > (endPos - _this.outerHeight())) { // End Position
+              _this.removeClass('bc-sf-filter-stick');
+              _this.css({
+                  position: 'absolute',
+                  top: (endPos - _this.outerHeight()),
+                  width: width
+              });
+          } else { // Fixed Position
+              _this.addClass('bc-sf-filter-stick');
+              _this.css({
+                  position: 'fixed',
+                  top: '55px',
+                  width: width
+              });
+          }
+      };
+      jQ(window).resize(function() {
+          endPos = jQ(endElement).offset().top;
+          setPosition();
+      });
+      jQ(window).scroll(setPosition);
+      setPosition();
+  };
+    /* Customization CS-4166 for ticket #67177 */
 })();

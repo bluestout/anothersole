@@ -1,8 +1,7 @@
 // ======================================================================
 
 $(document).ready(function(){
-  
-  $(".copy-btn").click(function(){
+  $('body').on('click', '.copy-btn', function(e) {
   var copyText = document.getElementById("discount_get");
   copyText.select();
   copyText.setSelectionRange(0, 99999)

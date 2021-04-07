@@ -132,7 +132,7 @@
   <div>
     <p>{{section.settings.ship_content}}</p>
   </div>
-  {% if product.metafields.information.specifications != blank %}
+  {% if product.description != blank %}
   <h3>
     <span><svg width="25px" height="25px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>0F8278B9-3DA1-4D64-A113-E9B2E4EA8D5E</title>
@@ -148,12 +148,35 @@
             </g>
         </g>
     </g>
-</svg></span>
+    </svg></span>
+    Specifications</h3>
+  <div>
+  {{product.description}}
+  </div>
+  {%endif%}
+  {% comment %} {% if product.metafields.information.specifications != blank %}
+  <h3>
+    <span><svg width="25px" height="25px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>0F8278B9-3DA1-4D64-A113-E9B2E4EA8D5E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icons" transform="translate(-295.000000, -177.000000)" stroke="#231F20">
+            <g id="spec_ico" transform="translate(296.000000, 178.000000)">
+                <rect id="Rectangle-path" x="6.0796084" y="10.451668" width="8.95482" height="8.95482"></rect>
+                <polyline id="Shape" points="6.0796084 10.4517529 10.4462319 6.1932135 19.1848834 6.1932135 19.1848834 15.2561196 15.034429 19.4065745"></polyline>
+                <path d="M14.926418,10.6201072 L19.076872,6.3291426" id="Shape"></path>
+                <path d="M12.5,25 C19.403559,25 25,19.403559 25,12.5 C25,5.59644075 19.403559,0 12.5,0 C5.59644075,0 0,5.59644075 0,12.5 C0,19.403559 5.59644075,25 12.5,25 Z" id="Oval"></path>
+            </g>
+        </g>
+    </g>
+    </svg></span>
     Specifications</h3>
   <div>
   {{product.metafields.information.specifications}}
   </div>
-  {%endif%}
+  {%endif%} {% endcomment %}
+
    {% if product.metafields.information.care-guide != blank %}
   <h3>
     <span><svg width="23px" height="26px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
