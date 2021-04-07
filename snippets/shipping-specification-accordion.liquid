@@ -1,5 +1,5 @@
 <div id="shipp_accordion">
-  {% if product.metafields.information.display_proDesc == 'yes' %}
+  {% comment %} {% if product.metafields.information.display_proDesc == 'yes' %}
     {% assign info = product.metafields.information %}
 		{% for i in (0..info.tabs8) %}
 		  {% assign enabled = "tab5_enabled_" | append:i %}
@@ -24,84 +24,13 @@
               </g>
             </svg>
           </span>
-          {% comment %} {%if info[title] contains "Specifications"%}
-            <span>
-              <svg width="25px" height="25px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>0F8278B9-3DA1-4D64-A113-E9B2E4EA8D5E</title>
-                <desc>Created with sketchtool.</desc>
-                <defs></defs>
-                <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                    <g id="icons" transform="translate(-295.000000, -177.000000)" stroke="#231F20">
-                        <g id="spec_ico" transform="translate(296.000000, 178.000000)">
-                            <rect id="Rectangle-path" x="6.0796084" y="10.451668" width="8.95482" height="8.95482"></rect>
-                            <polyline id="Shape" points="6.0796084 10.4517529 10.4462319 6.1932135 19.1848834 6.1932135 19.1848834 15.2561196 15.034429 19.4065745"></polyline>
-                            <path d="M14.926418,10.6201072 L19.076872,6.3291426" id="Shape"></path>
-                            <path d="M12.5,25 C19.403559,25 25,19.403559 25,12.5 C25,5.59644075 19.403559,0 12.5,0 C5.59644075,0 0,5.59644075 0,12.5 C0,19.403559 5.59644075,25 12.5,25 Z" id="Oval"></path>
-                        </g>
-                    </g>
-                </g>
-              </svg>
-            </span>
-          {%elsif info[title] contains "Care Guide"%}
-            <span>
-              <svg width="23px" height="26px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>6FB43143-38F7-4857-B510-2BFD1B60C5BE</title>
-                <desc>Created with sketchtool.</desc>
-                <defs></defs>
-                <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="icons" transform="translate(-238.000000, -216.000000)">
-                        <g id="clean_guid_ico" transform="translate(239.000000, 216.000000)">
-                            <rect id="Background" x="0" y="0" width="23" height="26"></rect>
-                            <g id="Layer_2" transform="translate(0.155306, 0.155035)" stroke="#231F20">
-                                <g id="Layer_1-2">
-                                    <path d="M9.54140175,13.7858164 L4.25618965,23.3393632 C4.07813562,23.6643362 3.77762,23.9055915 3.42077963,24.0100325 C3.06393954,24.1144756 2.68001945,24.0735405 2.35351348,23.8962409 C1.67644215,23.5262534 1.4276058,22.6810225 1.79701183,22.0059507 L8.52477539,9.7453596 C4.4365089,12.353403 0.649809606,13.4578766 0.130615195,12.4678728 C-0.075907194,12.0257568 -0.0284451361,11.5074035 0.254973223,11.1097101 C0.453332609,10.7880358 0.722227598,10.515166 1.0415376,10.3115189 L12.2337497,2.88648321 L13.7478085,0" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M12.280534,14.655188 L6.68442769,24.8243928 C6.31262273,25.4981563 5.46324376,25.745776 4.78486026,25.3781748 L4.78486026,25.3781765 C4.4585063,25.2015964 4.21612256,24.9031059 4.11114646,24.5485092 C4.00617036,24.1939155 4.04722151,23.8123313 4.22524979,23.4878864" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M14.6651303,16.090479 L9.84626071,24.8241762 C9.47322684,25.4983337 8.62289016,25.7458288 7.94358461,25.3779605 C7.26651276,25.0079723 7.01767676,24.1627409 7.38708199,23.4876702" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M22.689008,2.8676586 L20.9231255,6.34195655 C20.8835498,6.41584982 20.8693562,6.5005988 20.8827096,6.58327049 C21.0434826,7.57314864 21.1132033,8.57555576 21.0910088,9.57803661 C21.0628804,10.0371203 20.932243,10.4841867 20.7086069,10.8866982 L13.5238283,24.0166355 C13.151881,24.6919345 12.3012752,24.9408909 11.6211525,24.5735146 C10.9436852,24.2023017 10.6949755,23.3561141 11.0646505,22.6801276" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <ellipse id="Circle" cx="1.04460655" cy="17.786201" rx="1.04460655" ry="1.039505"></ellipse>
-                                    <path d="M4.59516703,3.55777162 C4.39490058,3.55776926 4.20148959,3.63035669 4.05110103,3.76196008 C3.80709334,3.54769114 3.45948893,3.49574768 3.16300211,3.62924968 C2.86651504,3.76275138 2.67627126,4.05687644 2.67694578,4.38071311 C2.67694578,5.09227885 3.81792987,6.02659598 4.05110103,6.1255964 C4.28427214,6.0327837 5.440801,5.0334978 5.440801,4.37761926 C5.43917806,4.15690866 5.34886116,3.94602415 5.18999452,3.7920024 C5.03112727,3.63798034 4.81692579,3.55363245 4.59516578,3.55777162 L4.59516703,3.55777162 Z" id="Shape"></path>
-                                    <path d="M16.21942,23.794449 L18.1252047,25.6909263" id="Line" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M18.1252047,23.794449 L16.21942,25.6909263" id="Line" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-              </svg>
-            </span>
-          {%else%}
-            <span>
-              <svg width="25px" height="15px" viewBox="0 0 27 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <title>14621ECD-E513-44CA-A666-B7D67337B262</title>
-                  <desc>Created with sketchtool.</desc>
-                  <defs></defs>
-                  <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                      <g id="icons" transform="translate(-297.000000, -62.000000)" stroke="#3D3D3D">
-                          <g id="transport_ico" transform="translate(298.000000, 63.000000)">
-                              <polyline id="Shape" points="23.4554461 14.4824923 24.9999993 14.4824923 24.9999993 10.5621612 22.0297045 6.8289943 19.183172 6.89475469"></polyline>
-                              <path d="M12.935648,14.355978 L20.11386,14.355978" id="Shape"></path>
-                              <polyline id="Shape" points="9.6534794 14.355988 8.168332 14.355988 8.168332 8.032873"></polyline>
-                              <polyline id="Shape" points="12.316789 4.1124873 18.87619 4.1124873 18.87619 14.2901733"></polyline>
-                              <path d="M11.2921002,16 C12.1642719,16 12.8713069,15.2775402 12.8713069,14.386341 C12.8713069,13.4951418 12.1642719,12.772682 11.2921002,12.772682 C10.4199284,12.772682 9.7128935,13.4951418 9.7128935,14.386341 C9.7128935,15.2775402 10.4199284,16 11.2921002,16 Z" id="Oval"></path>
-                              <path d="M21.7524317,16 C22.6246034,16 23.3316384,15.2775402 23.3316384,14.386341 C23.3316384,13.4951418 22.6246034,12.772682 21.7524317,12.772682 C20.8802599,12.772682 20.173225,13.4951418 20.173225,14.386341 C20.173225,15.2775402 20.8802599,16 21.7524317,16 Z" id="Oval"></path>
-                              <path d="M8.38611,8.032886 C10.55697,8.032886 12.3168,6.2346631 12.3168,4.016443 C12.3168,1.79822282 10.55697,0 8.38611,0 C6.2152499,0 4.45542,1.79822282 4.45542,4.016443 C4.45542,6.2346631 6.2152499,8.032886 8.38611,8.032886 Z" id="Oval"></path>
-                              <polyline id="Shape" points="8.232684 1.3910681 8.232684 3.79385168 9.4703069 5.0584747"></polyline>
-                              <path d="M0,9.358186 L6.064352,9.358186" id="Shape"></path>
-                              <path d="M0.683088,5.5642724 L2.970215,5.5642724" id="Shape"></path>
-                              <path d="M8.0445243,13.278571 L2.8465083,13.278571" id="Shape"></path>
-                          </g>
-                      </g>
-                  </g>
-              </svg>
-            </span>
-          {%endif%} {% endcomment %}
         {{ info[title] }} </h3>
         <div>
           {{ info[text] }}
         </div>
 			{% endif %}
 		{% endfor %}
-	{% endif %}
+	{% endif %} {% endcomment %}
   <h3>
     <span>
       <svg width="25px" height="15px" viewBox="0 0 27 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -155,26 +84,8 @@
   </div>
   {%endif%}
   {% comment %} {% if product.metafields.information.specifications != blank %}
-  <h3>
-    <span><svg width="25px" height="25px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>0F8278B9-3DA1-4D64-A113-E9B2E4EA8D5E</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="icons" transform="translate(-295.000000, -177.000000)" stroke="#231F20">
-            <g id="spec_ico" transform="translate(296.000000, 178.000000)">
-                <rect id="Rectangle-path" x="6.0796084" y="10.451668" width="8.95482" height="8.95482"></rect>
-                <polyline id="Shape" points="6.0796084 10.4517529 10.4462319 6.1932135 19.1848834 6.1932135 19.1848834 15.2561196 15.034429 19.4065745"></polyline>
-                <path d="M14.926418,10.6201072 L19.076872,6.3291426" id="Shape"></path>
-                <path d="M12.5,25 C19.403559,25 25,19.403559 25,12.5 C25,5.59644075 19.403559,0 12.5,0 C5.59644075,0 0,5.59644075 0,12.5 C0,19.403559 5.59644075,25 12.5,25 Z" id="Oval"></path>
-            </g>
-        </g>
-    </g>
-    </svg></span>
-    Specifications</h3>
-  <div>
+  Specifications
   {{product.metafields.information.specifications}}
-  </div>
   {%endif%} {% endcomment %}
 
    {% if product.metafields.information.care-guide != blank %}

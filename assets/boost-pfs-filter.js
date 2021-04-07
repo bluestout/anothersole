@@ -18,7 +18,7 @@ var boostPFSFilterConfig = {
 		placeholderProductPerRow: 3,
 		placeholderProductGridItemClass: 'boost-pfs-filter-product-item boost-pfs-filter-product-item-grid boost-pfs-filter-grid-width-3 boost-pfs-filter-grid-width-mb-2',
 		enableOTP: true,
-		separateRefineByFromFilter: true,
+		separateRefineByFromFilter: false,
 		filterTreeMobileStyle: 'style3', // 'style2', 'style3',
 		equal_height: boostPFSThemeConfig.custom.equal_height,
 		cropImagePossitionEqualHeight: boostPFSThemeConfig.custom.equal_height_crop_image_position,
