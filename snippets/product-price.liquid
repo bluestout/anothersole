@@ -20,7 +20,7 @@
     assign available = true
   endif
 
-  assign money_price = price | money
+  assign money_price = price | money | remove: '.00'
 -%}
 
 <dl class="price

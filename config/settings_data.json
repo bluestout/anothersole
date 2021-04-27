@@ -1,0 +1,1395 @@
+{
+  "current": {
+    "color_text": "#282828",
+    "color_body_text": "#3d3d3d",
+    "type_header_font": "roboto_n4",
+    "type_base_font": "roboto_n4",
+    "social_facebook_link": "https:\/\/www.facebook.com\/Anothersole",
+    "social_instagram_link": "https:\/\/www.instagram.com\/anothersoleofficial\/",
+    "favicon": "shopify:\/\/shop_images\/fav_icon_0ed921e2-ffe3-4a7f-a537-150c15a14960.png",
+    "popup_content": "There's savings when we ship 2 pairs & we want you to have it. Get another color or share with someone. SAVE up to $43.50 today! Disc is applied on the lower priced item.",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_8f525614-c092-4ee4-a3b1-5d6ff4347939.png",
+    "checkout_accent_color": "#3d3d3d",
+    "checkout_button_color": "#424242",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo_8f525614-c092-4ee4-a3b1-5d6ff4347939.png",
+          "main_linklist": "desktop-new-main-menu",
+          "gift_image_1": "<svg width=\"183px\" height=\"110px\" viewbox=\"0 0 183 110\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">     <title>02E34B52-1C59-41C1-8EB7-543AB3C1FCED<\/title>     <desc>Created with sketchtool.<\/desc>     <defs><\/defs>     <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">         <g id=\"icons\" transform=\"translate(-16.000000, -139.000000)\" stroke=\"#FFFFFF\">             <g id=\"card_ico\" transform=\"translate(16.000000, 139.000000)\">                 <path d=\"M57.4972259,33.4039044 C54.7166048,36.5580678 41,39 41,39 C41,39 43.1024214,26.315517 45.8830436,23.161354 C48.7827707,20.3748968 53.3318324,20.2701187 56.356736,22.9201144 C59.3816378,25.5701096 59.8769906,30.0940963 57.4972259,33.3360725 L57.4972259,33.4039044 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>                 <path d=\"M47.5810832,54.6260231 C44.2216297,52.1035837 41,39 41,39 C41,39 53.9898871,40.3758763 57.3321131,42.8983162 C60.4717282,45.5288888 60.8982535,50.0349618 58.3030834,53.1562128 C55.7079114,56.2774621 50.9979691,56.9231187 47.5810832,54.6260231 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>                 <path d=\"M25.580107,33.4039044 C28.3476943,36.5580678 42,39 42,39 C42,39 39.9074334,26.315517 37.0554684,23.161354 C34.1693347,20.3748968 29.6415964,20.2701187 26.6308737,22.9201144 C23.6201509,25.5701096 23.127121,30.0940963 25.4957293,33.3360725 L25.580107,33.4039044 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>                 <path d=\"M35.4361441,54.6260231 C38.7783695,52.1035837 42,39 42,39 C42,39 29.0101123,40.3758763 25.6678867,42.8983162 C22.5282721,45.5288888 22.1017461,50.0349618 24.6969172,53.1562128 C27.2920882,56.2774621 32.0020319,56.9231187 35.418916,54.6260231 L35.4361441,54.6260231 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>                 <path d=\"M176.300307,2 L48.7464115,2 C45.5729102,2 43,4.57468107 43,7.7510548 L43,25.154923 C43.3435366,24.491976 43.721332,23.8459164 44.1322564,23.2194552 L44.1940865,23.1251942 L44.2753502,23.0470642 C47.5341541,19.9139274 52.6467937,19.7961073 56.0462944,22.7758233 C59.4454235,25.7552098 60.0020237,30.84121 57.3279278,34.486052 L57.250758,34.5912358 L57.1491865,34.6731017 C56.5459659,35.1592929 55.9118777,35.6023795 55.2517305,36 L176.253587,36 C179.427088,36 182,33.4253189 182,30.2489452 L182,7.75102819 C182.000084,4.59262053 179.45528,2.0256174 176.300285,1.99999998 Z M176.300285,1.99999998 C176.299084,1.99999023 176.297883,1.99998085 176.296683,1.99997184 L176.304188,2 L176.300307,2 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>                 <path d=\"M54.4527504,42.0002773 C55.1272175,42.2986305 55.7887897,42.6272999 56.4353312,42.9855765 L56.606615,43.1054816 C60.0837615,46.1274999 60.5567394,51.3106497 57.6810798,54.8982174 C54.8117614,58.4778747 49.6112668,59.2173619 45.8086906,56.5649334 C44.8155912,55.8205909 43.9151702,54.4633534 43.0082451,52.4658598 L43.0082451,103.349449 C43.0082451,106.46703 45.5766539,109 48.7518424,109 L176.2564,109 C179.431591,109 182,106.46703 182,103.349449 L182,47.6509933 C182.00012,46.1430038 181.387465,44.6968895 180.297397,43.6351339 C179.204579,42.5707014 177.723105,41.9814748 176.184431,42.0004443 L176.172103,42.0005203 L54.4527504,42.0002773 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>                 <path d=\"M38,25.1722001 L38,6.72727303 C38,3.56122917 35.4726458,1 32.3617027,1 L6.63829764,1 C3.52735405,1 1,3.56122897 1,6.72727303 L1,30.2727266 C1,33.4387703 3.52735441,36 6.63829764,36 L26.8243536,36 C25.3868949,35.3446612 24.3248664,34.6679354 23.6590535,33.9425933 L23.5859261,33.8530445 C20.9553584,30.2219735 21.502584,25.1580975 24.8482213,22.1883344 C28.2010544,19.2121841 33.2477576,19.3299622 36.4614362,22.4589726 L36.546714,22.5420036 L36.6101203,22.6427315 C37.1237165,23.4586359 37.5876422,24.3033876 38,25.1722001 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>                 <path d=\"M26.0125924,42 L6.63829764,42 C3.52536298,42 1,44.5367679 1,47.6682776 L1,103.331723 C1,106.463232 3.52536327,109 6.63829764,109 L32.3617027,109 C35.4746365,109 38,106.463231 38,103.331723 L38.0000055,51.5421173 C37.0028723,53.9107532 36.0042225,55.5712567 34.9592141,56.4027228 L34.9156773,56.4354669 C31.1892704,59.082322 26.0517269,58.3382204 23.2222207,54.7426761 C20.3947375,51.1497086 20.859335,45.9638564 24.2805648,42.9352201 L24.4478976,42.8153776 C24.9597312,42.5233953 25.4816946,42.2514656 26.0125924,42 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>             <\/g>         <\/g>     <\/g> <\/svg>",
+          "gift_image_2": "<svg width=\"70px\" height=\"74px\" viewbox=\"0 0 20 21\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>1251D119-C4E4-49C0-8337-3FBCBCF82C17<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\".4\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-349.000000, -95.000000)\" stroke=\"#FFFFFF\">\n            <g id=\"donation_icon\" transform=\"translate(350.000000, 96.000000)\">\n                <path d=\"M16.9260381,5.04147844 C17.5993092,5.93036978 18,7.04588207 18,8.25705884 C18,10.1926546 14.9999994,13.7736351 9,18.9999994 C3.00000006,13.7736351 0,10.1926546 0,8.25705884 C0,6.48387971 0.85881546,4.91574186 2.17444878,3.9635694\" id=\"Combined-Shape\"><\/path>\n                <path d=\"M12.7142859,0 C15.0812201,0 17,1.9123533 17,4.2713606 C17,5.84403213 14.5,8.7535786 9.5,13 C4.5,8.7535786 2,5.84403213 2,4.2713606 C2,1.9123533 3.91877975,0 6.2857145,0 C7.5657419,0 8.71470245,0.559286481 9.5,1.44604304 C10.285298,0.559286481 11.4342581,0 12.7142859,0 Z\" id=\"Combined-Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "main_linklist_1": "women",
+          "last_text_11": "Gift Cards",
+          "last_link_11": "shopify:\/\/products\/online-gift-card",
+          "last_text_12": "#BUY1FEED1",
+          "last_link_12": "shopify:\/\/pages\/bs-make-good-to-good",
+          "main_linklist_2": "men",
+          "last_text_21": "Gift Cards",
+          "last_link_21": "shopify:\/\/products\/online-gift-card",
+          "last_text_22": "#BUY1FEED1",
+          "last_link_22": "shopify:\/\/pages\/bs-make-good-to-good",
+          "main_linklist_3": "men",
+          "last_text_31": "Gift Cards",
+          "last_link_31": "shopify:\/\/products\/online-gift-card",
+          "last_text_32": "#BUY1FEED1",
+          "last_link_32": "shopify:\/\/pages\/bs-make-good-to-good",
+          "menu_text_1": "First",
+          "mobile_mega_1": "women",
+          "mobile_mega_2": "men",
+          "other_mobile_menu": "others",
+          "custom_text": "Make Good Do Good",
+          "custom_link": "shopify:\/\/pages\/bs-make-good-to-good",
+          "accounment_1": "Free Shipping and Exchange",
+          "accounment_2": "Free Shipping and Exchange",
+          "accounment_3": "",
+          "message_text": "#Buy1Feed1",
+          "message_link": "shopify:\/\/pages\/bs-make-good-to-good"
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": ""
+        }
+      },
+      "feature-columns": {
+        "type": "feature-columns",
+        "blocks": {
+          "feature-columns-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": ""
+            }
+          },
+          "feature-columns-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": ""
+            }
+          },
+          "feature-columns-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "title": "Add a title or tagline",
+              "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "button_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "feature-columns-0",
+          "feature-columns-1",
+          "feature-columns-2"
+        ],
+        "settings": {
+          "title": "",
+          "align_text": "left"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "title": "Top Favorites",
+          "sub_title": "They fly off the shelves. We stay on our toes to replenish them pretty quickly.",
+          "link_url": "shopify:\/\/collections\/limited-edition",
+          "collection": "pink",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "quotes": {
+        "type": "quotes",
+        "disabled": true,
+        "blocks": {
+          "quotes-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "author": "Author's name"
+            }
+          },
+          "quotes-1": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "author": "Author's name"
+            }
+          },
+          "quotes-2": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+              "author": "Author's name"
+            }
+          }
+        },
+        "block_order": [
+          "quotes-0",
+          "quotes-1",
+          "quotes-2"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "image-bar-0": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          },
+          "image-bar-1": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          },
+          "image-bar-2": {
+            "type": "image",
+            "settings": {
+              "alignment": "center",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "image-bar-0",
+          "image-bar-1",
+          "image-bar-2"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-1": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Get free shipping and $20 off first order."
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "title": "Help",
+              "menu": "bs-footer-help"
+            }
+          },
+          "7b14283f-6531-4aad-9860-251417207f1f": {
+            "type": "link_list",
+            "settings": {
+              "title": "Anothersole",
+              "menu": "bs-footer-anothersole"
+            }
+          },
+          "394349c4-6f57-4763-9e3a-8c1ab5be3992": {
+            "type": "text",
+            "settings": {
+              "title": "Reach Us",
+              "text": "<p>customerservice@anothersole.com<\/p>\n<p>44 Jalan Kelabu Asap S(278237)<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-1",
+          "footer-0",
+          "7b14283f-6531-4aad-9860-251417207f1f",
+          "394349c4-6f57-4763-9e3a-8c1ab5be3992"
+        ],
+        "settings": {
+          "show_payment_icons": false,
+          "color_footer_bg": "#f6f6f6",
+          "color_footer_text": "#333232",
+          "show_locale_selector": false,
+          "show_currency_selector": true
+        }
+      },
+      "1615257431d65a3829": {
+        "type": "gift-card-returns",
+        "settings": {
+          "gift_svg": "<svg width=\"183px\" height=\"110px\" viewbox=\"0 0 183 110\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>02E34B52-1C59-41C1-8EB7-543AB3C1FCED<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-16.000000, -139.000000)\" stroke=\"#FFFFFF\">\n            <g id=\"card_ico\" transform=\"translate(16.000000, 139.000000)\">\n                <path d=\"M57.4972259,33.4039044 C54.7166048,36.5580678 41,39 41,39 C41,39 43.1024214,26.315517 45.8830436,23.161354 C48.7827707,20.3748968 53.3318324,20.2701187 56.356736,22.9201144 C59.3816378,25.5701096 59.8769906,30.0940963 57.4972259,33.3360725 L57.4972259,33.4039044 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M47.5810832,54.6260231 C44.2216297,52.1035837 41,39 41,39 C41,39 53.9898871,40.3758763 57.3321131,42.8983162 C60.4717282,45.5288888 60.8982535,50.0349618 58.3030834,53.1562128 C55.7079114,56.2774621 50.9979691,56.9231187 47.5810832,54.6260231 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M25.580107,33.4039044 C28.3476943,36.5580678 42,39 42,39 C42,39 39.9074334,26.315517 37.0554684,23.161354 C34.1693347,20.3748968 29.6415964,20.2701187 26.6308737,22.9201144 C23.6201509,25.5701096 23.127121,30.0940963 25.4957293,33.3360725 L25.580107,33.4039044 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M35.4361441,54.6260231 C38.7783695,52.1035837 42,39 42,39 C42,39 29.0101123,40.3758763 25.6678867,42.8983162 C22.5282721,45.5288888 22.1017461,50.0349618 24.6969172,53.1562128 C27.2920882,56.2774621 32.0020319,56.9231187 35.418916,54.6260231 L35.4361441,54.6260231 Z\" id=\"Shape\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M176.300307,2 L48.7464115,2 C45.5729102,2 43,4.57468107 43,7.7510548 L43,25.154923 C43.3435366,24.491976 43.721332,23.8459164 44.1322564,23.2194552 L44.1940865,23.1251942 L44.2753502,23.0470642 C47.5341541,19.9139274 52.6467937,19.7961073 56.0462944,22.7758233 C59.4454235,25.7552098 60.0020237,30.84121 57.3279278,34.486052 L57.250758,34.5912358 L57.1491865,34.6731017 C56.5459659,35.1592929 55.9118777,35.6023795 55.2517305,36 L176.253587,36 C179.427088,36 182,33.4253189 182,30.2489452 L182,7.75102819 C182.000084,4.59262053 179.45528,2.0256174 176.300285,1.99999998 Z M176.300285,1.99999998 C176.299084,1.99999023 176.297883,1.99998085 176.296683,1.99997184 L176.304188,2 L176.300307,2 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>\n                <path d=\"M54.4527504,42.0002773 C55.1272175,42.2986305 55.7887897,42.6272999 56.4353312,42.9855765 L56.606615,43.1054816 C60.0837615,46.1274999 60.5567394,51.3106497 57.6810798,54.8982174 C54.8117614,58.4778747 49.6112668,59.2173619 45.8086906,56.5649334 C44.8155912,55.8205909 43.9151702,54.4633534 43.0082451,52.4658598 L43.0082451,103.349449 C43.0082451,106.46703 45.5766539,109 48.7518424,109 L176.2564,109 C179.431591,109 182,106.46703 182,103.349449 L182,47.6509933 C182.00012,46.1430038 181.387465,44.6968895 180.297397,43.6351339 C179.204579,42.5707014 177.723105,41.9814748 176.184431,42.0004443 L176.172103,42.0005203 L54.4527504,42.0002773 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>\n                <path d=\"M38,25.1722001 L38,6.72727303 C38,3.56122917 35.4726458,1 32.3617027,1 L6.63829764,1 C3.52735405,1 1,3.56122897 1,6.72727303 L1,30.2727266 C1,33.4387703 3.52735441,36 6.63829764,36 L26.8243536,36 C25.3868949,35.3446612 24.3248664,34.6679354 23.6590535,33.9425933 L23.5859261,33.8530445 C20.9553584,30.2219735 21.502584,25.1580975 24.8482213,22.1883344 C28.2010544,19.2121841 33.2477576,19.3299622 36.4614362,22.4589726 L36.546714,22.5420036 L36.6101203,22.6427315 C37.1237165,23.4586359 37.5876422,24.3033876 38,25.1722001 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>\n                <path d=\"M26.0125924,42 L6.63829764,42 C3.52536298,42 1,44.5367679 1,47.6682776 L1,103.331723 C1,106.463232 3.52536327,109 6.63829764,109 L32.3617027,109 C35.4746365,109 38,106.463231 38,103.331723 L38.0000055,51.5421173 C37.0028723,53.9107532 36.0042225,55.5712567 34.9592141,56.4027228 L34.9156773,56.4354669 C31.1892704,59.082322 26.0517269,58.3382204 23.2222207,54.7426761 C20.3947375,51.1497086 20.859335,45.9638564 24.2805648,42.9352201 L24.4478976,42.8153776 C24.9597312,42.5233953 25.4816946,42.2514656 26.0125924,42 Z\" id=\"Shape\" stroke-width=\"2\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "gift_text": "Gift Card",
+          "gift_desc": "When you're just not sure which design or color they will love, let them decide with an anothersole gift card.",
+          "btn_text": "Sounds good. Let's Do it.",
+          "btn_link": "shopify:\/\/products\/online-gift-card",
+          "return_title": "Return Guarantee",
+          "return_link": "shopify:\/\/pages\/returns-and-exchanges",
+          "return_link_text": "Returns",
+          "return_svg": "<svg width=\"57px\" height=\"57px\" viewbox=\"0 0 57 57\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>0EA49319-E8BC-4EAE-BB6E-408E2A3BB379<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-15.000000, -35.000000)\" stroke=\"#282828\" stroke-width=\"2\">\n            <g id=\"location_ico\" transform=\"translate(16.000000, 36.000000)\">\n                <path d=\"M27.45996,55 C42.6256763,55 54.91992,42.6878298 54.91992,27.5 C54.91992,12.3121696 42.6256763,0 27.45996,0 C12.2942431,0 0,12.3121696 0,27.5 C0,42.6878298 12.2942431,55 27.45996,55 Z\" id=\"Oval\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M36.355866,25.2704451 C36.355866,30.1919203 27.4599618,39.331803 27.4599618,39.331803 C27.4599618,39.331803 18.554028,30.1919203 18.554028,25.2704451 C18.7151597,20.4638577 22.6526532,16.650784 27.454947,16.650784 C32.2572411,16.650784 36.1947344,20.4638577 36.355866,25.2704451 Z\" id=\"Shape\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M27.4604315,29.046866 C29.4821578,29.046866 31.121091,27.4055431 31.121091,25.380869 C31.121091,23.3561948 29.4821578,21.714872 27.4604315,21.714872 C25.4387051,21.714872 23.799772,23.3561948 23.799772,25.380869 C23.799772,27.4055431 25.4387051,29.046866 27.4604315,29.046866 Z\" id=\"Oval\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M16.3474062,30.302071 C10.918777,30.0422697 5.53339725,29.0040724 0.30068025,27.208572\" id=\"Shape\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M55,26.394962 C51.0023106,28.2530701 45.4055449,29.6089869 38.953274,30.1714412\" id=\"Shape\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                <path d=\"M6,9 L47,9\" id=\"New-shape\"><\/path>\n                <path d=\"M47,45 L7,45\" id=\"New-shape-Copy\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "return_title_1": "Easy International",
+          "return_svg_2": "<svg width=\"57px\" height=\"57px\" viewbox=\"0 0 57 57\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>9D71BEEF-BD0A-4184-94CE-1F5ADA8914CA<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-100.000000, -38.000000)\" stroke=\"#282828\" stroke-width=\"2\">\n            <g id=\"exchange_ico\" transform=\"translate(101.000000, 39.000000)\">\n                <polyline id=\"Shape\" points=\"1 33.5799991 22.3399997 11.8299998 18.2500001 8 36.5899984 8.25 36.3399997 25.9999996 31.8399981 21.7500004 22.0000005 31.4200002 17.6700001 27.4200011 17.1699997 45.33 35.7499988 45.2500018 31.5899995 41.0799997 53.17 19.9199991\"><\/polyline>\n                <path d=\"M27.38,54.76 C42.5015556,54.76 54.76,42.5015556 54.76,27.38 C54.76,12.2584438 42.5015556,0 27.38,0 C12.2584438,0 0,12.2584438 0,27.38 C0,42.5015556 12.2584438,54.76 27.38,54.76 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "return_title_2": "Free Exchange"
+        }
+      },
+      "161525865512426610": {
+        "type": "static-scroll-effect",
+        "blocks": {
+          "af387e8e-4c2c-400e-a4f2-ddd9d5392fdd": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AS-Web-Homepage-Classics.jpg",
+              "hover_image": "shopify:\/\/shop_images\/AS-Web-Homepage-Metallics.jpg",
+              "title": "Classics",
+              "sub_title": "Classy. Always on point.",
+              "link": "shopify:\/\/collections\/classics"
+            }
+          },
+          "a1f8aaed-0911-4761-a03c-5618c1649fb6": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AS-Web-Homepage-RibbonsBows.jpg",
+              "hover_image": "shopify:\/\/shop_images\/AS-Web-Homepage-Metallics.jpg",
+              "title": "Luxury",
+              "sub_title": "Affordable luxurious comfort",
+              "link": "shopify:\/\/collections\/luxury"
+            }
+          },
+          "ac853422-2df8-4849-a2d7-77cc7d183b49": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AS-Web-Homepage-Luxury.jpg",
+              "hover_image": "shopify:\/\/shop_images\/31.jpg",
+              "title": "Special Edits",
+              "sub_title": "A touch of cool to your outfit",
+              "link": "shopify:\/\/collections\/special-edits"
+            }
+          },
+          "7df5dd61-0f2b-4860-bb0e-82ef8280041c": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AS-Web-Homepage-Special.jpg",
+              "hover_image": "shopify:\/\/shop_images\/31.jpg",
+              "title": "Ribbons & Bows",
+              "sub_title": "Oversized bows and printed ribons",
+              "link": "shopify:\/\/collections\/ribbons"
+            }
+          },
+          "1ca5b608-2d4f-4a1a-8709-edc389106d44": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AS-Web-Homepage-Prints.jpg",
+              "hover_image": "shopify:\/\/shop_images\/31.jpg",
+              "title": "Metallics",
+              "sub_title": "Add some shine to your outfit",
+              "link": "shopify:\/\/collections\/metallics"
+            }
+          },
+          "865366f6-bc38-4eac-8f85-e32f0be7dac8": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/AS-Web-Homepage-Metallics.jpg",
+              "hover_image": "shopify:\/\/shop_images\/31.jpg",
+              "title": "Prints",
+              "sub_title": "Whimsical prints for the free-spirited",
+              "link": "shopify:\/\/collections\/prints"
+            }
+          }
+        },
+        "block_order": [
+          "af387e8e-4c2c-400e-a4f2-ddd9d5392fdd",
+          "a1f8aaed-0911-4761-a03c-5618c1649fb6",
+          "ac853422-2df8-4849-a2d7-77cc7d183b49",
+          "7df5dd61-0f2b-4860-bb0e-82ef8280041c",
+          "1ca5b608-2d4f-4a1a-8709-edc389106d44",
+          "865366f6-bc38-4eac-8f85-e32f0be7dac8"
+        ],
+        "settings": {
+          "heading_1": "Comfortable And Classy Shoes.",
+          "sub_heading_1": "\"Feels like I'm wearing nothing at all it's a perfect fit\"",
+          "heading_2": "Comfortable And Classy Shoes.",
+          "sub_heading_2": "\"Feels like I'm wearing nothing at all it's a perfect fit\"",
+          "heading_3": "Comfortable And Classy Shoes.",
+          "sub_heading_3": "\"Feels like I'm wearing nothing at all it's a perfect fit\"",
+          "btn_text": "View all styles",
+          "btn_link": "https:\/\/intl.anothersole.com\/collections\/all"
+        }
+      },
+      "161526447231ea0fd6": {
+        "type": "main-banner",
+        "settings": {
+          "image_desktop": "shopify:\/\/shop_images\/new-banner.png",
+          "image_mobile": "shopify:\/\/shop_images\/Rectangle_3_Copy_3_d53ee489-a967-4ec2-8552-926fe5e17c72.png",
+          "title": "Discover your everyday, everywhere, anytime pair of shoes.",
+          "text": "Socially-conscious footwear for the modern woman.",
+          "button_label": "Find your pair",
+          "button_link": "https:\/\/intl.anothersole.com\/collections\/all"
+        }
+      },
+      "1615269583997b9406": {
+        "type": "content-with-images",
+        "settings": {
+          "heading": "A Perfect Match to Fit the Occasion",
+          "sub_heading": "Choose from a wide range of colors, from classy designs to touch of glamorous.",
+          "image_rt": "shopify:\/\/shop_images\/image-02.jpg",
+          "image_lt": "shopify:\/\/shop_images\/image-01.jpg",
+          "text": "Walk a Good Path",
+          "text_desc": "Made with premium leathers, crafted in top tanneries, simply to create honest-to-goodness timeless footwear. In addition, together we are giving back to community by helping children in need.",
+          "btn_text": "Start Now",
+          "btn_link": "https:\/\/intl.anothersole.com\/collections\/all"
+        }
+      },
+      "16152743296837f8d2": {
+        "type": "logo-bar",
+        "blocks": {
+          "16152743296837f8d2-0": {
+            "type": "logo_image",
+            "settings": {
+              "svg_logo": "<svg width=\"29px\" height=\"39px\" viewbox=\"0 0 29 39\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>E07F840D-0C32-44EC-AC03-99400EC76B6A<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-484.000000, -61.000000)\" stroke=\"#1A1A1A\">\n            <g id=\"lether_ico\" transform=\"translate(485.000000, 62.000000)\">\n                <path d=\"M13.5320328,37 L13.6609092,37 C14.6393122,35.3179726 16.2525771,34.1166159 18.125181,33.6755741 C19.9977833,33.2345303 21.9663603,33.5922778 23.5726848,34.665539 C23.5726848,34.665539 26.8238871,31.443747 26.8180281,31.4318367 C24.4313026,28.2411935 23.1575571,24.3334844 23.1977709,20.325284 C23.159061,16.2232908 24.5004696,12.2310253 26.9996274,9.01030105 C27.028917,9.05794299 25.3242315,4.78802496 25.2422209,4.76420399 C24.5485296,5.02542436 23.8145022,5.15853186 23.0747524,5.15725092 C20.0825649,5.14715029 17.5154535,2.98652234 16.9472601,0 L10.0640831,0 C9.4876785,2.98380876 6.9160284,5.1366434 3.92487498,5.1393851 C3.18512358,5.14066604 2.45109834,5.00755854 1.75740689,4.74633854 C1.69296858,4.74633854 0,9.04007717 0,8.99243523 C2.50798761,12.2139738 3.85582248,16.2111097 3.8194308,20.3193307 C3.85758612,24.3309547 2.57960403,28.2411099 0.187456726,31.4318367 C0.187456726,31.4318367 3.42694341,34.6714957 3.43280133,34.665539 C5.03912448,33.5922778 7.00770204,33.2345303 8.8803054,33.6755741 C10.7529074,34.1166159 12.3661723,35.3179726 13.3445761,37 L13.5320328,37 Z\" id=\"Shape\"><\/path>\n                <path d=\"M12.5,9 C13.3284271,9 14,8.32842708 14,7.5 C14,6.67157289 13.3284271,6 12.5,6 C11.6715729,6 11,6.67157289 11,7.5 C11,8.32842708 11.6715729,9 12.5,9 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+              "title": "100% Premium Leather"
+            }
+          },
+          "16152743296837f8d2-1": {
+            "type": "logo_image",
+            "settings": {
+              "svg_logo": "<svg width=\"61px\" height=\"50px\" viewbox=\"0 0 61 50\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>C8FA4AA5-B44C-423B-AE0D-E98AD4E5768F<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-468.000000, -125.000000)\" stroke=\"#1A1A1A\">\n            <g id=\"light_ico\" transform=\"translate(469.000000, 126.000000)\">\n                <g id=\"Asset-1\" transform=\"translate(0.000000, 13.000000)\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <path d=\"M47.5990293,15.052803 C47.5990293,15.052803 48.7465119,14.9618564 48.6547135,16.0077457 C48.4408226,16.6143618 48.0883161,16.6743871 46.3294548,16.796256 C44.2795923,16.9326758 43.4433073,17.1527688 43.0247056,16.8417288 C42.4124091,16.3869946 42.0764262,15.7048924 42.3665098,13.9159671 C42.6942307,11.8987641 44.3401794,10.0507222 48.3334183,7.7770495 C52.3266566,5.503376 55.7691042,2.91138855 58.4312626,0.00108694413 C58.5230612,-0.0898599855 61.0475234,5.5488493 54.6675205,8.50462468 C54.5298229,8.50462468 57.1460831,7.8225228 57.4214786,8.9593587 C57.6968735,10.0961963 55.5855067,11.9151341 52.188959,12.1879749 C52.188959,12.1879749 53.9891294,12.5981458 54.024931,13.3702848 C54.0708297,14.3716113 53.1987433,15.0082392 47.5990293,15.052803 Z\" id=\"Shape\"><\/path>\n                    <path d=\"M11.4009687,15.0526988 C11.4009687,15.0526988 10.2534866,14.9617468 10.3452845,16.007693 C10.5591754,16.6143414 10.9116819,16.6743701 12.6705432,16.7962448 C14.7204052,16.9326727 15.5566904,17.1527756 15.9752917,16.8417208 C16.587589,16.3869621 16.9235718,15.7048237 16.6334883,13.9158022 C16.3057673,11.8984911 14.6598187,10.0503507 10.6665797,7.77655582 C6.67334142,5.50276094 3.23089414,2.91154444 0.568734975,0.00108700227 C0.476936381,-0.089864788 -2.04752486,5.54914629 4.33247687,8.5050796 C4.47017513,8.5050796 1.85391523,7.822941 1.57851944,8.9598381 C1.30312369,10.096736 3.41449126,11.9157714 6.81103901,12.1886277 C6.81103901,12.1886277 5.01086894,12.5988198 4.97506746,13.3709998 C4.92916776,14.3714702 5.80125467,15.0081328 11.4009687,15.0526988 Z\" id=\"Shape\"><\/path>\n                <\/g>\n                <g id=\"Asset-5\" transform=\"translate(21.000000, 0.000000)\">\n                    <path d=\"M8.64,34.56 C12.4212379,34.56 15.5299047,30.4350185 15.9025029,25.1484068 C15.9374822,24.6000212 15.9374822,24.0499606 15.9025029,23.501575 C15.8140895,21.9369274 15.6514727,17.6365168 16.4535056,16.32\" id=\"Shape\"><\/path>\n                    <path d=\"M8.63999976,34.56 C4.8587621,34.56 1.75009506,30.4350185 1.37749711,25.1484068 C1.3425176,24.6000212 1.3425176,24.0499606 1.37749711,23.501575 C1.46591012,21.9369274 1.62852707,17.6365168 0.82649416,16.32\" id=\"Shape\"><\/path>\n                    <path d=\"M5.859961,20.115528 C6.81996101,20.115528 6.74118625,21.2627192 6.8855173,23.8351805 C6.95172419,25.0152538 7.68,33.6 7.68,33.6\" id=\"Shape\"><\/path>\n                    <path d=\"M9.59999996,20.71377 C9.59999996,21.9137699 9.57748964,21.2709483 9.43448269,23.8351804 C9.36827591,25.0152538 8.64000004,32.8646486 8.64000004,33.6\" id=\"Shape\"><\/path>\n                    <path d=\"M6.72,34.56 C6.72,33.4996133 7.36470997,32.64 8.16,32.64 C8.95529,32.64 9.6,33.4996133 9.6,34.56\" id=\"Shape\"><\/path>\n                    <path d=\"M8.64,21.12 C11.82116,21.12 14.4,16.3921266 14.4,10.56 C14.4,4.72787315 11.82116,0 8.64,0 C5.4588399,0 2.88,4.72787315 2.88,10.56 C2.88,16.3921266 5.4588399,21.12 8.64,21.12 Z\" id=\"Oval\"><\/path>\n                    <path d=\"M8.64319905,0 C5.72699013,0 3.88736254,2.42316144 2.72439815,5.47567392 C2.22369961,6.78868512 2.01414211,8.1639936 1.79978544,9.54409296 C1.28468989,12.8857238 0.857576333,15.1219968 0.697608772,16.5052915 C0.470454774,19.9922784 0.457657344,21.2445917 0.270495245,24.1453584 C-0.0302438172,28.8319474 -0.265396193,33.2182368 0.625623316,36.9096864 C2.23809679,43.5913469 4.94634816,48 8.61120564,48 C12.0633062,48 15.0419037,43.5849581 16.6543767,36.9032928 C17.5453966,33.211848 17.3102435,28.8239592 17.0095046,24.1405651 C16.8927293,22.3196016 16.8495371,21.148752 16.7679533,19.6680192 C16.7231631,18.7878864 16.667174,17.7991344 16.583991,16.5004992 C16.4240231,15.1156066 15.9969099,12.8793341 15.4818145,9.5393016 C15.2690573,8.15920128 15.0579002,6.77590656 14.560401,5.4708816 C13.3942367,2.42316144 11.554609,0 8.63840039,0\" id=\"Shape\"><\/path>\n                <\/g>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+              "title": "Super Lightweight"
+            }
+          },
+          "16152743296837f8d2-2": {
+            "type": "logo_image",
+            "settings": {
+              "svg_logo": "<svg width=\"50px\" height=\"35px\" viewbox=\"0 0 50 35\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>A698D0DC-2B54-4DC5-B41F-7E6F5210592E<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-478.000000, -200.000000)\" stroke=\"#231F20\">\n            <g id=\"flexible_ico\" transform=\"translate(479.000000, 201.000000)\">\n                <path d=\"M36.8940017,3.90838128 C41.3223994,9.4261656 39.1249335,28.026615 24.0661554,30.785508 C9.00737979,33.544398 0.836598645,14.2321554 0.836598645,14.2321554 L0,17.1731349 C0,17.1731349 8.27117231,35.475624 24.7242792,32.7167319 C40.2571292,30.1123392 46.7212507,6.1154949 34.9419384,3.01450021 C34.5738363,2.91518009 30.2123686,3.10830254 30.6362439,10.9159668 C30.8593388,14.9880921 30.2123686,18.5580981 25.2820104,19.8437415 C17.6689639,21.830145 15.2093649,12.460947 15.2093649,12.460947 L15.1759007,12.3450738 C13.4152943,13.7023386 10.9425007,13.684065 9.20258612,12.3009309 C7.18359401,10.8056118 7.46246043,7.9529172 7.60189323,5.6795901 C7.52938801,5.6354478 6.37488213,6.1154949 3.56391024,8.598498 C0.752938842,11.0815011 0.557732471,12.207129 0.658124292,13.6362345 C0.752547169,14.302344 0.677792156,14.981232 0.440608673,15.6116019\" id=\"Shape\"><\/path>\n                <path d=\"M44.9138727,25 C44.9138727,25 52.996986,14.1898322 43,1\" id=\"Shape\"><\/path>\n                <polyline id=\"Shape\" points=\"43 7 43 0 49 2.83860514\"><\/polyline>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+              "title": "Flexible soles reduce strain on your feet."
+            }
+          },
+          "16152743296837f8d2-3": {
+            "type": "logo_image",
+            "settings": {
+              "svg_logo": "<svg width=\"72px\" height=\"22px\" viewbox=\"0 0 72 22\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>CF009FB5-A74F-491E-8D32-F7EB24BFB00D<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-559.000000, -67.000000)\">\n            <g id=\"flat_packs_ico\" transform=\"translate(560.000000, 67.000000)\">\n                <g id=\"no-lining\" transform=\"translate(12.017765, 0.000000)\" stroke=\"#231F20\" stroke-dasharray=\"4,4\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <path d=\"M56.640906,16.948011 C56.640906,16.948011 57.981697,15.9461361 57.981697,15.2841044 C57.981697,14.6220727 58.0894776,13.4657235 54.5844528,12.5256394 C51.0794256,11.5855544 45.207536,9.60387279 40.4651886,7.00870877 L27.3719958,0.11033861 L27.2599043,0 C27.2599043,0 21.2759226,6.17896246 16.6974011,6.84099414 C12.1188808,7.50302582 6.67811362,6.89836993 3.16877623,3.08948123 C3.06099546,3.08948123 1.39255131,4.19286725 0.642398028,8.99480432 C-0.107755252,13.7967402 -0.331938979,15.006052 0.689821439,16.550792\" id=\"Shape\"><\/path>\n                <\/g>\n                <g id=\"no-lining\" transform=\"translate(12.017765, 16.000000)\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <path d=\"M0.68972796,0.4296875 C0.68972796,0.4296875 1.02744059,1.25207801 1.70286586,2.89685903 C1.94055872,3.46271092 2.20066935,3.75596654 2.48319774,3.77662586 C4.77676955,3.90572169 11.0668478,4.21650899 14.9857515,4.02525544 C19.4964061,3.88147935 24.0107598,4.00117839 28.5100662,4.38385613 C29.9672594,4.56554687 46.0783092,6.05732531 53.1918325,3.6092789 C57.3435408,2.4139437 56.6408129,0.860008134 56.6408129,0.860008134\" id=\"Shape\"><\/path>\n                    <path d=\"M1.3804322,0.499999999 C3.68894726,0.499999999 22.0959506,0.52139702 56.6014422,0.564191062 L1.3804322,0.499999999 Z\" id=\"Shape\"><\/path>\n                <\/g>\n                <path d=\"M3.27047245,4 L3.27047245,20\" id=\"Path-3\" stroke=\"#1A1A1A\"><\/path>\n                <polyline id=\"Path-5\" stroke=\"#1A1A1A\" transform=\"translate(3.024611, 4.502781) rotate(179.000000) translate(-3.024611, -4.502781) \" points=\"0.0250512678 3.002781 2.92245875 6.002781 6.02319527 3.10929045\"><\/polyline>\n                <polyline id=\"Path-5\" stroke=\"#1A1A1A\" points=\"0.02147773 17 2.91888521 20 6.01962173 17.1065095\"><\/polyline>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+              "title": "Packs flat to save luggage space"
+            }
+          }
+        },
+        "block_order": [
+          "16152743296837f8d2-0",
+          "16152743296837f8d2-1",
+          "16152743296837f8d2-2",
+          "16152743296837f8d2-3"
+        ],
+        "settings": {
+          "heading": "Comfortable And Classy Shoes",
+          "title": "Logo list"
+        }
+      },
+      "1615345949102c9754": {
+        "type": "video-with-content",
+        "settings": {
+          "heading": "We are a business that believes in giving back.",
+          "sub_heading": "Feed a child with every purchase",
+          "heading_1": "<strong>Donation:<\/strong> 10% of profit",
+          "svg_1": "<svg width=\"20px\" height=\"21px\" viewbox=\"0 0 20 21\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>1251D119-C4E4-49C0-8337-3FBCBCF82C17<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-349.000000, -95.000000)\" stroke=\"#FFFFFF\">\n            <g id=\"donation_icon\" transform=\"translate(350.000000, 96.000000)\">\n                <path d=\"M16.9260381,5.04147844 C17.5993092,5.93036978 18,7.04588207 18,8.25705884 C18,10.1926546 14.9999994,13.7736351 9,18.9999994 C3.00000006,13.7736351 0,10.1926546 0,8.25705884 C0,6.48387971 0.85881546,4.91574186 2.17444878,3.9635694\" id=\"Combined-Shape\"><\/path>\n                <path d=\"M12.7142859,0 C15.0812201,0 17,1.9123533 17,4.2713606 C17,5.84403213 14.5,8.7535786 9.5,13 C4.5,8.7535786 2,5.84403213 2,4.2713606 C2,1.9123533 3.91877975,0 6.2857145,0 C7.5657419,0 8.71470245,0.559286481 9.5,1.44604304 C10.285298,0.559286481 11.4342581,0 12.7142859,0 Z\" id=\"Combined-Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "heading_2": "<strong>Goal:<\/strong> Give $1M to help children in need",
+          "svg_2": "<svg width=\"20px\" height=\"20px\" viewbox=\"0 0 20 20\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>AB73091B-9ED6-43A7-883D-A47104E12A5B<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-297.000000, -224.000000)\" stroke=\"#FFFFFF\">\n            <g id=\"goal_ico\" transform=\"translate(298.000000, 225.000000)\">\n                <path d=\"M9,18 C13.9705625,18 18,13.9705625 18,9 C18,4.02943734 13.9705625,0 9,0 C4.02943734,0 0,4.02943734 0,9 C0,13.9705625 4.02943734,18 9,18 Z\" id=\"Oval-9\"><\/path>\n                <path d=\"M9,18 C12.865993,18 16,14.865993 16,11 C16,7.13400682 12.865993,4 9,4 C5.13400682,4 2,7.13400682 2,11 C2,14.865993 5.13400682,18 9,18 Z\" id=\"Oval-9\"><\/path>\n                <g id=\"Group-17\" transform=\"translate(5.000000, 7.000000)\" stroke-linecap=\"square\">\n                    <path d=\"M4,0 L4,8\" id=\"Line-3\"><\/path>\n                    <path d=\"M8,4 L0,4\" id=\"Line-3\"><\/path>\n                <\/g>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "btn_text": "Read More",
+          "btn_link": "shopify:\/\/pages\/bs-make-good-to-good",
+          "video": "<iframe width=\"100%\" height=\"365px\" data-src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed zpa-lazyloaded\" name=\"wistia_embed\" allowfullscreen=\"\" mozallowfullscreen=\"\" webkitallowfullscreen=\"\" oallowfullscreen=\"\" msallowfullscreen=\"\" src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\"><\/iframe>"
+        }
+      },
+      "1615346561a1115021": {
+        "type": "video-iframe",
+        "settings": {
+          "video_iframe": "<iframe width=\"100%\" height=\"500px\" data-src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed zpa-lazyloaded\" name=\"wistia_embed\" allowfullscreen=\"\" mozallowfullscreen=\"\" webkitallowfullscreen=\"\" oallowfullscreen=\"\" msallowfullscreen=\"\" src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\"><\/iframe>",
+          "title": "Supple and comfortable soles"
+        }
+      },
+      "16153567571ab93211": {
+        "type": "logo-with-text",
+        "settings": {
+          "text_1": "As Seen In",
+          "text_2": "\"The shoes perform like sneakers as its signature footbed can absorb impact.\"",
+          "image_1": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_2.png",
+          "image_2": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1.png",
+          "image_3": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_6e61482d-b73e-4520-87c2-d872b2e5f1a0.png",
+          "image_4": "shopify:\/\/shop_images\/vulcan_post_logo.png"
+        }
+      },
+      "bs-page-sitemap": {
+        "type": "bs-page-sitemap",
+        "settings": {
+          "hero_img": "shopify:\/\/shop_images\/img_hero_account.jpg",
+          "page_linklist": "bs-sitemap"
+        }
+      },
+      "bs-page-mk-gd-do-gd": {
+        "type": "bs-page-mk-gd-do-gd",
+        "settings": {
+          "hero_img": "shopify:\/\/shop_images\/video_sections.jpg",
+          "problem_img": "shopify:\/\/shop_images\/problem_img_mob.jpg",
+          "what_are_img": "shopify:\/\/shop_images\/what_img.jpg",
+          "video_lt_img": "shopify:\/\/shop_images\/mgdg_video_lt.jpg",
+          "video_rt_img": "shopify:\/\/shop_images\/mgdg_video_rt_f506cc76-827a-4cc6-beff-d874d13a774c.jpg",
+          "goal_link": "https:\/\/intl.anothersole.com\/pages\/buy1feed1"
+        }
+      },
+      "bs-page-about-us": {
+        "type": "bs-page-about-us",
+        "settings": {
+          "about2_img": "shopify:\/\/shop_images\/image_about_1.png",
+          "about2_img_mob": "shopify:\/\/shop_images\/about_2_mob.png",
+          "diff_img": "shopify:\/\/shop_images\/img_1_about.png",
+          "miss_img": "shopify:\/\/shop_images\/img_2_about.png",
+          "mission_link": "shopify:\/\/pages\/bs-make-good-to-good"
+        }
+      },
+      "bs-login-sec": {
+        "type": "bs-login-sec",
+        "settings": {
+          "left_img": "shopify:\/\/shop_images\/img_login.jpg"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "collection_title": "A Pair Of Shoes That Goes Well With Almost Everything",
+          "collection_content": "Genuine leather flats crafted with premium materials and an ergonomic footbed for maximum comfort.",
+          "link_text": "#BUY1FEED1",
+          "text_content": "Help feed a child with your purchase",
+          "banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim.png",
+          "text_1": "Hight Quality Leather",
+          "svg_code_1": "<svg width=\"17px\" height=\"23px\" viewbox=\"0 0 29 39\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>E07F840D-0C32-44EC-AC03-99400EC76B6A<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-484.000000, -61.000000)\" stroke=\"#1A1A1A\">\n            <g id=\"lether_ico\" transform=\"translate(485.000000, 62.000000)\">\n                <path d=\"M13.5320328,37 L13.6609092,37 C14.6393122,35.3179726 16.2525771,34.1166159 18.125181,33.6755741 C19.9977833,33.2345303 21.9663603,33.5922778 23.5726848,34.665539 C23.5726848,34.665539 26.8238871,31.443747 26.8180281,31.4318367 C24.4313026,28.2411935 23.1575571,24.3334844 23.1977709,20.325284 C23.159061,16.2232908 24.5004696,12.2310253 26.9996274,9.01030105 C27.028917,9.05794299 25.3242315,4.78802496 25.2422209,4.76420399 C24.5485296,5.02542436 23.8145022,5.15853186 23.0747524,5.15725092 C20.0825649,5.14715029 17.5154535,2.98652234 16.9472601,0 L10.0640831,0 C9.4876785,2.98380876 6.9160284,5.1366434 3.92487498,5.1393851 C3.18512358,5.14066604 2.45109834,5.00755854 1.75740689,4.74633854 C1.69296858,4.74633854 0,9.04007717 0,8.99243523 C2.50798761,12.2139738 3.85582248,16.2111097 3.8194308,20.3193307 C3.85758612,24.3309547 2.57960403,28.2411099 0.187456726,31.4318367 C0.187456726,31.4318367 3.42694341,34.6714957 3.43280133,34.665539 C5.03912448,33.5922778 7.00770204,33.2345303 8.8803054,33.6755741 C10.7529074,34.1166159 12.3661723,35.3179726 13.3445761,37 L13.5320328,37 Z\" id=\"Shape\"><\/path>\n                <path d=\"M12.5,9 C13.3284271,9 14,8.32842708 14,7.5 C14,6.67157289 13.3284271,6 12.5,6 C11.6715729,6 11,6.67157289 11,7.5 C11,8.32842708 11.6715729,9 12.5,9 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_2": "No Uncomfortable Lining",
+          "svg_code_2": "<svg width=\"42px\" height=\"17px\" viewbox=\"0 0 30 12\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>7BDFC091-1A5D-457D-A78F-7CFDF0AAAD5F<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-238.000000, -184.000000)\" stroke=\"#231F20\">\n            <g id=\"everyday_flats_ico\" transform=\"translate(239.000000, 185.000000)\">\n                <path d=\"M0.822372799,9.06542009 C0.832500483,9.27450907 0.994548451,9.44265446 1.19920133,9.45642705 C2.30678576,9.51380405 5.34431502,9.65193103 7.23678532,9.56692954 C9.41501663,9.50302905 11.5950343,9.55622904 13.7677852,9.72630763 C14.4714762,9.80705942 22.2516307,10.470072 25.6868082,9.38205146 C27.6917024,8.85079111 27.352348,8.16015318 27.352348,8.16015318 C27.352348,8.16015318 27.9998267,7.67776923 27.9998267,7.35901326 C27.9998267,7.0402573 28.0518748,6.48349695 26.3592702,6.0308634 C24.6666645,5.57823004 21.8310819,4.62408674 19.5409642,3.37456346 L13.2181564,0.0531259947 L13.1640265,0 C13.1640265,0 10.2743137,2.9750559 8.06330898,3.29381197 C5.85230478,3.61256764 3.22491465,3.32143747 1.53022747,1.48752795 C1.47817927,1.48752795 0.6724742,2.018788 0.310219162,4.33083137 C-0.0520358757,6.64287504 -0.160295996,7.22513528 0.333120308,7.9688992 C0.579675669,8.28926817 0.747442525,8.66527053 0.822372799,9.06542009 Z\" id=\"Shape\"><\/path>\n                <path d=\"M0.66650397,7.999999 C4.094602,8.46792909 7.5435299,8.74263297 10.9988591,8.8229614 C13.6267776,8.96121909 16.8215007,9.4264672 20.1955424,9.31673893 C23.5695842,9.20701054 26.3541461,8.43891228 27.333174,8.02852836\" id=\"Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_3": "Perfect for Everyday",
+          "svg_code_3": "<svg width=\"29px\" height=\"23px\" viewbox=\"0 0 30 24\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>C52EB6A0-7464-469E-8490-879EBD3F293D<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-292.000000, -138.000000)\">\n            <g id=\"perfect_everyday_ico\" transform=\"translate(293.000000, 139.000000)\">\n                <g id=\"everyday\" transform=\"translate(9.000000, 6.000000)\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polygon id=\"Shape\" points=\"6.8307626 9 0 9 0 0 10 0 10 9\"><\/polygon>\n                    <path d=\"M0,3 L10,3\" id=\"Shape\"><\/path>\n                <\/g>\n                <path d=\"M20.2758612,0 C24.5417844,0 28,3.3823372 28,7.55466096 C28,10.3362107 23.3333333,15.1513237 14,22 C4.66666667,15.1513237 0,10.3362107 0,7.55466096 C0,3.3823372 3.45821437,0 7.72413796,0 C10.3093676,0 12.5979588,1.24219238 14,3.1496091 C15.4020412,1.24219238 17.6906335,0 20.2758612,0 Z\" id=\"Combined-Shape\" stroke=\"#1A1A1A\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_4": "150+ Colors",
+          "svg_code_4": "<svg width=\"26px\" height=\"24px\" viewbox=\"0 0 28 26\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>2B67AA84-3671-4F45-BAB2-6D827467D90D<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-345.000000, -59.000000)\" stroke=\"#282828\">\n            <g id=\"colors_ico\" transform=\"translate(346.000000, 60.000000)\">\n                <path d=\"M16.4666604,15.2890571 C16.4666604,15.4634164 16.4666604,15.6377757 16.4666604,15.8121351 C16.4718919,19.8260048 13.5428137,23.250108 9.55360616,23.8935201 C5.56439915,24.5369323 1.69484504,22.2093707 0.420890479,18.4001323 C-0.853064082,14.5908924 0.84534492,10.4265343 4.42938522,8.571635\" id=\"Shape\"><\/path>\n                <path d=\"M21.3988628,8.571635 C24.1756242,9.93379137 25.9476165,12.6862417 25.9988586,15.7168504 C26.0501007,18.7474588 24.3721253,21.5553763 21.6429239,23.0060553 C18.9137213,24.4567341 15.5843297,24.3104316 13,22.626259\" id=\"Shape\"><\/path>\n                <path d=\"M13.4332845,15.428364 C17.9804288,15.428364 21.666618,11.9746068 21.666618,7.714182 C21.666618,3.453757 17.9804288,0 13.4332845,0 C8.88614005,0 5.199951,3.453757 5.199951,7.714182 C5.199951,11.9746068 8.88614005,15.428364 13.4332845,15.428364 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "layout": "grid",
+          "grid": 3,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "ship_text": "Free Express Shipping & Exchange",
+          "ship_content": "We provide free express international shipping & returns so you can shop with peace of mind. Need to size up or down - no problem.\n\nWe pay for the shoes to be sent back to Singapore using DHL Express. They will ship your replacement shoes for free as well! We seek your understanding that this service is limited to one return per order.\n\nOur shoes need to be returned in its original condition with the box and tags intact.",
+          "svg_offer": "<svg width=\"16px\" height=\"32px\" viewbox=\"0 0 35 56\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>C42D80A6-E823-4FBB-A998-5D7BBB0368B5<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-489.000000, -321.000000)\" stroke=\"#3D3D3D\">\n            <g id=\"other_ico\" transform=\"translate(505.546665, 349.027627) scale(-1, 1) rotate(22.000000) translate(-505.546665, -349.027627) translate(490.586400, 320.529050)\">\n                <path d=\"M14.9618545,24.4309161 C18.3343179,24.4309161 21.06824,18.9630712 21.06824,12.2181436 C21.06824,5.47321571 18.3343179,0.0053710938 14.9618545,0.0053710938 C11.589391,0.0053710938 8.855469,5.47321571 8.855469,12.2181436 C8.855469,18.9630712 11.589391,24.4309161 14.9618545,24.4309161 Z\" id=\"Oval\"><\/path>\n                <path d=\"M15.152344,41.054806 C17.880027,41.054806 20.319682,39.4716708 21.937217,36.983887\" id=\"Shape\"><\/path>\n                <path d=\"M15.443074,41.0308847 C12.7165152,41.0308847 10.2842028,39.4483177 8.658203,36.9599617\" id=\"Shape\"><\/path>\n                <path d=\"M13.7265625,33.291016 C14.3902551,35.9417288 14.9001427,37.5129665 14.9001427,37.5129665\" id=\"Shape\"><\/path>\n                <path d=\"M16.9761156,33.2353517 C16.3062714,35.531813 15.619141,37.9853364 15.619141,37.9853364\" id=\"Shape\"><\/path>\n                <path d=\"M13.125,40.522056 C13.125,39.0231823 14.0363067,37.808105 15.1604605,37.808105 C16.2846142,37.808105 17.195921,39.0231823 17.195921,40.522056\" id=\"Shape\"><\/path>\n                <path d=\"M25.7427636,25.0241073 C25.8154291,23.9846747 24.2307339,15.1092229 23.6288781,11.1929838 C23.3802877,9.57479517 23.1335628,7.95285076 22.5522607,6.42268674 C21.19155,2.841689 19.0439386,0.00048828125 15.6328125,0.00048828125\" id=\"Shape\"><\/path>\n                <path d=\"M25.9248833,36.0411377 C25.8298947,34.7103021 25.6467025,33.352581 25.416016,31.9702147\" id=\"Shape\"><\/path>\n                <path d=\"M4.765625,37.9995117 C4.79048716,40.0408875 5.03214733,42.0740675 5.48664372,44.06572 C7.39111457,51.8566167 10.5847366,56.9971547 14.9108486,56.9971547 C18.9840378,56.9971547 22.4985322,51.8491658 24.4011162,44.0582699 C24.8495916,42.0977834 25.0905932,40.0966503 25.120247,38.0870499\" id=\"Shape\"><\/path>\n                <path d=\"M5.25427025,32.015545 C4.90121473,33.1234543 4.61235113,34.2313635 4.46257,35.2949563\" id=\"Shape\" transform=\"translate(4.858420, 33.655251) rotate(-9.000000) translate(-4.858420, -33.655251) \"><\/path>\n                <path d=\"M14.2839812,0.025878906 C10.8786011,0.025878906 8.72105095,3.0222845 7.36861243,6.79692576 C6.78766173,8.42055524 6.54295252,10.1212175 6.2926393,11.8278064 C5.69114045,15.9579863 5.19238213,18.7232916 5.00558124,20.4358064 C4.90470877,22.0910384 4.83932846,23.3393765 4.7851562,24.4514239\" id=\"Shape\"><\/path>\n                <path d=\"M17.6039947,31.582322 C17.6039947,31.582322 23.6773638,32.0572509 26.228332,36.5880351 C26.3875439,36.8579787 26.4038178,37.1827239 26.2723144,37.4656605 C26.1556814,37.6968365 25.9422123,37.8715877 25.6833349,37.9478117 C24.9069539,38.2060434 20.4609257,37.5162227 17.2693475,34.2242267 C17.0068602,33.9497922 16.9246512,33.561631 17.0551732,33.2129713 C17.3534874,32.4021613 17.8047831,30.8148518 17.4032064,29.4713275 C17.3165958,29.198022 17.3583782,28.9027575 17.5179426,28.6605176 C18.0610272,27.8587368 19.6214396,26.1070983 23.5836631,24.7075935 C23.8003867,24.6305455 24.0241225,24.5553033 24.2548694,24.4818669 C24.3779155,24.4424255 24.5074382,24.4240786 24.6373235,24.4276925 C25.0192744,24.433483 25.3690373,24.6309699 25.5552137,24.9459607 C26.3201207,26.2587865 27.849937,29.0993299 27.849937,31.3114502 C27.849937,31.35479 26.4884008,31.6617783 25.046549,31.9759899 C23.4268565,32.3371519 21.7058136,32.6892853 21.7058136,32.6892853\" id=\"Shape\"><\/path>\n                <path d=\"M26.294599,37.186523 L29.7128226,39.0989898 C29.9109661,39.2101087 29.9792215,39.4553562 29.8655801,39.6478592 L29.8345858,39.6993158 C29.7198464,39.8912072 29.4666087,39.957309 29.2678337,39.8472532 L25.84961,37.9347863\" id=\"Shape\"><\/path>\n                <path d=\"M12.4077925,31.5480684 C12.4077925,31.5480684 9.28259204,31.8133815 6.60494213,33.5442347 C5.3836921,34.3168512 4.38055255,35.3588808 3.68247832,36.5799958 C3.52323851,36.8497955 3.50696111,37.1743683 3.63848834,37.4571537 C3.75514204,37.6882077 3.96864869,37.8628647 4.22757133,37.9390493 C5.00408988,38.1971418 9.45090143,37.5076896 12.6430433,34.2174443 C12.9055765,33.9431572 12.9878011,33.5552017 12.8572551,33.2067275 C12.5588885,32.3963491 12.107513,30.809884 12.5091602,29.4670739 C12.5957862,29.1939144 12.5539968,28.8988068 12.3944042,28.6566955 C11.8473983,27.8481218 10.2580219,26.0775623 6.23389613,24.6733874 L6.1784306,24.653534 C6.0088463,24.5945755 5.83479896,24.5344138 5.65628903,24.4730488 C5.53322129,24.4336284 5.40367545,24.4152913 5.27376736,24.4189033 C4.8904364,24.4271651 4.54102774,24.6281654 4.35762868,24.94592 C3.59258579,26.2580475 2.0625,29.0970798 2.0625,31.3080229 C2.0625,31.3982662 8.20579448,32.6851252 8.20579448,32.6851252\" id=\"Shape\"><\/path>\n                <path d=\"M3.6259348,37.038574 L0.207708508,38.9504073 C0.00956490747,39.0616139 -0.0586906253,39.3070552 0.054950989,39.4997106 L0.0859452661,39.5512077 C0.20068465,39.743251 0.453922559,39.8094048 0.652697758,39.6992622 L4.070924,37.7852833\" id=\"Shape\"><\/path>\n                <path d=\"M12.097656,28.74716 C12.8774025,28.5341447 14.1660969,28.5407797 14.9583794,28.4677367 C16.0431324,28.3961524 17.639303,29.3413692 17.639303,29.3413692\" id=\"Shape\"><\/path>\n                <path d=\"M12.4375,32.535156 C12.4375,32.535156 15.2425579,34.161586 17.187484,32.7520133\" id=\"Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "offer_text": "30% off on 2nd item",
+          "show_quantity_selector": false,
+          "show_vendor": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "text_1": "High Quality Leather",
+          "svg_1": "<svg width=\"17px\" height=\"23px\" viewbox=\"0 0 29 39\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>E07F840D-0C32-44EC-AC03-99400EC76B6A<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-484.000000, -61.000000)\" stroke=\"#1A1A1A\">\n            <g id=\"lether_ico\" transform=\"translate(485.000000, 62.000000)\">\n                <path d=\"M13.5320328,37 L13.6609092,37 C14.6393122,35.3179726 16.2525771,34.1166159 18.125181,33.6755741 C19.9977833,33.2345303 21.9663603,33.5922778 23.5726848,34.665539 C23.5726848,34.665539 26.8238871,31.443747 26.8180281,31.4318367 C24.4313026,28.2411935 23.1575571,24.3334844 23.1977709,20.325284 C23.159061,16.2232908 24.5004696,12.2310253 26.9996274,9.01030105 C27.028917,9.05794299 25.3242315,4.78802496 25.2422209,4.76420399 C24.5485296,5.02542436 23.8145022,5.15853186 23.0747524,5.15725092 C20.0825649,5.14715029 17.5154535,2.98652234 16.9472601,0 L10.0640831,0 C9.4876785,2.98380876 6.9160284,5.1366434 3.92487498,5.1393851 C3.18512358,5.14066604 2.45109834,5.00755854 1.75740689,4.74633854 C1.69296858,4.74633854 0,9.04007717 0,8.99243523 C2.50798761,12.2139738 3.85582248,16.2111097 3.8194308,20.3193307 C3.85758612,24.3309547 2.57960403,28.2411099 0.187456726,31.4318367 C0.187456726,31.4318367 3.42694341,34.6714957 3.43280133,34.665539 C5.03912448,33.5922778 7.00770204,33.2345303 8.8803054,33.6755741 C10.7529074,34.1166159 12.3661723,35.3179726 13.3445761,37 L13.5320328,37 Z\" id=\"Shape\"><\/path>\n                <path d=\"M12.5,9 C13.3284271,9 14,8.32842708 14,7.5 C14,6.67157289 13.3284271,6 12.5,6 C11.6715729,6 11,6.67157289 11,7.5 C11,8.32842708 11.6715729,9 12.5,9 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_2": "No Uncomfortable Lining",
+          "svg_2": "<svg width=\"42px\" height=\"17px\" viewbox=\"0 0 30 12\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>7BDFC091-1A5D-457D-A78F-7CFDF0AAAD5F<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-238.000000, -184.000000)\" stroke=\"#231F20\">\n            <g id=\"everyday_flats_ico\" transform=\"translate(239.000000, 185.000000)\">\n                <path d=\"M0.822372799,9.06542009 C0.832500483,9.27450907 0.994548451,9.44265446 1.19920133,9.45642705 C2.30678576,9.51380405 5.34431502,9.65193103 7.23678532,9.56692954 C9.41501663,9.50302905 11.5950343,9.55622904 13.7677852,9.72630763 C14.4714762,9.80705942 22.2516307,10.470072 25.6868082,9.38205146 C27.6917024,8.85079111 27.352348,8.16015318 27.352348,8.16015318 C27.352348,8.16015318 27.9998267,7.67776923 27.9998267,7.35901326 C27.9998267,7.0402573 28.0518748,6.48349695 26.3592702,6.0308634 C24.6666645,5.57823004 21.8310819,4.62408674 19.5409642,3.37456346 L13.2181564,0.0531259947 L13.1640265,0 C13.1640265,0 10.2743137,2.9750559 8.06330898,3.29381197 C5.85230478,3.61256764 3.22491465,3.32143747 1.53022747,1.48752795 C1.47817927,1.48752795 0.6724742,2.018788 0.310219162,4.33083137 C-0.0520358757,6.64287504 -0.160295996,7.22513528 0.333120308,7.9688992 C0.579675669,8.28926817 0.747442525,8.66527053 0.822372799,9.06542009 Z\" id=\"Shape\"><\/path>\n                <path d=\"M0.66650397,7.999999 C4.094602,8.46792909 7.5435299,8.74263297 10.9988591,8.8229614 C13.6267776,8.96121909 16.8215007,9.4264672 20.1955424,9.31673893 C23.5695842,9.20701054 26.3541461,8.43891228 27.333174,8.02852836\" id=\"Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_3": "Perfect for Everyday",
+          "svg_3": "<svg width=\"29px\" height=\"23px\" viewbox=\"0 0 30 24\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>C52EB6A0-7464-469E-8490-879EBD3F293D<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-292.000000, -138.000000)\">\n            <g id=\"perfect_everyday_ico\" transform=\"translate(293.000000, 139.000000)\">\n                <g id=\"everyday\" transform=\"translate(9.000000, 6.000000)\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polygon id=\"Shape\" points=\"6.8307626 9 0 9 0 0 10 0 10 9\"><\/polygon>\n                    <path d=\"M0,3 L10,3\" id=\"Shape\"><\/path>\n                <\/g>\n                <path d=\"M20.2758612,0 C24.5417844,0 28,3.3823372 28,7.55466096 C28,10.3362107 23.3333333,15.1513237 14,22 C4.66666667,15.1513237 0,10.3362107 0,7.55466096 C0,3.3823372 3.45821437,0 7.72413796,0 C10.3093676,0 12.5979588,1.24219238 14,3.1496091 C15.4020412,1.24219238 17.6906335,0 20.2758612,0 Z\" id=\"Combined-Shape\" stroke=\"#1A1A1A\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "Don't Miss Out",
+          "sub_heading": "By one more pair and get 30% off",
+          "show_vendor": false
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "product-detail": {
+        "type": "product-detail",
+        "blocks": {
+          "293bc098-b59c-46d0-aea8-a716fcf9675b": {
+            "type": "image_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/5_f8b9c3c9-840b-4e1b-ac46-74ec05477974.png",
+              "title": "UNLINED LEATHER DESIGN",
+              "heading": "Velvety Soft Leather",
+              "text": "Supple to the touch, yet resistant to abrasions. The flexibility of our unlined leather shoes will conform remarkably to your feet for a luxurious fit. No need to ‘break-in’ your pair first. No need to worry about stuffy feet all day."
+            }
+          },
+          "b8ad80ed-241c-4c58-8bc9-7181d86afd94": {
+            "type": "image_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2_f63451e4-0cc5-4360-8e07-769610aa351a.png",
+              "title": "ERGONOMIC SPORTS FOOTBED",
+              "heading": "Stride Technology",
+              "text": "Designed to support your entire body by providing stability and impact absorption for all-day wearing. Our ergonomic sports-engineered footbed is made from plant-based materials. Shoes that take care of you and the environment."
+            }
+          },
+          "2b90fea5-afc8-4e86-a7ac-5b9d818749e7": {
+            "type": "image_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4_9651bff9-611d-4705-858c-95f46ed80a13.png",
+              "title": "LIGHTWEIGHT DESIGN",
+              "heading": "Weighs 280 Grams",
+              "text": "Constructed to be lightweight and breathable. The combination of premium leathers with our ergonomic design makes our shoes ideal for warm weather. Just toss a pair into your duffle for whenever – it won’t weigh you down."
+            }
+          },
+          "e0637f70-6609-4073-a566-3af448d7cffb": {
+            "type": "image_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3_c750db3a-ed38-4ad5-842f-0bacf90ba190.png",
+              "title": "100% PREMIUM RUBBER SOLE",
+              "heading": "Flexible Sole",
+              "text": "Designed to keep you moving comfortably, the leather is stitched into flexible rubber soles which are water-resistant and durable. A sole with good grip gives you stability with every step, every time, at any age."
+            }
+          },
+          "5a42ae4e-4cc9-4a06-a0c1-e985c1c1572c": {
+            "type": "image_content",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/6_49113ba9-951b-4fad-b7c2-ba1f1d4d4088.png",
+              "title": "VERSATILE EVERYDAY WEAR",
+              "heading": "A Perfect Match to Fit the Occasion",
+              "text": "Created to be your dress-up, dress-down, forgot-I-have-them-on shoes. We believe that aesthetics is definitely a function. Our diverse range of colors and styles will take you from playful casual to a touch of glam."
+            }
+          }
+        },
+        "block_order": [
+          "293bc098-b59c-46d0-aea8-a716fcf9675b",
+          "b8ad80ed-241c-4c58-8bc9-7181d86afd94",
+          "2b90fea5-afc8-4e86-a7ac-5b9d818749e7",
+          "e0637f70-6609-4073-a566-3af448d7cffb",
+          "5a42ae4e-4cc9-4a06-a0c1-e985c1c1572c"
+        ],
+        "settings": {
+          "main_banner": "shopify:\/\/shop_images\/1_f345758e-8ae5-4625-9cd6-c9508d07c10e.jpg",
+          "video": "<iframe width=\"100%\" height=\"500px\" data-src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed zpa-lazyloaded\" name=\"wistia_embed\" allowfullscreen=\"\" mozallowfullscreen=\"\" webkitallowfullscreen=\"\" oallowfullscreen=\"\" msallowfullscreen=\"\" src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\"><\/iframe>",
+          "heading": "An Insanely Comfortable Shoe, That Looks Great.",
+          "icon_1": "<svg width=\"36px\" height=\"36px\" viewbox=\"0 0 37 37\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n                              <title>B517987C-CB94-4A25-AF84-C1D41B402F7A<\/title>\n                              <desc>Created with sketchtool.<\/desc>\n                              <defs><\/defs>\n                              <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                                <g id=\"icons\" transform=\"translate(-576.000000, -200.000000)\">\n                                  <g id=\"no_wardrobe_ico\" transform=\"translate(577.000000, 201.000000)\">\n                                    <path d=\"M17,0 C21.7757676,-8.5981059e-07 26.3557733,1.89676674 29.7317385,5.2727328 C33.1077023,8.6486976 35.002858,13.2270959 34.999996,18\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                                    <path d=\"M18,35 C8.06308992,35.0000018 0.0059609538,26.9428724 0,17\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                                    <path d=\"M35,17 C35,17.3333333 35,17.6666667 35,18\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                                    <path d=\"M34,20 C32.6911495,27.4299898 26.5884355,33.1258561 19,34\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-dasharray=\"1.86\"><\/path>\n                                    <path d=\"M18,35 L17,35\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                                    <path d=\"M0,17 C0,16.6666667 0,16.3333333 0,16\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                                    <path d=\"M0,14 C1.3088511,6.57001016 7.41156495,0.874143788 15,0\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-dasharray=\"1.86\"><\/path>\n                                    <path d=\"M16,0 L17,0\" id=\"Shape\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n                                    <path d=\"M12,9.00105304 L20.0976929,9.00105304 C20.8719133,8.9796134 21.6192034,9.28637886 22.1555568,9.84581384 C22.7110894,10.3850116 23.0168707,11.1317391 22.9992806,11.9062062 L22.9992806,16.4905791 C22.9992806,17.2501443 22.6979147,17.9785999 22.1614799,18.5156941 C21.6250451,19.0527883 20.8974836,19.3545245 20.1388505,19.3545245 L13.6257123,19.3545245 C13.1142753,19.3545245 12.6996736,19.7696354 12.6996736,20.2817009 L12.6996736,21.311897 M13.2242442,23.969727 L12.1953125,23.969727\" id=\"Shape\" stroke=\"#000000\"><\/path>\n                                  <\/g>\n                                <\/g>\n                              <\/g>\n                              <\/svg>",
+          "title_1": "No wardrobe dilemmas",
+          "text_1": "They pair well with almost everything",
+          "icon_2": "<svg width=\"70px\" height=\"21px\" viewbox=\"0 0 72 22\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n                                  <title>CF009FB5-A74F-491E-8D32-F7EB24BFB00D<\/title>\n                                  <desc>Created with sketchtool.<\/desc>\n                                  <defs><\/defs>\n                                  <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                                      <g id=\"icons\" transform=\"translate(-559.000000, -67.000000)\">\n                                          <g id=\"flat_packs_ico\" transform=\"translate(560.000000, 67.000000)\">\n                                              <g id=\"no-lining\" transform=\"translate(12.017765, 0.000000)\" stroke=\"#231F20\" stroke-dasharray=\"4,4\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                                  <path d=\"M56.640906,16.948011 C56.640906,16.948011 57.981697,15.9461361 57.981697,15.2841044 C57.981697,14.6220727 58.0894776,13.4657235 54.5844528,12.5256394 C51.0794256,11.5855544 45.207536,9.60387279 40.4651886,7.00870877 L27.3719958,0.11033861 L27.2599043,0 C27.2599043,0 21.2759226,6.17896246 16.6974011,6.84099414 C12.1188808,7.50302582 6.67811362,6.89836993 3.16877623,3.08948123 C3.06099546,3.08948123 1.39255131,4.19286725 0.642398028,8.99480432 C-0.107755252,13.7967402 -0.331938979,15.006052 0.689821439,16.550792\" id=\"Shape\"><\/path>\n                                              <\/g>\n                                              <g id=\"no-lining\" transform=\"translate(12.017765, 16.000000)\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                                  <path d=\"M0.68972796,0.4296875 C0.68972796,0.4296875 1.02744059,1.25207801 1.70286586,2.89685903 C1.94055872,3.46271092 2.20066935,3.75596654 2.48319774,3.77662586 C4.77676955,3.90572169 11.0668478,4.21650899 14.9857515,4.02525544 C19.4964061,3.88147935 24.0107598,4.00117839 28.5100662,4.38385613 C29.9672594,4.56554687 46.0783092,6.05732531 53.1918325,3.6092789 C57.3435408,2.4139437 56.6408129,0.860008134 56.6408129,0.860008134\" id=\"Shape\"><\/path>\n                                                  <path d=\"M1.3804322,0.499999999 C3.68894726,0.499999999 22.0959506,0.52139702 56.6014422,0.564191062 L1.3804322,0.499999999 Z\" id=\"Shape\"><\/path>\n                                              <\/g>\n                                              <path d=\"M3.27047245,4 L3.27047245,20\" id=\"Path-3\" stroke=\"#1A1A1A\"><\/path>\n                                              <polyline id=\"Path-5\" stroke=\"#1A1A1A\" transform=\"translate(3.024611, 4.502781) rotate(179.000000) translate(-3.024611, -4.502781) \" points=\"0.0250512678 3.002781 2.92245875 6.002781 6.02319527 3.10929045\"><\/polyline>\n                                              <polyline id=\"Path-5\" stroke=\"#1A1A1A\" points=\"0.02147773 17 2.91888521 20 6.01962173 17.1065095\"><\/polyline>\n                                          <\/g>\n                                      <\/g>\n                                  <\/g>\n                              <\/svg>",
+          "title_2": "Flat Packs",
+          "text_2": "Great for travel",
+          "icon_3": "<svg width=\"31px\" height=\"37px\" viewbox=\"0 0 31 37\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n                                <title>01830361-FB66-4393-A53C-84952B88893D<\/title>\n                                <desc>Created with sketchtool.<\/desc>\n                                <defs><\/defs>\n                                <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                    <g id=\"icons\" transform=\"translate(-580.000000, -130.000000)\" stroke=\"#231F20\">\n                                        <g id=\"breathebale_ico\" transform=\"translate(580.000000, 130.000000)\">\n                                            <path d=\"M8.51990472,36.85 C9.06078843,35.8063991 8.98393846,34.5499054 8.31990475,33.5800002 C7.57990479,32.4499998 5.92990476,31.6799999 6.06990476,28\" id=\"Shape\"><\/path>\n                                            <path d=\"M16.8400707,36.85 C17.3809541,35.8063991 17.3041044,34.5499054 16.6400708,33.5800002 C15.9100707,32.4499998 14.2600705,31.67 14.3900705,28\" id=\"Shape\"><\/path>\n                                            <path d=\"M25.2697582,36.85 C25.8106416,35.8063991 25.7337919,34.5499054 25.0697583,33.5800002 C24.3397582,32.4499998 22.689758,31.67 22.819758,28\" id=\"Shape\"><\/path>\n                                            <path d=\"M7.43022898,17.9198828 C7.8698189,17.1436275 8.08774614,16.261541 8.06022909,15.3698827 C8.06703068,14.1324754 7.6973401,12.9222619 7.00022902,11.8998826 C6.2516752,10.9068473 5.74493121,9.7529781 5.52022892,8.52988263 C5.25022891,4.9998831 7.43022898,0.6298828 7.43022898,0.6298828\" id=\"Shape\"><\/path>\n                                            <polyline id=\"Shape\" points=\"4.5898438 2.09999997 7.49984386 0.5 8.5998438 3.63\"><\/polyline>\n                                            <path d=\"M15.2199601,17.9198828 C15.6595499,17.1436275 15.8774772,16.261541 15.8499601,15.3698827 C15.8479386,14.1292872 15.4676985,12.9187987 14.7599601,11.8998826 C14.0221012,10.9040382 13.5257166,9.75037163 13.3099602,8.52988263 C12.9999602,4.9998831 15.2199601,0.6298828 15.2199601,0.6298828\" id=\"Shape\"><\/path>\n                                            <polyline id=\"Shape\" points=\"12.370117 2.09999997 15.2901172 0.5 16.380117 3.63\"><\/polyline>\n                                            <path d=\"M23.159632,17.9198828 C23.5992219,17.1436275 23.817149,16.261541 23.7896321,15.3698827 C23.7876105,14.1292872 23.4073704,12.9187987 22.6996321,11.8998826 C21.9617731,10.9040382 21.4653886,9.75037163 21.2496321,8.52988263 C20.9996322,4.9998831 23.159632,0.6298828 23.159632,0.6298828\" id=\"Shape\"><\/path>\n                                            <polyline id=\"Shape\" points=\"20.320312 2.09999997 23.230312 0.5 24.320312 3.63\"><\/polyline>\n                                            <path d=\"M0.5,20.45996 L29.87,20.45996\" id=\"Shape\"><\/path>\n                                            <path d=\"M0.5,24.799805 L29.87,24.799805\" id=\"Shape\"><\/path>\n                                        <\/g>\n                                    <\/g>\n                                <\/g>\n                            <\/svg>",
+          "title_3": "They Breathe",
+          "text_3": "..well you know what happens when shoes don't breathe",
+          "icon_4": "<svg width=\"61px\" height=\"50px\" viewbox=\"0 0 61 50\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n                                    <title>C8FA4AA5-B44C-423B-AE0D-E98AD4E5768F<\/title>\n                                    <desc>Created with sketchtool.<\/desc>\n                                    <defs><\/defs>\n                                    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                                        <g id=\"icons\" transform=\"translate(-468.000000, -125.000000)\" stroke=\"#1A1A1A\">\n                                            <g id=\"light_ico\" transform=\"translate(469.000000, 126.000000)\">\n                                                <g id=\"Asset-1\" transform=\"translate(0.000000, 13.000000)\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                                                    <path d=\"M47.5990293,15.052803 C47.5990293,15.052803 48.7465119,14.9618564 48.6547135,16.0077457 C48.4408226,16.6143618 48.0883161,16.6743871 46.3294548,16.796256 C44.2795923,16.9326758 43.4433073,17.1527688 43.0247056,16.8417288 C42.4124091,16.3869946 42.0764262,15.7048924 42.3665098,13.9159671 C42.6942307,11.8987641 44.3401794,10.0507222 48.3334183,7.7770495 C52.3266566,5.503376 55.7691042,2.91138855 58.4312626,0.00108694413 C58.5230612,-0.0898599855 61.0475234,5.5488493 54.6675205,8.50462468 C54.5298229,8.50462468 57.1460831,7.8225228 57.4214786,8.9593587 C57.6968735,10.0961963 55.5855067,11.9151341 52.188959,12.1879749 C52.188959,12.1879749 53.9891294,12.5981458 54.024931,13.3702848 C54.0708297,14.3716113 53.1987433,15.0082392 47.5990293,15.052803 Z\" id=\"Shape\"><\/path>\n                                                    <path d=\"M11.4009687,15.0526988 C11.4009687,15.0526988 10.2534866,14.9617468 10.3452845,16.007693 C10.5591754,16.6143414 10.9116819,16.6743701 12.6705432,16.7962448 C14.7204052,16.9326727 15.5566904,17.1527756 15.9752917,16.8417208 C16.587589,16.3869621 16.9235718,15.7048237 16.6334883,13.9158022 C16.3057673,11.8984911 14.6598187,10.0503507 10.6665797,7.77655582 C6.67334142,5.50276094 3.23089414,2.91154444 0.568734975,0.00108700227 C0.476936381,-0.089864788 -2.04752486,5.54914629 4.33247687,8.5050796 C4.47017513,8.5050796 1.85391523,7.822941 1.57851944,8.9598381 C1.30312369,10.096736 3.41449126,11.9157714 6.81103901,12.1886277 C6.81103901,12.1886277 5.01086894,12.5988198 4.97506746,13.3709998 C4.92916776,14.3714702 5.80125467,15.0081328 11.4009687,15.0526988 Z\" id=\"Shape\"><\/path>\n                                                <\/g>\n                                                <g id=\"Asset-5\" transform=\"translate(21.000000, 0.000000)\">\n                                                    <path d=\"M8.64,34.56 C12.4212379,34.56 15.5299047,30.4350185 15.9025029,25.1484068 C15.9374822,24.6000212 15.9374822,24.0499606 15.9025029,23.501575 C15.8140895,21.9369274 15.6514727,17.6365168 16.4535056,16.32\" id=\"Shape\"><\/path>\n                                                    <path d=\"M8.63999976,34.56 C4.8587621,34.56 1.75009506,30.4350185 1.37749711,25.1484068 C1.3425176,24.6000212 1.3425176,24.0499606 1.37749711,23.501575 C1.46591012,21.9369274 1.62852707,17.6365168 0.82649416,16.32\" id=\"Shape\"><\/path>\n                                                    <path d=\"M5.859961,20.115528 C6.81996101,20.115528 6.74118625,21.2627192 6.8855173,23.8351805 C6.95172419,25.0152538 7.68,33.6 7.68,33.6\" id=\"Shape\"><\/path>\n                                                    <path d=\"M9.59999996,20.71377 C9.59999996,21.9137699 9.57748964,21.2709483 9.43448269,23.8351804 C9.36827591,25.0152538 8.64000004,32.8646486 8.64000004,33.6\" id=\"Shape\"><\/path>\n                                                    <path d=\"M6.72,34.56 C6.72,33.4996133 7.36470997,32.64 8.16,32.64 C8.95529,32.64 9.6,33.4996133 9.6,34.56\" id=\"Shape\"><\/path>\n                                                    <path d=\"M8.64,21.12 C11.82116,21.12 14.4,16.3921266 14.4,10.56 C14.4,4.72787315 11.82116,0 8.64,0 C5.4588399,0 2.88,4.72787315 2.88,10.56 C2.88,16.3921266 5.4588399,21.12 8.64,21.12 Z\" id=\"Oval\"><\/path>\n                                                    <path d=\"M8.64319905,0 C5.72699013,0 3.88736254,2.42316144 2.72439815,5.47567392 C2.22369961,6.78868512 2.01414211,8.1639936 1.79978544,9.54409296 C1.28468989,12.8857238 0.857576333,15.1219968 0.697608772,16.5052915 C0.470454774,19.9922784 0.457657344,21.2445917 0.270495245,24.1453584 C-0.0302438172,28.8319474 -0.265396193,33.2182368 0.625623316,36.9096864 C2.23809679,43.5913469 4.94634816,48 8.61120564,48 C12.0633062,48 15.0419037,43.5849581 16.6543767,36.9032928 C17.5453966,33.211848 17.3102435,28.8239592 17.0095046,24.1405651 C16.8927293,22.3196016 16.8495371,21.148752 16.7679533,19.6680192 C16.7231631,18.7878864 16.667174,17.7991344 16.583991,16.5004992 C16.4240231,15.1156066 15.9969099,12.8793341 15.4818145,9.5393016 C15.2690573,8.15920128 15.0579002,6.77590656 14.560401,5.4708816 C13.3942367,2.42316144 11.554609,0 8.63840039,0\" id=\"Shape\"><\/path>\n                                                <\/g>\n                                            <\/g>\n                                        <\/g>\n                                    <\/g>\n                                <\/svg>",
+          "title_4": "Really Light",
+          "text_4": "Weights less than half of a typical shoe or they're lighter than a can of coke",
+          "faq": "FAQ",
+          "quest_1": "Will the same style fit differently in a different material?",
+          "ans_1": "Different types of leather or material may feel different at the initial wear. You can feel the stretch of a thinner leather (Goat) better than a thicker bovine leather or fabric. It's best to let the tighter shoe stretch to fit if you still have enough toe space. (Especially if you have been wearing that same size for Anothersole shoes.)",
+          "quest_2": "Should I wear sock with Anothersole ?",
+          "ans_2": "Yes, we encourage you to wear dark hidden socks. There are many advantages in doing so:\n\n   • Helps to absorb moisture from your feet\n   • Avoid having color transfer onto your feet - Some color migration can be expected during initial wear or worn when the shoes are wet, especially for darker colored shoes. Yes, colour migration will reduce with wearing. (Be assured that consumer safe pigments are used for our leathers and are tested for VOC limits.)",
+          "quest_3": "Why can I see the contours of my toe?",
+          "ans_3": "Anothersole is designed to be unlined hence only the soft leather touches your skin. In your initial wear, the outline of the big toe may be visible. Unlined leather stretches to a perfect fit and the bulge (or any protruding bones) will become less pronounced with wear.\n\nWe do not want to add any synthetic linings which makes the shoe stiff or stuffy. Enjoy this signature look of Anothersole - thousands of women have road tested them, loved and raved about this wearing experience.",
+          "quest_4": "Could there be differences between what I receive and what I see on your website\/social media posts?",
+          "ans_4": "Leather is organic in nature and unique - no two leathers are identical. Slight imperfection, blemishes, uneven tonality, veins and grains are characteristics of natural leathers and are not defects. In addition, lightings used during photography and screen monitors’ resolution could be reasons of perceived color differences."
+        }
+      },
+      "video-with-content": {
+        "type": "video-with-content",
+        "settings": {
+          "heading": "We are a business that believes in giving back.",
+          "sub_heading": "Feed a child with every purchase",
+          "heading_1": "<strong>Donation:<\/strong> 10% of profit",
+          "svg_1": "<svg width=\"20px\" height=\"21px\" viewbox=\"0 0 20 21\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>1251D119-C4E4-49C0-8337-3FBCBCF82C17<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-349.000000, -95.000000)\" stroke=\"#FFFFFF\">\n            <g id=\"donation_icon\" transform=\"translate(350.000000, 96.000000)\">\n                <path d=\"M16.9260381,5.04147844 C17.5993092,5.93036978 18,7.04588207 18,8.25705884 C18,10.1926546 14.9999994,13.7736351 9,18.9999994 C3.00000006,13.7736351 0,10.1926546 0,8.25705884 C0,6.48387971 0.85881546,4.91574186 2.17444878,3.9635694\" id=\"Combined-Shape\"><\/path>\n                <path d=\"M12.7142859,0 C15.0812201,0 17,1.9123533 17,4.2713606 C17,5.84403213 14.5,8.7535786 9.5,13 C4.5,8.7535786 2,5.84403213 2,4.2713606 C2,1.9123533 3.91877975,0 6.2857145,0 C7.5657419,0 8.71470245,0.559286481 9.5,1.44604304 C10.285298,0.559286481 11.4342581,0 12.7142859,0 Z\" id=\"Combined-Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "heading_2": "<strong>Goal:<\/strong> Give $1M to help children in need",
+          "svg_2": "<svg width=\"20px\" height=\"20px\" viewbox=\"0 0 20 20\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>AB73091B-9ED6-43A7-883D-A47104E12A5B<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-297.000000, -224.000000)\" stroke=\"#FFFFFF\">\n            <g id=\"goal_ico\" transform=\"translate(298.000000, 225.000000)\">\n                <path d=\"M9,18 C13.9705625,18 18,13.9705625 18,9 C18,4.02943734 13.9705625,0 9,0 C4.02943734,0 0,4.02943734 0,9 C0,13.9705625 4.02943734,18 9,18 Z\" id=\"Oval-9\"><\/path>\n                <path d=\"M9,18 C12.865993,18 16,14.865993 16,11 C16,7.13400682 12.865993,4 9,4 C5.13400682,4 2,7.13400682 2,11 C2,14.865993 5.13400682,18 9,18 Z\" id=\"Oval-9\"><\/path>\n                <g id=\"Group-17\" transform=\"translate(5.000000, 7.000000)\" stroke-linecap=\"square\">\n                    <path d=\"M4,0 L4,8\" id=\"Line-3\"><\/path>\n                    <path d=\"M8,4 L0,4\" id=\"Line-3\"><\/path>\n                <\/g>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "btn_text": "Read More",
+          "btn_link": "#",
+          "video": "<iframe width=\"100%\" height=\"365px\" data-src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed zpa-lazyloaded\" name=\"wistia_embed\" allowfullscreen=\"\" mozallowfullscreen=\"\" webkitallowfullscreen=\"\" oallowfullscreen=\"\" msallowfullscreen=\"\" src=\"https:\/\/fast.wistia.net\/embed\/iframe\/ommolgxirk?videoFoam=true&autoPlay=true&endVideoBehavior=loop&muted=true&controlsVisibleOnLoad=false&playbackRateControl=false&playbar=false\"><\/iframe>"
+        }
+      },
+      "bs-account-sec": {
+        "type": "bs-account-sec",
+        "settings": {
+          "page_linklist": "bs-account-dashboard"
+        }
+      },
+      "bs-order-sec": {
+        "type": "bs-order-sec",
+        "settings": {
+          "page_linklist": "bs-account-dashboard"
+        }
+      },
+      "bs-addr-sec": {
+        "type": "bs-addr-sec",
+        "settings": {
+          "page_linklist": "bs-account-dashboard"
+        }
+      },
+      "size-guide": {
+        "type": "size-guide",
+        "blocks": {
+          "1a92d033-7485-41d9-b3e9-2a4195caa1be": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "35",
+              "size-us": "5",
+              "length": "22.8",
+              "ideal_length": "21.3 to 21.8",
+              "width": "7.8",
+              "ideal_width": "6.8 to 9.3"
+            }
+          },
+          "93ee6b4f-5d95-4c6b-8365-e8d0e12e5963": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "36",
+              "size-us": "5.5",
+              "length": "23.4",
+              "ideal_length": "21.9 to 22.5",
+              "width": "8",
+              "ideal_width": "7 to 9.5"
+            }
+          },
+          "57cac9ab-9e1a-4684-9811-1f68eb921d82": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "37",
+              "size-us": "6.5",
+              "length": "24.1",
+              "ideal_length": "22.6 to 23.2",
+              "width": "8.2",
+              "ideal_width": "7.2 to 9.7"
+            }
+          },
+          "7409fa60-aa5b-4f6a-ae95-2798c4c26476": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "38",
+              "size-us": "7",
+              "length": "24.8",
+              "ideal_length": "23.3 to 23.8",
+              "width": "8.4",
+              "ideal_width": "7.4 to 9.9"
+            }
+          },
+          "b3028922-b733-43fa-9304-7fc569ee11ca": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "39",
+              "size-us": "8",
+              "length": "25.3",
+              "ideal_length": "23.9 to 24.5",
+              "width": "8.6",
+              "ideal_width": "7.6 to 10.1"
+            }
+          },
+          "69902272-bfba-4b47-b69e-4328f7d91411": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "40",
+              "size-us": "9",
+              "length": "26.1",
+              "ideal_length": "24.6 to 25.2",
+              "width": "8.8",
+              "ideal_width": "7.8 to 10.3"
+            }
+          },
+          "bd7fad91-7232-429b-a294-b6be50a6c476": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "41",
+              "size-us": "9.5",
+              "length": "26.8",
+              "ideal_length": "25.3 to 25.8",
+              "width": "9",
+              "ideal_width": "8 to 10.5"
+            }
+          },
+          "02a91a53-d1cf-4fe4-8bce-b564db8b24dd": {
+            "type": "featured_collection",
+            "settings": {
+              "size-eu": "42",
+              "size-us": "10",
+              "length": "27.4",
+              "ideal_length": "25.9 to 26.4",
+              "width": "9.2",
+              "ideal_width": "8.2 to 10.7"
+            }
+          }
+        },
+        "block_order": [
+          "1a92d033-7485-41d9-b3e9-2a4195caa1be",
+          "93ee6b4f-5d95-4c6b-8365-e8d0e12e5963",
+          "57cac9ab-9e1a-4684-9811-1f68eb921d82",
+          "7409fa60-aa5b-4f6a-ae95-2798c4c26476",
+          "b3028922-b733-43fa-9304-7fc569ee11ca",
+          "69902272-bfba-4b47-b69e-4328f7d91411",
+          "bd7fad91-7232-429b-a294-b6be50a6c476",
+          "02a91a53-d1cf-4fe4-8bce-b564db8b24dd"
+        ],
+        "settings": {
+          "show": false,
+          "title-help": "Need help choosing the right size?",
+          "tab_image": "shopify:\/\/shop_images\/pop1.png",
+          "text-help-right": "<p>If the initial wear feels a bit snug, be assured that our leathers will stretch to fit with each wear like a pair of leather gloves. Buying a larger size may result the shoe slipping off at the back upon stretching.<\/p>\n                      <p>If you are unsure and need some questions answered, please write to us at customerservice@anothersole.com or message us on FB Messenger.<\/p>",
+          "text-help-left": "<p>Measure your feet and choose your size based on your measurements. If your foot length is 23.5 - you should be choosing size EU 38\/US 7 as shown in the size guide.<\/p>\n                      <p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.<\/p>\n                      <p>Anothersole shoes have a standard width and does not cater to a wide fit. If the width of your feet exceeds the width of your footbed excessively, the leather may be stepped on and make contact with the ground leading to damage from abrasion.<\/p>",
+          "text-help-mob": "<p>Measure your feet and choose your size based on your measurements. If your foot length is 23.5 - you should be choosing size EU 38\/US 7 as shown in the size guide.<\/p>\n<p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.<\/p>\n<div class=\"mobil-size-show\">\n<p>Anothersole shoes have a standard width and does not cater to a wide fit. If the width of your feet exceeds the width of your footbed excessively, the leather may be stepped on and make contact with the ground leading to damage from abrasion.<\/p>\n<p>If the initial wear feels a bit snug, be assured that our leathers will stretch to fit with each wear like a pair of leather gloves. Buying a larger size may result the shoe slipping off at the back upon stretching.<\/p>\n                      <p>If you are unsure and need some questions answered, please write to us at customerservice@anothersole.com or message us on FB Messenger.<\/p>\n<\/div>",
+          "title-measure1": "step one",
+          "text-measure1": "<p>Measure your feet and choose your size based on your measurements. If your foot length is 23.8 - you should be choosing size EU 37 as shown in the size guide.<\/p><p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.<\/p>",
+          "image-measure1": "shopify:\/\/shop_images\/pop3.png",
+          "title-measure2": "step two",
+          "text-measure2": "<p>Measure your feet and choose your size based on your measurements. If your foot length is 23.8 - you should be choosing size EU 37 as shown in the size guide.<\/p><p><\/p><p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.<\/p>",
+          "image-measure2": "shopify:\/\/shop_images\/pop2.png",
+          "title-measure3": "step three",
+          "text-measure3": "<p>Measure your feet and choose your size based on your measurements. If your foot length is 23.8 - you should be choosing size EU 37 as shown in the size guide.<\/p><p><\/p><p>Please note the width of our shoes in the size guide; it is measured based on the widest points of your feet.<\/p>",
+          "image-measure3": "shopify:\/\/shop_images\/pop4.png"
+        }
+      },
+      "custom-product-slider": {
+        "type": "custom-product-slider",
+        "blocks": {
+          "8bd01cd1-364a-46c4-81f4-ad2c00a4fc24": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/11.jpg"
+            }
+          },
+          "43d4e127-dc65-4aca-8357-ec346c0e351c": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/12.jpg"
+            }
+          },
+          "a2cc4924-52dd-485a-9d24-7525e973bb53": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/11.jpg"
+            }
+          },
+          "988354ec-f0aa-4d8a-a042-0d30104f08d0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/12.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "8bd01cd1-364a-46c4-81f4-ad2c00a4fc24",
+          "43d4e127-dc65-4aca-8357-ec346c0e351c",
+          "a2cc4924-52dd-485a-9d24-7525e973bb53",
+          "988354ec-f0aa-4d8a-a042-0d30104f08d0"
+        ],
+        "settings": {
+          "image_1": "shopify:\/\/shop_images\/12.jpg",
+          "image_2": "shopify:\/\/shop_images\/11.jpg",
+          "image_3": "shopify:\/\/shop_images\/mobile1.png",
+          "title": "A Must-have Essential",
+          "mob-title": "A Must-have Essential",
+          "content": "Every modern woman has a pair of go-to shoe she knows she can rely on. Experience blissful comfort. That pain you don’t feel after wearing shoes the whole day… yes, that’s what we are talking about. It’s all made possible as each pair is made with unlined leather and has an ergonomic sports-engineered footbed.",
+          "mob-content": "Every modern woman has a pair of go-to shoe she knows she can rely on."
+        }
+      },
+      "collection-404": {
+        "type": "collection-404",
+        "settings": {
+          "title": "Top Favorites",
+          "sub_title": "They sell out quickly. Once they sell out, they get put on waitlist",
+          "collection": "pink",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "1617163965d04e149d": {
+        "type": "custom-instagram",
+        "blocks": {
+          "1617163965d04e149d-0": {
+            "type": "Image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_2_64462a73-6442-4777-96a5-b81c11a05dcd.jpg",
+              "title": "@username with The Anywhere Heels",
+              "link": "#"
+            }
+          },
+          "1617163965d04e149d-1": {
+            "type": "Image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_3_d29dec65-7a43-466f-86d4-ce9ea7fdd0a3.jpg",
+              "title": "@username with The Anywhere Heels",
+              "link": "#"
+            }
+          },
+          "1617163965d04e149d-2": {
+            "type": "Image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_102444cc-64c4-45db-8b76-2f05cf924186.jpg",
+              "title": "@username with The Anywhere Heels",
+              "link": "#"
+            }
+          },
+          "1617163965d04e149d-3": {
+            "type": "Image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_1_4cf84595-cdae-4e76-a6c1-fa8359f22f06.jpg",
+              "title": "@username with The Anywhere Heels"
+            }
+          },
+          "158d3587-765a-4102-8981-939ded3a59e9": {
+            "type": "Image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/imgpsh_fullsize_anim_2_64462a73-6442-4777-96a5-b81c11a05dcd.jpg",
+              "title": "@username with The Anywhere Heels",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "1617163965d04e149d-0",
+          "1617163965d04e149d-1",
+          "1617163965d04e149d-2",
+          "1617163965d04e149d-3",
+          "158d3587-765a-4102-8981-939ded3a59e9"
+        ],
+        "settings": {
+          "heading": "Everyday & Everywhere",
+          "View_all": "View Limited Edition",
+          "link": "shopify:\/\/collections\/limited-edition"
+        }
+      },
+      "collection-template-boost-pfs-filter": {
+        "type": "collection-template-boost-pfs-filter",
+        "settings": {
+          "collection_title": "A Pair Of Shoes That Goes Well With Almost Everything",
+          "collection_content": "Genuine leather flats crafted with premium materials and an ergonomic footbed for maximum comfort.",
+          "link_text": "#BUY1FEED1",
+          "text_content": "Help feed a child with your purchase",
+          "banner": "shopify:\/\/shop_images\/imgpsh_fullsize_anim.png",
+          "text_1": "High Quality Leather",
+          "svg_code_1": "<svg width=\"17px\" height=\"23px\" viewbox=\"0 0 29 39\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>E07F840D-0C32-44EC-AC03-99400EC76B6A<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-484.000000, -61.000000)\" stroke=\"#1A1A1A\">\n            <g id=\"lether_ico\" transform=\"translate(485.000000, 62.000000)\">\n                <path d=\"M13.5320328,37 L13.6609092,37 C14.6393122,35.3179726 16.2525771,34.1166159 18.125181,33.6755741 C19.9977833,33.2345303 21.9663603,33.5922778 23.5726848,34.665539 C23.5726848,34.665539 26.8238871,31.443747 26.8180281,31.4318367 C24.4313026,28.2411935 23.1575571,24.3334844 23.1977709,20.325284 C23.159061,16.2232908 24.5004696,12.2310253 26.9996274,9.01030105 C27.028917,9.05794299 25.3242315,4.78802496 25.2422209,4.76420399 C24.5485296,5.02542436 23.8145022,5.15853186 23.0747524,5.15725092 C20.0825649,5.14715029 17.5154535,2.98652234 16.9472601,0 L10.0640831,0 C9.4876785,2.98380876 6.9160284,5.1366434 3.92487498,5.1393851 C3.18512358,5.14066604 2.45109834,5.00755854 1.75740689,4.74633854 C1.69296858,4.74633854 0,9.04007717 0,8.99243523 C2.50798761,12.2139738 3.85582248,16.2111097 3.8194308,20.3193307 C3.85758612,24.3309547 2.57960403,28.2411099 0.187456726,31.4318367 C0.187456726,31.4318367 3.42694341,34.6714957 3.43280133,34.665539 C5.03912448,33.5922778 7.00770204,33.2345303 8.8803054,33.6755741 C10.7529074,34.1166159 12.3661723,35.3179726 13.3445761,37 L13.5320328,37 Z\" id=\"Shape\"><\/path>\n                <path d=\"M12.5,9 C13.3284271,9 14,8.32842708 14,7.5 C14,6.67157289 13.3284271,6 12.5,6 C11.6715729,6 11,6.67157289 11,7.5 C11,8.32842708 11.6715729,9 12.5,9 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_2": "No Uncomfortable Lining",
+          "svg_code_2": "<svg width=\"42px\" height=\"17px\" viewbox=\"0 0 30 12\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>7BDFC091-1A5D-457D-A78F-7CFDF0AAAD5F<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-238.000000, -184.000000)\" stroke=\"#231F20\">\n            <g id=\"everyday_flats_ico\" transform=\"translate(239.000000, 185.000000)\">\n                <path d=\"M0.822372799,9.06542009 C0.832500483,9.27450907 0.994548451,9.44265446 1.19920133,9.45642705 C2.30678576,9.51380405 5.34431502,9.65193103 7.23678532,9.56692954 C9.41501663,9.50302905 11.5950343,9.55622904 13.7677852,9.72630763 C14.4714762,9.80705942 22.2516307,10.470072 25.6868082,9.38205146 C27.6917024,8.85079111 27.352348,8.16015318 27.352348,8.16015318 C27.352348,8.16015318 27.9998267,7.67776923 27.9998267,7.35901326 C27.9998267,7.0402573 28.0518748,6.48349695 26.3592702,6.0308634 C24.6666645,5.57823004 21.8310819,4.62408674 19.5409642,3.37456346 L13.2181564,0.0531259947 L13.1640265,0 C13.1640265,0 10.2743137,2.9750559 8.06330898,3.29381197 C5.85230478,3.61256764 3.22491465,3.32143747 1.53022747,1.48752795 C1.47817927,1.48752795 0.6724742,2.018788 0.310219162,4.33083137 C-0.0520358757,6.64287504 -0.160295996,7.22513528 0.333120308,7.9688992 C0.579675669,8.28926817 0.747442525,8.66527053 0.822372799,9.06542009 Z\" id=\"Shape\"><\/path>\n                <path d=\"M0.66650397,7.999999 C4.094602,8.46792909 7.5435299,8.74263297 10.9988591,8.8229614 C13.6267776,8.96121909 16.8215007,9.4264672 20.1955424,9.31673893 C23.5695842,9.20701054 26.3541461,8.43891228 27.333174,8.02852836\" id=\"Shape\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_3": "Perfect for Everyday",
+          "svg_code_3": "<svg width=\"29px\" height=\"23px\" viewbox=\"0 0 30 24\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>C52EB6A0-7464-469E-8490-879EBD3F293D<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n        <g id=\"icons\" transform=\"translate(-292.000000, -138.000000)\">\n            <g id=\"perfect_everyday_ico\" transform=\"translate(293.000000, 139.000000)\">\n                <g id=\"everyday\" transform=\"translate(9.000000, 6.000000)\" stroke=\"#231F20\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                    <polygon id=\"Shape\" points=\"6.8307626 9 0 9 0 0 10 0 10 9\"><\/polygon>\n                    <path d=\"M0,3 L10,3\" id=\"Shape\"><\/path>\n                <\/g>\n                <path d=\"M20.2758612,0 C24.5417844,0 28,3.3823372 28,7.55466096 C28,10.3362107 23.3333333,15.1513237 14,22 C4.66666667,15.1513237 0,10.3362107 0,7.55466096 C0,3.3823372 3.45821437,0 7.72413796,0 C10.3093676,0 12.5979588,1.24219238 14,3.1496091 C15.4020412,1.24219238 17.6906335,0 20.2758612,0 Z\" id=\"Combined-Shape\" stroke=\"#1A1A1A\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "text_4": "150+ Colors",
+          "svg_code_4": "<svg width=\"26px\" height=\"24px\" viewbox=\"0 0 28 26\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\n    <title>2B67AA84-3671-4F45-BAB2-6D827467D90D<\/title>\n    <desc>Created with sketchtool.<\/desc>\n    <defs><\/defs>\n    <g id=\"style-guide\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n        <g id=\"icons\" transform=\"translate(-345.000000, -59.000000)\" stroke=\"#282828\">\n            <g id=\"colors_ico\" transform=\"translate(346.000000, 60.000000)\">\n                <path d=\"M16.4666604,15.2890571 C16.4666604,15.4634164 16.4666604,15.6377757 16.4666604,15.8121351 C16.4718919,19.8260048 13.5428137,23.250108 9.55360616,23.8935201 C5.56439915,24.5369323 1.69484504,22.2093707 0.420890479,18.4001323 C-0.853064082,14.5908924 0.84534492,10.4265343 4.42938522,8.571635\" id=\"Shape\"><\/path>\n                <path d=\"M21.3988628,8.571635 C24.1756242,9.93379137 25.9476165,12.6862417 25.9988586,15.7168504 C26.0501007,18.7474588 24.3721253,21.5553763 21.6429239,23.0060553 C18.9137213,24.4567341 15.5843297,24.3104316 13,22.626259\" id=\"Shape\"><\/path>\n                <path d=\"M13.4332845,15.428364 C17.9804288,15.428364 21.666618,11.9746068 21.666618,7.714182 C21.666618,3.453757 17.9804288,0 13.4332845,0 C8.88614005,0 5.199951,3.453757 5.199951,7.714182 C5.199951,11.9746068 8.88614005,15.428364 13.4332845,15.428364 Z\" id=\"Oval\"><\/path>\n            <\/g>\n        <\/g>\n    <\/g>\n<\/svg>",
+          "switch_layout_filter": "switch_layout_filter_vertical",
+          "show_collection_image": true,
+          "show_collection_des": true,
+          "collection_image_text_color": "",
+          "products_per_page": 24,
+          "products_per_row": 3,
+          "products_per_row_mobile": 1,
+          "product_item_type": "grid",
+          "product_item_layout": "no-border",
+          "text_alignment": "left",
+          "show_vendor": false,
+          "show_price": true,
+          "active_image_swap": true,
+          "show_sorting": true,
+          "show_product_review": false,
+          "product_item_label_position": "top_left",
+          "show_sold_out_label": true,
+          "soldout_label": "Sold out",
+          "show_sale_label": true,
+          "sale_label": "Sale",
+          "from": "from",
+          "show_lable_by_tag": false,
+          "product_item_title_color": "#3d4246",
+          "product_item_title_font_size": 14,
+          "product_item_vendor_color": "#969595",
+          "product_item_vendor_font_size": 12,
+          "product_item_price_color": "#222222",
+          "product_item_old_price_color": "#969595",
+          "product_item_sale_price_color": "#f30000",
+          "product_item_price_font_size": 14,
+          "product_item_des_color": "#3a3a3a",
+          "product_item_des_font_size": 14,
+          "display_item_swatch": true,
+          "swatch_color_display_type": "swatch_color_display_type_image_product",
+          "swatch_color_event_change_image": "hover",
+          "swatches_color_shape": "circle",
+          "equal_height": "false",
+          "ratio_width_height_other": "",
+          "equal_height_crop_image_position": "center"
+        }
+      },
+      "search-template-boost-pfs-filter": {
+        "type": "search-template-boost-pfs-filter",
+        "settings": {
+          "switch_layout_filter": "switch_layout_filter_vertical",
+          "products_per_page": 24,
+          "products_per_row": 3,
+          "products_per_row_mobile": 1,
+          "product_item_type": "grid",
+          "product_item_layout": "no-border",
+          "text_alignment": "left",
+          "show_vendor": false,
+          "show_price": true,
+          "active_image_swap": true,
+          "show_sorting": true,
+          "show_product_review": false,
+          "product_item_label_position": "top_left",
+          "show_sold_out_label": true,
+          "soldout_label": "Sold out",
+          "show_sale_label": true,
+          "sale_label": "Sale",
+          "from": "from",
+          "show_lable_by_tag": false,
+          "product_item_title_color": "#3d4246",
+          "product_item_title_font_size": 14,
+          "product_item_vendor_color": "#969595",
+          "product_item_vendor_font_size": 12,
+          "product_item_price_color": "#222",
+          "product_item_old_price_color": "#969595",
+          "product_item_sale_price_color": "#f30000",
+          "product_item_price_font_size": 14,
+          "product_item_des_color": "#3a3a3a",
+          "product_item_des_font_size": 14,
+          "display_item_swatch": true,
+          "swatch_color_display_type": "swatch_color_display_type_image_product",
+          "swatch_color_event_change_image": "hover",
+          "swatches_color_shape": "circle",
+          "equal_height": "false",
+          "ratio_width_height_other": "",
+          "equal_height_crop_image_position": "center"
+        }
+      },
+      "bs-page-buy-now": {
+        "type": "bs-page-buy-now",
+        "settings": {
+          "atome_link": "https:\/\/www.atome.sg\/"
+        }
+      }
+    },
+    "content_for_index": [
+      "161526447231ea0fd6",
+      "1615269583997b9406",
+      "16152743296837f8d2",
+      "161525865512426610",
+      "1615346561a1115021",
+      "collection",
+      "1615345949102c9754",
+      "16153567571ab93211",
+      "1615257431d65a3829",
+      "quotes",
+      "1617163965d04e149d"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "hero-1": {
+          "type": "hero",
+          "settings": {
+            "hero_size": "large",
+            "text_size": "large"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+          }
+        },
+        "feature-columns": {
+          "type": "feature-columns",
+          "blocks": {
+            "feature-columns-0": {
+              "type": "text_block",
+              "settings": {
+              }
+            },
+            "feature-columns-1": {
+              "type": "text_block",
+              "settings": {
+              }
+            },
+            "feature-columns-2": {
+              "type": "text_block",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "feature-columns-0",
+            "feature-columns-1",
+            "feature-columns-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "grid": 4
+          }
+        },
+        "hero-2": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "quotes": {
+          "type": "quotes",
+          "blocks": {
+            "quotes-0": {
+              "type": "quote",
+              "settings": {
+              }
+            },
+            "quotes-1": {
+              "type": "quote",
+              "settings": {
+              }
+            },
+            "quotes-2": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "quotes-0",
+            "quotes-1",
+            "quotes-2"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "image-bar": {
+          "type": "image-bar",
+          "blocks": {
+            "image-bar-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "image-bar-1": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "image-bar-2": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "image-bar-0",
+            "image-bar-1",
+            "image-bar-2"
+          ],
+          "settings": {
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1"
+          ],
+          "settings": {
+            "show_payment_icons": true
+          }
+        }
+      },
+      "content_for_index": [
+        "hero-1",
+        "feature-row",
+        "feature-columns",
+        "collection",
+        "hero-2",
+        "quotes",
+        "image-bar"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_vendor": false,
+            "show_share_buttons": true,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {
+          }
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {
+          }
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+            "color_footer_bg": "#f8f8f8",
+            "color_footer_text": "#6d6d6d"
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}
