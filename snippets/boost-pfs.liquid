@@ -20,7 +20,7 @@
       url: '{{ shop.url }}',
       domain: '{{ shop.permanent_domain }}',
       currency: '{{ shop.currency }}',
-      money_format: '{{ shop.money_format | replace: "'", '"' | replace: "$", "&#36;" }}'
+      money_format: '{{ shop.money_with_currency_format | replace: "'", '"' | replace: "$", "&#36;" }}'
     },
     general: {
       file_url: "{{ '' | file_url }}",

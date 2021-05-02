@@ -272,19 +272,20 @@ var boostPFSFilterConfig = {
 	}
 
 	function buildPrice(data) {
+		//console.log("test:",data);
 		var html = '';
 		if (boostPFSThemeConfig.custom.hasOwnProperty('show_price') &&
 			boostPFSThemeConfig.custom.show_price) {
 			html = '<p class="boost-pfs-filter-product-item-price">';
 			if (onSale) {
 
-				html += '<span class="boost-pfs-filter-product-item-sale-price">' + Utils.formatMoney(data.price_min) + '</span>';
-				html += '<s>' + Utils.formatMoney(data.compare_at_price_min) + '</s> ';
+				html += '<span class="boost-pfs-filter-product-item-sale-price">' + Utils.formatMoney(data.price_min).replace(".00","") + '</span>';
+				html += '<s>' + Utils.formatMoney(data.compare_at_price_min).replace(".00","") + '</s> ';
 			} else {
 				if (priceVaries) {
 					html += '<span class="boost-pfs-filter-product-item-price-from-text">' + (boostPFSThemeConfig.label_basic.from) + ' ' + '</span>';
 				}
-				html += '<span class="boost-pfs-filter-product-item-regular-price">' + Utils.formatMoney(data.price_min) + '</span>';
+				html += '<span class="boost-pfs-filter-product-item-regular-price">' + Utils.formatMoney(data.price_min).replace(".00","") + '</span>';
 			}
 			html += '</p>';
 		}
