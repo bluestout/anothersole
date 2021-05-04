@@ -6,10 +6,22 @@
 			</div>
 			<div class="hm-as-seen-in-mid">
 				<ul class="logo-slider-mobile cst-slider-dots-lt">
-					<li><a href="#"><img class="lazyload" data-src="{{section.settings.image_1 | img_url : "medium"}}" /></a></li>
-					<li><a href="#"><img class="lazyload" data-src="{{section.settings.image_2 | img_url : "medium"}}" /></a></li>
-					<li><a href="#"><img class="lazyload" data-src="{{section.settings.image_3 | img_url : "medium"}}" /></a></li>
-					<li><a href="#"><img class="lazyload" data-src="{{section.settings.image_4 | img_url : "medium"}}" /></a></li>
+					<li><a href="#">
+            {{section.settings.svg_code_1}}
+            {% comment %} <img class="lazyload" data-src="{{section.settings.image_1 | img_url : "medium"}}" /> {% endcomment %}
+          </a></li>
+					<li><a href="#">
+            {{section.settings.svg_code_2}}
+            {% comment %} <img class="lazyload" data-src="{{section.settings.image_2 | img_url : "medium"}}" /> {% endcomment %}
+          </a></li>
+					<li><a href="#">
+            {{section.settings.svg_code_3}}
+            {% comment %} <img class="lazyload" data-src="{{section.settings.image_3 | img_url : "medium"}}" /> {% endcomment %}
+          </a></li>
+					<li><a href="#">
+            {{section.settings.svg_code_4}}
+            {% comment %} <img class="lazyload" data-src="{{section.settings.image_4 | img_url : "medium"}}" /> {% endcomment %}
+          </a></li>
 				</ul>
 			</div>
 			<div class="hm-as-seen-in-right">
@@ -53,6 +65,34 @@
         "de": "Hier etwas ankündigen",
         "en": "Title"
       }
+    },
+    {
+      "type": "textarea",
+      "id": "svg_code_1",
+      "label": "SVG HTML",
+      "default":"Text",
+      "info": "Recommended 152 x 40 px "
+    },
+    {
+      "type": "textarea",
+      "id": "svg_code_2",
+      "label": "SVG HTML",
+      "default":"Text",
+      "info": "Recommended 216 x 50 px "
+    },
+    {
+      "type": "textarea",
+      "id": "svg_code_3",
+      "label": "SVG HTML",
+      "default":"Text",
+      "info": "Recommended 106 x 28 px "
+    },
+    {
+      "type": "textarea",
+      "id": "svg_code_4",
+      "label": "SVG HTML",
+      "default":"Text",
+      "info": "Recommended 240 x 38 px "
     },
 {
           "type": "image_picker",

@@ -48,9 +48,11 @@
         <div class="line-item-cst-cont">
         	<div class="line-item-content"> 
               <div class="slect-size-custom">
-                  {% assign titleget =  item.title | split: "-" %}
-                  <label>Color: <span>{{titleget[1]}}</span></label>
-                  <label class="size-changed">Size: <span>{{titleget[2]}}</span></label>
+                  {% unless  item.title contains "Gift Card" %}
+                    {% assign titleget =  item.title | split: "-" %}
+                    <label>Color: <span>{{titleget[1]}}</span></label>
+                    <label class="size-changed">Size: <span>{{titleget[2]}}</span></label>
+                  {% endunless %}
               </div>
               <div class="line-item-content-qty-price">                
               	<div class="line-item-qty">
@@ -110,8 +112,10 @@
               
               <div class="line-item-content-qty-price">
               	<div class="slect-size-custom">
-                  <label>Color: <span>{{ product.title | split: "-" | last}}</span></label>
-                  <label class="size-changed">Size: <span>{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}</span></label>
+                  {% unless  item.title contains "Gift Card" %}
+                    <label>Color: <span>{{ product.title | split: "-" | last}}</span></label>
+                    <label class="size-changed">Size: <span>{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}</span></label>
+                  {% endunless%}
                </div>
                 <div class="line-item-price">
                   {% if product.variant.compare_at_price > item.price %}

@@ -1118,6 +1118,13 @@ ul#custom-currency-list {
   left: 0;
   top: 0;
 }
+{% comment %} .hm-business-sec-video video{
+	width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+} {% endcomment %}
 .hm-business-sec-cont{
 	max-width: 370px;
   padding: 15px;
@@ -1222,7 +1229,16 @@ ul#custom-currency-list {
     opacity: .2;
     display: block;
 }
+
 .hm-as-seen-in-mid ul li a:hover img{
+    opacity: 1;
+}
+.hm-as-seen-in-mid ul li svg{
+	height: 28px;
+  opacity: .2;
+  display: block;
+}
+.hm-as-seen-in-mid ul li a:hover svg{
     opacity: 1;
 }
 .hm-as-seen-in-row .hm-as-seen-in-right p{
@@ -4108,6 +4124,10 @@ body.size_body{
   	padding: 0;
   }
   .hm-as-seen-in-mid ul li img{
+  	margin: auto;    
+    opacity: 1;
+  }
+  .hm-as-seen-in-mid ul li svg{
   	margin: auto;    
     opacity: 1;
   }
