@@ -1,200 +1,185 @@
 <div id="overlay" class=""></div>
-<div class="inline-cart ans-cst-cart {% if cart.item_count == 1 %} sliderAdded {%endif%}" id="slidingcartmain">
-	<div class="cart-header">
-	
-		<div>
-			<h3>Your Bag</h3>
-		</div>
-		<div>
-          <div class="close-cart-img">
-            <span></span> close
-          </div>
-		</div>
-	</div>
+<div class="inline-cart ans-cst-cart {% if cart.item_count == 1 %} sliderAdded {% endif %}" id="slidingcartmain">
+  <div class="cart-header">
+
+    <div>
+      <h3>Your Bag</h3>
+    </div>
+    <div>
+      <div class="close-cart-img">
+        <span></span> close
+      </div>
+    </div>
+  </div>
   {% if cart.item_count > 1 %}
-  <div class="ans-cst-cart-percentage"><p>10% of your purchase will go to a child in need.</p></div>
-  {%endif%}
-    {% if cart.item_count == 1 %}
+  <div class="ans-cst-cart-percentage">
+    <p>10% of your purchase will go to a child in need.</p>
+  </div>
+  {% endif %}
+  {% if cart.item_count == 1 %}
   <div class="ans-cst-cart-buy-more-sec">
     <div class="ans-cst-cart-buy-more-sec-inn">
       <p>Buy one more pair and get 30% off</p>
       <div class="ans-cst-cart-buy-more-bar">
-          <div style="width: 50%"></div>
+        <div style="width:50%"></div>
       </div>
     </div>
   </div>  
-{%endif%}
+  {% endif %}
   {% if cart.item_count < 1 %}
-	<p class="empty-cart-title international-cart-element" data-empty-cart="">Your cart is empty.</p>
+  <p class="empty-cart-title international-cart-element" data-empty-cart="">Your cart is empty.</p>
   {% else %}
-	
+
   <div data-cart-contents="">
 
-<div class="line-item-container">
-    
-  
-  
-  {% for item in cart.items %}
-  <div class="line-item">
-    <div class="line-item-image">
-	  <h4 class="line-item-title"><a href="{{ item.url }}">{{ item.title }}</a></h4>
-      <a rel="{{ item.id }}" class="remove-item" onclick="remove({{ forloop.index  }},0)">Remove</a>
-      <div class="line-item-cst-row">
-        <div class="line-item-cst-img">
-        	<a href="{{ item.url }}">
-        		<img alt="{{ item.image.alt | escape }}" src="{{ item | img_url: 'small' }}">
-      		</a>	
-        </div>
-        <div class="line-item-cst-cont">
-        	<div class="line-item-content"> 
-              <div class="slect-size-custom">
-                  {% unless  item.title contains "Gift Card" %}
-                    {% assign titleget =  item.title | split: "-" %}
-                    <label>Color: <span>{{titleget[1]}}</span></label>
-                    <label class="size-changed">Size: <span>{{titleget[2]}}</span></label>
-                  {% endunless %}
-              </div>
-              <div class="line-item-content-qty-price">                
-              	<div class="line-item-qty">
-                  <input type='button' value='-' class='qtyminus' field='quantity' min="1" />
-                  <input type='text' name='quantity' value='{{ item.quantity }}' class='qty' data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}"  />
-                  <input type='button' value='+' class='qtyplus' field='quantity' max="{{ item.variant.inventory_quantity }}" /><br/>
-                </div>
-                <div class="line-item-price">
-                  {% if item.variant.compare_at_price > item.price %}
+    <div class="line-item-container">
 
-                  <span class="strikeprice">{{ item.variant.compare_at_price | money }}</span>
-                  {% endif %}
-                  <span class="flow-price">{{ item.price | money }}</span>
-                  <div class="yousavepricesliding yousaveprice">
-                    {% if item.variant.compare_at_price > item.price %}You save {{ item.variant.compare_at_price | minus: item.price | times: 100.0 | divided_by: item.variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
+      {% for item in cart.items %}
+      <div class="line-item">
+        <div class="line-item-image">
+          <h4 class="line-item-title"><a href="{{ item.url }}">{{ item.title }}</a></h4>
+          <a rel="{{ item.id }}" class="remove-item" onclick="remove({{ forloop.index  }},0)">Remove</a>
+          <div class="line-item-cst-row">
+            <div class="line-item-cst-img">
+              <a href="{{ item.url }}">
+                <img alt="{{ item.image.alt | escape }}" src="{{ item | img_url: 'small' }}">
+              </a>	
+            </div>
+            <div class="line-item-cst-cont">
+              <div class="line-item-content"> 
+                <div class="slect-size-custom">
+                  {% unless item.title contains "Gift Card" %}
+                  {% assign titleget =  item.title | split: "-" %}
+                  <label>Color: <span>{{titleget[1]}}</span></label>
+                  <label class="size-changed">Size: <span>{{titleget[2]}}</span></label>
+                  {% endunless %}
+                </div>
+                <div class="line-item-content-qty-price">                
+                  <div class="line-item-qty">
+                    <input type='button' value='-' class='qtyminus' field='quantity' min="1" />
+                    <input type='text' name='quantity' value='{{ item.quantity }}' class='qty' data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}"  />
+                    <input type='button' value='+' class='qtyplus' field='quantity' max="{{ item.variant.inventory_quantity }}" /><br/>
+                  </div>
+                  <div class="line-item-price">
+                    {% if item.variant.compare_at_price > item.price %}
+
+                    <span class="strikeprice">{{ item.variant.compare_at_price | money }}</span>
+                    {% endif %}
+                    <span class="flow-price">{{ item.price | money }}</span>
+                    <div class="yousavepricesliding yousaveprice">
+                      {% if item.variant.compare_at_price > item.price %}You save {{ item.variant.compare_at_price | minus: item.price | times: 100.0 | divided_by: item.variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
+                    </div>
                   </div>
                 </div>
-              </div>
-              
 
+              </div>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  {% endfor %}
-  
-  
-  
-  
-    
-    
-    
+      {% endfor %}
 
-</div>
+    </div>
     {% if cart.item_count == 1 %}
     <div class="header-cart-related">
-            <div class="header-cart-related-inner">
-              <h3 class="header-cart-related-inner-title">Recommended Products</h3>
-                <div class="header-cart-related-list">
-                    {% for product in collections["bestsellers"].products %}
-{% if product.available %}
-                    <div class="line-item form related-each-item">
-                      {% include "variant-cart-drawer" %}
-    <div class="line-item-image">
-	  <h4 class="line-item-title"><a href="{{ product.url }}">{{ product.title }}</a></h4>
-      
-      <div class="line-item-cst-row">
-        <div class="line-item-cst-img">
-        	<a href="{{ product.url }}">
-        		<img alt="{{ product.image.alt | escape }}" src="{{ product | img_url: 'small' }}">
-      		</a>	
-        </div>
-        <div class="line-item-cst-cont">
-        	<div class="line-item-content"> 
-              
-              
-              <div class="line-item-content-qty-price">
-              	<div class="slect-size-custom">
-                  {% unless  item.title contains "Gift Card" %}
-                    <label>Color: <span>{{ product.title | split: "-" | last}}</span></label>
-                    <label class="size-changed">Size: <span>{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}</span></label>
-                  {% endunless%}
-               </div>
-                <div class="line-item-price">
-                  {% if product.variant.compare_at_price > item.price %}
+      <div class="header-cart-related-inner">
+        <h3 class="header-cart-related-inner-title">Recommended Products</h3>
+        <div class="header-cart-related-list">
+          {% for product in collections["bestsellers"].products %}
+          {% if product.available %}
+          <div class="line-item form related-each-item">
+            {% include "variant-cart-drawer" %}
+            <div class="line-item-image">
+              <h4 class="line-item-title"><a href="{{ product.url }}">{{ product.title }}</a></h4>
 
-                  <span class="strikeprice">{{ product.variant.compare_at_price | money }}</span>
-                  {% endif %}
-                  <span class="flow-price">{{ product.price | money }}</span>
-                  <div class="yousavepricesliding yousaveprice">
-                    {% if product.variant.compare_at_price > item.price %}You save {{ product.variant.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
-                  </div>
-                </div>                                
-              </div> 
-              <div class="product-add-size-chrt-row">
-                  <div class="product-add-size-chrt-box">
-                    <div class="cart-select-size">Select Size</div>
-                  	
-                    <select style="display:none;" name="product-size" class="cart-select-box" id="product-select-header-cart{{ product.id }}">
-                      {% for variant in product.variants %}
-                      {%if forloop.first%}
-                      <option data-val="{% for variant in product.variants %}{% if variant.available %}{{ variant.id }}{% break %}{% endif %}{% endfor %}" value="Select Size">Select Size</option>
-                      {%endif%}
-                      {% if variant.available %}
-                      <option data-val="{{ variant.id }}" value="{{ variant.title | escape }}">{{ variant.title | escape }}</option>
-                      {% endif %}
-                      {% endfor %}
-                    </select>
-                  </div>
-                  <div  data-def="{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}" class="product-add-con" data-tit="{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}" data-idget="{% for variant in product.variants %}{% if variant.available %}{{ variant.id }}{% break %}{% endif %}{% endfor %}"><button class="cart-btn-header-cart{{ product.id }}">Add</button></div>
+              <div class="line-item-cst-row">
+                <div class="line-item-cst-img">
+                  <a href="{{ product.url }}">
+                    <img alt="{{ product.image.alt | escape }}" src="{{ product | img_url: 'small' }}">
+                  </a>	
                 </div>
+                <div class="line-item-cst-cont">
+                  <div class="line-item-content"> 
+
+                    <div class="line-item-content-qty-price">
+                      <div class="slect-size-custom">
+                        {% unless item.title contains "Gift Card" %}
+                        <label>Color: <span>{{ product.title | split: "-" | last}}</span></label>
+                        <label class="size-changed">Size: <span>{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}</span></label>
+                        {% endunless %}
+                      </div>
+                      <div class="line-item-price">
+                        {% if product.variant.compare_at_price > item.price %}
+
+                        <span class="strikeprice">{{ product.variant.compare_at_price | money }}</span>
+                        {% endif %}
+                        <span class="flow-price">{{ product.price | money }}</span>
+                        <div class="yousavepricesliding yousaveprice">
+                          {% if product.variant.compare_at_price > item.price %}You save {{ product.variant.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.variant.compare_at_price | money_without_currency | times: 100 | remove: '.0'}}%{% endif %}
+                        </div>
+                      </div>                                
+                    </div> 
+                    <div class="product-add-size-chrt-row">
+                      <div class="product-add-size-chrt-box">
+                        <div class="cart-select-size">Select Size</div>
+
+                        <select style="display:none;" name="product-size" class="cart-select-box" id="product-select-header-cart{{ product.id }}">
+                          {% for variant in product.variants %}
+                          {%if forloop.first%}
+                          <option data-val="{% for variant in product.variants %}{% if variant.available %}{{ variant.id }}{% break %}{% endif %}{% endfor %}" value="Select Size">Select Size</option>
+                          {%endif%}
+                          {% if variant.available %}
+                          <option data-val="{{ variant.id }}" value="{{ variant.title | escape }}">{{ variant.title | escape }}</option>
+                          {% endif %}
+                          {% endfor %}
+                        </select>
+                      </div>
+                      <div data-def="{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}" class="product-add-con" data-tit="{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}" data-idget="{% for variant in product.variants %}{% if variant.available %}{{ variant.id }}{% break %}{% endif %}{% endfor %}"><button class="cart-btn-header-cart{{ product.id }}">Add</button></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
 
             </div>
+
+          </div>
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
-      
-
     </div>
-
-    
-
-    
-
-  </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
     {%endif%}
-</div>
-	<a href="#" class="button btn-continue-shopping international-cart-element" data-empty-cart="" style="display: none;"><span>Continue Shopping</span></a>
+  </div>
+  <a href="#" class="button btn-continue-shopping international-cart-element" data-empty-cart="" style="display: none;"><span>Continue Shopping</span></a>
 
   {% endif %}
-  
-  
+
   <div data-full-cart="" class="subtotal-block international-cart-element" style="display: block;"> 
     {% if cart.item_count < 1 %}
     <a href="/collections/all" class="button btn-checkout continueshopping"><span>Continue Shopping</span></a>
     {% else %}
     <div class="subtotal-main">
-    <div class="subtotal">
-      <div class="subtotal-lbl">Subtotal:</div>
-      <div class="cart-total">
-        <span class="cart-subtotal">{{ cart.total_price | money }}</span>
+      <div class="subtotal">
+        <div class="subtotal-lbl">Subtotal:</div>
+        <div class="cart-total">
+          <span class="cart-subtotal">{{ cart.total_price | money }}</span>
+        </div>
       </div>
     </div>
-    </div>
-        {% if cart.item_count > 1 %}
+    {% if cart.item_count > 1 %}
     <div class="cart-discount-code">
-            <span class="text">Enter code during checkout for <strong>30% discount</strong></span>
-            <div class="code">
-                <input id="discount_get" type="text" value="2P30" size="4" readonly=""><button class="copy-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.426 10.481">
-                    <g id="Group_193" data-name="Group 193" transform="translate(-8.398 -7.034)">
-                      <path id="Path_45" data-name="Path 45" d="M10.319,14.65H8.773V7.409h5.784V8.551" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"></path>
-                      <rect id="Rectangle_70" data-name="Rectangle 70" width="5.784" height="7.242" transform="translate(11.665 9.898)" stroke-width="0.75" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect>
-                    </g>
-                  </svg></button>
-            </div>
-        </div>
-    {%endif%}
+      <span class="text">Enter code during checkout for <strong>30% discount</strong></span>
+      <div class="code">
+        <input id="discount_get" type="text" value="2P30" size="4" readonly=""><button class="copy-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.426 10.481">
+        <g id="Group_193" data-name="Group 193" transform="translate(-8.398 -7.034)">
+          <path id="Path_45" data-name="Path 45" d="M10.319,14.65H8.773V7.409h5.784V8.551" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"></path>
+          <rect id="Rectangle_70" data-name="Rectangle 70" width="5.784" height="7.242" transform="translate(11.665 9.898)" stroke-width="0.75" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect>
+        </g>
+        </svg></button>
+      </div>
+    </div>
+    {% endif %}
     <div class="ans-cart-chk-out">
       <a href="/checkout" class="button btn-checkout"><span>checkout</span></a>
     </div>
@@ -203,40 +188,40 @@
   <div class="cart-element-bot-list">
     <ul>
       <li><svg width="24px" height="15px" viewBox="0 0 27 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>14621ECD-E513-44CA-A666-B7D67337B262</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="icons" transform="translate(-297.000000, -62.000000)" stroke="#3D3D3D">
+        <title>14621ECD-E513-44CA-A666-B7D67337B262</title>
+        <desc>Created with sketchtool.</desc>
+        <defs></defs>
+        <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+          <g id="icons" transform="translate(-297.000000, -62.000000)" stroke="#3D3D3D">
             <g id="transport_ico" transform="translate(298.000000, 63.000000)">
-                <polyline id="Shape" points="23.4554461 14.4824923 24.9999993 14.4824923 24.9999993 10.5621612 22.0297045 6.8289943 19.183172 6.89475469"></polyline>
-                <path d="M12.935648,14.355978 L20.11386,14.355978" id="Shape"></path>
-                <polyline id="Shape" points="9.6534794 14.355988 8.168332 14.355988 8.168332 8.032873"></polyline>
-                <polyline id="Shape" points="12.316789 4.1124873 18.87619 4.1124873 18.87619 14.2901733"></polyline>
-                <path d="M11.2921002,16 C12.1642719,16 12.8713069,15.2775402 12.8713069,14.386341 C12.8713069,13.4951418 12.1642719,12.772682 11.2921002,12.772682 C10.4199284,12.772682 9.7128935,13.4951418 9.7128935,14.386341 C9.7128935,15.2775402 10.4199284,16 11.2921002,16 Z" id="Oval"></path>
-                <path d="M21.7524317,16 C22.6246034,16 23.3316384,15.2775402 23.3316384,14.386341 C23.3316384,13.4951418 22.6246034,12.772682 21.7524317,12.772682 C20.8802599,12.772682 20.173225,13.4951418 20.173225,14.386341 C20.173225,15.2775402 20.8802599,16 21.7524317,16 Z" id="Oval"></path>
-                <path d="M8.38611,8.032886 C10.55697,8.032886 12.3168,6.2346631 12.3168,4.016443 C12.3168,1.79822282 10.55697,0 8.38611,0 C6.2152499,0 4.45542,1.79822282 4.45542,4.016443 C4.45542,6.2346631 6.2152499,8.032886 8.38611,8.032886 Z" id="Oval"></path>
-                <polyline id="Shape" points="8.232684 1.3910681 8.232684 3.79385168 9.4703069 5.0584747"></polyline>
-                <path d="M0,9.358186 L6.064352,9.358186" id="Shape"></path>
-                <path d="M0.683088,5.5642724 L2.970215,5.5642724" id="Shape"></path>
-                <path d="M8.0445243,13.278571 L2.8465083,13.278571" id="Shape"></path>
+              <polyline id="Shape" points="23.4554461 14.4824923 24.9999993 14.4824923 24.9999993 10.5621612 22.0297045 6.8289943 19.183172 6.89475469"></polyline>
+              <path d="M12.935648,14.355978 L20.11386,14.355978" id="Shape"></path>
+              <polyline id="Shape" points="9.6534794 14.355988 8.168332 14.355988 8.168332 8.032873"></polyline>
+              <polyline id="Shape" points="12.316789 4.1124873 18.87619 4.1124873 18.87619 14.2901733"></polyline>
+              <path d="M11.2921002,16 C12.1642719,16 12.8713069,15.2775402 12.8713069,14.386341 C12.8713069,13.4951418 12.1642719,12.772682 11.2921002,12.772682 C10.4199284,12.772682 9.7128935,13.4951418 9.7128935,14.386341 C9.7128935,15.2775402 10.4199284,16 11.2921002,16 Z" id="Oval"></path>
+              <path d="M21.7524317,16 C22.6246034,16 23.3316384,15.2775402 23.3316384,14.386341 C23.3316384,13.4951418 22.6246034,12.772682 21.7524317,12.772682 C20.8802599,12.772682 20.173225,13.4951418 20.173225,14.386341 C20.173225,15.2775402 20.8802599,16 21.7524317,16 Z" id="Oval"></path>
+              <path d="M8.38611,8.032886 C10.55697,8.032886 12.3168,6.2346631 12.3168,4.016443 C12.3168,1.79822282 10.55697,0 8.38611,0 C6.2152499,0 4.45542,1.79822282 4.45542,4.016443 C4.45542,6.2346631 6.2152499,8.032886 8.38611,8.032886 Z" id="Oval"></path>
+              <polyline id="Shape" points="8.232684 1.3910681 8.232684 3.79385168 9.4703069 5.0584747"></polyline>
+              <path d="M0,9.358186 L6.064352,9.358186" id="Shape"></path>
+              <path d="M0.683088,5.5642724 L2.970215,5.5642724" id="Shape"></path>
+              <path d="M8.0445243,13.278571 L2.8465083,13.278571" id="Shape"></path>
             </g>
+          </g>
         </g>
-    </g>
-</svg> Free Shipping</li>
+        </svg> Free Shipping</li>
       <li><svg width="18px" height="18px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>9254B351-67F3-4382-B7D3-4D9F04FAD3F1</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="icons" transform="translate(-297.000000, -95.000000)" stroke="#3D3D3D">
+        <title>9254B351-67F3-4382-B7D3-4D9F04FAD3F1</title>
+        <desc>Created with sketchtool.</desc>
+        <defs></defs>
+        <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+          <g id="icons" transform="translate(-297.000000, -95.000000)" stroke="#3D3D3D">
             <g id="global_ico" transform="translate(298.000000, 96.000000)">
-                <polyline id="Shape" points="0 10.9280493 7.0427284 3.63236709 5.69292722 2.3476562 11.7455809 2.43151462 11.6630751 8.38546219 10.1779631 6.95986934 6.93052025 10.2035129 5.50151287 8.8617785 5.33650035 14.8693952 11.4683602 14.8425611 10.0954574 13.443802 17.217392 6.34602527"></polyline>
-                <path d="M9,18 C13.9705625,18 18,13.9705625 18,9 C18,4.02943734 13.9705625,0 9,0 C4.02943734,0 0,4.02943734 0,9 C0,13.9705625 4.02943734,18 9,18 Z" id="Oval"></path>
+              <polyline id="Shape" points="0 10.9280493 7.0427284 3.63236709 5.69292722 2.3476562 11.7455809 2.43151462 11.6630751 8.38546219 10.1779631 6.95986934 6.93052025 10.2035129 5.50151287 8.8617785 5.33650035 14.8693952 11.4683602 14.8425611 10.0954574 13.443802 17.217392 6.34602527"></polyline>
+              <path d="M9,18 C13.9705625,18 18,13.9705625 18,9 C18,4.02943734 13.9705625,0 9,0 C4.02943734,0 0,4.02943734 0,9 C0,13.9705625 4.02943734,18 9,18 Z" id="Oval"></path>
             </g>
+          </g>
         </g>
-    </g>
-</svg> Free Returns</li>
+        </svg> Free Returns</li>
     </ul>
   </div>
 </div>

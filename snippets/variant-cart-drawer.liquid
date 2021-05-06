@@ -1,70 +1,65 @@
 <div class="product-size custom-cart-variants">
   <div class="custom-cart-variants-inn">
-								{% assign us = "35:5|36:5.5|37:6.5|38:7|39:8|40:9|41:9.5|42:10" | split:"|" %}
-								
-								{% if product.available %}
+    {% assign us = "35:5|36:5.5|37:6.5|38:7|39:8|40:9|41:9.5|42:10" | split:"|" %}
 
-								{% if product.variants.size > 1 %}
-								{% if product.id != 4406627401813 %}
+    {% if product.available %}
 
-								<div for="" class="label flex">
-                                  <h3>Size</h3>
-									<span><ul class="product-sizes-system cart-pro-size-get">
-										<li class="active" data-prop="eu">EU</li><li data-prop="us">US</li>
-									</ul></span>
-                                  <div class="close-size-pop">x</div>
-								</div>
-								{% endif %}
-								<div class="sizes-wrapper">
-									{% assign option = product.options_with_values | first %}
-									{% for variant in product.variants%}
-                                  <div data-variId="{{variant.id}}" class="size-each custom-cart-sizes-get {% unless variant.available %}disabled{%endunless%}" {% for uu in us %}{% assign tt = uu | split:":" %}{% if variant.title contains tt[0] %}data-us="{{ tt[1] }}"{% break %}{% endif %}{% endfor %} data-eu="{{ variant.title | remove:"EU" }}" data-value="{{ variant.title | escape }}">{{ variant.title | remove:"EU" }}</div>
-                                  {% endfor %}
-								</div>
-						{% if product.id != 4406627401813 %}
+    {% if product.variants.size > 1 %}
+    {% if product.id != 4406627401813 %}
 
-								
-{% endif %}
-								<script>
-									$(function(){
+    <div for="" class="label flex">
+      <h3>Size</h3>
+      <span><ul class="product-sizes-system cart-pro-size-get">
+        <li class="active" data-prop="eu">EU</li><li data-prop="us">US</li>
+        </ul></span>
+      <div class="close-size-pop">x</div>
+    </div>
+    {% endif %}
+    <div class="sizes-wrapper">
+      {% assign option = product.options_with_values | first %}
+      {% for variant in product.variants%}
+      <div data-variId="{{variant.id}}" class="size-each custom-cart-sizes-get {% unless variant.available %}disabled{%endunless%}" {% for uu in us %}{% assign tt = uu | split:":" %}{% if variant.title contains tt[0] %}data-us="{{ tt[1] }}"{% break %}{% endif %}{% endfor %} data-eu="{{ variant.title | remove:"EU" }}" data-value="{{ variant.title | escape }}">{{ variant.title | remove:"EU" }}</div>
+      {% endfor %}
+    </div>
+    {% if product.id != 4406627401813 %}
 
-										$(".custom-cart-variants .cart-pro-size-get li").on("click",function(){
-											var elem = $(this);
-											elem.parent().find(".active").removeClass("active");
-											elem.addClass("active");
-											if(elem.attr("data-prop") == "us")
-											{
-												$(this).parents(".cart-pro-size-get").parents("span").parents(".label.flex").next(".sizes-wrapper").children(".custom-cart-sizes-get").each(function(){
-													ee = $(this);
-													ee.html(ee.attr("data-us"));
-												});
-											}
-											else
-											{
-												$(this).parents(".cart-pro-size-get").parents("span").parents(".label.flex").next(".sizes-wrapper").children(".size-each").each(function(){
-													ee = $(this);
-													ee.html(ee.attr("data-eu"));
-												});
-											}
-										});
+    {% endif %}
+    <script>
+      $(function(){
 
+        $(".custom-cart-variants .cart-pro-size-get li").on("click",function(){
+          var elem = $(this);
+          elem.parent().find(".active").removeClass("active");
+          elem.addClass("active");
+          if(elem.attr("data-prop") == "us")
+          {
+            $(this).parents(".cart-pro-size-get").parents("span").parents(".label.flex").next(".sizes-wrapper").children(".custom-cart-sizes-get").each(function(){
+              ee = $(this);
+              ee.html(ee.attr("data-us"));
+            });
+          }
+          else
+          {
+            $(this).parents(".cart-pro-size-get").parents("span").parents(".label.flex").next(".sizes-wrapper").children(".size-each").each(function(){
+              ee = $(this);
+              ee.html(ee.attr("data-eu"));
+            });
+          }
+        });
 
-										$(".custom-cart-sizes-get").on("click",function(e){
-											var elem = $(this);
-											elem.parent().find(".active").removeClass("active");
-											elem.addClass("active");
-                                            var value_get = elem.attr("data-value");
-                                          value_get= value_get.trim();
-                                            
-										});
-										
-										
-									});
-								</script>
+        $(".custom-cart-sizes-get").on("click",function(e){
+          var elem = $(this);
+          elem.parent().find(".active").removeClass("active");
+          elem.addClass("active");
+          var value_get = elem.attr("data-value");
+          value_get= value_get.trim();
 
-								
+        });
 
-								{% endif %}
-          {% endif %}
-							</div>
+      });
+    </script>							
+
+    {% endif %}
+    {% endif %}
+  </div>
 </div>

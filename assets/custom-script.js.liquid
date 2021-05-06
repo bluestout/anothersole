@@ -3,125 +3,130 @@ $(document).ready(function(){
   $(window).scroll(function() {    
     var scroll_val = $(".cst-header-sec-main").scrollTop();    
     if($(window).scrollTop() > scroll_val+31){
-        $("#shopify-section-header").addClass("header-fixed");
-       $(".ans-cst-cart").addClass("ans-cst-cart-fixed");
+      $("#shopify-section-header").addClass("header-fixed");
+      $(".ans-cst-cart").addClass("ans-cst-cart-fixed");
     }
     else{
-    $("#shopify-section-header").removeClass("header-fixed");
-       $(".ans-cst-cart").removeClass("ans-cst-cart-fixed");
+      $("#shopify-section-header").removeClass("header-fixed");
+      $(".ans-cst-cart").removeClass("ans-cst-cart-fixed");
     }
-})
+
+    /******************* Cart page right section block*************/
+    if($(window).scrollTop() > 300){
+      $(".cart_content_container").addClass("cart-cont-rt-fixed");
+    }
+    else{
+      $(".cart_content_container").removeClass("cart-cont-rt-fixed");
+    }
+  })
   /******************* Cart Slide Cart on All*************/
-    $('.header-cart-related-list').slick({
- dots: false,
- slidesToShow: 1,
-  slidesToScroll: 1
-}); 
-  
+  $('.header-cart-related-list').slick({
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }); 
+
   /********************Fotter Accordion on All***********************/
   $( function() {
-    $( "#footer-accordion" ).accordion({
+    $("#footer-accordion" ).accordion({
       collapsible: true,heightStyle: "content"
     });
   } );
-    $( function() {
-    $( ".accordion-child" ).accordion({
+  $( function() {
+    $(".accordion-child" ).accordion({
       collapsible: true, heightStyle: "content"
     });
   } );
   /*********************Currency Convertor on All**********************/
   $(".custom_currency_wrapper").click(function(){
-  $("#custom-currency-list").slideToggle(100); 
+    $("#custom-currency-list").slideToggle(100); 
   })
- 
+
   $("#custom-currency-list li").click(function(){
-  var custom_currency = $(this).html();
-   $(".custom-currency-drop").html(custom_currency);
+    var custom_currency = $(this).html();
+    $(".custom-currency-drop").html(custom_currency);
     $("#currency-list .disclosure-list__item").each(function(){
-    var actual_currency_list = $(this).children("a").attr("data-value");
+      var actual_currency_list = $(this).children("a").attr("data-value");
       if(custom_currency==actual_currency_list){
-      $(this).trigger("click");
+        $(this).trigger("click");
       }
     })
   })
-  
-  
+
   /*****************Mobile Header on All***********************/
   $(".cst-mob-header-menu-toggle").click(function(){
-  $(this).toggleClass("custom-mobile-close");
+    $(this).toggleClass("custom-mobile-close");
     $(".cst-mob-header").toggleClass("show-mobile-menu");
     $("body").toggleClass("for-custom-mobile-menu");
   })
-  
+
   $(".mobile-accordion-list").click(function(){
-   
+
     if($(this).hasClass("custom-open-accordion")){
-    $(this).removeClass("custom-open-accordion");
+      $(this).removeClass("custom-open-accordion");
     }
     else{
-    $(this).addClass("custom-open-accordion");
+      $(this).addClass("custom-open-accordion");
       $(this).siblings("li").removeClass("custom-open-accordion");
     }
   })
   $(".tab-listing").click(function(){
-   
+
     $(this).addClass("active-tab");
     $(this).siblings("li").removeClass("active-tab");
-   
+
     var data_tab = $(this).attr("data-tab");
     $(".cst-mob-header-dd-tab-cont").each(function(){
-    var data_content = $(this).attr("data-content");
+      var data_content = $(this).attr("data-content");
       if(data_content==data_tab){
-      $(this).show();
-       $(this).siblings(".cst-mob-header-dd-tab-cont").hide();
+        $(this).show();
+        $(this).siblings(".cst-mob-header-dd-tab-cont").hide();
       }
     })
   })
   /*******************Top bar close for Mobile on All*****************/
   $(".ext-top-bar-left-inn-close").click(function(){
-  $(".ext-top-bar").addClass("close-top-bar");
+    $(".ext-top-bar").addClass("close-top-bar");
   })
-  
+
   /************************ Search Open on Icon Click on All*****************/
   $(".custom-search").click(function(){
-  $("html").addClass("js-drawer-open js-drawer-open-top");
+    $("html").addClass("js-drawer-open js-drawer-open-top");
     $("body").addClass("js-drawer-open js-drawer-open-top prevent-scrolling");
   })
   $(".btn--link.search-bar__close.js-drawer-close").click(function(){
-  $("html").removeClass("js-drawer-open js-drawer-open-top");
+    $("html").removeClass("js-drawer-open js-drawer-open-top");
     $("body").removeClass("js-drawer-open js-drawer-open-top prevent-scrolling");
   })
-  
-  
+
   /************ Top Bar Slider on All *********************/
   if ($(window).width() < 749) {
-  $('.hm-fav-product-listing-main').slick({
- dots: false,
-    prevArrow: false,
-    slidesToShow: 1,
-  slidesToScroll: 1,
-    nextArrow: false
-});
+    $('.hm-fav-product-listing-main').slick({
+      dots: false,
+      prevArrow: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: false
+    });
   }
   if ($(window).width() < 750) {
-     $('.logo-slider-mobile').slick({
- dots: true,
-    prevArrow: false,
-    slidesToShow: 1,
-  slidesToScroll: 1,
-    nextArrow: false
-});
+    $('.logo-slider-mobile').slick({
+      dots: true,
+      prevArrow: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: false
+    });
   }
   else if($(window).width() < 1200)  {
     $('.logo-slider-mobile').slick({
- dots: true,
-    prevArrow: false,
-    slidesToShow: 2,
-  slidesToScroll: 2,
-    nextArrow: false
-});
-  
+      dots: true,
+      prevArrow: false,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      nextArrow: false
+    });
+
   }
-  
-  	
+ 
 }) 
