@@ -1,14 +1,15 @@
-<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+{% comment %} <script src="//fast.wistia.com/assets/external/E-v1.js" async></script> {% endcomment %}
 <div class="video_ifram">
-{{section.settings.video_iframe}}
+  {% comment %} {{section.settings.video_iframe}} {% endcomment %}
+  <video width="100%" autoplay="" loop="" muted="" playsinline="">
+    <source src="{{section.settings.video_iframe}}" type="video/mp4">
+  </video>
   <h3 class="video_ifram_title">{{section.settings.title}}</h3>
 </div>
 
-
-
 <button id="play">Play</button>
 <button id="pause">Pause</button>
-<script>
+{% comment %} <script>
   window._wq = window._wq || [];
   _wq.push({
     id: "ommolgxirk", onReady: function (video) {
@@ -29,7 +30,8 @@
       }
     });
   })
-</script>
+</script> {% endcomment %}
+
   {% schema %}
   {
     "name": "Video Iframe",

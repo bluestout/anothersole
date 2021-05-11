@@ -44,7 +44,7 @@
              {% assign text_12 = section.settings.last_text_12 %}
              {% assign link_12 = section.settings.last_link_12 %}
           {%include "mega-menu-desktop"%}
-              {% elsif forloop.index == 2 %}
+              {% comment %} {% elsif forloop.index == 2 %}
              {% assign selectedlist = section.settings.main_linklist_2 %}
              {% assign text_11 = section.settings.last_text_21 %}
              {% assign link_11 = section.settings.last_link_21 %}
@@ -57,7 +57,7 @@
              {% assign link_11 = section.settings.last_link_31 %}
              {% assign text_12 = section.settings.last_text_32 %}
              {% assign link_12 = section.settings.last_link_32 %}
-              {%include "mega-menu-desktop"%}
+              {%include "mega-menu-desktop"%} {% endcomment %}
             {%endif%}
           </li>
           {%endfor%}

@@ -5258,7 +5258,9 @@ hr {
   .price dl {
     margin-top: 0; }
   .price dd {
-    margin: 0 0.5em 0 0; }
+    /* margin: 0 0.5em 0 0;   FS removed*/
+    margin: 0 0 0 0; 
+  }
 
 .price--unavailable {
   visibility: hidden; }
@@ -5276,7 +5278,9 @@ hr {
 
 .price__regular,
 .price__sale {
-  margin-right: 0.625rem; }
+  /* margin-right: 0.625rem;  FS removed*/
+  margin-right: 0; 
+}
 
 .price--on-sale .price__regular,
 .price--on-sale .price__availability {

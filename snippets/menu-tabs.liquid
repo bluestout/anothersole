@@ -3,7 +3,7 @@
 						<div class="cst-mob-header-dd-tab">
 							<ul class="cst-mob-header-dd-tab-list">
 								<li class="tab-listing active-tab" data-tab="first-tab"><a  href="#">{{section.settings.mobile_mega_1}}</a></li>
-								<li class="tab-listing" data-tab="second-tab"><a href="#">{{section.settings.mobile_mega_2}}</a></li>
+								{% comment %} <li class="tab-listing" data-tab="second-tab"><a href="#">{{section.settings.mobile_mega_2}}</a></li> {% endcomment %}
 							</ul>
 							<div data-content="first-tab" class="active_content cst-mob-header-dd-tab-cont">
 							 {% for link in linklists[section.settings.mobile_mega_1].links %}	
