@@ -1,83 +1,84 @@
 <ul>
-<li>
-						<div class="cst-mob-header-dd-tab">
-							<ul class="cst-mob-header-dd-tab-list">
-								<li class="tab-listing active-tab" data-tab="first-tab"><a  href="#">{{section.settings.mobile_mega_1}}</a></li>
-								{% comment %} <li class="tab-listing" data-tab="second-tab"><a href="#">{{section.settings.mobile_mega_2}}</a></li> {% endcomment %}
+	<li>
+		<div class="cst-mob-header-dd-tab">
+			<ul class="cst-mob-header-dd-tab-list">
+				<li class="tab-listing active-tab" data-tab="first-tab"><a  href="#">{{section.settings.mobile_mega_1}}</a></li>
+				{% if section.settings.mobile_mega_2 != blank %}
+					<li class="tab-listing" data-tab="second-tab"><a href="#">{{section.settings.mobile_mega_2}}</a></li> 
+				{% endif %}
+			</ul>
+			<div data-content="first-tab" class="active_content cst-mob-header-dd-tab-cont">
+				{% for link in linklists[section.settings.mobile_mega_1].links %}	
+					{% if link.handle =="colors" %}
+						<div class="cst-mob-header-dd-tab-cont-box">
+							<h3>{{link.title}}</h3>
+							<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
+							{% for childlink in link.links %}	
+								<li class="{%if childlink.handle == "white"%}custom-white{%endif%}">
+									<a href="{{childlink.url}}">
+										{% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
+										<img src="{{imagename| file_url}}">												
+									</a>
+								</li>
+							{%endfor%}
 							</ul>
-							<div data-content="first-tab" class="active_content cst-mob-header-dd-tab-cont">
-							 {% for link in linklists[section.settings.mobile_mega_1].links %}	
-                              {% if link.handle =="colors" %}
-                              <div class="cst-mob-header-dd-tab-cont-box">
-									<h3>{{link.title}}</h3>
-									<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
-									{% for childlink in link.links %}	
-                                      <li class="{%if childlink.handle == "white"%}custom-white{%endif%}">
-											<a href="{{childlink.url}}">
-                                              {% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
-												<img src="{{imagename| file_url}}">												
-											</a>
-										</li>
-                                       {%endfor%}
-									</ul>
-								</div>
-                              {%else%}
-                              <div class="cst-mob-header-dd-tab-cont-box">
-                                 
-									<h3>{{link.title}}</h3>
-                                  <ul class="cst-mob-header-dd-tab-cont-list">
-                                       {% for childlink in link.links %}
-										<li>
-											<a href="{{childlink.url}}">
-                                              {% capture imagenamestyle %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
-												<div><img src="{{imagenamestyle | file_url }}" /></div>
-												<span>{{childlink.title}}</span>
-											</a>
-										</li>
-                                      {%endfor%}
-									</ul>
-                               </div>
-                              {%endif%}
+						</div>
+					{%else%}
+						<div class="cst-mob-header-dd-tab-cont-box">
+							<h3>{{link.title}}</h3>
+							<ul class="cst-mob-header-dd-tab-cont-list">
+								{% for childlink in link.links %}
+									<li>
+										<a href="{{childlink.url}}">
+											{% capture imagenamestyle %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
+											<div><img src="{{imagenamestyle | file_url }}" /></div>
+											<span>{{childlink.title}}</span>
+										</a>
+									</li>
 								{%endfor%}
-								
-							</div>
-                          <div style="display:none;" data-content="second-tab" class="cst-mob-header-dd-tab-cont">
-								 {% for link in linklists[section.settings.mobile_mega_2].links %}	
-                              {% if link.handle =="colors" %}
-                              <div class="cst-mob-header-dd-tab-cont-box">
-									<h3>{{link.title}}</h3>
-									<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
+							</ul>
+						</div>
+					{%endif%}
+				{%endfor%}
+			</div>
+			{% if section.settings.mobile_mega_2 != blank %}
+				<div style="display:none;" data-content="second-tab" class="cst-mob-header-dd-tab-cont">
+					{% for link in linklists[section.settings.mobile_mega_2].links %}	
+						{% if link.handle =="colors" %}
+							<div class="cst-mob-header-dd-tab-cont-box">
+								<h3>{{link.title}}</h3>
+								<ul class="cst-mob-header-dd-tab-cont-list cst-mob-header-dd-tab-cont-list-color">
 									{% for childlink in link.links %}	
-                                      <li class="{%if childlink.handle == "white"%} custom-white{%endif%}">
+										<li class="{%if childlink.handle == "white"%} custom-white{%endif%}">
 											<a href="{{childlink.url}}">
 												{% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
 												<img src="{{imagename| file_url}}">	
 											</a>
 										</li>
-                                       {%endfor%}
-									</ul>
-								</div>
-                              {%else%}
-                              <div class="cst-mob-header-dd-tab-cont-box">
-                                 
-									<h3>{{link.title}}</h3>
-                                  <ul class="cst-mob-header-dd-tab-cont-list">
-                                       {% for childlink in link.links %}
+									{%endfor%}
+								</ul>
+							</div>
+						{%else%}
+							<div class="cst-mob-header-dd-tab-cont-box">
+								<h3>{{link.title}}</h3>
+								<ul class="cst-mob-header-dd-tab-cont-list">
+									{% for childlink in link.links %}
 										<li>
 											<a href="{{childlink.url}}">
 												<div>
-                                              {% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
-												<img src="{{imagename| file_url}}">	
-                                              </div>
-												<span>{{childlink.title}}</span>
+													{% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
+													<img src="{{imagename| file_url}}">	
+												</div>
+											<span>{{childlink.title}}</span>
 											</a>
 										</li>
-                                      {%endfor%}
-									</ul>
-                               </div>
-                              {%endif%}
-								{%endfor%}
+									{%endfor%}
+								</ul>
 							</div>
-						</div>
-					</li>
+						{%endif%}
+					{%endfor%}
+				</div>
+			{%endif%}
+		</div>
+	</li>
 </ul>

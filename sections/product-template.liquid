@@ -400,6 +400,9 @@
                     {% include 'icon-spinner' %}
                   </span>
                 </button>
+                {% unless current_variant.available %}
+                  <a class="klaviyo-bis-trigger btn product-form__cart-submit" href="#">Notify Me When Available</a>
+                {% endunless %}
                 {% if section.settings.enable_payment_button %}
                   {{ form | payment_button }}
                 {% endif %}

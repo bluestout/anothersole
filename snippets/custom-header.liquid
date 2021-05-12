@@ -32,32 +32,30 @@
 <div class="cst-header-sec">
 	<div class="cst-header-row">
 		<div class="cst-header-left"> 
-          <ul class="custom-main-menu">
-           
-      {% for link in linklists[section.settings.main_linklist].links %}
-            
+      <ul class="custom-main-menu">
+        {% for link in linklists[section.settings.main_linklist].links %}
           <li><a href="{{link.url}}">{{link.handle}}</a>
             {% if forloop.index == 1 %}
-            {% assign selectedlist = section.settings.main_linklist_1 %}
-             {% assign text_11 = section.settings.last_text_11 %}
-             {% assign link_11 = section.settings.last_link_11 %}
-             {% assign text_12 = section.settings.last_text_12 %}
-             {% assign link_12 = section.settings.last_link_12 %}
-          {%include "mega-menu-desktop"%}
-              {% comment %} {% elsif forloop.index == 2 %}
-             {% assign selectedlist = section.settings.main_linklist_2 %}
-             {% assign text_11 = section.settings.last_text_21 %}
-             {% assign link_11 = section.settings.last_link_21 %}
-             {% assign text_12 = section.settings.last_text_22 %}
-             {% assign link_12 = section.settings.last_link_22 %}
+              {% assign selectedlist = section.settings.main_linklist_1 %}
+              {% assign text_11 = section.settings.last_text_11 %}
+              {% assign link_11 = section.settings.last_link_11 %}
+              {% assign text_12 = section.settings.last_text_12 %}
+              {% assign link_12 = section.settings.last_link_12 %}
               {%include "mega-menu-desktop"%}
-           {% elsif forloop.index == 3 %}
-             {% assign selectedlist = section.settings.main_linklist_3 %}
-             {% assign text_11 = section.settings.last_text_31 %}
-             {% assign link_11 = section.settings.last_link_31 %}
-             {% assign text_12 = section.settings.last_text_32 %}
-             {% assign link_12 = section.settings.last_link_32 %}
-              {%include "mega-menu-desktop"%} {% endcomment %}
+            {% elsif forloop.index == 2 and section.settings.main_linklist_2 != blank %}
+              {% assign selectedlist = section.settings.main_linklist_2 %}
+              {% assign text_11 = section.settings.last_text_21 %}
+              {% assign link_11 = section.settings.last_link_21 %}
+              {% assign text_12 = section.settings.last_text_22 %}
+              {% assign link_12 = section.settings.last_link_22 %}
+              {%include "mega-menu-desktop"%}
+           {% elsif forloop.index == 3 and section.settings.main_linklist_3 != blank %}
+              {% assign selectedlist = section.settings.main_linklist_3 %}
+              {% assign text_11 = section.settings.last_text_31 %}
+              {% assign link_11 = section.settings.last_link_31 %}
+              {% assign text_12 = section.settings.last_text_32 %}
+              {% assign link_12 = section.settings.last_link_32 %}
+              {%include "mega-menu-desktop"%}
             {%endif%}
           </li>
           {%endfor%}
