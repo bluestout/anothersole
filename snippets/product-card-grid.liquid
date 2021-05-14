@@ -39,7 +39,7 @@
               data-aspectratio="{{ preview_image.aspect_ratio }}"
               data-sizes="auto"
               data-image>
-        <img class="pro-hover-image" src="{{ product.images[1] | img_url: 'large' }}" alt="{{ product.images.last.alt | escape }}" />
+        <img class="lazyload pro-hover-image" data-src="{{ product.images[1] | img_url: 'large' }}" alt="{{ product.images.last.alt | escape }}" />
       </div>
     </div>
   </div>

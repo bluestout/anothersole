@@ -13,7 +13,7 @@
 <ul class="ant-mm-drop-box-list ant-mm-drop-box-inline-list">
  {% for childlink in link.links %}
   {% capture imagename %}{{childlink.title | handleize | append: ".png" | prepend: "bs-"}}{%endcapture%}
-<li><a href="{{childlink.url}}"><span class="ant-mm-drop-box-color {%if childlink.handle == "white"%}custom-white{%endif%}"><img src="{{imagename| file_url}}" /></span> {{childlink.title}}</a></li>
+<li><a href="{{childlink.url}}"><span class="ant-mm-drop-box-color {%if childlink.handle == "white"%}custom-white{%endif%}"><img class="lazyload" data-src="{{imagename| file_url}}" /></span> {{childlink.title}}</a></li>
  {%endfor%}
 </ul>
 </div>

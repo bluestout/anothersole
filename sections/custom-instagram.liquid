@@ -10,7 +10,7 @@
 			<li>
               <div class="instabox">
 				<a href="{{block.settings.link}}">
-					<img src="{{block.settings.image | img_url: "grande"}}" />
+					<img class="lazyload"  data-src="{{block.settings.image | img_url: "grande"}}" />
 					<span>{{block.settings.title}}</span>
 				</a>
               </div>
