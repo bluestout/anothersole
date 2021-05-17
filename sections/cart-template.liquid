@@ -12,14 +12,16 @@
 
       {% if cart.item_count >= 1 %}
       <div class="ans-cst-cart-percentage">
-        <p>10% of your purchase will go to a child in need.</p>
+        {% comment %} <p>Your purchase will help a child in need.</p> {% endcomment %}
+        <p>{{settings.cart_notification_text2}}</p>
       </div>
       {% endif %}
 
       {% if cart.item_count == 1 %}
       <div class="ans-cst-cart-buy-more-sec">
         <div class="ans-cst-cart-buy-more-sec-inn">
-          <p>Buy one more pair and get 30% off</p>
+          {% comment %} <p>Buy one more pair and get 30% off</p> {% endcomment %}
+          <p>{{settings.cart_notification_text1}}</p>
           <div class="ans-cst-cart-buy-more-bar">
             <div style="width:50%"></div>
           </div>
@@ -445,6 +447,9 @@
           {% endif %}
 
           <div class="return_url_link">
+            <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
             <a href="{{ routes.all_products_collection_url }}" class="text-link text-link--accent"><span>Back to cart</span></a>
           </div>
 
@@ -524,14 +529,16 @@
 
         {% if cart.item_count >= 1 %}
         <div class="ans-cst-cart-percentage">
-          <p>10% of your purchase will go to a child in need.</p>
+          <p>{{settings.cart_notification_text2}}</p>
+          {% comment %} <p>Your purchase will help a child in need.</p> {% endcomment %}
         </div>
         {% endif %}
 
         {% if cart.item_count == 1 %}
         <div class="ans-cst-cart-buy-more-sec">
           <div class="ans-cst-cart-buy-more-sec-inn">
-            <p>Buy one more pair and get 30% off</p>
+            {% comment %} <p>Buy one more pair and get 30% off</p> {% endcomment %}
+            <p>{{settings.cart_notification_text1}}</p>
             <div class="ans-cst-cart-buy-more-bar">
               <div style="width:50%"></div>
             </div>

@@ -115,4 +115,12 @@ $(document).ready(function(){
       });
     }
   });
+  /**********product page review*****************/
+  $(".stamped-main-badge").on("click",function(e){
+    console.log("TEST");
+    e.preventDefault();
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".stamped-container").offset().top
+    }, 100);
+  });
 }) 

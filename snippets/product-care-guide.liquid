@@ -1,0 +1,252 @@
+<div class="bs-pdp-careguide-row">
+  
+  
+  
+  <div class="bs-pdp-careguide-title">
+    Anothersole Care Tips
+  </div>
+  <div class="bs-pdp-careguide-sub-title">
+    Do's
+  </div>
+  {% for block in section.blocks %} 
+    {% if block.type == 'careitem' %}
+      {% if block.settings.do_not_option == false %}
+        <div class="bs-pdp-careguide-block">
+          <div class="bs-pdp-careguide-img">
+            {{block.settings.left_svg_icon}}
+          </div>
+          <div class="bs-pdp-careguide-txt">
+            {{block.settings.description}}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %} 
+  <div class="bs-pdp-careguide-sub-title">
+    Don'ts
+  </div>
+  {% for block in section.blocks %} 
+    {% if block.type == 'careitem' %}
+      {% if block.settings.do_not_option == true %}
+        <div class="bs-pdp-careguide-block">
+          <div class="bs-pdp-careguide-img">
+            {{block.settings.left_svg_icon}}
+          </div>
+          <div class="bs-pdp-careguide-txt">
+            {{block.settings.description}}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% endfor %} 
+  {% comment %} <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="30px" height="33px" viewBox="0 0 30 33">
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icons" transform="translate(-753.000000, -130.000000)" stroke="#231F20">
+                  <g id="ico_socks" transform="translate(754.000000, 131.000000)">
+                      <path d="M18.1851489,30.1395448 C20.8880601,31.6852525 24.2864753,31.1052158 26.3436018,28.7470716 C28.4007283,26.3889273 28.5586521,22.8922287 26.7227238,20.3526731 L18.1293477,8.22299813 C15.4777052,9.42857438 12.3586866,8.65015105 10.5589926,6.33364065 C9.1796373,4.69944464 8.6977853,2.47210465 9.27556627,0.401058185 C8.11716439,-0.00906247584 6.87379142,-0.106714948 5.66709232,0.117654564 C2.76709979,0.659853481 0.524003076,3.00929406 0.0794132024,5.97024218 C-0.365176671,8.93119029 1.0864322,11.8530224 3.69545192,13.248689 C6.60431607,14.8797639 9.07081511,17.2163858 10.8751991,20.0503759 L16.0089043,27.9667837 C16.5534861,28.8568535 17.299633,29.6018059 18.1851489,30.1395448 Z" id="Shape"></path>
+                      <path d="M16,28 C18.2749299,27.8862802 20.4924361,27.2625098 22.4804754,26.1770833 C24.4215832,24.8632977 25.9791081,23.079164 27,21" id="Shape"></path>
+                      <path d="M6.32852177,0 C5.37313137,3.47032324 6.54253784,7.18515705 9.30306934,9.44919502 C12.2532743,12.0463027 16.3978534,12.7215125 20,11.1918744" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Wear hidden socks with your shoes to help absorb moisture.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="29px" height="34px" viewBox="0 0 29 34">
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icons" transform="translate(-753.000000, -200.000000)" stroke="#231F20">
+                  <g id="ico_spray" transform="translate(754.000000, 201.000000)">
+                      <polyline id="Shape" points="4.69565217 5.92592593 4.69565217 2.37037037 8.2173913 2.37037037 8.2173913 5.92592593"></polyline>
+                      <polyline id="Shape" points="3.52173913 8.2962963 3.52173913 5.92592593 9.39130435 5.92592593 9.39130435 8.2962963"></polyline>
+                      <rect id="Rectangle-path" x="0" y="8.2962963" width="11.7391304" height="23.7037037" rx="2.53"></rect>
+                      <path d="M0,11.8518519 L11.7391304,11.8518519" id="Shape"></path>
+                      <path d="M11.7391304,2.98666667 L15.2608696,2.37037037" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M17.6086957,1.18518519 L24.6521739,0" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M11.7391304,4.74074074 L14.0869565,4.74074074" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M16.4347826,4.74074074 L21.1304348,4.74074074" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M21.1304348,4.74074074 L27,4.74074074" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M11.7391304,4.74074074 L15.2608696,5.38074074" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M17.6086957,7.11111111 L24.6521739,8.2962963" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M8.2173913,5.92592593 C7.84752829,5.92592593 7.04347826,5.39259259 7.04347826,4.74074074 C7.04347826,4.08888889 7.84752829,3.55555556 8.2173913,3.55555556" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Spray a coat of clear leather protector evenly but sparingly to protect against water marks and liquid stains.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="29px" height="33px" viewBox="0 0 29 33">
+        <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="icons" transform="translate(-675.000000, -329.000000)">
+                <g id="ico_wipe" transform="translate(676.000000, 330.000000)">
+                    <path d="M19.9672464,26.5055732 C22.3299643,26.6868152 24.706488,26.4761519 27,25.8821656 C25.6571304,23.0782312 24.9220759,20.0238593 24.8427136,16.9179936 C25.1269026,14.2778036 25.6687886,11.6715207 26.4606784,9.1361465 C26.7755558,6.43434997 26.6663841,3.70017415 26.1370854,1.03184713 C24.3044631,1.82185036 22.2977714,2.12549601 20.3124122,1.91321656 C16.7744625,1.59076433 15.4153721,0.150477707 10.4104677,0 C7.15827654,0.0309205943 3.98900099,1.02624696 1.3067191,2.85907643 C1.55567445,4.99974001 1.6781319,7.15313577 1.67345778,9.30812102 C1.47930201,12.5541401 -0.0523713272,14.0589172 0.0123472645,18.0788217 C-0.122633597,21.2802969 0.852431854,24.4304975 2.77367384,27 C4.11112127,26.1673791 5.56514396,25.5371089 7.08824662,25.1297771" id="Shape" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19,15.8020529 L19,27.1951993 C17.8389661,29.416364 15.6516868,30.8559606 13.2191013,31 C9.32416947,31 7.37670358,27.3439903 6.22872368,23.3903985 C5.08074379,19.4368067 4.4862542,17.9488958 5.57273517,17.6088019 C6.65921614,17.2687079 7.62269927,19.0329451 8.60668203,21.3710909 C8.60668203,21.3710909 8.60668203,15.9720999 8.60668203,13.4001396 C8.60668203,12.6723034 9.17571815,12.0822756 9.87765977,12.0822756 C10.2128897,12.0822289 10.5341003,12.2217494 10.7692087,12.4695274 C11.0043171,12.7173053 11.1336334,13.0525897 11.1281379,13.4001396 L11.1281379,10.2967825 C11.1280928,9.94918601 11.2626495,9.61612605 11.5016122,9.3723445 C11.7405749,9.12856296 12.0639307,8.99447617 12.3991156,9.00017447 L12.6861106,9.00017447 C13.0212955,8.99447617 13.3446513,9.12856296 13.583614,9.3723445 C13.8225767,9.61612605 13.9571334,9.94918601 13.9570883,10.2967825 L13.9570883,11.8697169 C13.9515927,11.5221671 14.0809091,11.1868827 14.3160175,10.9391047 C14.5511259,10.6913268 14.8723365,10.5518063 15.2075664,10.551853 L15.3305643,10.551853 C16.0325059,10.551853 16.601542,11.1418808 16.601542,11.8697169 L16.601542,15.9083322 C16.601542,15.1922354 17.1614001,14.6117242 17.8520201,14.6117242 C18.4860319,14.6117242 19,15.1446525 19,15.8020529 Z" id="Shape" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7,5.06010057 C8.2231009,4.2660825 9.61668926,3.90519402 11.0115163,4.02126435 C13.2706334,4.24387211 16.5642994,6 18,6" id="Shape" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9,6.41804526 C9.86372448,6.0573987 10.7904785,5.9274517 11.7067669,6.03850956 C12.8231492,6.27250408 13.9235777,6.59378454 15,7" id="Shape" stroke="#231F20" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M11.25,14 L11.25,19" id="Path-6" stroke="#000000"></path>
+                    <path d="M17.25,14 L17.25,19" id="Path-6" stroke="#000000"></path>
+                    <path d="M13.8333333,11.4090909 L13.8333333,19.6927823" id="Path-6" stroke="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Wipe away the grime and yucky stuff regularly. Use a damp cloth to remove dirt. For suede and nubuck, use rubber eraser.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="37px" height="40px" viewBox="0 0 37 40" >
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+              <g id="icons" transform="translate(-749.000000, -326.000000)" stroke="#231F20">
+                  <g id="ico_footbed" transform="translate(749.000000, 327.000000)">
+                      <g id="Group-24">
+                          <path d="M7.96303963,37.5716729 C8.86339439,37.7726473 9.80668754,37.668082 10.6385082,37.2750938 C11.8647646,36.6663261 13.3617529,35.2302588 13.3617529,31.9210601 C13.1272317,29.4680599 12.3963572,27.0854561 11.2118228,24.9124271 C10.8504377,24.2087137 10.7276928,23.4102963 10.8614639,22.6334507 C11.0324464,21.8955949 11.3343055,21.192904 11.7532867,20.5573968 C14.2264323,16.9224835 15.5250348,12.6416184 15.4798322,8.2727773 C15.4798322,2.40363252 11.3710769,0.171484367 8.7115338,0.124656085 C6.05199068,0.0778278018 0.95586014,0.827080327 0.621426573,10.2239557 C0.448164247,12.7060111 0.652112826,15.1995252 1.22659207,17.6228244 C2.16619114,21.0412891 3.10579021,22.898811 3.10579021,26.3172756 C3.10579021,29.7357403 2.42099767,36.3541376 7.96303963,37.5716729 Z" id="Shape"></path>
+                          <path d="M3.61540326,7.72644733 C3.61540326,7.72644733 4.82573427,3.27776046 8.82301166,3.93335642 C12.820289,4.58895238 12.6451096,9.19373353 12.6451096,9.19373353 L3.61540326,7.72644733 Z" id="Shape"></path>
+                          <ellipse id="Oval" cx="8.64783217" cy="31.7025281" rx="1.16255478" ry="1.13948822"></ellipse>
+                          <path d="M11.8488392,26.1924002 C9.1398683,26.1320543 6.99372386,23.9306519 7.05529138,21.2754305 C7.11685889,18.6202091 9.36282401,16.5166468 12.0717949,16.5769928 C12.6150794,16.5812144 13.1536492,16.6762336 13.6643357,16.8579625" id="Shape"></path>
+                      </g>
+                      <g id="Group-24" transform="translate(29.000000, 19.000000) scale(-1, 1) translate(-29.000000, -19.000000) translate(21.000000, 0.000000)">
+                          <path d="M7.96303963,37.5716729 C8.86339439,37.7726473 9.80668754,37.668082 10.6385082,37.2750938 C11.8647646,36.6663261 13.3617529,35.2302588 13.3617529,31.9210601 C13.1272317,29.4680599 12.3963572,27.0854561 11.2118228,24.9124271 C10.8504377,24.2087137 10.7276928,23.4102963 10.8614639,22.6334507 C11.0324464,21.8955949 11.3343055,21.192904 11.7532867,20.5573968 C14.2264323,16.9224835 15.5250348,12.6416184 15.4798322,8.2727773 C15.4798322,2.40363252 11.3710769,0.171484367 8.7115338,0.124656085 C6.05199068,0.0778278018 0.95586014,0.827080327 0.621426573,10.2239557 C0.448164247,12.7060111 0.652112826,15.1995252 1.22659207,17.6228244 C2.16619114,21.0412891 3.10579021,22.898811 3.10579021,26.3172756 C3.10579021,29.7357403 2.42099767,36.3541376 7.96303963,37.5716729 Z" id="Shape"></path>
+                          <path d="M3.61540326,7.72644733 C3.61540326,7.72644733 4.82573427,3.27776046 8.82301166,3.93335642 C12.820289,4.58895238 12.6451096,9.19373353 12.6451096,9.19373353 L3.61540326,7.72644733 Z" id="Shape"></path>
+                          <ellipse id="Oval" cx="8.64783217" cy="31.7025281" rx="1.16255478" ry="1.13948822"></ellipse>
+                          <path d="M11.8488392,26.1924002 C9.1398683,26.1320543 6.99372386,23.9306519 7.05529138,21.2754305 C7.11685889,18.6202091 9.36282401,16.5166468 12.0717949,16.5769928 C12.6150794,16.5812144 13.1536492,16.6762336 13.6643357,16.8579625" id="Shape"></path>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Our footbed can be removed for a wipe down as well. Please do so as our feet can sweat alot!
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="39px" height="33px" viewBox="0 0 39 33" >
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icons" transform="translate(-671.000000, -392.000000)" stroke="#231F20">
+                  <g id="ico_talcum" transform="translate(671.000000, 391.000000)">
+                      <polyline id="Shape" points="30.8352273 18 33 19.4429224 29.1647727 26 27 24.5388128"></polyline>
+                      <rect id="Rectangle-path" transform="translate(16.000000, 14.000000) rotate(122.130000) translate(-16.000000, -14.000000) " x="9" y="0" width="14" height="28" rx="2.53"></rect>
+                      <path d="M29,14 L21,26" id="Shape"></path>
+                      <circle id="Oval" cx="34.491697" cy="32.491697" r="1"></circle>
+                      <circle id="Oval" cx="37.491697" cy="28.491697" r="1"></circle>
+                      <circle id="Oval" cx="32.491697" cy="28.491697" r="1"></circle>
+                      <circle id="Oval" cx="35.491697" cy="24.491697" r="1"></circle>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      If you feel it's sticky when you wear them, it's time for a clean. You may choose to apply some talcum powder inside the shoes.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="37px" height="31px" viewBox="0 0 37 31">
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+              <g id="icons" transform="translate(-749.000000, -262.000000)" stroke="#231F20">
+                  <g id="ico_air_flow" transform="translate(750.000000, 263.000000)">
+                      <path d="M0,0 C0,0 7.51419136,1.32929553 9.54084048,2.69024096 C10.3879452,3.37980911 10.9132507,4.39684369 10.9901931,5.49630678 C11.0671355,6.59576988 10.6887384,7.67797103 9.9461703,8.48217149 C9.17913385,9.40202644 8.06621399,9.95182243 6.87982468,9.99698363 C5.69343538,10.0421448 4.54307677,9.57850302 3.71032685,8.71954569 C2.10459716,7.12122606 2.33844129,3.62391282 0,0 Z" id="Shape"></path>
+                      <path d="M4,4 C7.15195785,5.36753323 9.65584251,7.87141789 11,11" id="Shape"></path>
+                      <path d="M20.9681289,10.3183272 C21.5899261,8.64395807 23.4128126,7.68663749 25.2052453,8.09313164 C26.9976781,8.4996258 28.1893459,10.1405975 27.9751575,11.9074056 C27.7609691,13.6742136 26.2090743,15.0047 24.367934,14.9999875 L3,15" id="Shape"></path>
+                      <path d="M25.6286232,25.7036726 C26.4644238,28.0899374 28.8950552,29.4492604 31.2814032,28.8649722 C33.6677512,28.280684 35.2524262,25.9382285 34.9667911,23.4172578 C34.681156,20.8962871 32.6158667,18.9969179 30.1636664,19.0000038 L3,19" id="Shape"></path>
+                      <path d="M15.3752924,27.053774 C15.9829034,28.4733287 17.7030985,29.2721581 19.3837956,28.9152549 C21.0644928,28.5583517 22.1772015,27.157943 21.9766971,25.6519375 C21.7761927,24.1459319 20.3255232,23.0078887 18.596259,23 L3,23" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      We know you will love the shoes but please give them the day off to allow them to air out. Like us, our shoes need tender loving care too.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-sub-title">
+    Don'ts
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="42px" height="32px" viewBox="0 0 42 32" >
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+              <g id="icons" transform="translate(-669.000000, -129.000000)" stroke="#231F20">
+                  <g id="ico_spaces" transform="translate(670.000000, 130.000000)">
+                      <rect id="Rectangle-path" x="0" y="0" width="24.3902439" height="30"></rect>
+                      <path d="M10.7317073,0 L10.7317073,30" id="Shape"></path>
+                      <path d="M20.4878049,0 L20.4878049,30" id="Shape"></path>
+                      <path d="M0,7.74193548 L10.7317073,7.74193548" id="Shape"></path>
+                      <path d="M0,14.516129 L10.7317073,14.516129" id="Shape"></path>
+                      <path d="M0,22.2580645 L10.7317073,22.2580645" id="Shape"></path>
+                      <path d="M36.097561,7.90096342 C35.8234919,9.4834701 34.3779874,10.6451613 32.6829268,10.6451613 C30.9878663,10.6451613 29.5423618,9.4834701 29.2682927,7.90096342 C29.2682927,6.09193713 32.7284553,1.93548387 32.7284553,1.93548387 C32.7284553,1.93548387 36.097561,6.09193713 36.097561,7.90096342 Z" id="Shape"></path>
+                      <path d="M39.990132,15.4902449 C40.073005,16.4930392 39.6289822,17.4608081 38.8431641,17.9901159 C38.0573461,18.5194237 37.0646051,18.5194237 36.2787871,17.9901159 C35.492969,17.4608081 35.0489462,16.4930392 35.1318192,15.4902449 C35.1318192,14.0324321 37.5708103,10.6451613 37.5708103,10.6451613 C37.5708103,10.6451613 39.990132,14.0324321 39.990132,15.4902449 Z" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Never store damp or wet shoes in enclosed spaces.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="38px" height="31px" viewBox="0 0 38 31">
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+              <g id="icons" transform="translate(-671.000000, -200.000000)" stroke="#231F20">
+                  <g id="ico_wash" transform="translate(672.000000, 200.000000)">
+                      <path d="M0,0 L2.64362851,19.3573649 C3.09006557,22.5934408 5.83622949,25.001786 9.07775378,24.9999976 L27.349892,24.9999976 C30.644417,25.0028285 33.4187667,22.5181345 33.8034557,19.2202176 L36,0" id="Shape"></path>
+                      <path d="M4,30 L33,30" id="Shape"></path>
+                      <path d="M1,5 L6.88565022,8.06780628 C9.37542099,9.35395786 12.2803041,9.30696773 14.7331839,7.94086257 C17.1774197,6.54460429 20.0926766,6.48958669 22.5807175,7.79276158 L23.110426,8.06780628 C25.6080671,9.3408481 28.5159405,9.27029035 30.9579596,7.87739071 L36,5" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Never wash your leather shoes but if it does get wet in the rain, allow it to dry naturally by first removing the footbed. You may also insert some paper into the shoes to help absorb moisture.
+    </div>
+  </div>
+  <div class="bs-pdp-careguide-block">
+    <div class="bs-pdp-careguide-img">
+      <svg width="38px" height="42px" viewBox="0 0 38 42" >
+          <g id="style-guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+              <g id="icons" transform="translate(-671.000000, -251.000000)" stroke="#231F20">
+                  <g id="ico_dry" transform="translate(672.000000, 252.000000)">
+                      <polyline id="Shape" points="24.1270529 23.8827273 24.1270529 39.7981818 0.0128372093 39.7981818 0.0128372093 13.4233838 13.2940719 13.4233838"></polyline>
+                      <path d="M0.0128372093,17.4777273 L14.1823763,17.4777273" id="Shape"></path>
+                      <ellipse id="Oval" cx="12.080778" cy="28.9506566" rx="8.16806765" ry="8.13025253"></ellipse>
+                      <path d="M8.48422833,25.8667677 L8.35423256,26.0608586 C7.63622925,26.9387486 7.57479297,28.1792576 8.20257082,29.1231818 C8.79921309,29.994912 8.79921309,31.1412497 8.20257082,32.0129798" id="Shape"></path>
+                      <path d="M12.2757717,25.8667677 L12.1457759,26.0608586 C11.4344821,26.9435643 11.3818299,28.183898 12.0157801,29.1231818 C12.6124224,29.994912 12.6124224,31.1412497 12.0157801,32.0129798" id="Shape"></path>
+                      <path d="M16.088981,25.8667677 L15.9589852,26.0608586 C15.2476914,26.9435643 15.1950392,28.183898 15.8289894,29.1231818 C16.4256317,29.994912 16.4256317,31.1412497 15.8289894,32.0129798" id="Shape"></path>
+                      <ellipse id="Oval" cx="26.0986554" cy="9.62782828" rx="4.46318816" ry="4.44252525"></ellipse>
+                      <path d="M25.9903256,19.504899 L25.9903256,17.369899" id="Shape"></path>
+                      <path d="M25.9903256,2.29550505 L25.9903256,0.138939394" id="Shape"></path>
+                      <path d="M19.1005497,16.679798 L20.638833,15.1486364" id="Shape"></path>
+                      <path d="M31.3418182,4.49520202 L32.8801015,2.9640404" id="Shape"></path>
+                      <path d="M16.2623087,9.82191919 L18.4289049,9.82191919" id="Shape"></path>
+                      <path d="M33.5734123,9.82191919 L35.7183425,9.82191919" id="Shape"></path>
+                      <path d="M19.1005497,2.9640404 L20.638833,4.49520202" id="Shape"></path>
+                      <path d="M31.3418182,15.1486364 L32.8801015,16.679798" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+    <div class="bs-pdp-careguide-txt">
+      Never use artificial heat or direct sunlight to fasten the drying process as it may damage the leather.
+    </div>
+  </div> {% endcomment %}
+</div>

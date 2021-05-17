@@ -1633,6 +1633,18 @@
           "zh-TW": "新增商品至購物車時顯示通知"
         },
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "cart_notification_text1",
+        "label": "Cart Notification1",
+        "default": "Buy one more pair and get 30% off"
+      },
+      {
+        "type": "text",
+        "id": "cart_notification_text2",
+        "label": "Cart Notification2",
+        "default": "Your purchase will help a child in need."
       }
     ]
   },

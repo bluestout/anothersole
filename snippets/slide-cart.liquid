@@ -13,13 +13,15 @@
   </div>
   {% if cart.item_count > 1 %}
   <div class="ans-cst-cart-percentage">
-    <p>10% of your purchase will go to a child in need.</p>
+    {% comment %} <p>Your purchase will help a child in need.</p> {% endcomment %}
+    <p>{{settings.cart_notification_text2}}</p>
   </div>
   {% endif %}
   {% if cart.item_count == 1 %}
   <div class="ans-cst-cart-buy-more-sec">
     <div class="ans-cst-cart-buy-more-sec-inn">
-      <p>Buy one more pair and get 30% off</p>
+      {% comment %} <p>Buy one more pair and get 30% off</p> {% endcomment %}
+      <p>{{settings.cart_notification_text1}}</p>
       <div class="ans-cst-cart-buy-more-bar">
         <div style="width:50%"></div>
       </div>
