@@ -5349,7 +5349,9 @@ hr {
   font-weight: var(--font-weight-body--bolder); }
 
 .price__badges {
-  margin-top: 0; }
+  margin-top: 0; 
+  margin-left: 20px;
+}
 
 .price__badge {
   display: none;

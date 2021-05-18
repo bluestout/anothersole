@@ -205,6 +205,7 @@ var boostPFSFilterConfig = {
 	}
 
 	function buildImages(data) {
+		console.log(data);
 		var html = '',
 			aspectRatio = '',
 			rangeWidths = boostPFSRangeWidths,
@@ -221,18 +222,16 @@ var boostPFSFilterConfig = {
 			boostPFSThemeConfig.custom.active_image_swap == true;
 
 		for (var i = 0; i < rangeWidths.length; i++) {
-			// dataSrcSet += Utils.getFeaturedImage(images, rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
-			if (images.length > 0) {
-				dataSrcSet += Utils.optimizeImage(images[images.length - 1]['src'], rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';			
-			}
-			else{
-				dataSrcSet += Utils.getFeaturedImage(images, rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
-			}
+			dataSrcSet += Utils.getFeaturedImage(images, rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
 			dataWidths += rangeWidths[i];
 
 			if (activeSwapImage) {
 				// flipImageSrcSet += Utils.optimizeImage(images[1]['src'], rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
-				flipImageSrcSet += Utils.optimizeImage(images[0]['src'], rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
+				if(images.length > 0)
+					flipImageSrcSet += Utils.optimizeImage(images[images.length - 1]['src'], rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
+				else
+					flipImageSrcSet += Utils.optimizeImage(images[1]['src'], rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
+
 			}
 
 			if (i < rangeWidths.length - 1) {
@@ -246,31 +245,93 @@ var boostPFSFilterConfig = {
 		}
 
 		if (images.length > 0) {
+			aspectRatio = 1200 / 1600;
 			// aspectRatio = images[0]['width'] / images[0]['height'];
-			aspectRatio = images[images.length - 1]['width'] / images[images.length - 1]['height'];
 			paddingTop = 1 / aspectRatio * 100;
 		}
 
 		html += '<a href="{{itemUrl}}" class="boost-pfs-filter-product-item-image-link" ';
 		html += 'style="padding-top:' + paddingTop + '%;">';
+		if(data.tags.find(element => element == "New Arrivals"))
+			html += '<span class="product_tag">New!</span>';
 		html += '<img class="boost-pfs-filter-product-item-main-image lazyload Image--lazyLoad"' +
 			'data-srcset="' + dataSrcSet + '" ' +
-			// 'data-src="' + Utils.getFeaturedImage(images, rangeWidths[2] + 'x') + '" ' +
-			'data-src="' + Utils.optimizeImage(images[images.length - 1]['src'], rangeWidths[2] + 'x') + '" ' + 
-			'data-widths="[' + dataWidths + ']" ' + 
+			'data-src="' + Utils.getFeaturedImage(images, rangeWidths[2] + 'x') + '" ' +
+			'data-widths="[' + dataWidths + ']" ' +
 			'data-sizes="' + dataSizes + '" ' +
 			'src="' + boostPFSImgDefaultSrc + '" ' +
 			'alt="' + imgAlt + '" ';
 
 		if (activeSwapImage) {
 			// html += 'data-img-flip-src="' + Utils.optimizeImage(images[1]['src'], rangeWidths[2] + 'x') + '" ' +
-			html += 'data-img-flip-src="' + Utils.optimizeImage(images[0]['src'], rangeWidths[2] + 'x') + '" ' +
+			if(images.length > 0)
+				html += 'data-img-flip-src="' + Utils.optimizeImage(images[images.length-1]['src'], rangeWidths[2] + 'x') + '" ' +
+				'data-img-flip-srcset="' + flipImageSrcSet + '" ';
+			else
+				html += 'data-img-flip-src="' + Utils.optimizeImage(images[1]['src'], rangeWidths[2] + 'x') + '" ' +
 				'data-img-flip-srcset="' + flipImageSrcSet + '" ';
 		}
 		html += '/></a>';
 
 		return html;
 	}
+	// function buildImages(data) {
+	// 	var html = '',
+	// 		aspectRatio = '',
+	// 		rangeWidths = boostPFSRangeWidths,
+	// 		paddingTop = 100;
+
+	// 	var dataSrcSet = '',
+	// 		dataWidths = '',
+	// 		dataSizes = 'auto',
+	// 		imgAlt = data.title,
+	// 		flipImageSrcSet = '';
+
+	// 	var activeSwapImage = !Utils.isMobile() && images.length > 1 &&
+	// 		boostPFSThemeConfig.custom.hasOwnProperty('active_image_swap') &&
+	// 		boostPFSThemeConfig.custom.active_image_swap == true;
+
+	// 	for (var i = 0; i < rangeWidths.length; i++) {
+	// 		dataSrcSet += Utils.getFeaturedImage(images, rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
+	// 		dataWidths += rangeWidths[i];
+
+	// 		if (activeSwapImage) {
+	// 			flipImageSrcSet += Utils.optimizeImage(images[1]['src'], rangeWidths[i] + 'x') + ' ' + rangeWidths[i] + 'w';
+	// 		}
+
+	// 		if (i < rangeWidths.length - 1) {
+	// 			dataSrcSet += ', ';
+	// 			dataWidths += ', ';
+
+	// 			if (activeSwapImage) {
+	// 				flipImageSrcSet += ', ';
+	// 			}
+	// 		}
+	// 	}
+
+	// 	if (images.length > 0) {
+	// 		aspectRatio = images[0]['width'] / images[0]['height'];
+	// 		paddingTop = 1 / aspectRatio * 100;
+	// 	}
+
+	// 	html += '<a href="{{itemUrl}}" class="boost-pfs-filter-product-item-image-link" ';
+	// 	html += 'style="padding-top:' + paddingTop + '%;">';
+	// 	html += '<img class="boost-pfs-filter-product-item-main-image lazyload Image--lazyLoad"' +
+	// 		'data-srcset="' + dataSrcSet + '" ' +
+	// 		'data-src="' + Utils.getFeaturedImage(images, rangeWidths[2] + 'x') + '" ' +
+	// 		'data-widths="[' + dataWidths + ']" ' +
+	// 		'data-sizes="' + dataSizes + '" ' +
+	// 		'src="' + boostPFSImgDefaultSrc + '" ' +
+	// 		'alt="' + imgAlt + '" ';
+
+	// 	if (activeSwapImage) {
+	// 		html += 'data-img-flip-src="' + Utils.optimizeImage(images[1]['src'], rangeWidths[2] + 'x') + '" ' +
+	// 			'data-img-flip-srcset="' + flipImageSrcSet + '" ';
+	// 	}
+	// 	html += '/></a>';
+
+	// 	return html;
+	// }
 
 	function buildVendor(data) {
 		var html = '';

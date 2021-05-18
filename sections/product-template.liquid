@@ -402,6 +402,13 @@
                   {% include 'icon-spinner' %}
                 </span>
               </button>
+              {% if product.title contains "Gift Card" %}
+              <style>
+                .klaviyo-bis-trigger{
+                  display: none !important;
+                }
+              </style>
+              {% endif %}
               {% unless current_variant.available %}
                 <a class="klaviyo-bis-trigger btn product-form__cart-submit" href="#">Notify Me When Available</a>
               {% endunless %}

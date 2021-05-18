@@ -128,5 +128,136 @@ $(document).ready(function(){
     });
 
   }
- 
+
+
+
+  /************************************************************/
+  /************************bs-script.js start******************/
+  /************************************************************/
+  //socialLogin.loginPopup();
+
+  /****************cookie banner*********************/
+  $(function(){
+    var check_privacy = $.cookie('bs-privacy_3_30');
+    //check_privacy = null;/*Test*/
+    if(check_privacy == null)
+    {
+      $(".bs-cookie-banner").show();//Right now Hide
+    }
+  });
+
+  $(".bs-cookie-banner .bs-cookie-banner-accept").on("click",function(e){
+    e.preventDefault();
+    $(".bs-cookie-banner").hide();
+    $.cookie('bs-privacy_3_30', "done" , { expires: 7 });
+  });
+
+  /****************faq page********************/
+  $(".bs-faq-main-accor" ).accordion({
+    collapsible: true,
+    heightStyle: "content",
+    header: "h4", 
+    active: false, 
+    animate: 0
+  });
+
+  /********************account mobile nav*********************/
+  
+  $(document).on('touchstart', '.bs-acct-mob-list-btn', function(){
+    $(this).toggleClass('EnableAcctMobNav');
+    if ($(this).hasClass("EnableAcctMobNav")) {
+      $(this).siblings('.bs-acct-mob-list-block').show();
+    } else{
+      $(this).siblings('.bs-acct-mob-list-block').hide();
+    }
+  });
+
+  var location = (window.location.pathname);
+  if(location=="/account")
+  {
+    $(".bs-acct-details-right").show();
+    $(".bs-acct-order-list-right").hide();
+    
+    /*
+    $(".AccountForm").show();
+    $(".OrderHis").hide();
+    $(".tlt-account-main-head h1").html("Profile Settings");
+    $(".CustomerSidebar li").each(function(){
+      var linkget = $(this).children("a").attr("href");
+      if(linkget==location){
+        $(this).addClass("active");
+      }
+    })*/
+  }
+  else if(location=="/account/")
+  {
+    $(".bs-acct-details-right").hide();
+    $(".bs-acct-order-list-right").show();
+
+    /*
+    $(".AccountForm").hide();
+    $(".OrderHis").show();
+    $(".tlt-account-main-head h1").html("Order History");
+    $(".CustomerSidebar li").each(function(){
+      var linkget = $(this).children("a").attr("href");
+      if(linkget==location){
+        $(this).addClass("active");
+      }
+    })*/
+  }
+  else
+  {
+    /*
+    $(".CustomerSidebar li").each(function(){
+      var linkget = $(this).children("a").attr("href");
+      if(linkget==location){
+        $(this).addClass("active");
+      }
+    })*/
+  }
+
+  $(".bs-acct-order-list-accor" ).accordion({
+    collapsible: true,
+    heightStyle: "content",
+    header: ".bs-acct-order-accor-head", 
+    active: false, 
+    animate: 0
+  });
+  /*****************blog loadmore*****************************/
+
+  $("#bs-blog-load-btn").on("click",function(e){
+    e.preventDefault();
+    var page_url = "/blogs/news?page=";
+    var page_total =  parseInt($("#bs-art-pg-total").val());
+    var page_cur =  parseInt($("#bs-art-pg-cur").val());
+    if(page_cur < page_total)
+    {
+      page_url = page_url + (page_cur + 1);
+      $.ajax({
+        type: 		'GET',
+        dataType: 	'html',
+        url: 		page_url,     
+        success: function(data) {
+          let filteredData = $(data).find(".bs-blog-row");
+          $(filteredData).appendTo($(".bs-blog-row").parent());
+          $("#bs-art-pg-cur").val(page_cur + 1);
+          if(page_cur + 1 >= page_total)
+          {
+            $("#bs-blog-load-btn").hide();
+          }
+        }
+      });
+    }
+  });
+  /**********product page review*****************/
+  $(".stamped-main-badge").on("click",function(e){
+    console.log("TEST");
+    e.preventDefault();
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".stamped-container").offset().top
+    }, 100);
+  });
+  /************************************************************/
+  /************************bs-script.js End*************************/
+  /************************************************************/
 }) 
