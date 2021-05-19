@@ -42,6 +42,7 @@
           {% for image in product.images %}
             <li class="pro-item">
               <img class="lazyload" data-src="{{image.src| img_url: "large"}}">
+               {% comment %} <img class="lazyload zoom_06" src="{{image.src| img_url: "master"}}" data-zoom-image="{{image.src| img_url: "master"}}"/> {% endcomment %}
             </li>
           {%endfor%}
         </ul>
@@ -60,7 +61,8 @@
           <ul>
           {% for image in product.images %}
             <li class="custom-thumb-{{forloop.index}}">
-              <img class="lazyload" data-src="{{image.src| img_url: "master"}}">
+             {% comment %} <img class="lazyload" data-src="{{image.src| img_url: "master"}}">{% endcomment %}
+              <img class="lazyload zoom_05" src="{{image.src| img_url: "master"}}" data-zoom-image="{{image.src| img_url: "master"}}"/>
             </li>
             {% if forloop.first%}
               <li>

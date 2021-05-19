@@ -1219,6 +1219,9 @@ ul#custom-currency-list {
   padding-left: 25px;
   vertical-align: middle;
 }
+.hm-as-seen-in-mid ul li a{
+  cursor: default;
+}
 .hm-as-seen-in-mid ul li img{
   height: 28px;
   opacity: .2;
@@ -1668,7 +1671,7 @@ body.for-custom-mobile-menu{
   height: 100vh;
   width: 100%;
   overflow-y: auto;
-  padding-bottom: 151px;
+  padding-bottom: 250px;
 }
 .show-mobile-menu .cst-mob-header-dropdown{
   left: 0;
@@ -1907,6 +1910,14 @@ body.for-custom-mobile-menu{
   color: #949596;
   border-radius: 20px;
   line-height: 17px;
+  z-index: 1;
+}
+@media (max-width: 749px){
+  .product_tag{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
 }
 .template-collection main.main-content{
   padding-top: 0px;
@@ -4986,6 +4997,7 @@ body.size_body{
   .bs-page-faq-sec .ui-accordion-header{
     font-size: 18px !important;
     line-height: 21px !important;
+    padding-right: 20px;
   }
 }
 .bs-page-faq-sec .ui-accordion-header .ui-accordion-header-icon{
@@ -5151,7 +5163,7 @@ body.size_body{
 .bs-faq-contact-form-block_3{
   text-align: center;
 }
-.bs-faq-contact-btn{
+.bs-faq-contact-btn{ 
   background-color: #030303;
   padding: 15px 135px;
   border-radius: 23px;
@@ -5162,6 +5174,8 @@ body.size_body{
   text-align: center;
   width: unset;
   margin-top: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 @media (max-width: 749px){
   .bs-faq-contact-btn{
@@ -5468,6 +5482,8 @@ body.size_body{
 @media (max-width: 749px){
   .bs-mgdg-what-ini{
     flex-wrap: wrap; -ms-flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column-reverse;
   }
 }
@@ -5482,7 +5498,7 @@ body.size_body{
   .bs-mgdg-what-left{
     flex: 0 0 100%; -ms-flex: 0 0 100%;
     max-width: 100%;
-    margin-top:100px;
+    {% comment %} margin-top:100px; {% endcomment %}
   }
 }
 .bs-mgdg-what-left-ini{
@@ -5545,6 +5561,7 @@ body.size_body{
   .bs-mgdg-what-right{
     flex: 0 0 100%; -ms-flex: 0 0 100%;
     max-width: 100%;
+    align-items: normal;
   }
 }
 .bs-mgdg-what-right img{
@@ -6213,6 +6230,8 @@ body.size_body{
   line-height: 13px;
   text-align: center;
   width: 100% !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .bs-pg-lg-form-btn:hover,
 .bs-pg-reg-form-btn:hover{
@@ -6962,3 +6981,7 @@ body.size_body{
 {% comment %} .stamped-main-badge{
   pointer-events: none;
 } {% endcomment %} 
+
+  /************************************************************/
+  /************************bs-style.css end******************/
+  /************************************************************/

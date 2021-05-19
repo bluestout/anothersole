@@ -1,4 +1,17 @@
 $(document).ready(function(){
+  
+   /**********product page image zoom*****************/ 
+  
+  
+       $(".zoom_05").elevateZoom({
+        zoomType				: "inner",
+        cursor: "crosshair"
+      }); 
+  
+         $(".zoom_06").elevateZoom({
+        zoomType				: "inner",
+        cursor: "crosshair"
+      }); 
   /********************* Header Fixed on All********************/
   $(window).scroll(function() {    
     var scroll_val = $(".cst-header-sec-main").scrollTop();    
@@ -91,13 +104,15 @@ $(document).ready(function(){
 
   /************************ Search Open on Icon Click on All*****************/
   $(".custom-search").click(function(){
-    $("html").addClass("js-drawer-open js-drawer-open-top");
-    $("body").addClass("js-drawer-open js-drawer-open-top prevent-scrolling");
+    $(".boost-pfs-search-suggestion-mobile-top-panel").css("display", "block");/*FS add*/
+    {% comment %} $("html").addClass("js-drawer-open js-drawer-open-top");
+    $("body").addClass("js-drawer-open js-drawer-open-top prevent-scrolling"); {% endcomment %}
   })
   $(".btn--link.search-bar__close.js-drawer-close").click(function(){
     $("html").removeClass("js-drawer-open js-drawer-open-top");
     $("body").removeClass("js-drawer-open js-drawer-open-top prevent-scrolling");
   })
+ 
 
   /************ Top Bar Slider on All *********************/
   if ($(window).width() < 749) {
@@ -251,13 +266,15 @@ $(document).ready(function(){
   });
   /**********product page review*****************/
   $(".stamped-main-badge").on("click",function(e){
-    console.log("TEST");
     e.preventDefault();
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(".stamped-container").offset().top
+      scrollTop: $(".sin-pro-review-sec").offset().top
     }, 100);
   });
   /************************************************************/
   /************************bs-script.js End*************************/
   /************************************************************/
+  
+  
+  
 }) 

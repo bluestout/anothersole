@@ -205,7 +205,6 @@ var boostPFSFilterConfig = {
 	}
 
 	function buildImages(data) {
-		console.log(data);
 		var html = '',
 			aspectRatio = '',
 			rangeWidths = boostPFSRangeWidths,

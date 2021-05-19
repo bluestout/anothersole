@@ -61,7 +61,16 @@
       {% assign getnumber = forloop.index | modulo:2 %}
 		<div class="sin-pro-img-cont-lr-row">
 			<div class="sin-pro-img-cont-lr-left">
-				<div class="sin-pro-img-cont-lr-img"><img class="lazyload" data-src="{{ block.settings.image | img_url:'700x700'}}" /></div>
+				<div class="sin-pro-img-cont-lr-img">
+					{%if block.settings.video != blank%}
+						<video width="100%" autoplay="" loop="" muted="" playsinline="">
+							<source src="{{block.settings.video}}" type="video/mp4">
+						</video>
+					{%else%}
+						<img class="lazyload" data-src="{{ block.settings.image | img_url:'700x700'}}" />
+					{%endif%}
+					{% comment %} <img class="lazyload" data-src="{{ block.settings.image | img_url:'700x700'}}" /> {% endcomment %}
+				</div>
 			</div>
 			<div class="sin-pro-img-cont-lr-right">
 				<div class="sin-pro-img-cont-lr-cont">
