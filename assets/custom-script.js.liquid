@@ -1,8 +1,7 @@
 $(document).ready(function(){
   
    /**********product page image zoom*****************/ 
-  
-  
+ 
        $(".zoom_05").elevateZoom({
         zoomType				: "inner",
         cursor: "crosshair"
@@ -12,6 +11,37 @@ $(document).ready(function(){
         zoomType				: "inner",
         cursor: "crosshair"
       }); 
+  
+
+  $("li.bazar").click(function(){
+    $("p.bazar").css("display", "block");
+    $("p.house_keeping").css("display", "none");
+    $("p.vouge").css("display", "none");
+    $("p.vulcan_post").css("display", "none");
+  }); 
+  $("li.house_keeping").click(function(){
+    $("p.bazar").css("display", "none");
+    $("p.house_keeping").css("display", "block");
+    $("p.vouge").css("display", "none");
+    $("p.vulcan_post").css("display", "none");
+  }); 
+
+  $("li.vouge").click(function(){
+    $("p.bazar").css("display", "none");
+    $("p.house_keeping").css("display", "none");
+    $("p.vouge").css("display", "block");
+    $("p.vulcan_post").css("display", "none");
+  }); 
+  $("li.vulcan_post").click(function(){
+    $("p.bazar").css("display", "none");
+    $("p.house_keeping").css("display", "none");
+    $("p.vouge").css("display", "none");
+    $("p.vulcan_post").css("display", "block");
+  }); 
+  
+
+  
+  
   /********************* Header Fixed on All********************/
   $(window).scroll(function() {    
     var scroll_val = $(".cst-header-sec-main").scrollTop();    
@@ -131,6 +161,21 @@ $(document).ready(function(){
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: false
+    });
+    // Run when slides change
+    $('.logo-slider-mobile').on('afterChange', function(event, slick, currentSlide) {
+      if(currentSlide == 0){
+        $("li.bazar").trigger( "click" );
+      }
+      else if(currentSlide == 1){
+        $("li.house_keeping").trigger( "click" );
+      }
+      else if(currentSlide == 2){
+        $("li.vouge").trigger( "click" );
+      }
+      else if(currentSlide == 3){
+        $("li.vulcan_post").trigger( "click" );
+      }
     });
   }
   else if($(window).width() < 1200)  {

@@ -3762,6 +3762,9 @@ body.size_body{
 }
 
 @media (max-width: 749px) {
+  .fancybox-container{
+  	z-index: 9999999 !important;
+  }
   .template-cart #shopify-section-cart-template .cart-discount-code{
     padding: 10px 0;
   }
@@ -4317,6 +4320,7 @@ body.size_body{
   }
   .hm-perf-mtch-sec-scrl::-webkit-scrollbar {
     -webkit-appearance: none;
+    -moz-appearance: none;
     height: 3px;
     background-color: rgba(0,0,0,.1);
   }
@@ -5570,7 +5574,7 @@ body.size_body{
   .bs-mgdg-what-right{
     flex: 0 0 100%; -ms-flex: 0 0 100%;
     max-width: 100%;
-    align-items: normal;
+    {% comment %} align-items: normal; {% endcomment %}
   }
 }
 .bs-mgdg-what-right img{
