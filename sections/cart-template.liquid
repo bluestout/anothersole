@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      {% if cart.item_count > 1 %}
+      {% comment %} {% if cart.item_count > 1 %}
       <div class="cart-discount-code">
         <span class="text">Enter code during checkout for <strong>30% discount</strong></span>
         <div class="code">
@@ -53,7 +53,7 @@
           </button>
         </div>
       </div>
-      {% endif %}
+      {% endif %} {% endcomment %}
 
       <div class="ans-cart-chk-out">
         <a href="/checkout" class="button btn-checkout"><span>checkout</span></a>

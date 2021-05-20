@@ -3763,13 +3763,13 @@ body.size_body{
 
 @media (max-width: 749px) {
   .template-cart #shopify-section-cart-template .cart-discount-code{
-    padding: 0;
+    padding: 10px 0;
   }
   .template-cart #shopify-section-cart-template .cart-discount-code span.text{
     line-height: 13px;
   }
   .template-cart #shopify-section-cart-template .cart_content_container_right_sec_desk .cart-discount-code{
-    display: none;
+    {% comment %} display: none; {% endcomment %}
   }
   .template-cart main.main-content{
     padding-top: 0px;
@@ -3781,18 +3781,18 @@ body.size_body{
     position: relative;
   }
   .cart_content_container .cart_content_container_right_sec.cart_content_container_right_sec_desk{
-    position: fixed;
+    {% comment %} position: fixed;
     padding-left: 22px !important;
     padding-right: 22px !important;
     top: calc(100% - 154px);
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 11;
+    z-index: 11; {% endcomment %}
   }
   .cart_content_container.cart-cont-rt-fixed .cart_content_container_right_sec.cart_content_container_right_sec_desk{
-    position: absolute;
-    top: calc(100% - 154px);
+    {% comment %} position: absolute;
+    top: calc(100% - 154px); {% endcomment %}
   }
   .cart_content_container_right_sec_mobile .ans-cst-cart-percentage,
   .cart_content_container_right_sec_mobile .ans-cst-cart-buy-more-sec{
@@ -5497,7 +5497,7 @@ body.size_body{
 @media (max-width: 749px){
   .bs-mgdg-what-left{
     flex: 0 0 100%; -ms-flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 100%; 
     {% comment %} margin-top:100px; {% endcomment %}
   }
 }
