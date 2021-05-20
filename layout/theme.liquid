@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="{{ 'jquery-ui.css' | asset_url }}" type="text/css">
     <link rel="stylesheet" href="{{ 'slideCart.css' | asset_url }}" type="text/css">
     <link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}" type="text/css">
+    <link rel="stylesheet" href="{{ 'jquery.fancybox.min.css' | asset_url }}" type="text/css">
     <style>
       {{ header_font | font_face: font_display: 'swap' }}
       {{ base_font | font_face: font_display: 'swap' }}
@@ -167,6 +168,7 @@
     {% endif %}
     <script src="{{ 'custom-script.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'jquery.elevatezoom.js' | asset_url }}"></script>
+    <script src="{{ 'jquery.fancybox.min.js' | asset_url }}"></script>
     <script type="text/javascript">
       if (window.MSInputMethodContext && document.documentMode) {
         var scripts = document.getElementsByTagName('script')[0];
@@ -273,6 +275,10 @@
         }
       });
     </script>
-    
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
   </body>
 </html>

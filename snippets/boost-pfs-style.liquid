@@ -55,12 +55,19 @@ fMobileButtonBackgroundColor
 
      .boost-pfs-filter-tree-v .boost-pfs-filter-option-title-text:before {
         {%- if boost_shop_metafields.fTitleTextColor != nil and boost_shop_metafields.fTitleTextColor != blank -%}
-          border-top-color: {{ boost_shop_metafields.fTitleTextColor | replace: '"','' | replace: '||',',' | strip | strip_html }};
+          {% comment %} border-top-color: {{ boost_shop_metafields.fTitleTextColor | replace: '"','' | replace: '||',',' | strip | strip_html }}; {% endcomment %}
+          border-bottom-color: {{ boost_shop_metafields.fTitleTextColor | replace: '"','' | replace: '||',',' | strip | strip_html }};
+          border-top-color: transparent;
+          margin-bottom: 2px;
         {%- endif -%}
+
       }
       .boost-pfs-filter-tree-v .boost-pfs-filter-option.boost-pfs-filter-option-collapsed .boost-pfs-filter-option-title-text:before {
         {%- if boost_shop_metafields.fTitleTextColor != nil and boost_shop_metafields.fTitleTextColor != blank -%}
-          border-bottom-color: {{ boost_shop_metafields.fTitleTextColor | replace: '"','' | replace: '||',',' | strip | strip_html }};
+          {% comment %} border-bottom-color: {{ boost_shop_metafields.fTitleTextColor | replace: '"','' | replace: '||',',' | strip | strip_html }}; {% endcomment %}
+            border-top-color: {{ boost_shop_metafields.fTitleTextColor | replace: '"','' | replace: '||',',' | strip | strip_html }};
+            border-bottom-color: transparent;
+            margin-bottom: -2px;
         {%- endif -%}
       }
       .boost-pfs-filter-tree-h .boost-pfs-filter-option-title-heading:before {
