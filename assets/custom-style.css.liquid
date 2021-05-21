@@ -190,7 +190,7 @@ ul#custom-currency-list {
 /*top bar ends*/
 /*header starts*/
 #shopify-section-header{
-  z-index: 9999999;
+  z-index: 9999998;
   position: relative;
 }
 .cst-header-row{
@@ -2199,7 +2199,7 @@ body.for-custom-mobile-menu{
 }
 .sin-pro-fea-pro-inn{
   padding: 60px;	
-  background-color: #fefcfe;
+  background-color: #f7f7f7;
   max-width: 1440px;
   margin: auto;
 }
@@ -2332,7 +2332,7 @@ width: 50%;
   color: #4c4c4c;
   margin: 0 0 20px 0;
   font-weight: 400;
-  font-family: 'Libre Baskerville';
+  {% comment %} font-family: 'Libre Baskerville'; {% endcomment %}
   letter-spacing: 0px;
   text-transform: none;
 }
@@ -3954,6 +3954,10 @@ body.size_body{
   }
   .product-template__container .mobile-image-section .slick-dots li.slick-active button{
     background-color: #d6d6d6 !important;
+  }
+  .mob_slick_img{
+    max-height: 375px; 
+    margin: auto;
   }
   #shopify-section-size-guide .popup-overlay{
     max-width: 90%;
