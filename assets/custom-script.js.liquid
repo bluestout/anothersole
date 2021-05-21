@@ -2,7 +2,7 @@ $(document).ready(function(){
   
    /**********product page image zoom*****************/ 
  
-       $(".zoom_05").elevateZoom({
+       {% comment %} $(".zoom_05").elevateZoom({
         zoomType				: "inner",
         cursor: "crosshair"
       }); 
@@ -10,7 +10,7 @@ $(document).ready(function(){
          $(".zoom_06").elevateZoom({
         zoomType				: "inner",
         cursor: "crosshair"
-      }); 
+      });  {% endcomment %}
   
 
   $("li.bazar").click(function(){
