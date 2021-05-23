@@ -5,9 +5,9 @@
     <div class="bs-about-top-cacs-row">
       <div class="bs-about-cacs-row">
         <div class="bs-about-cacs-ini"> 
-          <h2>Comfortable And Classy Shoes.</h2>
+          <h2>{{section.settings.title}}</h2>
           <p>
-            We use the finest materials to create timeless essentials at honest prices and help children in need. 
+            {{section.settings.description}}
           </p>
         </div>
       </div>
@@ -196,6 +196,18 @@
 {
   "name": "About Us",
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Title"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "description",
+      "default": "description"
+    },
     {
       "type": "image_picker",
       "id": "about2_img",

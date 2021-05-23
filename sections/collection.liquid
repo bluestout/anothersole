@@ -4,7 +4,7 @@
   <div class="hm-tp-fav-title-sec">
 	<h3>{{ section.settings.title | escape }}</h3>
 	<p>{{section.settings.sub_title}}</p>
-	<div class="hm-tp-fav-title-sec-link"><a href="{{ section.settings.link_url }}">View Limited edition</a></div>
+	<div class="hm-tp-fav-title-sec-link"><a href="{{ section.settings.link_url }}">{{ section.settings.top_right_title }}</a></div>
 </div>
   {% endif %}
 
@@ -143,7 +143,7 @@
         "zh-TW": "精選商品系列"
       }
     },
-{
+    {
       "type": "text",
       "id": "sub_title",
       "label": {
@@ -161,13 +161,19 @@
       }
     },
     {
+      "type": "text",
+      "id": "top_right_title",
+      "label": "Top right button",
+      "default": "View Limited edition"
+    },
+    {
       "type": "url",
       "id": "link_url",
       "label": {
         "en": "Link"
       },
       "info": {
-        "en": "View Limited edition"
+        "en": "Top right button link"
       }
     },
     {

@@ -35,12 +35,12 @@ font-family: 'Roboto', sans-serif;
 }
 .related-each-item .size-each.disabled{opacity: .6;position: relative;pointer-events: none;}
 .related-each-item .size-each.disabled:before{
-  width: 2px;
+  width: 1px;
   height: 25px;
   background-color: #282828;
-  transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
   content:"";
   display: block;
   position: absolute;
@@ -49,7 +49,7 @@ font-family: 'Roboto', sans-serif;
   margin-left: -1px;
 }    
 .related-each-item .size-each.disabled:after{
-  width: 2px;
+  {% comment %} width: 2px;
   height: 25px;
   background-color: #282828;
   transform: rotate(45deg);
@@ -60,7 +60,7 @@ font-family: 'Roboto', sans-serif;
   position: absolute;
   left: 50%;
   top: 1px;
-  margin-left: -1px;
+  margin-left: -1px; {% endcomment %}
 }
 /*#insta-feed h2 {
 font-size: 28px;
@@ -458,6 +458,11 @@ ul#custom-currency-list {
   width: 50%;
   float: left;
   padding-right: 10px;  
+}
+@media (min-width: 750px) and (max-width: 991px){
+  .ant-mm-drop-box-inline-list li{
+    width: 100%;
+  }
 }
 .ant-mm-drop-box-inline-list li > a{
   padding-left: 40px;
@@ -1647,10 +1652,13 @@ display: none;
   display: none;
 }
 .custom-mobile-cart{
-  margin-left: 18px;
+  margin-left: 8px;
 }
 .custom-mobile-cart img{
   height: 19px;
+  display: block;
+}
+.custom-mobile-cart svg{
   display: block;
 }
 .cst-mob-header-logo img{
@@ -1925,6 +1933,13 @@ body.for-custom-mobile-menu{
     right: 10px;
   }
 }
+@media (min-width: 750px) and (max-width: 991px){
+  .product_tag{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+}
 .template-collection main.main-content{
   padding-top: 0px;
 }
@@ -2044,6 +2059,7 @@ body.for-custom-mobile-menu{
 }
 .product-card:hover .product-card__image-with-placeholder-wrapper .pro-hover-image{
   display: block !important;
+  width: 100%;/*FS ADDED*/
 }
 .product-card .product-card__image-with-placeholder-wrapper .pro-hover-image{
   position: absolute;
@@ -2830,12 +2846,12 @@ body.size_body{
   pointer-events: none;
 }
 .custom-product-info .size-each.disabled:before{
-  width: 2px;
+  width: 1px;
   height: 30px;
   background-color: #282828;
-  transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+  transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
   content:"";
   display: block;
   position: absolute;
@@ -2844,7 +2860,7 @@ body.size_body{
   margin-left: -1px;
 }
 .custom-product-info .size-each.disabled:after{
-  width: 2px;
+  {% comment %} width: 2px;
   height: 30px;
   background-color: #282828;
   transform: rotate(45deg);
@@ -2855,7 +2871,7 @@ body.size_body{
   position: absolute;
   left: 50%;
   top: 1px;
-  margin-left: -1px;
+  margin-left: -1px; {% endcomment %}
 }
 .custom-product-info .size-each.active{
   color: #fff;
@@ -3690,6 +3706,7 @@ body.size_body{
     -ms-flex: 0 0 140px;
     flex: 0 0 140px;
     max-width: 140px;
+    margin-left: -150px;
   }
   .cst-header-right ul li{
     margin: 0 5px;
@@ -5600,7 +5617,7 @@ body.size_body{
   .bs-mgdg-what-right{
     flex: 0 0 100%; -ms-flex: 0 0 100%;
     max-width: 100%;
-    {% comment %} align-items: normal; {% endcomment %}
+    margin: 50px 0;
   }
 }
 .bs-mgdg-what-right img{
@@ -5873,6 +5890,15 @@ body.size_body{
     padding: 0;
   }
 }
+@media (min-width: 750px) and (max-width: 991px){
+  .bs-about-mat-ini{
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+  }
+}
+
 .bs-about-mat-left{
   padding-right: 90px;
 }
@@ -5957,6 +5983,12 @@ body.size_body{
 
 .bs-about-mat-right{
   flex: 0 0 60%;
+}
+@media (min-width: 750px) and (max-width: 991px)
+{
+  .bs-about-mat-right{
+    flex: 0 0 100%;
+  }
 }
 .bs-about-mat-right img{
   display: block;
@@ -7021,6 +7053,24 @@ body.size_body{
   pointer-events: none;
 } {% endcomment %} 
 
+@media (min-width: 750px) and (max-width: 991px){
+  .sin-pro-fea-pro-row .sin-pro-fea-pro-right,
+  .sin-pro-fea-pro-row .sin-pro-fea-pro-left{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .site-footer__content {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+  } 
+  .hm-tp-fav-title-sec-link{
+    position: relative;
+    margin-bottom: 50px;
+  }
+}
   /************************************************************/
   /************************bs-style.css end******************/
   /************************************************************/

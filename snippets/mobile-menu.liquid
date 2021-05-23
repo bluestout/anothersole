@@ -66,7 +66,25 @@
             <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
           </button>
           Search</li>
-				<li class="custom-mobile-cart">{% if cart.item_count > 0 %}<span class="cart_count_items">{{cart.item_count}}</span>{%endif%}<img src="{{'bag_ico.svg' | asset_url}}" /></li>
+				<li class="custom-mobile-cart">
+					{% if cart.item_count > 0 %}
+						<span class="cart_count_items">{{cart.item_count}}</span>
+					{%endif%}
+					{% comment %} <img src="{{'bag_ico.svg' | asset_url}}" /> {% endcomment %}
+					<svg width="20px" height="20px" viewBox="0 0 31 31" version="1.1">
+              <g id="style-guide" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd">
+                  <g id="icons" transform="translate(-645.000000, -481.000000)">
+                      <g id="new_bag" transform="translate(646.000000, 482.000000)">
+                          <g id="bag_ico" transform="translate(9.417000, 7.564086)" stroke="#030303">
+                              <rect id="Rectangle-2" x="0.5" y="3.4674072" width="10" height="9.904347"></rect>
+                              <path d="M2.8388672,3.6666667 L2.8388672,2.5666665 C2.8388672,1.14913573 3.98800293,2.60396177e-16 5.4055337,0 L5.4055337,0 C6.82306447,-2.60396177e-16 7.9722002,1.14913573 7.9722002,2.5666665 L7.9722002,3.6666667" id="Path-2"></path>
+                          </g>
+                          <circle id="Ellipse" stroke="#000000" cx="14.917" cy="14.5" r="14.5"></circle>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+				</li>
 			</ul>
 		</div>
 	</div>
