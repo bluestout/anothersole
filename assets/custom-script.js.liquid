@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  
+  {% comment %}
    /**********product page image zoom*****************/ 
  
-       {% comment %} $(".zoom_05").elevateZoom({
+        $(".zoom_05").elevateZoom({
         zoomType				: "inner",
         cursor: "crosshair"
       }); 
@@ -12,18 +12,28 @@ $(document).ready(function(){
         cursor: "crosshair"
       });  {% endcomment %}
   
-
+ 
   $("li.bazar").click(function(){
     $("p.bazar").css("display", "block");
     $("p.house_keeping").css("display", "none");
     $("p.vouge").css("display", "none");
     $("p.vulcan_post").css("display", "none");
+
+    $("li.bazar a svg").css("opacity","1");
+    $("li.house_keeping a svg").css("opacity","0.2");
+    $("li.vouge a svg").css("opacity","0.2");
+    $("li.vulcan_post a svg").css("opacity","0.2");
   }); 
   $("li.house_keeping").click(function(){
     $("p.bazar").css("display", "none");
     $("p.house_keeping").css("display", "block");
     $("p.vouge").css("display", "none");
     $("p.vulcan_post").css("display", "none");
+
+    $("li.bazar a svg").css("opacity","0.2");
+    $("li.house_keeping a svg").css("opacity","1");
+    $("li.vouge a svg").css("opacity","0.2");
+    $("li.vulcan_post a svg").css("opacity","0.2");
   }); 
 
   $("li.vouge").click(function(){
@@ -31,17 +41,24 @@ $(document).ready(function(){
     $("p.house_keeping").css("display", "none");
     $("p.vouge").css("display", "block");
     $("p.vulcan_post").css("display", "none");
+
+    $("li.bazar a svg").css("opacity","0.2");
+    $("li.house_keeping a svg").css("opacity","0.2");
+    $("li.vouge a svg").css("opacity","1");
+    $("li.vulcan_post a svg").css("opacity","0.2");
   }); 
   $("li.vulcan_post").click(function(){
     $("p.bazar").css("display", "none");
     $("p.house_keeping").css("display", "none");
     $("p.vouge").css("display", "none");
     $("p.vulcan_post").css("display", "block");
-  }); 
-  
 
-  
-  
+    $("li.bazar a svg").css("opacity","0.2");
+    $("li.house_keeping a svg").css("opacity","0.2");
+    $("li.vouge a svg").css("opacity","0.2");
+    $("li.vulcan_post a svg").css("opacity","1");
+  }); 
+
   /********************* Header Fixed on All********************/
   $(window).scroll(function() {    
     var scroll_val = $(".cst-header-sec-main").scrollTop();    
@@ -74,12 +91,13 @@ $(document).ready(function(){
     $("#footer-accordion" ).accordion({
       collapsible: true,heightStyle: "content"
     });
-  } );
+  });
+
   $( function() {
     $(".accordion-child" ).accordion({
       collapsible: true, heightStyle: "content"
     });
-  } );
+  });
   /*********************Currency Convertor on All**********************/
   $(".custom_currency_wrapper").click(function(){
     $("#custom-currency-list").slideToggle(100); 
@@ -319,7 +337,4 @@ $(document).ready(function(){
   /************************************************************/
   /************************bs-script.js End*************************/
   /************************************************************/
-  
-  
-  
 }) 

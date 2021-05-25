@@ -1,5 +1,12 @@
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
 
+  {%assign total_quantity = 0 %}
+  {% for item in cart.items %}
+    {% unless item.title contains "Gift Card" %}
+      {% assign total_quantity = total_quantity | plus: item.quantity %}
+    {% endunless%}
+  {% endfor %}
+
   <div {% if cart.item_count == 0 %}class="hide" {% endif %}data-cart-wrapper>
     <div class="cart-header">
       <h1 class="cart-header__title">Your Bag</h1>
@@ -10,14 +17,15 @@
 
     <div class="cart_content_container_right_sec cart_content_container_right_sec_mobile">
 
-      {% if cart.item_count >= 1 %}
+      {% if total_quantity > 1 %}
       <div class="ans-cst-cart-percentage">
         {% comment %} <p>Your purchase will help a child in need.</p> {% endcomment %}
         <p>{{settings.cart_notification_text2}}</p>
       </div>
       {% endif %}
 
-      {% if cart.item_count == 1 %}
+      {% if total_quantity == 1 %}
+      {% unless cart.items.first.title contains "Gift Card" %}
       <div class="ans-cst-cart-buy-more-sec">
         <div class="ans-cst-cart-buy-more-sec-inn">
           {% comment %} <p>Buy one more pair and get 30% off</p> {% endcomment %}
@@ -27,6 +35,7 @@
           </div>
         </div>
       </div>  
+      {%endunless%}
       {% endif %}
 
       <div class="subtotal-main">
@@ -122,16 +131,18 @@
                     <div class="line-item-content"> 
                       <div class="slect-size-custom">
                         {% unless item.title contains "Gift Card" %}
-                        {% assign titleget =  item.title | split: "-" %}
-                        <label>Color: <span>{{titleget[1]}}</span></label>
-                        <label class="size-changed">Size: <span>{{titleget[2]}}</span></label>
+                          {% assign titleget =  item.title | split: "-" %}
+                          <label>Color: <span>{{titleget[1]}}</span></label>
+                          <label class="size-changed">Size: <span>{{titleget[2]}}</span></label>
                         {% endunless %}
                       </div>
                       <div class="line-item-content-qty-price">                
                         <div class="line-item-qty">
-                          <input type='button' value='-' class='cartqtyminus qtyminus' field='quantity' min="1" />
-                          <input type='text' name='quantity' value='{{ item.quantity }}' class='qty' data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}"  />
-                          <input type='button' value='+' class='cartqtyplus qtyplus' field='quantity' max="{{ item.variant.inventory_quantity }}" /><br/>
+                          {% unless item.title contains "Gift Card" %}
+                            <input type='button' value='-' class='cartqtyminus qtyminus' field='quantity' min="1" />
+                            <input type='text' name='quantity' value='{{ item.quantity }}' class='qty' data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}"  />
+                            <input type='button' value='+' class='cartqtyplus qtyplus' field='quantity' max="{{ item.variant.inventory_quantity }}" /><br/>
+                          {% endunless %}
                         </div>
                         <div class="line-item-price">
                           {% if item.variant.compare_at_price > item.price %}
@@ -375,7 +386,7 @@
           </tbody>
           </table>{% endcomment %}
 
-          {% if cart.item_count == 1 %}
+          {% if total_quantity == 1 %}
           <div class="header-cart-related">
             <div class="header-cart-related-inner">
               <h3 class="header-cart-related-inner-title">Recommended Products</h3>
@@ -527,14 +538,15 @@
       </div>
       <div class="cart_content_container_right_sec cart_content_container_right_sec_desk">
 
-        {% if cart.item_count >= 1 %}
+        {% if total_quantity >= 1 %}
         <div class="ans-cst-cart-percentage">
           <p>{{settings.cart_notification_text2}}</p>
           {% comment %} <p>Your purchase will help a child in need.</p> {% endcomment %}
         </div>
         {% endif %}
 
-        {% if cart.item_count == 1 %}
+        {% if total_quantity == 1 %}
+        {% unless cart.items.first.title contains "Gift Card" %}
         <div class="ans-cst-cart-buy-more-sec">
           <div class="ans-cst-cart-buy-more-sec-inn">
             {% comment %} <p>Buy one more pair and get 30% off</p> {% endcomment %}
@@ -544,6 +556,7 @@
             </div>
           </div>
         </div>  
+        {%endunless%}
         {% endif %}
 
         <div class="subtotal-main">
@@ -555,7 +568,7 @@
           </div>
         </div>
 
-        {% if cart.item_count > 1 %}
+        {% if total_quantity > 1 %}
         <div class="cart-discount-code">
           <span class="text">Enter code during checkout for <strong>30% discount</strong></span>
           <div class="code">

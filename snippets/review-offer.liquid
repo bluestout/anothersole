@@ -1,7 +1,9 @@
 <div class="custom-review-product">
   <!-- Stamped - Begin Star Rating Badge --><span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ product.id }}" data-product-sku="{{ product.handle }}" data-product-type="{{product.type}}" data-product-title="{{product.title}}" style="display: inline-block;">{{ product.metafields.stamped.badge }}</span><!-- Stamped - End Star Rating Badge -->
 </div>
+{% unless product.title contains "Gift Card" %}
 <div class="custom-offer-pro">
   {{section.settings.svg_offer}}
   <span>{{section.settings.offer_text}}</span>
 </div>
+{% endunless %}
