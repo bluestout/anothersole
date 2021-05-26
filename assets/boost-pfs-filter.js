@@ -413,89 +413,136 @@ var boostPFSFilterConfig = {
 
 	// Build Color Swatches
 	function buildColorSwatches(data) {
-		var colorSwatchesHtml = '',
-			filterSwatchTitle = 'Colour',
-			optionName = 'colour',
-			swatchArr = [],
-			countSwatch = 0,
-			swatchValues = [],
-			swatchLimit = 4;
+		var colorSwatchesHtml = ''
+		if(Utils.getProductMetafield(data, "information", "colors_count") == null
+			|| Utils.getProductMetafield(data, "information", "colors_info") == null
+			|| Utils.getProductMetafield(data, "information", "colors_products") == null)
+			return colorSwatchesHtml;
+		var colors_count = Utils.getProductMetafield(data, "information", "colors_count");
+		var colors_info = Utils.getProductMetafield(data, "information", "colors_info");
+		var colors_info_list = colors_info.split(',');
+		var colors_products = Utils.getProductMetafield(data, "information", "colors_products");
+		var colors_products_list = colors_products.split(',');
+		var pending_number='';
+		var total_number='';
 
-		var dataImgSize = '360',
-			bgSize = '50x',
-			dataImgSrc = Utils.getFeaturedImage(data.images_info, dataImgSize + 'x'),
-			swatchName = '#ffffff',
-			bgImageSrc = '',
-			viewMoreLabel = 'More ' + filterSwatchTitle;
-
-		if (boostPFSThemeConfig.custom.hasOwnProperty('display_item_swatch') && boostPFSThemeConfig.custom.display_item_swatch == true) {
-			if (typeof data.options_with_values != 'undefined' && data.options_with_values.length > 0) {
-				swatchArr = data.options_with_values.filter(function(option) {
-					return option.name == optionName;
-				});
-				if (swatchArr.length > 0) {
-					countSwatch = swatchArr[0].values.length;
-
-					if (swatchLimit > countSwatch) {
-						swatchLimit = countSwatch;
-					}
-					swatchValues = swatchArr[0].values;
-
-					colorSwatchesHtml += '<ul class="boost-pfs-filter-item-swatch">';
-
-					for (var sIndex = 0; sIndex < swatchLimit; sIndex++) {
-						swatchName = swatchValues[sIndex].title;
-						sImageIndex = swatchValues[sIndex].image || '';
-						if (sImageIndex != '') {
-							dataImgSrc = Utils.optimizeImage(data.images[sImageIndex], dataImgSize + 'x') + ' ' + dataImgSize + 'w';
-						}
-
-
-						if (boostPFSThemeConfig.custom.hasOwnProperty('swatch_color_display_type')) {
-							switch (boostPFSThemeConfig.custom.swatch_color_display_type) {
-								case 'swatch_color_display_type_image_color':
-									bgImageSrc = boostPFSAppConfig.general.file_url.replace(/\?/, Utils.slugify(filterSwatchTitle).replace(/\-/g, '_') + '-' + Utils.slugify(swatchName) + '.png?v=');
-									break;
-								case 'swatch_color_display_type_image_product':
-									bgImageSrc = Utils.getFeaturedImage(data.images_info, bgSize);
-									if (sImageIndex != '') {
-										bgImageSrc = Utils.optimizeImage(data.images[sImageIndex], bgSize);
-									}
-									break;
-								default:
-									bgImageSrc = '';
-							}
-						}
-
-						colorSwatchesHtml += '<li>';
-						colorSwatchesHtml += '<div class="boost-pfs-product-item-tooltip">' + swatchName + '</div>';
-						colorSwatchesHtml += '<span tabindex="0" aria-label="' + swatchName + '" ' +
-							'style="background-color: ' + swatchName + '; ';
-						if (bgImageSrc != '') {
-							colorSwatchesHtml += 'background-image: url(' + bgImageSrc + ');" ';
-						} else {
-							colorSwatchesHtml += '" ';
-						}
-						if (dataImgSrc != '') {
-							colorSwatchesHtml += 'data-img="' + dataImgSrc + '" ';
-						}
-
-						colorSwatchesHtml += '></span>';
-						colorSwatchesHtml += '</li>';
-					}
-
-					if (countSwatch > swatchLimit) {
-						colorSwatchesHtml += '<li class="boost-pfs-filter-item-swatch-more">';
-						colorSwatchesHtml += '<a href="{{itemUrl}}" title="' + viewMoreLabel + '">+' + (countSwatch - swatchLimit) + '</a>';
-						colorSwatchesHtml += '</li>';
-					}
-
-					colorSwatchesHtml += '</ul>';
-				}
+		colorSwatchesHtml += '<div class="product-colors-coll">';
+		colorSwatchesHtml += '<ul class="swatch">';
+		for(var i = 0; i < colors_count; i++)
+		{
+			if(i < 4)
+			{
+				colorSwatchesHtml += '<li>';
+				colorSwatchesHtml += '<a href="/products/' + colors_products_list[i] + '" class="dd ';
+				if (colors_info_list[i] == "FFFFFF")
+					colorSwatchesHtml += 'custom-white';
+				colorSwatchesHtml += '"  style="background-color:#' + colors_info_list[i] + '">';
+				colorSwatchesHtml += '</a>';
+				colorSwatchesHtml += '</li>';
 			}
 		}
+		colorSwatchesHtml += '</ul>';
+		if(colors_count >= 4 )
+		{
+			pending_number='<div class="swatch-color-count-text-hover">';
+			pending_number += '<span class="hover_number">+';
+			pending_number += (i - 4);
+			pending_number += 'more</span></div>';
+		}
+		
+		total_number = '<div class="swatch-color-count-text-total"><span class="total_number">';
+		total_number += colors_count;
+		total_number += ' Colors Available</span></div>';
+
+		colorSwatchesHtml += pending_number;
+		colorSwatchesHtml += total_number;
+		colorSwatchesHtml += '</div> ';
 		return colorSwatchesHtml;
 	}
+	// function buildColorSwatches(data) {
+	// 	var colorSwatchesHtml = '',
+	// 		filterSwatchTitle = 'Colour',
+	// 		optionName = 'colour',
+	// 		swatchArr = [],
+	// 		countSwatch = 0,
+	// 		swatchValues = [],
+	// 		swatchLimit = 4;
+
+	// 	var dataImgSize = '360',
+	// 		bgSize = '50x',
+	// 		dataImgSrc = Utils.getFeaturedImage(data.images_info, dataImgSize + 'x'),
+	// 		swatchName = '#ffffff',
+	// 		bgImageSrc = '',
+	// 		viewMoreLabel = 'More ' + filterSwatchTitle;
+
+	// 	if (boostPFSThemeConfig.custom.hasOwnProperty('display_item_swatch') && boostPFSThemeConfig.custom.display_item_swatch == true) {
+	// 		if (typeof data.options_with_values != 'undefined' && data.options_with_values.length > 0) {
+	// 			swatchArr = data.options_with_values.filter(function(option) {
+	// 				return option.name == optionName;
+	// 			});
+	// 			if (swatchArr.length > 0) {
+	// 				countSwatch = swatchArr[0].values.length;
+
+	// 				if (swatchLimit > countSwatch) {
+	// 					swatchLimit = countSwatch;
+	// 				}
+	// 				swatchValues = swatchArr[0].values;
+
+	// 				colorSwatchesHtml += '<ul class="boost-pfs-filter-item-swatch">';
+
+	// 				for (var sIndex = 0; sIndex < swatchLimit; sIndex++) {
+	// 					swatchName = swatchValues[sIndex].title;
+	// 					sImageIndex = swatchValues[sIndex].image || '';
+	// 					if (sImageIndex != '') {
+	// 						dataImgSrc = Utils.optimizeImage(data.images[sImageIndex], dataImgSize + 'x') + ' ' + dataImgSize + 'w';
+	// 					}
+
+
+	// 					if (boostPFSThemeConfig.custom.hasOwnProperty('swatch_color_display_type')) {
+	// 						switch (boostPFSThemeConfig.custom.swatch_color_display_type) {
+	// 							case 'swatch_color_display_type_image_color':
+	// 								bgImageSrc = boostPFSAppConfig.general.file_url.replace(/\?/, Utils.slugify(filterSwatchTitle).replace(/\-/g, '_') + '-' + Utils.slugify(swatchName) + '.png?v=');
+	// 								break;
+	// 							case 'swatch_color_display_type_image_product':
+	// 								bgImageSrc = Utils.getFeaturedImage(data.images_info, bgSize);
+	// 								if (sImageIndex != '') {
+	// 									bgImageSrc = Utils.optimizeImage(data.images[sImageIndex], bgSize);
+	// 								}
+	// 								break;
+	// 							default:
+	// 								bgImageSrc = '';
+	// 						}
+	// 					}
+
+	// 					colorSwatchesHtml += '<li>';
+	// 					colorSwatchesHtml += '<div class="boost-pfs-product-item-tooltip">' + swatchName + '</div>';
+	// 					colorSwatchesHtml += '<span tabindex="0" aria-label="' + swatchName + '" ' +
+	// 						'style="background-color: ' + swatchName + '; ';
+	// 					if (bgImageSrc != '') {
+	// 						colorSwatchesHtml += 'background-image: url(' + bgImageSrc + ');" ';
+	// 					} else {
+	// 						colorSwatchesHtml += '" ';
+	// 					}
+	// 					if (dataImgSrc != '') {
+	// 						colorSwatchesHtml += 'data-img="' + dataImgSrc + '" ';
+	// 					}
+
+	// 					colorSwatchesHtml += '></span>';
+	// 					colorSwatchesHtml += '</li>';
+	// 				}
+
+	// 				if (countSwatch > swatchLimit) {
+	// 					colorSwatchesHtml += '<li class="boost-pfs-filter-item-swatch-more">';
+	// 					colorSwatchesHtml += '<a href="{{itemUrl}}" title="' + viewMoreLabel + '">+' + (countSwatch - swatchLimit) + '</a>';
+	// 					colorSwatchesHtml += '</li>';
+	// 				}
+
+	// 				colorSwatchesHtml += '</ul>';
+	// 			}
+	// 		}
+	// 	}
+	// 	return colorSwatchesHtml;
+	// }
 
 	// Build Color Swatches
 	function eventColorSwatches(event) {

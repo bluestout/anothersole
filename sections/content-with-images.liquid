@@ -4,15 +4,17 @@
 		<p>{{section.settings.sub_heading}}</p>
 		<div class="hm-perf-mtch-sec-scrl">
 			<div class="hm-perf-mtch-sec-row">
-				<div class="hm-perf-mtch-sec-img"><img class="lazyload" data-src="{{section.settings.image_lt | img_url: "500x500"}}" /></div>
-				<div class="hm-perf-mtch-sec-cont">
+				<div class="hm-perf-mtch-sec-img">
+        <img class="lazyload" data-src="{{section.settings.image_lt | img_url: 'master'}}" />
+        </div>
+				<div class="hm-perf-mtch-sec-cont"> 
 					<div class="hm-perf-mtch-sec-cont-inn">
 						<h3>{{section.settings.text}}</h3>
 						<p>{{section.settings.text_desc}}</p>
 						<div class="hm-perf-mtch-sec-cont-btn"><a href="{{section.settings.btn_link}}" class="blk-bk-rounded-btn">{{section.settings.btn_text}}</a></div>
 					</div>
 				</div>
-				<div class="hm-perf-mtch-sec-img"><img class="lazyload" data-src="{{section.settings.image_rt | img_url: "500x500"}}" /></div>
+				<div class="hm-perf-mtch-sec-img"><img class="lazyload" data-src="{{section.settings.image_rt | img_url: 'master'}}" /></div>
 			</div>
 		</div>
 	</div>

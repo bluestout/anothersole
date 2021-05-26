@@ -1229,6 +1229,15 @@ ul#custom-currency-list {
 .hm-as-seen-in-mid .slick-dots{
   text-align: center;
 }
+@media (min-width: 750px) and (max-width: 991px){
+  .hm-as-seen-in-mid .slick-dots{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+  }
+}
 .hm-as-seen-in-mid ul li{
   display: inline-block;
   padding-left: 25px;
@@ -3185,6 +3194,23 @@ body.size_body{
 .size-guide__readmore{
 
 }
+@media (min-width: 750px) and (max-width: 991px){
+  .main-thumb-image-product{
+    display: none;
+  }
+  .ansl-cst-product-pg-sec .product-single>.product-single__media-group
+  {
+    width: 50%!important;  
+  }
+  .main-large-image-product
+  {
+    width: 100%;
+  }
+  .ansl-cst-product-pg-sec .product-single>.custom-product-info{
+    width: 50%!important;
+  }
+}
+
 /*product page ends*/
 /*size guide table starts*/
 .size-guide-table th {
@@ -3717,7 +3743,7 @@ body.size_body{
     -ms-flex: 0 0 140px;
     flex: 0 0 140px;
     max-width: 140px;
-    margin-left: -150px;
+    margin-left: -80px;
   }
   .cst-header-right ul li{
     margin: 0 5px;
@@ -3793,11 +3819,81 @@ body.size_body{
   .cart_content_container_right_sec_mobile{
     display: none;
   }
+  
+}
+@media (min-width: 992px) {
   .hm-as-seen-in-main.mobile_view{
   	display: none;
   }
 }
-
+@media (min-width: 750px) and (max-width: 991px){
+  .hm-as-seen-in-main.desktop_view{
+  	display: none;
+  }
+  .hm-as-seen-in-main.mobile_view .owl-carousel .owl-item .item{
+  	text-align: center;
+  }
+  .hm-as-seen-in-main.mobile_view .hm-as-seen-in-right owl-item .item {
+    font-size: 14px;
+    color: #282828;
+    line-height: 22px;
+    margin: 0;
+    text-align: center;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+  }
+  .hm-as-seen-in-row{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .hm-as-seen-in-row .hm-as-seen-in-left {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: none;
+  }
+  .hm-as-seen-in-row .hm-as-seen-in-mid {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px 0px 40px;
+  }
+  .hm-as-seen-in-row .hm-as-seen-in-right {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .hm-as-seen-in-main .hm-as-seen-in-inn{
+    padding: 40px 20px;
+  }
+  .hm-as-seen-in-left h3{
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  .hm-as-seen-in-left h3:after{
+    display: none;
+  }
+  .hm-as-seen-in-row .hm-as-seen-in-right p{
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .hm-as-seen-in-mid ul li{
+    padding: 0;
+  }
+  .hm-as-seen-in-mid ul li img{
+    margin: auto;    
+    opacity: 1;
+  }
+  .hm-as-seen-in-mid ul li svg{
+    margin: auto;    
+    opacity: 1;
+  }
+  .hm-as-seen-in-mid .cst-slider-dots-lt .slick-dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
 @media (max-width: 749px) {
 	.hm-as-seen-in-main.desktop_view{
   	display: none;
@@ -5401,7 +5497,7 @@ body.size_body{
   letter-spacing: 0.5px;
   line-height: 29px;
   text-align: center;
-
+  font-weight: 500;
 }
 @media (max-width: 749px){
   .bs-mgdg-hero-des{
@@ -5430,6 +5526,7 @@ body.size_body{
   letter-spacing: 0;
   line-height: 50px;
   text-align: center;
+  font-weight: 400;
 }
 @media (max-width: 749px){
   .bs-mgdg-md-content{
@@ -5505,6 +5602,7 @@ body.size_body{
   font-size: 32px;
   letter-spacing: 0;
   line-height: 46px;
+  font-weight: 400 !important;
 }
 @media (max-width: 749px){
   .bs-mgdg-pb-right-ini h4{
@@ -5589,6 +5687,7 @@ body.size_body{
   font-size: 32px;
   letter-spacing: 0;
   line-height: 46px;
+  font-weight: 400 !important;
 }
 @media (max-width: 749px){
   .bs-mgdg-what-left-ini h4{
@@ -6999,6 +7098,10 @@ body.size_body{
 }
 /**********georica chat app*************/
 .css-sef6vt{
+  z-index: 999998 !important;
+  {% comment %} z-index: 2147483650!important; {% endcomment %}
+}
+.css-1ek9ucu{
   z-index: 999998 !important;
   {% comment %} z-index: 2147483650!important; {% endcomment %}
 }

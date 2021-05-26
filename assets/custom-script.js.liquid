@@ -200,9 +200,24 @@ $(document).ready(function(){
     $('.logo-slider-mobile').slick({
       dots: true,
       prevArrow: false,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 1,
       nextArrow: false
+    });
+    // Run when slides change
+    $('.logo-slider-mobile').on('afterChange', function(event, slick, currentSlide) {
+      if(currentSlide == 0){
+        $("li.bazar").trigger( "click" );
+      }
+      else if(currentSlide == 1){
+        $("li.house_keeping").trigger( "click" );
+      }
+      else if(currentSlide == 2){
+        $("li.vouge").trigger( "click" );
+      }
+      else if(currentSlide == 3){
+        $("li.vulcan_post").trigger( "click" );
+      }
     });
 
   }

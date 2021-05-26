@@ -1842,6 +1842,21 @@
 {
 	z-index: 9999999;
 }
+.boost-pfs-filter-product-item-inner:hover .product-colors-coll .swatch-color-count-text-total{
+  opacity: 0;
+  visibility: hidden;
+}
+.boost-pfs-filter-product-item-inner:hover .product-colors-coll ul.swatch,
+.boost-pfs-filter-product-item-inner:hover .product-colors-coll .swatch-color-count-text-hover{
+  opacity: 1;
+}
+@media screen and (max-width: 767px){
+	.boost-pfs-filter-product-item-inner .product-colors-coll .swatch-color-count-text-hover
+	{
+		display: none;
+	}
+}
+
 /* Customization CS-4166 for ticket #67177 */
 /* for the size filter */
 .boost-pfs-filter-tree-v .boost-pfs-filter-option-size .boost-pfs-filter-option-content .boost-pfs-filter-option-item-list-box li {

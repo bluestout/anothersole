@@ -8,7 +8,7 @@
 							<source src="{{section.settings.video}}" type="video/mp4">
 						</video>
 					{%else%}
-						<img class="lazyload" data-src="{{section.settings.main_banner| img_url: "grande"}}" />
+						<img class="lazyload" data-src="{{section.settings.main_banner| img_url: "master"}}" />
 					{%endif%}
 					{% comment %} {% if product.tags contains "related-video" %}
 						{{section.settings.video}}
@@ -67,7 +67,7 @@
 							<source src="{{block.settings.video}}" type="video/mp4">
 						</video>
 					{%else%}
-						<img class="lazyload" data-src="{{ block.settings.image | img_url:'700x700'}}" />
+						<img class="lazyload" data-src="{{ block.settings.image | img_url:'master'}}" />
 					{%endif%}
 					{% comment %} <img class="lazyload" data-src="{{ block.settings.image | img_url:'700x700'}}" /> {% endcomment %}
 				</div>

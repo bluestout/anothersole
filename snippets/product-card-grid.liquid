@@ -44,7 +44,7 @@
         {% comment %} <img class="lazyload pro-hover-image" data-src="{{ product.images[1] | img_url: 'large' }}" alt="{{ product.images.last.alt | escape }}" /> {% endcomment %}
         {% assign img_num = product.images.size | minus: 1 %}
         <img class="lazyload pro-hover-image" 
-          data-src="{{ product.images[img_num] | img_url: 'large' }}" 
+          data-src="{{ product.images[img_num] | img_url: 'master' }}"  
           alt="{{ product.images.last.alt | escape }}" />
       </div>
     </div>

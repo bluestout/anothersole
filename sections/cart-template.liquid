@@ -138,11 +138,15 @@
                       </div>
                       <div class="line-item-content-qty-price">                
                         <div class="line-item-qty">
-                          {% unless item.title contains "Gift Card" %}
+                          {% if item.title contains "Gift Card" %}
+                            <input type='button' value='-' class='cartqtyminus qtyminus' field='quantity' min="1" />
+                            <input type='text' name='quantity' value='{{ item.quantity }}' class='qty' data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}"  />
+                            <input type='button' value='+' class='cartqtyplus qtyplus' field='quantity' max="60000" /><br/>
+                          {% else %}
                             <input type='button' value='-' class='cartqtyminus qtyminus' field='quantity' min="1" />
                             <input type='text' name='quantity' value='{{ item.quantity }}' class='qty' data-line-item-variant-id="{{ item.variant.id }}" data-line-item-index="{{ forloop.index }}"  />
                             <input type='button' value='+' class='cartqtyplus qtyplus' field='quantity' max="{{ item.variant.inventory_quantity }}" /><br/>
-                          {% endunless %}
+                          {% endif %}
                         </div>
                         <div class="line-item-price">
                           {% if item.variant.compare_at_price > item.price %}
@@ -386,7 +390,7 @@
           </tbody>
           </table>{% endcomment %}
 
-          {% if total_quantity == 1 %}
+          {% if cart.item_count == 1 or total_quantity == 1 %}
           <div class="header-cart-related">
             <div class="header-cart-related-inner">
               <h3 class="header-cart-related-inner-title">Recommended Products</h3>
@@ -408,11 +412,9 @@
                         <div class="line-item-content"> 
 
                           <div class="line-item-content-qty-price">
-                            <div class="slect-size-custom">
-                              {% unless  item.title contains "Gift Card" %}
+                            <div class="slect-size-custom"> 
                               <label>Color: <span>{{ product.title | split: "-" | last}}</span></label>
                               <label class="size-changed">Size: <span>{% for variant in product.variants %}{% if variant.available %}{{ variant.title }}{% break %}{% endif %}{% endfor %}</span></label>
-                              {% endunless%}
                             </div>
                             <div class="line-item-price">
                               {% if product.variant.compare_at_price > item.price %}
