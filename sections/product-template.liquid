@@ -426,7 +426,13 @@
             
                           
               
-              <div id="size-error" style="display:none;"><p style="margin-top:10px;color:#ff0000;">Please select your size</p></div>
+              <div id="size-error" style="display:none;">
+                {% if product.title contains "Gift Card" %}
+                  <p style="margin-top:10px;color:#ff0000;">Please select a value</p>
+                {% else %}
+                  <p style="margin-top:10px;color:#ff0000;">Please select your size</p>
+                {% endif %}
+              </div>
                 {% include "shipping-specification-accordion" %}
             </div>
           </div>

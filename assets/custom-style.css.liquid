@@ -250,6 +250,11 @@ ul#custom-currency-list {
   background-repeat: no-repeat;
   background-size: 9px auto;
 }
+@media (min-width: 750px) and (max-width: 991px){
+  .cst-header-right ul li.custom-search button{
+  padding-left: 6px;
+  }
+}
 .cst-header-right ul li.custom-search button > svg{
   display: none;
 }
@@ -3035,6 +3040,11 @@ body.size_body{
   justify-content: space-between;  
   margin-top: 15px;
 }
+@media (min-width: 750px) and (max-width: 991px){
+  .custom-product-info .review-offer{
+    flex-wrap: wrap;
+  }
+}
 .custom-product-info .review-offer .custom-offer-pro{
   display: -ms-flexbox;
   display: flex;
@@ -3743,7 +3753,7 @@ body.size_body{
     -ms-flex: 0 0 140px;
     flex: 0 0 140px;
     max-width: 140px;
-    margin-left: -80px;
+    margin-left: -60px;
   }
   .cst-header-right ul li{
     margin: 0 5px;
@@ -3821,12 +3831,12 @@ body.size_body{
   }
   
 }
-@media (min-width: 992px) {
+@media (min-width: 1201px) {
   .hm-as-seen-in-main.mobile_view{
   	display: none;
   }
 }
-@media (min-width: 750px) and (max-width: 991px){
+@media (min-width: 750px) and (max-width: 1200px){
   .hm-as-seen-in-main.desktop_view{
   	display: none;
   }
@@ -6551,6 +6561,15 @@ body.size_body{
 .bs-acct-order-block{
 
 }
+.bs-acct-order-block #AddressNewForm h2{
+    color: #282828;
+    font-size: 20px;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: capitalize;
+    font-weight: 400!important;
+    margin-bottom: 8px;
+}
 .bs-acct-order-title
 {
   color: #282828;
@@ -6658,6 +6677,7 @@ body.size_body{
   letter-spacing: 0.5px;
   line-height: 19px;
   text-decoration: underline;
+  display: none; 
 }
 .bs-acct-addr-block{
   padding-left: 17px;

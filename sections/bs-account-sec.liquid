@@ -105,8 +105,8 @@
   </div>
   <div class="bs-acct-order-list-right">
     <div class="bs-acct-order-list-accor">
-      {%if customer.orders.length == 0%}
-        <p>There is no order.</p>
+      {%if customer.orders.size == 0%}
+        <p>{{ 'customer.orders.none' | t }}</p>
       {%endif%}
       {% for order in customer.orders %}
         <div class="bs-acct-order-accor-head">

@@ -5,245 +5,12 @@
   <div class="bs-faq-main"> 
     <div class="bs-faq-main-ini">
       <div class="bs-faq-main-accor">
-        <h4 class="bs-faq-accor-head">What are the Terms & Conditions for BD40 Promotion?</h4>
-        <div class="bs-faq-accor-cont">
-          <p>
-            • Offer valid online and in-store at Anothersole @ Great World.
-            <br>• You will enjoy 20% off the 3rd pair and more in the same order.
-            <br>• Strictly no monetary/credit refunds for orders placed under the promotion.
-            <br>• For Singapore Exchange, please proceed to Anothersole @ Great World for 1-to-1 exchange.
-            <br>• For International Exchange, a US$20 surcharge applies.
-            <br>• Exchange item must be of same value or lower with no refund of price difference.
-            <br>• Exchanges are only applicable to styles launched before the promotion ends.
-            <br>• Not to be used with other promotions
-            <br>• Discount codes cannot be stacked; only 1 code can be applied on a single order.
-            <br>• Cannot be applied to gift card purchases.
-            <br>• Only applicable to orders placed from 1st Nov 2020 till promotion ends.
-            <br>• Offer is valid while stocks last and we reserve the full & final rights to this promotion.
-            <br>• No stock transfer and/or reservation is allowed.
-            <br>• Taxes and duties are payable by you when applicable and not refundable.
-          </p>
-        </div>
-        <h4 class="bs-faq-accor-head">Shipping</h4>
-        <div class="bs-faq-accor-cont">
-          Yes, we ship for free to these 49 countries (no minimum purchase needed):
-          <div class="bs-faq-ship-free-cont-dsk">
-            <ul class="bs-faq-ctry-ul_1">
-              <li class="bs-faq-ctry-li_1">
-                <p>North America</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>USD</li>
-                </ul>
-              </li>
-              <li class="bs-faq-ctry-li_1">
-                <p>Asia</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>USD</li>
-                  <li>Hong Kong</li>
-                  <li>Philippines</li>
-                  <li>Malaysia</li>
-                  <li>Brunei</li>
-                  <li>China</li>
-                  <li>India</li>
-                  <li>Indonesia</li>
-                  <li>Japan</li>
-                  <li>Macau</li>
-                  <li>Korea</li>
-                  <li>Taiwan</li>
-                  <li>Thailand</li>
-                  <li>Vietnam</li>
-                </ul>
-              </li>
-              <li class="bs-faq-ctry-li_1">
-                <p>Australia & Oceanic</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>Australia</li>
-                  <li>New Zealand</li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="bs-faq-ctry-ul_1">
-              <li class="bs-faq-ctry-li_1">
-                <p>Europe</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>Austria</li>
-                  <li>Belgium</li>
-                  <li>Bulgaria</li>
-                  <li>Croatia</li>
-                  <li>Cyprus</li>
-                  <li>Denmark</li>
-                  <li>Estonia</li>
-                  <li>Finland</li>
-                  <li>France</li>
-                  <li>Germany</li>
-                  <li>Greece</li>
-                  <li>Hungary</li>
-                  <li>Italy</li>
-                  <li>Latvia</li>
-                  <li>Liechtenstein</li>
-                  <li>Lithuania</li>
-                  <li>Luxembourg</li>
-                  <li>Malta</li>
-                  <li>Monaco</li>
-                  <li>Norway</li>
-                  <li>Poland</li>
-                  <li>Portugal</li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="bs-faq-ctry-ul_1">
-              <li class="bs-faq-ctry-li_1">
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>Ireland</li>
-                  <li>Romania</li>
-                  <li>Slovakia</li>
-                  <li>Slovenia</li>
-                  <li>Spain</li>
-                  <li>Sweden</li>
-                  <li>Switzerland</li>
-                  <li>Czech Republic</li>
-                  <li>Newatherlands</li>
-                  <li>United Kingdom</li>
-                  <li>Vatican City</li>
-                </ul>
-              </li>
-            </ul>
+        {% for block in section.blocks %}
+          <h4 class="bs-faq-accor-head">{{block.settings.faq_title}}</h4>
+          <div class="bs-faq-accor-cont">
+            {{block.settings.faq_content}}
           </div>
-          <div class="bs-faq-ship-free-cont-mob">
-            <ul class="bs-faq-ctry-ul_1">
-              <li class="bs-faq-ctry-li_1">
-                <p>North America</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>USD</li>
-                </ul>
-              </li>
-              <li class="bs-faq-ctry-li_1">
-                <p>Asia</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>USD</li>
-                  <li>Hong Kong</li>
-                  <li>Philippines</li>
-                  <li>Malaysia</li>
-                  <li>Brunei</li>
-                  <li>China</li>
-                  <li>India</li>
-                  <li>Indonesia</li>
-                  <li>Japan</li>
-                  <li>Macau</li>
-                  <li>Korea</li>
-                  <li>Taiwan</li>
-                  <li>Thailand</li>
-                  <li>Vietnam</li>
-                </ul>
-              </li>
-              <li class="bs-faq-ctry-li_1">
-                <p>Australia & Oceanic</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>Australia</li>
-                  <li>New Zealand</li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="bs-faq-ctry-ul_1">
-              <li class="bs-faq-ctry-li_1">
-                <p>Europe</p>
-                <ul class="bs-faq-ctry-ul_2">
-                  <li>Austria</li>
-                  <li>Belgium</li>
-                  <li>Bulgaria</li>
-                  <li>Croatia</li>
-                  <li>Cyprus</li>
-                  <li>Denmark</li>
-                  <li>Estonia</li>
-                  <li>Finland</li>
-                  <li>France</li>
-                  <li>Germany</li>
-                  <li>Greece</li>
-                  <li>Hungary</li>
-                  <li>Italy</li>
-                  <li>Latvia</li>
-                  <li>Liechtenstein</li>
-                  <li>Lithuania</li>
-                  <li>Luxembourg</li>
-                  <li>Malta</li>
-                  <li>Monaco</li>
-                  <li>Norway</li>
-                  <li>Poland</li>
-                  <li>Portugal</li>
-                  <li>Ireland</li>
-                  <li>Romania</li>
-                  <li>Slovakia</li>
-                  <li>Slovenia</li>
-                  <li>Spain</li>
-                  <li>Sweden</li>
-                  <li>Switzerland</li>
-                  <li>Czech Republic</li>
-                  <li>Newatherlands</li>
-                  <li>United Kingdom</li>
-                  <li>Vatican City</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <h4 class="bs-faq-accor-head">Order & Payment</h4>
-        <div class="bs-faq-accor-cont">
-            <h5>Can I track my package after placing an order?</h5>
-            <p>You’ll receive a shipment notification email with your tracking number, once your package is being collected by our delivery partner.</p>
-            <h5>What are the payment methods that I can use?</h5>
-            <p>You can choose to pay with any of the major debit and credit cards (VISA, Mastercard and American Express), Paypal or Apple Pay. </p>
-            <h5>What's your return policy, is it free?</h5>
-            <p>30 days free return (now extended to 60 days until further notice). We want you to love your Anothersole. If it doesn't work for you, just send them back in its original state, unworn, unwashed & in your original packaging. We'll do the rest. Find out more at <a href="/pages/returns-and-exchanges" target="_blank">Returns.</a></p>
-            <h5>Do I need to pay for sales taxes and duties?</h5>
-            <p>Sales taxes and duties are dependent on your shipping destination. You may be subjected to additional import fees upon delivery depending on your location.</p>
-            <p>Tax Free countries </p>
-            <p>
-                &nbsp;&nbsp;&nbsp;• USA (below $800)
-                <br>&nbsp;&nbsp;&nbsp;• Australia (10% tax absorbed)
-                <br>&nbsp;&nbsp;&nbsp;• Hongkong
-            </p>
-            <p>&nbsp;&nbsp;Rest of World</p>
-                <p>&nbsp;&nbsp;&nbsp;• Taxes and duties are payable by you when applicable. Please check with your custom office for details.</p>
-            <p>Please understand that Anothersole does not have any control over any duties, customs and taxes levied by the country your order is being shipped to. If you choose not to pay for the Customs fee and the parcel is returned back to Anothersole, we will contact you regarding a re-shipment or refund. Please note that any logistics costs incurred are non-refundable.</p>
-            <p>Customs may choose to dispose of your package instead of returning it to Anothersole. In this instance, we will not be liable to reship the product to you or offer a refund.</p>
-            <p>If you are unsure about whether you are subjected to Customs and Duties fees, we would best advise you to contact your local Customs office for more clarity and information.</p>
-        </div>
-        <h4 class="bs-faq-accor-head">Product & Fit</h4>
-        <div class="bs-faq-accor-cont">
-            <h5>What size should I wear?</h5>
-            <p>We know how important it is to find your perfect fit. <a href="/pages/size-guide" target="_blank">Here</a> are some helpful steps to size your Anothersole.</p>
-            <h5>How do I take care of my Anothersole?</h5>
-            <p>All Anothersole leather shoes are design pieces made with premium leather curated from the best tanneries around the world. Leather, like our skin, require tender loving care to keep them in the best condition:</p>
-            <p>
-              &nbsp;&nbsp;&nbsp;• Avoid prolonged and direct exposure to sources of light and heat
-              <br>&nbsp;&nbsp;&nbsp;• Avoid contact with water, oil, perfume or cosmetics
-              <br>&nbsp;&nbsp;&nbsp;• Spray a coat of clear leather protectant before wear
-            </p>
-            <p><a href="/pages/care-tips" target="_blank">Here</a> are more care tips that we love.</p>
-            <h5>Do you use pig leather?</h5>
-            <p>No, we do not. </p>
-            <h5>When is your next new-release?</h5>
-            <p>You can know by following us at <a href="https://instagram.com/anothersoleofficial" target="_blank">www.instagram.com/anothersolegirl</a> or sign-up for our <a href="/pages/newsletter" target="_blank">Newsletter!</a></p>
-            <h5>The shoes I want are sold out!</h5>
-            <p>Help us decide what to restock by clicking on “Notify Me” on the product you covet. If there’s enough demand, we can make it happen!</p>
-            <h5>Will the same style fit differently in a different material?</h5>
-            <p>Different types of leather or material may feel different at the initial wear. You can feel the stretch of a thinner leather (Goat) better than a thicker bovine leather or fabric. It's best to let the tighter shoe stretch to fit if you still have enough toe space. (Especially if you have been wearing that same size for Anothersole shoes.) </p>
-            <h5>Should I wear socks with Anothersole?</h5>
-            <p>Yes, we encourage you to wear dark hidden socks. There are many advantages in doing so:</p>
-            <p>    
-              &nbsp;&nbsp;&nbsp;• Helps to absorb moisture from your feet
-              <br>&nbsp;&nbsp;&nbsp;• Avoid having color transfer onto your feet - Some color migration can be expected during initial wear or worn when the shoes are wet, especially for darker colored shoes. Yes, colour migration will reduce with wearing. (Be assured that consumer safe pigments are used for our leathers and are tested for VOC limits.) 
-            </p>
-            <h5>Why can I see the contours of my toe?</h5>
-            <p>Anothersole is designed to be unlined hence only the soft leather touches your skin. In your initial wear, the outline of the big toe may be visible. Unlined leather stretches to a perfect fit and the bulge (or any protruding bones) will become less pronounced with wear.</p>
-            <p>We do not want to add any synthetic linings which makes the shoe stiff or stuffy. Enjoy this signature look of Anothersole - thousands of women have road tested them, loved and <a href="/pages/reviews-1" target="_blank">raved</a> about this wearing experience.</p>
-            <h5>Could there be differences between what I receive and what I see on your website/social media posts?</h5>
-            <p>Leather is organic in nature and unique - no two leathers are identical. Slight imperfection, blemishes, uneven tonality, veins and grains are characteristics of natural leathers and are not defects. In addition, lightings used during photography and screen monitors’ resolution could be reasons of perceived color differences.</p>
-            <h5>Have more questions?</h5>
-            <p>Email us at <a href="mailto:customerservice@anothersole.com" target="_blank">customerservice@anothersole.com</a> </p>
-            <p>Message us on <a href="https://www.facebook.com/Anothersole/" target="_blank">facebook</a></p>
-            <p>Mail to us at  44 Jalan Kelabu Asap Singapore 278237</p>
-        </div>
+        {% endfor %}  
       </div>
     </div>
   </div>
@@ -308,18 +75,27 @@
 {
   "name": "Faq",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "hero_img",
-      "label": "Hero Image",
-      "info": "Recommend 1440 x 310px"
-    },
-    {
-      "type": "image_picker",
-      "id": "contact_img",
-      "label": "Contact Image",
-      "info": "Recommend 745 x 420px"
-    }
-  ]
+    
+  ],
+  "blocks" : [
+		{
+			"type": "fagitem",
+			"name": "Faq Item", 
+			"settings": [
+        {
+					"type": "text",
+					"id": "faq_title",
+					"default": "Faq title",
+					"label": "Faq title"
+				},
+				{
+					"type": "textarea",
+					"id": "faq_content",
+					"default": "Faq content",
+					"label": "Faq content"
+				}
+			]
+		}
+	]	
 }
 {% endschema %}
