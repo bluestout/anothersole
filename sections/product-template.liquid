@@ -63,8 +63,8 @@
           <ul>
           {% for image in product.images %}
             <li class="custom-thumb-{{forloop.index}}">
-                <a href="{{ image.src | img_url: 'master' }}" data-fancybox="gallery">
-          <img class="lazyload" data-src="{{image.src| img_url: "master"}}">
+              <a href="{{ image.src | img_url: 'master' }}" data-fancybox="gallery">
+                <img class="lazyload" data-src="{{image.src| img_url: "master"}}">
               </a>
                {% comment %}
               <img class="lazyload zoom_05" src="{{image.src| img_url: "master"}}" data-zoom-image="{{image.src| img_url: "master"}}"/>
@@ -306,7 +306,6 @@
                         {
                           $('.size-each-pro[data-value="'+unavailable[i]+'"]').addClass("disabled");
                         }
-                        //$(".size-each").not(".disabled").first().trigger("click");
                       },700);
                       $(".size-each-pro").on("click",function(e){
                         var elem = $(this);
@@ -314,17 +313,27 @@
                         elem.addClass("active");
                         var value_get = elem.attr("data-value");
                         value_get= value_get.trim();
-                          //alert(value_get);
+                        //console.log("---",value_get);
                         $("#ProductSelect-product-template option").each(function(){
                           var option_text = $(this).text();
                           option_text = option_text.trim();
-                          if (option_text==value_get)
+                          //console.log(option_text);
+                          //if (option_text==value_get)
+                          if(option_text.includes(value_get)==true)
                           {
                             var getval = $(this).val();
                             $("#ProductSelect-product-template").val(getval).trigger("change");
-                              
-                            console.log(option_text);
                             $("select#SingleOptionSelector-0").val(option_text).change();
+                            if(option_text.includes('Sold out')==true){
+                              $(".product-form__cart-submit").attr("aria-disabled",true);
+                              $(".product-form__cart-submit").attr("aria-label","{{ 'products.product.sold_out' | t }}");
+                              $(".product-form__cart-submit>span").text("{{ 'products.product.sold_out' | t }}");
+                            }
+                            else{ 
+                              $(".product-form__cart-submit").removeAttr("aria-disabled");
+                              $(".product-form__cart-submit").attr("aria-label","{{ 'products.product.add_to_cart' | t }}");
+                              $(".product-form__cart-submit>span").text("{{ 'products.product.add_to_cart' | t }}");
+                            }
                           }
                         })
                         //$("#ProductSelect-product-template option").text(elem.attr("data-value")).trigger("change");
@@ -410,16 +419,7 @@
                   {% include 'icon-spinner' %}
                 </span>
               </button>
-              {% if product.title contains "Gift Card" %}
-              <style>
-                .klaviyo-bis-trigger{
-                  display: none !important;
-                }
-              </style>
-              {% endif %}
-              {% unless current_variant.available %}
-                <a class="klaviyo-bis-trigger btn product-form__cart-submit" href="#">Notify Me When Available</a>
-              {% endunless %}
+              
               {% if section.settings.enable_payment_button %}
                 {{ form | payment_button }}
               {% endif %}

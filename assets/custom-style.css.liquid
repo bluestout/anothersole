@@ -2868,7 +2868,7 @@ body.size_body{
 }
 .custom-product-info .size-each.disabled{
   opacity: .6;
-  pointer-events: none;
+  {% comment %} pointer-events: none; {% endcomment %}
 }
 .custom-product-info .size-each.disabled:before{
   width: 1px;
@@ -7179,11 +7179,6 @@ body.size_body{
   letter-spacing: 0;
   line-height: 24px;
   color: #282828;
-}
-/****************klaviyo back in stock Notify Modal*******************/
-#klaviyo-bis-iframe
-{
-  z-index: 9999999 !important;
 }
 /**********review widget**********/
 {% comment %} .stamped-main-badge{
