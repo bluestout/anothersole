@@ -181,7 +181,7 @@
 	<div class="boost-pfs-search-result-page-pagination boost-pfs-filter-bottom-pagination-default">{% include 'boost-pfs-filter-skeleton', width: 4 %}</div>
 </div>
 {% comment %} END SEARCH RESULT: PAGES PANEL {% endcomment %}
-{%- endpaginate -%}
+{% assign sp_paginate_by = paginate.page_size %}{%- endpaginate -%}
 
 <script>
 // Declare boostPFSThemeConfig variable
@@ -271,7 +271,7 @@ var boostPFSTemplate = {
 };
 </script>
 
-{% schema %}
+{% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}{% schema %}
 {
 	"name": "Search pages",
 	"settings": [
