@@ -1,3 +1,5 @@
+{% render 'shogun-products', content: product %}
+{{product.metafields.shogun.above}}
 {% comment %}
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %} 
@@ -11,6 +13,8 @@
 {% section 'product-recommendations' %}
 <!--Stamped - Begin Main Widget -->
 <div class="sin-pro-review-sec">
+  <div class="page-width">
+  <h3>Product Reviews</h3>
   <div class="sin-pro-review-sec-inn" >
     <div id="stamped-main-widget"   
     data-widget-style="standard" 
@@ -24,6 +28,7 @@
     {{ product.metafields.stamped.reviews }}   
     </div>
   </div>
+</div>
 </div>
 <!-- Stamped - End Main Widget -->
 
@@ -78,3 +83,7 @@
 }
 </script>
 {%include 'preorder-me-widget'%}
+
+
+{{product.metafields.shogun.below}}
+
