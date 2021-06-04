@@ -1689,5 +1689,16 @@
         }
       }
     ]
+  },
+  {
+    "name": "Register Page",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "rg_pg_sub_content",
+        "label": "Sub Content",
+        "default": "Sign up and get <span>$20 off<\/span> instantly and other great deals straight to your inbox."
+      }
+    ]
   }
 ]

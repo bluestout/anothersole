@@ -2241,6 +2241,32 @@ body.for-custom-mobile-menu{
   cursor: pointer;
   display: block;
 } 
+.main-thumb-image-product ul li video{
+	width: 100%;
+  height: auto;
+  display: block;
+}
+.main-thumb-image-product .custom_image.external_video li{
+	position: relative;
+  cursor: pointer;
+}
+.main-thumb-image-product .custom_image.external_video li:before{
+	width: 28px;
+  height: 28px;
+  background: url('play-button.svg') 0 0 no-repeat;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -14px;
+  margin-top: -14px;
+  pointer-events: none;
+  opacity: .75;
+}
+.main-large-image-product .custom_image.external_video .custom-thumb-2 video{
+	width: 100%;
+  height: auto;
+}
 .sin-pro-fea-pro-sec{
   padding: 90px 60px;
 }
@@ -6842,7 +6868,11 @@ body.size_body{
   max-width: 50%;
 }
 @media (max-width: 749px) {
-  
+    /**/
+  .mobile-image-section .mobile-main-pro-slide video{
+  	width: 100%;
+  }
+  /**/
    /*review section starts*/
   .sin-pro-review-sec > .page-width > h3 {
     font-size: 18px;
