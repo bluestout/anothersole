@@ -52,7 +52,7 @@
             </li>
             {% when 'video' %}
             <li class="pro-item">
-              {{ media | video_tag: controls: true, image_size: "358x", autoplay: true, loop: true }}
+              {{ media | video_tag: controls: false, image_size: "358x", autoplay: true, loop: true }}
             </li>
             {% endcase %}
           </div>
@@ -112,7 +112,7 @@
                
                {% when 'video' %}
                 <li class="custom-thumb-{{forloop.index}}">
-               {{ media | video_tag: controls: true, image_size: "636x", autoplay: true, loop: true }}
+               {{ media | video_tag: controls: false, image_size: "636x", autoplay: true, loop: true }}
               </li>
 
        

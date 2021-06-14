@@ -1,5 +1,10 @@
 <div class="custom-review-product">
-  <!-- Stamped - Begin Star Rating Badge --><span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ product.id }}" data-product-sku="{{ product.handle }}" data-product-type="{{product.type}}" data-product-title="{{product.title}}" style="display: inline-block;">{{ product.metafields.stamped.badge }}</span><!-- Stamped - End Star Rating Badge -->
+  <!-- Stamped - Begin Star Rating Badge -->
+    {% comment %} <span class="stamped-product-reviews-badge stamped-main-badge" data-id="{{ product.id }}" data-product-sku="{{ product.handle }}" data-product-type="{{product.type}}" data-product-title="{{product.title}}" style="display: inline-block;">{{ product.metafields.stamped.badge }}</span> {% endcomment %}
+  <!-- Stamped - End Star Rating Badge -->
+  <a href="#">
+    <div id="stamped-reviews-widget" data-widget-type="site-badge" data-badge-type="minimal"></div>
+  </a>
 </div>
 {% unless product.title contains "Gift Card" %}
 <div class="custom-offer-pro">

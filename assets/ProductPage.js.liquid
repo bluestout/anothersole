@@ -39,7 +39,7 @@ $(document).ready(function(){
   var data_thumb= $(this).attr("data-thumb");
     $('html, body').animate({
         'scrollTop' : $("."+data_thumb).position().top+50
-    });
+    },2000);
   })
   /*****************Product Slider on PDP*************************/
   $('.custom-items-slider').slick({
